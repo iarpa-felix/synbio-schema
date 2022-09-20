@@ -1,2 +1,2 @@
 # synbio-schema
-a schema for synthetic biology, in a personal (no institutional) GH org
+A schema for synthetic biology, inspired by IARPA FELIX
