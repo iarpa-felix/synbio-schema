@@ -6,17 +6,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/ArabadopsisSeeds/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/BioSafetyLevelEnum/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/BiologicalSamples/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -66,27 +56,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/PartsComments/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/PartsSequence/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/Person/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/PersonCollection/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/PersonStatus/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -121,27 +96,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/about/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/age_in_years/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/associated_part/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/bio_safety_level/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/birth_date/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -167,11 +127,6 @@
     </url>
     <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/date_joined/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/description/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -212,11 +167,6 @@
     </url>
     <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/email/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/entries/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -366,11 +316,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/primary_email/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/principal_investigator/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
@@ -461,11 +406,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/synbio-schema/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/synbio/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
@@ -477,11 +417,6 @@
     </url>
     <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/username/</loc>
-         <lastmod>2022-09-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/vital_status/</loc>
          <lastmod>2022-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
