@@ -26,3 +26,9 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.extras]
 docs = ["linkml", "mkdocs-material"]
+
+## why would I ahve to do tis compared to other LikML cookiecutter projects?
+## or make a src/synbio_schema/__init__.py
+#packages = [
+#    { include = "nmdc_schema" }
+#]
