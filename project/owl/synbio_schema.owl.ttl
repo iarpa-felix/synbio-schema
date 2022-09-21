@@ -23,7 +23,7 @@
         synbio:Person,
         synbio:Strain ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2022-09-21T17:19:55" ;
+    linkml:generation_date "2022-09-21T17:20:24" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "synbio_schema.yaml" ;
     linkml:source_file_date "2022-09-21T10:12:03" ;
@@ -283,17 +283,17 @@ synbio:Database a owl:Class,
             owl:allValuesFrom synbio:Strain ;
             owl:onProperty synbio:strain_set ],
         [ a owl:Restriction ;
-            owl:allValuesFrom synbio:Organism ;
-            owl:onProperty synbio:organism_set ],
-        [ a owl:Restriction ;
             owl:allValuesFrom synbio:Modification ;
             owl:onProperty synbio:modification_set ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom synbio:Person ;
+            owl:onProperty synbio:person_set ],
         [ a owl:Restriction ;
             owl:allValuesFrom synbio:PartsSequence ;
             owl:onProperty synbio:sequence_set ],
         [ a owl:Restriction ;
-            owl:allValuesFrom synbio:Person ;
-            owl:onProperty synbio:person_set ] ;
+            owl:allValuesFrom synbio:Organism ;
+            owl:onProperty synbio:organism_set ] ;
     skos:exactMatch synbio:Database .
 
 <https://w3id.org/None/DescriptorEnum#3pUTR> a owl:Class,
@@ -715,28 +715,28 @@ synbio:PartsSequence a owl:Class,
     rdfs:label "PartsSequence" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:seq_name ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:nt_sequence ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass synbio:Modification ;
             owl:onProperty synbio:associated_part ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:SeqTypeEnum ;
-            owl:onProperty synbio:seq_type ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:seq_name ],
+            owl:onProperty synbio:date_added ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:id ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:date_added ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:nt_sequence ] .
+            owl:onClass synbio:SeqTypeEnum ;
+            owl:onProperty synbio:seq_type ] .
 
 synbio:bio_safety_level a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -775,31 +775,20 @@ synbio:Strain a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Strain" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:intellectual_property ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:sub_parts ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:Person ;
-            owl:onProperty synbio:principal_investigator ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:name ],
+            owl:onProperty synbio:id ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty synbio:parent_parts ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:FundingSourceEnum ;
-            owl:onProperty synbio:funding_source ],
+            owl:onClass synbio:Person ;
+            owl:onProperty synbio:creator ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:genotype_phenotype ],
+            owl:onClass synbio:Person ;
+            owl:onProperty synbio:principal_investigator ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass synbio:StatusEnum ;
@@ -809,25 +798,9 @@ synbio:Strain a owl:Class,
             owl:onClass synbio:BioSafetyLevelEnum ;
             owl:onProperty synbio:bio_safety_level ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:id ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:summary ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:Person ;
-            owl:onProperty synbio:creator ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:Organism ;
-            owl:onProperty synbio:host_organism ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:notes ],
+            owl:onClass synbio:FundingSourceEnum ;
+            owl:onProperty synbio:funding_source ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
@@ -835,7 +808,34 @@ synbio:Strain a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:references ] ;
+            owl:onProperty synbio:summary ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:references ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:name ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:notes ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:genotype_phenotype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:sub_parts ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:intellectual_property ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:Organism ;
+            owl:onProperty synbio:host_organism ] ;
     skos:exactMatch OBI:0001185,
         synbio:Strain .
 
@@ -867,13 +867,17 @@ synbio:Modification a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Modification" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:ModificationTypeEnum ;
-            owl:onProperty synbio:modification_type ],
+            owl:onClass synbio:Person ;
+            owl:onProperty synbio:principal_investigator ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:aa_change ],
+            owl:onProperty synbio:el_name_short ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:CategoryEnum ;
+            owl:onProperty synbio:category ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
@@ -881,7 +885,7 @@ synbio:Modification a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:subcategory_size ],
+            owl:onProperty synbio:aa_change ],
         [ a owl:Restriction ;
             owl:onClass synbio:BioSafetyLevelEnum ;
             owl:onProperty synbio:bio_safety_level ;
@@ -896,20 +900,20 @@ synbio:Modification a owl:Class,
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:el_name_short ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass synbio:DescriptorEnum ;
             owl:onProperty synbio:descriptor ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:ModificationTypeEnum ;
+            owl:onProperty synbio:modification_type ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:el_name_long ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass synbio:Person ;
             owl:onProperty synbio:creator ;
             owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:notes ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Integer ;
@@ -919,38 +923,30 @@ synbio:Modification a owl:Class,
             owl:onProperty synbio:status ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:CategoryEnum ;
-            owl:onProperty synbio:category ],
-        [ a owl:Restriction ;
-            owl:onClass synbio:Person ;
-            owl:onProperty synbio:principal_investigator ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:el_name_long ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:id ;
-            owl:qualifiedCardinality 1 ] ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:subcategory_size ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:notes ] ;
     skos:exactMatch synbio:Modification .
 
 synbio:Organism a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Organism" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:species_name ],
+            owl:onProperty synbio:id ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:species_ncbi_taxon_number ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:special_name ],
+            owl:onProperty synbio:comment ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
@@ -958,15 +954,19 @@ synbio:Organism a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:strain ],
+            owl:onProperty synbio:special_name ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:comment ],
+            owl:onProperty synbio:species_ncbi_taxon_number ],
         [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:id ;
-            owl:qualifiedCardinality 1 ] ;
+            owl:onProperty synbio:species_name ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:strain ] ;
     skos:exactMatch OBI:0100026,
         synbio:Organism .
 
@@ -995,18 +995,14 @@ synbio:Person a owl:Class,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:last_name ],
+            owl:onProperty synbio:first_name ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Boolean ;
+            owl:onProperty synbio:is_superuser ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:username ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:first_name ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:Datetime ;
-            owl:onProperty synbio:date_joined ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:Boolean ;
@@ -1015,14 +1011,18 @@ synbio:Person a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:email ],
+            owl:onProperty synbio:last_name ],
         [ a owl:Restriction ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty synbio:is_superuser ;
-            owl:qualifiedCardinality 1 ],
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:email ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:id ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Datetime ;
+            owl:onProperty synbio:date_joined ;
             owl:qualifiedCardinality 1 ] ;
     skos:altLabel "auth_user" ;
     skos:exactMatch NCBITaxon:9606,
