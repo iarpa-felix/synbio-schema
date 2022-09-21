@@ -1,13 +1,5 @@
 {
    "$defs": {
-      "ArabadopsisSeeds": {
-         "additionalProperties": false,
-         "description": "empty, so skip",
-         "properties": {},
-         "required": [],
-         "title": "ArabadopsisSeeds",
-         "type": "object"
-      },
       "BioSafetyLevelEnum": {
          "description": "",
          "enum": [

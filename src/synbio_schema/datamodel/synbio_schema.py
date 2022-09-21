@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-09-20T22:59:03
+# Generation date: 2022-09-20T23:22:38
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -122,18 +122,6 @@ class PartsComments(YAMLRoot):
     class_class_curie: ClassVar[str] = "synbio:PartsComments"
     class_name: ClassVar[str] = "PartsComments"
     class_model_uri: ClassVar[URIRef] = SYNBIO.PartsComments
-
-
-class ArabadopsisSeeds(YAMLRoot):
-    """
-    empty, so skip
-    """
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = SYNBIO.ArabadopsisSeeds
-    class_class_curie: ClassVar[str] = "synbio:ArabadopsisSeeds"
-    class_name: ClassVar[str] = "ArabadopsisSeeds"
-    class_model_uri: ClassVar[URIRef] = SYNBIO.ArabadopsisSeeds
 
 
 class BiologicalSamples(YAMLRoot):

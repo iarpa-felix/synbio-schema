@@ -2327,18 +2327,6 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "ArabadopsisSeeds",
-      "definition_uri": "https://w3id.org/None/ArabadopsisSeeds",
-      "description": "empty, so skip",
-      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "aliases": [
-        "arabidopsis_seeds"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/None/ArabadopsisSeeds",
-      "@type": "ClassDefinition"
-    },
-    {
       "name": "BiologicalSamples",
       "definition_uri": "https://w3id.org/None/BiologicalSamples",
       "description": "currently out-of-scope, so skip",
@@ -2500,9 +2488,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "synbio_schema.yaml",
-  "source_file_date": "2022-09-20T22:56:31",
-  "source_file_size": 18332,
-  "generation_date": "2022-09-20T22:58:53",
+  "source_file_date": "2022-09-20T23:07:36",
+  "source_file_size": 18168,
+  "generation_date": "2022-09-20T23:22:28",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/synbio_schema.context.jsonld",

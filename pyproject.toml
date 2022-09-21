@@ -12,6 +12,7 @@ python = "^3.9"
 linkml-runtime = "^1.1.24"
 db-to-sqlite = "^1.4"
 psycopg2 = "^2.9.3"
+cruft = "^2.11.1"
 
 
 [tool.poetry.dev-dependencies]

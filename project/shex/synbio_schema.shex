@@ -34,12 +34,6 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<ArabadopsisSeeds> CLOSED {
-    (  $<ArabadopsisSeeds_tes> rdf:type . * ;
-       rdf:type [ <ArabadopsisSeeds> ] ?
-    )
-}
-
 <BiologicalSamples> CLOSED {
     (  $<BiologicalSamples_tes> rdf:type . * ;
        rdf:type [ <BiologicalSamples> ] ?
