@@ -467,11 +467,6 @@ classes:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     aliases:
       - parts_comments
-  ArabadopsisSeeds:
-    description: empty, so skip
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    aliases:
-      - arabidopsis_seeds
   BiologicalSamples:
     description: currently out-of-scope, so skip
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
