@@ -1,0 +1,291 @@
+source	schema name	rule name	level	message
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'PartsSequence' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'PartsComments' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'ArabadopsisSeeds' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'BiologicalSamples' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'Strain' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'Database' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'Modification' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'NamedThing' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'Organism' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	ClassDefinition 'Person' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'associated_part' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'seq_name' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'seq_type' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'date_added' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'nt_sequence' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'sub_parts' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'parent_parts' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'host_organism' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'strain_set' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'sequence_set' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'name' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'genotype_phenotype' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'intellectual_property' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'keywords' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'summary' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'references' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'funding_source' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'modification_set' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'category' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'creator' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'descriptor' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'modification_taxon' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'modification_type' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'organism_basis' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'organism_set' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'person_set' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'principal_investigator' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'subcategory_size' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'license' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'exactMatch' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'aa_change' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'abbreviation' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'bio_safety_level' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'comment' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'date_joined' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'el_name_long' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'el_name_short' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'element' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'element_id' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'element_name' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'element_organism' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'email' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'first_name' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'id' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'is_staff' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'is_superuser' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'last_name' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'modification_genes' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'modifications_genes' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'notes' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'position' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'size_bp' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'special_name' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'species_name' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'species_ncbi_taxon_number' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'status' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'strain_value' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'username' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'examples' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'generation_date' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'metamodel_version' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'permissible_values' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'source_file' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'source_file_date' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	SlotDefinition 'source_file_size' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'SeqTypeEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'IntellectualPropertyEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'FundingSourceEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'SubcategorySizeEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'StatusEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'ModificationTypeEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'BioSafetyLevelEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'CategoryEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_empty_title	warning	EnumDefinition 'DescriptorEnum' has no title
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SeqTypeEnum' has permissible value 'deletion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SeqTypeEnum' has permissible value 'sequence'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SeqTypeEnum' has permissible value 'insertion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SeqTypeEnum' has permissible value 'flank1'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SeqTypeEnum' has permissible value 'flank2'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'IntellectualPropertyEnum' has permissible value 'Limited License Agreement required from Scarab Genomics'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'FundingSourceEnum' has permissible value 'IARPA-FELIX'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SubcategorySizeEnum' has permissible value 'lt_200'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SubcategorySizeEnum' has permissible value 'gt_3k'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SubcategorySizeEnum' has permissible value 'from_1k_to_3k'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SubcategorySizeEnum' has permissible value 'from_100_to_300'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'SubcategorySizeEnum' has permissible value 'from_300_to_1k'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'StatusEnum' has permissible value 'In Progress'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'StatusEnum' has permissible value 'Abandoned'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'amber stop codon'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'CDSpartial'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'chrXIII-chrII'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'compound deletion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'compound insertion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'deletion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'fluorescent/epitope'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'frameshift'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'in-frame deletion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'insertion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'insertion site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'inversion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'ochre stop codon'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'plasmid'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'plasmid element'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'reassortment'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'substitution'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'substitution transition'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'substitution transversion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'subtitutions'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'transition'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'ModificationTypeEnum' has permissible value 'transition plasmid element'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'BioSafetyLevelEnum' has permissible value 'Level 1'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'BioSafetyLevelEnum' has permissible value 'Level 2'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'antibiotic resistance'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'biosynthetic'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'compound'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'control element'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'fluorescent/epitope'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'origin/structural'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'promoter'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'terminator'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'CategoryEnum' has permissible value 'toxin/virulence'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value '3pUTR'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value '5pUTR'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'activiation domain'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'CDSpartial'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'CDSpartial-3prime'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'CDSpartial-5prime'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'eGFP'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'enhancer'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'epitope'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'fragment'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'G'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'gene'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'insertion site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'multiple cloning site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'opt'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'promoter'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'ribosomal binding site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'scar'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	permissible_values_format	warning	Enum 'DescriptorEnum' has permissible value 'terminator'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	class_definition 'PartsSequence' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	class_definition 'Strain' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	class_definition 'Database' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	class_definition 'Modification' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	class_definition 'NamedThing' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	class_definition 'Organism' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	class_definition 'Person' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'associated_part' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'seq_name' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'seq_type' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'date_added' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'nt_sequence' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'sub_parts' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'parent_parts' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'host_organism' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'strain_set' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'sequence_set' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'name' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'genotype_phenotype' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'intellectual_property' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'keywords' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'summary' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'references' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'funding_source' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'modification_set' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'category' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'creator' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'descriptor' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'modification_taxon' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'modification_type' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'organism_basis' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'organism_set' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'person_set' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'principal_investigator' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'subcategory_size' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'license' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'exactMatch' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'aa_change' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'abbreviation' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'bio_safety_level' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'comment' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'date_joined' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'el_name_long' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'el_name_short' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'element' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'element_id' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'element_name' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'element_organism' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'email' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'first_name' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'id' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'is_staff' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'is_superuser' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'last_name' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'modification_genes' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'modifications_genes' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'notes' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'position' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'size_bp' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'special_name' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'species_name' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'species_ncbi_taxon_number' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'status' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'strain_value' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'username' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'examples' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'generation_date' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'metamodel_version' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'permissible_values' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'source_file' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'source_file_date' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	slot_definition 'source_file_size' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'SeqTypeEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'IntellectualPropertyEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'FundingSourceEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'SubcategorySizeEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'StatusEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'ModificationTypeEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'BioSafetyLevelEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'CategoryEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	recommended	warning	enum_definition 'DescriptorEnum' does not have recommended slot 'description'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'strain_set' not found on class 'Database'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'modification_set' not found on class 'Database'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'organism_set' not found on class 'Database'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'person_set' not found on class 'Database'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'sequence_set' not found on class 'Database'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'id' not found on class 'Modification'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'id' not found on class 'NamedThing'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'id' not found on class 'Organism'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'special_name' not found on class 'Organism'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'species_ncbi_taxon_number' not found on class 'Organism'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'id' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'date_joined' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'email' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'first_name' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'is_staff' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'is_superuser' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'last_name' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	no_invalid_slot_usage	warning	Slot 'username' not found on class 'Person'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Slot has name 'exactMatch'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'IntellectualPropertyEnum' has name 'Limited License Agreement required from Scarab Genomics'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'FundingSourceEnum' has name 'IARPA-FELIX'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'StatusEnum' has name 'In Progress'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'StatusEnum' has name 'Abandoned'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'amber stop codon'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'CDSpartial'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'chrXIII-chrII'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'compound deletion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'compound insertion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'fluorescent/epitope'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'in-frame deletion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'insertion site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'ochre stop codon'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'plasmid element'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'substitution transition'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'substitution transversion'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'ModificationTypeEnum' has name 'transition plasmid element'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'BioSafetyLevelEnum' has name 'Level 1'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'BioSafetyLevelEnum' has name 'Level 2'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'CategoryEnum' has name 'antibiotic resistance'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'CategoryEnum' has name 'control element'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'CategoryEnum' has name 'fluorescent/epitope'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'CategoryEnum' has name 'GOI'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'CategoryEnum' has name 'origin/structural'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'CategoryEnum' has name 'toxin/virulence'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name '3pUTR'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name '5pUTR'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'activiation domain'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'CDS'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'CDSpartial'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'CDSpartial-3prime'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'CDSpartial-5prime'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'eGFP'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'G'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'insertion site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'multiple cloning site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'ribosomal binding site'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'SUMO'
+/Users/MAM/Documents/gitrepos/semantic-synbio/synbio-schema/src/synbio_schema/schema/synbio_schema.yaml	synbio	standard_naming	warning	Permissible value of enum 'DescriptorEnum' has name 'VP16'
+
