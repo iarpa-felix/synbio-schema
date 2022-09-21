@@ -1,4 +1,3 @@
-
 name: synbio
 description: synbio
 id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -462,16 +461,6 @@ classes:
         pattern: ^sequence:\d+$
       associated_part:
         pattern: ^IF:\d+$
-  PartsComments:
-    description: empty, so skip
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    aliases:
-      - parts_comments
-  BiologicalSamples:
-    description: currently out-of-scope, so skip
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    aliases:
-      - biological_samples
   Strain:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
