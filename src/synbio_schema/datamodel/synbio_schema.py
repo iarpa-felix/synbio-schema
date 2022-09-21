@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-09-20T23:22:38
+# Generation date: 2022-09-20T23:50:04
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -110,30 +110,6 @@ class PartsSequence(YAMLRoot):
             self.nt_sequence = str(self.nt_sequence)
 
         super().__post_init__(**kwargs)
-
-
-class PartsComments(YAMLRoot):
-    """
-    empty, so skip
-    """
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = SYNBIO.PartsComments
-    class_class_curie: ClassVar[str] = "synbio:PartsComments"
-    class_name: ClassVar[str] = "PartsComments"
-    class_model_uri: ClassVar[URIRef] = SYNBIO.PartsComments
-
-
-class BiologicalSamples(YAMLRoot):
-    """
-    currently out-of-scope, so skip
-    """
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = SYNBIO.BiologicalSamples
-    class_class_curie: ClassVar[str] = "synbio:BiologicalSamples"
-    class_name: ClassVar[str] = "BiologicalSamples"
-    class_model_uri: ClassVar[URIRef] = SYNBIO.BiologicalSamples
 
 
 @dataclass

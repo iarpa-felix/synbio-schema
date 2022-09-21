@@ -1,0 +1,39 @@
+{
+  "synbio_schema": {
+    "PartsSequence": {
+      "name": "PartsSequence",
+      "status": "published",
+      "display": true
+    },
+    "Strain": {
+      "name": "Strain",
+      "status": "published",
+      "display": true
+    },
+    "Database": {
+      "name": "Database",
+      "status": "published",
+      "display": true
+    },
+    "Modification": {
+      "name": "Modification",
+      "status": "published",
+      "display": true
+    },
+    "NamedThing": {
+      "name": "NamedThing",
+      "status": "published",
+      "display": true
+    },
+    "Organism": {
+      "name": "Organism",
+      "status": "published",
+      "display": true
+    },
+    "Person": {
+      "name": "Person",
+      "status": "published",
+      "display": true
+    }
+  }
+}
