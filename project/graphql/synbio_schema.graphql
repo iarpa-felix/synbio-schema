@@ -1,23 +1,100 @@
+type ArabadopsisSeeds
+  {
+  }
+
+type BiologicalSamples
+  {
+  }
+
+type Database
+  {
+    strainSet: [Strain]
+    modificationSet: [Modification]
+    organismSet: [Organism]
+    personSet: [Person]
+    sequenceSet: [PartsSequence]
+  }
+
+type Modification
+  {
+    aaChange: String
+    bioSafetyLevel: BioSafetyLevelEnum!
+    category: CategoryEnum
+    creator: Person!
+    descriptor: DescriptorEnum
+    elNameLong: String!
+    elNameShort: String
+    elementOrganism: String!
+    modificationType: ModificationTypeEnum
+    modificationsGenes: String
+    notes: String
+    position: String
+    principalInvestigator: Person!
+    sizeBp: Integer
+    status: StatusEnum!
+    subcategorySize: String
+    id: String!
+  }
+
 type NamedThing
   {
-    id: Uriorcurie!
-    name: String
-    description: String
+    id: String!
+  }
+
+type Organism
+  {
+    abbreviation: String
+    strainValue: String
+    comment: String
+    speciesName: String
+    id: String!
+    specialName: String
+    speciesNcbiTaxonNumber: String
+  }
+
+type PartsComments
+  {
+  }
+
+type PartsSequence
+  {
+    id: String!
+    associatedPart: Modification
+    seqName: String
+    seqType: SeqTypeEnum
+    dateAdded: String
+    ntSequence: String
   }
 
 type Person
   {
-    id: Uriorcurie!
-    name: String
-    description: String
-    primaryEmail: String
-    birthDate: Date
-    ageInYears: Integer
-    vitalStatus: PersonStatus
+    id: String!
+    dateJoined: Datetime!
+    email: String
+    firstName: String
+    isStaff: Boolean!
+    isSuperuser: Boolean!
+    lastName: String
+    username: String!
   }
 
-type PersonCollection
+type Strain
   {
-    entries: [Person]
+    id: String!
+    bioSafetyLevel: BioSafetyLevelEnum
+    creator: Person
+    fundingSource: FundingSourceEnum
+    genotypePhenotype: String
+    hostOrganism: Organism
+    intellectualProperty: String
+    keywords: String
+    name: String
+    notes: String
+    principalInvestigator: Person
+    references: String
+    status: StatusEnum
+    summary: String
+    subParts: [String]
+    parentParts: [String]
   }
 
