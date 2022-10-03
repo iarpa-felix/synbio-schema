@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-09-21T18:35:44
+# Generation date: 2022-10-03T06:48:12
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -203,15 +203,13 @@ class Database(YAMLRoot):
     class_name: ClassVar[str] = "Database"
     class_model_uri: ClassVar[URIRef] = SYNBIO.Database
 
-    strain_set: Optional[Union[Dict[Union[str, StrainId], Union[dict, Strain]], List[Union[dict, Strain]]]] = empty_dict()
     modification_set: Optional[Union[Dict[Union[str, ModificationId], Union[dict, "Modification"]], List[Union[dict, "Modification"]]]] = empty_dict()
     organism_set: Optional[Union[Dict[Union[str, OrganismId], Union[dict, "Organism"]], List[Union[dict, "Organism"]]]] = empty_dict()
     person_set: Optional[Union[Dict[Union[str, PersonId], Union[dict, "Person"]], List[Union[dict, "Person"]]]] = empty_dict()
     sequence_set: Optional[Union[Dict[Union[str, PartsSequenceId], Union[dict, PartsSequence]], List[Union[dict, PartsSequence]]]] = empty_dict()
+    strain_set: Optional[Union[Dict[Union[str, StrainId], Union[dict, Strain]], List[Union[dict, Strain]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        self._normalize_inlined_as_list(slot_name="strain_set", slot_type=Strain, key_name="id", keyed=True)
-
         self._normalize_inlined_as_list(slot_name="modification_set", slot_type=Modification, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="organism_set", slot_type=Organism, key_name="id", keyed=True)
@@ -219,6 +217,8 @@ class Database(YAMLRoot):
         self._normalize_inlined_as_list(slot_name="person_set", slot_type=Person, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="sequence_set", slot_type=PartsSequence, key_name="id", keyed=True)
+
+        self._normalize_inlined_as_list(slot_name="strain_set", slot_type=Strain, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -350,11 +350,11 @@ class Organism(YAMLRoot):
 
     id: Union[str, OrganismId] = None
     abbreviation: Optional[str] = None
-    strain_value: Optional[str] = None
     comment: Optional[str] = None
-    species_name: Optional[str] = None
     special_name: Optional[str] = None
+    species_name: Optional[str] = None
     species_ncbi_taxon_number: Optional[str] = None
+    strain_value: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -365,20 +365,20 @@ class Organism(YAMLRoot):
         if self.abbreviation is not None and not isinstance(self.abbreviation, str):
             self.abbreviation = str(self.abbreviation)
 
-        if self.strain_value is not None and not isinstance(self.strain_value, str):
-            self.strain_value = str(self.strain_value)
-
         if self.comment is not None and not isinstance(self.comment, str):
             self.comment = str(self.comment)
-
-        if self.species_name is not None and not isinstance(self.species_name, str):
-            self.species_name = str(self.species_name)
 
         if self.special_name is not None and not isinstance(self.special_name, str):
             self.special_name = str(self.special_name)
 
+        if self.species_name is not None and not isinstance(self.species_name, str):
+            self.species_name = str(self.species_name)
+
         if self.species_ncbi_taxon_number is not None and not isinstance(self.species_ncbi_taxon_number, str):
             self.species_ncbi_taxon_number = str(self.species_ncbi_taxon_number)
+
+        if self.strain_value is not None and not isinstance(self.strain_value, str):
+            self.strain_value = str(self.strain_value)
 
         super().__post_init__(**kwargs)
 
@@ -711,9 +711,6 @@ slots.subcategory_size = Slot(uri=SYNBIO.subcategory_size, name="subcategory_siz
 
 slots.license = Slot(uri=DCTERMS.license, name="license", curie=DCTERMS.curie('license'),
                    model_uri=SYNBIO.license, domain=None, range=Optional[str])
-
-slots.exactMatch = Slot(uri=SKOS.exactMatch, name="exactMatch", curie=SKOS.curie('exactMatch'),
-                   model_uri=SYNBIO.exactMatch, domain=None, range=Optional[str])
 
 slots.aa_change = Slot(uri=SYNBIO.aa_change, name="aa_change", curie=SYNBIO.curie('aa_change'),
                    model_uri=SYNBIO.aa_change, domain=None, range=Optional[str])

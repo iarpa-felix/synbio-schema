@@ -675,6 +675,10 @@
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "slot_uri": "https://w3id.org/None/strain_set",
       "multivalued": true,
+      "owner": "Database",
+      "domain_of": [
+        "Database"
+      ],
       "range": "Strain",
       "inlined": true,
       "inlined_as_list": true,
@@ -686,6 +690,10 @@
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "slot_uri": "https://w3id.org/None/sequence_set",
       "multivalued": true,
+      "owner": "Database",
+      "domain_of": [
+        "Database"
+      ],
       "range": "PartsSequence",
       "inlined": true,
       "inlined_as_list": true,
@@ -787,6 +795,10 @@
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "slot_uri": "https://w3id.org/None/modification_set",
       "multivalued": true,
+      "owner": "Database",
+      "domain_of": [
+        "Database"
+      ],
       "range": "Modification",
       "inlined": true,
       "inlined_as_list": true,
@@ -884,6 +896,10 @@
       ],
       "slot_uri": "https://w3id.org/None/organism_set",
       "multivalued": true,
+      "owner": "Database",
+      "domain_of": [
+        "Database"
+      ],
       "range": "Organism",
       "inlined": true,
       "inlined_as_list": true,
@@ -898,6 +914,10 @@
       ],
       "slot_uri": "https://w3id.org/None/person_set",
       "multivalued": true,
+      "owner": "Database",
+      "domain_of": [
+        "Database"
+      ],
       "range": "Person",
       "inlined": true,
       "inlined_as_list": true,
@@ -948,17 +968,6 @@
         "http://purl.obolibrary.org/obo/NCIT_C43611"
       ],
       "slot_uri": "http://purl.org/dc/terms/license",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "exactMatch",
-      "definition_uri": "https://w3id.org/None/exactMatch",
-      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "mappings": [
-        "http://www.w3.org/2004/02/skos/core#exactMatch"
-      ],
-      "slot_uri": "http://www.w3.org/2004/02/skos/core#exactMatch",
       "range": "string",
       "@type": "SlotDefinition"
     },
@@ -1037,6 +1046,10 @@
         "https://w3id.org/None/date_joined"
       ],
       "slot_uri": "https://w3id.org/None/date_joined",
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
       "range": "datetime",
       "required": true,
       "@type": "SlotDefinition"
@@ -1130,6 +1143,10 @@
         "http://purl.obolibrary.org/obo/IAO_0000429"
       ],
       "slot_uri": "https://w3id.org/None/email",
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
       "range": "string",
       "@type": "SlotDefinition"
     },
@@ -1144,6 +1161,10 @@
         "http://purl.obolibrary.org/obo/IAO_0020016"
       ],
       "slot_uri": "https://w3id.org/None/first_name",
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
       "range": "string",
       "@type": "SlotDefinition"
     },
@@ -1156,10 +1177,14 @@
       ],
       "slot_uri": "https://w3id.org/None/id",
       "identifier": true,
-      "owner": "Strain",
+      "owner": "Person",
       "domain_of": [
         "PartsSequence",
-        "Strain"
+        "Strain",
+        "Modification",
+        "NamedThing",
+        "Organism",
+        "Person"
       ],
       "range": "string",
       "required": true,
@@ -1173,6 +1198,10 @@
         "https://w3id.org/None/is_staff"
       ],
       "slot_uri": "https://w3id.org/None/is_staff",
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
       "range": "boolean",
       "required": true,
       "@type": "SlotDefinition"
@@ -1185,6 +1214,10 @@
         "https://w3id.org/None/is_superuser"
       ],
       "slot_uri": "https://w3id.org/None/is_superuser",
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
       "range": "boolean",
       "required": true,
       "@type": "SlotDefinition"
@@ -1200,6 +1233,10 @@
         "http://purl.obolibrary.org/obo/IAO_0020017"
       ],
       "slot_uri": "https://w3id.org/None/last_name",
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
       "range": "string",
       "@type": "SlotDefinition"
     },
@@ -1286,6 +1323,10 @@
         "https://w3id.org/None/special_name"
       ],
       "slot_uri": "https://w3id.org/None/special_name",
+      "owner": "Organism",
+      "domain_of": [
+        "Organism"
+      ],
       "range": "string",
       "@type": "SlotDefinition"
     },
@@ -1312,6 +1353,10 @@
         "https://w3id.org/None/species_ncbi_taxon_number"
       ],
       "slot_uri": "https://w3id.org/None/species_ncbi_taxon_number",
+      "owner": "Organism",
+      "domain_of": [
+        "Organism"
+      ],
       "range": "string",
       "@type": "SlotDefinition"
     },
@@ -1357,6 +1402,10 @@
         "https://w3id.org/None/username"
       ],
       "slot_uri": "https://w3id.org/None/username",
+      "owner": "Person",
+      "domain_of": [
+        "Person"
+      ],
       "range": "string",
       "required": true,
       "@type": "SlotDefinition"
@@ -2354,11 +2403,11 @@
         "synbio:Database"
       ],
       "slots": [
-        "Database_strain_set",
         "Database_modification_set",
         "Database_organism_set",
         "Database_person_set",
-        "Database_sequence_set"
+        "Database_sequence_set",
+        "Database_strain_set"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/None/Database",
@@ -2372,6 +2421,7 @@
         "synbio:Modification"
       ],
       "slots": [
+        "Modification_id",
         "Modification_aa_change",
         "Modification_bio_safety_level",
         "Modification_category",
@@ -2387,8 +2437,7 @@
         "Modification_principal_investigator",
         "Modification_size_bp",
         "Modification_status",
-        "Modification_subcategory_size",
-        "Modification_id"
+        "Modification_subcategory_size"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/None/Modification",
@@ -2423,12 +2472,12 @@
       ],
       "slots": [
         "Organism_abbreviation",
-        "Organism_strain_value",
         "Organism_comment",
-        "Organism_species_name",
         "Organism_id",
         "Organism_special_name",
-        "Organism_species_ncbi_taxon_number"
+        "Organism_species_name",
+        "Organism_species_ncbi_taxon_number",
+        "Organism_strain_value"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/None/Organism",
@@ -2448,10 +2497,10 @@
         "NCBITaxon:9606"
       ],
       "slots": [
-        "Person_id",
         "Person_date_joined",
         "Person_email",
         "Person_first_name",
+        "Person_id",
         "Person_is_staff",
         "Person_is_superuser",
         "Person_last_name",
@@ -2464,9 +2513,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "synbio_schema.yaml",
-  "source_file_date": "2022-09-21T10:12:03",
-  "source_file_size": 17826,
-  "generation_date": "2022-09-21T18:35:32",
+  "source_file_date": "2022-10-03T06:45:08",
+  "source_file_size": 18192,
+  "generation_date": "2022-10-03T06:48:03",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/synbio_schema.context.jsonld",

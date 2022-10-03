@@ -297,9 +297,9 @@ slots:
     exact_mappings:
       - NCIT:C43611
     slot_uri: dcterms:license
-  exactMatch:
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    slot_uri: skos:exactMatch
+#  exactMatch:
+#    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+#    slot_uri: skos:exactMatch
   aa_change:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:aa_change
@@ -489,6 +489,12 @@ classes:
   Database:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
+    slots:
+      - modification_set
+      - organism_set
+      - person_set
+      - sequence_set
+      - strain_set
     slot_usage:
       strain_set:
         range: Strain
@@ -505,6 +511,7 @@ classes:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
     slots:
+      - id
       - aa_change
       - bio_safety_level
       - category
@@ -559,6 +566,8 @@ classes:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
       - biolink:NamedThing
+    slots:
+      - id
     slot_usage:
       id:
         multivalued: false
@@ -570,9 +579,12 @@ classes:
       - OBI:0100026
     slots:
       - abbreviation
-      - strain_value
       - comment
+      - id
+      - special_name
       - species_name
+      - species_ncbi_taxon_number
+      - strain_value
     slot_usage:
       id:
         multivalued: false
@@ -597,6 +609,15 @@ classes:
       - auth_user
     exact_mappings:
       - NCBITaxon:9606
+    slots:
+      - date_joined
+      - email
+      - first_name
+      - id
+      - is_staff
+      - is_superuser
+      - last_name
+      - username
     slot_usage:
       id:
         multivalued: false

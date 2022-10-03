@@ -1,12 +1,12 @@
 
 
 CREATE TABLE "Database" (
-	strain_set TEXT, 
 	modification_set TEXT, 
 	organism_set TEXT, 
 	person_set TEXT, 
 	sequence_set TEXT, 
-	PRIMARY KEY (strain_set, modification_set, organism_set, person_set, sequence_set)
+	strain_set TEXT, 
+	PRIMARY KEY (modification_set, organism_set, person_set, sequence_set, strain_set)
 );
 
 CREATE TABLE "NamedThing" (
@@ -16,20 +16,20 @@ CREATE TABLE "NamedThing" (
 
 CREATE TABLE "Organism" (
 	abbreviation TEXT, 
-	strain_value TEXT, 
 	comment TEXT, 
-	species_name TEXT, 
 	id TEXT NOT NULL, 
 	special_name TEXT, 
+	species_name TEXT, 
 	species_ncbi_taxon_number TEXT, 
+	strain_value TEXT, 
 	PRIMARY KEY (id)
 );
 
 CREATE TABLE "Person" (
-	id TEXT NOT NULL, 
 	date_joined DATETIME NOT NULL, 
 	email TEXT, 
 	first_name TEXT, 
+	id TEXT NOT NULL, 
 	is_staff BOOLEAN NOT NULL, 
 	is_superuser BOOLEAN NOT NULL, 
 	last_name TEXT, 
@@ -38,6 +38,7 @@ CREATE TABLE "Person" (
 );
 
 CREATE TABLE "Modification" (
+	id TEXT NOT NULL, 
 	aa_change TEXT, 
 	bio_safety_level VARCHAR(7) NOT NULL, 
 	category VARCHAR(21), 
@@ -54,7 +55,6 @@ CREATE TABLE "Modification" (
 	size_bp INTEGER, 
 	status VARCHAR(11) NOT NULL, 
 	subcategory_size TEXT, 
-	id TEXT NOT NULL, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY(creator) REFERENCES "Person" (id), 
 	FOREIGN KEY(principal_investigator) REFERENCES "Person" (id)

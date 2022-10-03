@@ -1,14 +1,15 @@
 type Database
   {
-    strainSet: [Strain]
     modificationSet: [Modification]
     organismSet: [Organism]
     personSet: [Person]
     sequenceSet: [PartsSequence]
+    strainSet: [Strain]
   }
 
 type Modification
   {
+    id: String!
     aaChange: String
     bioSafetyLevel: BioSafetyLevelEnum!
     category: CategoryEnum
@@ -25,7 +26,6 @@ type Modification
     sizeBp: Integer
     status: StatusEnum!
     subcategorySize: String
-    id: String!
   }
 
 type NamedThing
@@ -36,12 +36,12 @@ type NamedThing
 type Organism
   {
     abbreviation: String
-    strainValue: String
     comment: String
-    speciesName: String
     id: String!
     specialName: String
+    speciesName: String
     speciesNcbiTaxonNumber: String
+    strainValue: String
   }
 
 type PartsSequence
@@ -56,10 +56,10 @@ type PartsSequence
 
 type Person
   {
-    id: String!
     dateJoined: Datetime!
     email: String
     firstName: String
+    id: String!
     isStaff: Boolean!
     isSuperuser: Boolean!
     lastName: String

@@ -35,11 +35,11 @@ linkml:Objectidentifier IRI
 linkml:Nodeidentifier NONLITERAL
 
 <Database> CLOSED {
-    (  $<Database_tes> (  <strain_set> @<Strain> * ;
-          <modification_set> @<Modification> * ;
+    (  $<Database_tes> (  <modification_set> @<Modification> * ;
           <organism_set> @<Organism> * ;
           <person_set> @<Person> * ;
-          <sequence_set> @<PartsSequence> *
+          <sequence_set> @<PartsSequence> * ;
+          <strain_set> @<Strain> *
        ) ;
        rdf:type [ <Database> ] ?
     )
@@ -75,11 +75,11 @@ linkml:Nodeidentifier NONLITERAL
 
 <Organism> CLOSED {
     (  $<Organism_tes> (  <abbreviation> @linkml:String ? ;
-          <strain> @linkml:String ? ;
           <comment> @linkml:String ? ;
-          <species_name> @linkml:String ? ;
           <special_name> @linkml:String ? ;
-          <species_ncbi_taxon_number> @linkml:String ?
+          <species_name> @linkml:String ? ;
+          <species_ncbi_taxon_number> @linkml:String ? ;
+          <strain> @linkml:String ?
        ) ;
        rdf:type [ <Organism> ]
     )

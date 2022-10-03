@@ -168,13 +168,13 @@
             }
          },
          "required": [
+            "id",
             "bio_safety_level",
             "creator",
             "el_name_long",
             "element_organism",
             "principal_investigator",
-            "status",
-            "id"
+            "status"
          ],
          "title": "Modification",
          "type": "object"
@@ -318,8 +318,8 @@
             }
          },
          "required": [
-            "id",
             "date_joined",
+            "id",
             "is_staff",
             "is_superuser",
             "username"
