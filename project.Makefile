@@ -10,7 +10,9 @@ SCHEMA_FILE = $(SCHEMA_DIR)$(SCHEMA_NAME)$(SCHEMA_EXTENSION)
 .PHONY: project_clean project_all jsonschema_validation confirm_invalid
 
 # probably don't want to release this with resources/felix_dump.db as part of project_all
-project_all: project_clean resources/linting_log.tsv jsonschema_validation resources/felix_dump.db
+project_all: project_clean  jsonschema_validation resources/felix_dump.db
+
+# resources/linting_log.tsv
 
 project_clean:
 	rm -rf resources/linting_log.tsv
@@ -23,11 +25,12 @@ project_clean:
 #  -o, --output FILENAME
 #  --fix / --no-fix
 
-resources/linting_log.tsv: $(SCHEMA_FILE)
-	$(RUN) linkml-lint \
-		--config resources/config/linter_config_default.yaml \
-		--format tsv  \
-		--output $@ $<
+## or make lint
+#resources/linting_log.tsv: $(SCHEMA_FILE)
+#	$(RUN) linkml-lint \
+#		--config resources/config/linter_config_default.yaml \
+#		--format tsv  \
+#		--output $@ $<
 
 resources/%.json: $(SCHEMA_FILE) src/data/examples/%.yaml
 	$(RUN) linkml-convert \

@@ -1,5 +1,6 @@
 .idea
 .DS_Store
+resources/felix_dump.db
 
 /docs/
 /project/docs/
