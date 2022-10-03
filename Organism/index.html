@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about.md">
+<a class="md-nav__link" href="../about/">
         About
       </a>
 </li>
@@ -205,7 +205,10 @@
     class Organism
       Organism : abbreviation
       Organism : comment
+      Organism : id
+      Organism : special_name
       Organism : species_name
+      Organism : species_ncbi_taxon_number
       Organism : strain_value
 
 </div>
@@ -226,17 +229,32 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../strain_value/">strain_value</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../comment/">comment</a></td>
 <td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../special_name/">special_name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="../species_name/">species_name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../species_ncbi_taxon_number/">species_ncbi_taxon_number</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../strain_value/">strain_value</a></td>
 <td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
@@ -256,6 +274,12 @@
 <tr>
 <td><a href="../Strain/">Strain</a></td>
 <td><a href="../host_organism/">host_organism</a></td>
+<td>range</td>
+<td>Organism</td>
+</tr>
+<tr>
+<td><a href="../Database/">Database</a></td>
+<td><a href="../organism_set/">organism_set</a></td>
 <td>range</td>
 <td>Organism</td>
 </tr>
@@ -300,13 +324,29 @@ exact_mappings:
 rank: 1000
 slots:
 - abbreviation
-- strain_value
 - comment
+- id
+- special_name
 - species_name
+- species_ncbi_taxon_number
+- strain_value
 slot_usage:
   id:
     name: id
     multivalued: false
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
     required: true
     pattern: ^organism:-?\d+$
   abbreviation:
@@ -324,6 +364,9 @@ slot_usage:
   special_name:
     name: special_name
     multivalued: false
+    domain_of:
+    - Organism
+    - Organism
   species_name:
     name: species_name
     multivalued: false
@@ -333,6 +376,9 @@ slot_usage:
   species_ncbi_taxon_number:
     name: species_ncbi_taxon_number
     multivalued: false
+    domain_of:
+    - Organism
+    - Organism
   strain_value:
     name: strain_value
     multivalued: false
@@ -354,6 +400,19 @@ slot_usage:
   id:
     name: id
     multivalued: false
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
     required: true
     pattern: ^organism:-?\d+$
   abbreviation:
@@ -371,6 +430,9 @@ slot_usage:
   special_name:
     name: special_name
     multivalued: false
+    domain_of:
+    - Organism
+    - Organism
   species_name:
     name: species_name
     multivalued: false
@@ -380,6 +442,9 @@ slot_usage:
   species_ncbi_taxon_number:
     name: species_ncbi_taxon_number
     multivalued: false
+    domain_of:
+    - Organism
+    - Organism
   strain_value:
     name: strain_value
     multivalued: false
@@ -399,18 +464,6 @@ attributes:
     - Organism
     - Organism
     range: string
-  strain_value:
-    name: strain_value
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    slot_uri: synbio:strain
-    multivalued: false
-    alias: strain_value
-    owner: Organism
-    domain_of:
-    - Organism
-    - Organism
-    range: string
   comment:
     name: comment
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -423,6 +476,43 @@ attributes:
     - Organism
     - Organism
     range: string
+  id:
+    name: id
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:id
+    multivalued: false
+    identifier: true
+    alias: id
+    owner: Organism
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    range: string
+    required: true
+    pattern: ^organism:-?\d+$
+  special_name:
+    name: special_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:special_name
+    multivalued: false
+    alias: special_name
+    owner: Organism
+    domain_of:
+    - Organism
+    - Organism
+    range: string
   species_name:
     name: species_name
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -430,6 +520,30 @@ attributes:
     slot_uri: synbio:species_name
     multivalued: false
     alias: species_name
+    owner: Organism
+    domain_of:
+    - Organism
+    - Organism
+    range: string
+  species_ncbi_taxon_number:
+    name: species_ncbi_taxon_number
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:species_ncbi_taxon_number
+    multivalued: false
+    alias: species_ncbi_taxon_number
+    owner: Organism
+    domain_of:
+    - Organism
+    - Organism
+    range: string
+  strain_value:
+    name: strain_value
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:strain
+    multivalued: false
+    alias: strain_value
     owner: Organism
     domain_of:
     - Organism

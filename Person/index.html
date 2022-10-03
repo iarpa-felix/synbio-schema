@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about.md">
+<a class="md-nav__link" href="../about/">
         About
       </a>
 </li>
@@ -203,6 +203,14 @@
 <p>URI: <a href="https://w3id.org/None/Person">synbio:Person</a></p>
 <div class="mermaid"> classDiagram
     class Person
+      Person : date_joined
+      Person : email
+      Person : first_name
+      Person : id
+      Person : is_staff
+      Person : is_superuser
+      Person : last_name
+      Person : username
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -217,8 +225,43 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../date_joined/">date_joined</a></td>
+<td>1..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="../email/">email</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="../first_name/">first_name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../is_staff/">is_staff</a></td>
+<td>1..1 <br/> <a href="xsd:boolean">xsd:boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../is_superuser/">is_superuser</a></td>
+<td>1..1 <br/> <a href="xsd:boolean">xsd:boolean</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../last_name/">last_name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../username/">username</a></td>
+<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -243,6 +286,12 @@
 <tr>
 <td><a href="../Strain/">Strain</a></td>
 <td><a href="../principal_investigator/">principal_investigator</a></td>
+<td>range</td>
+<td>Person</td>
+</tr>
+<tr>
+<td><a href="../Database/">Database</a></td>
+<td><a href="../person_set/">person_set</a></td>
 <td>range</td>
 <td>Person</td>
 </tr>
@@ -299,33 +348,76 @@ aliases:
 exact_mappings:
 - NCBITaxon:9606
 rank: 1000
+slots:
+- date_joined
+- email
+- first_name
+- id
+- is_staff
+- is_superuser
+- last_name
+- username
 slot_usage:
   id:
     name: id
     multivalued: false
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
     required: true
     pattern: ^person:\d+$
   date_joined:
     name: date_joined
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   email:
     name: email
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   first_name:
     name: first_name
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   is_staff:
     name: is_staff
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   is_superuser:
     name: is_superuser
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   last_name:
     name: last_name
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   username:
     name: username
     multivalued: false
+    domain_of:
+    - Person
+    - Person
 class_uri: synbio:Person
 
 </code></pre>
@@ -343,29 +435,177 @@ slot_usage:
   id:
     name: id
     multivalued: false
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
     required: true
     pattern: ^person:\d+$
   date_joined:
     name: date_joined
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   email:
     name: email
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   first_name:
     name: first_name
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   is_staff:
     name: is_staff
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   is_superuser:
     name: is_superuser
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   last_name:
     name: last_name
     multivalued: false
+    domain_of:
+    - Person
+    - Person
   username:
     name: username
     multivalued: false
+    domain_of:
+    - Person
+    - Person
+attributes:
+  date_joined:
+    name: date_joined
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:date_joined
+    multivalued: false
+    alias: date_joined
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: datetime
+    required: true
+  email:
+    name: email
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:email
+    multivalued: false
+    alias: email
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: string
+  first_name:
+    name: first_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:first_name
+    multivalued: false
+    alias: first_name
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: string
+  id:
+    name: id
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:id
+    multivalued: false
+    identifier: true
+    alias: id
+    owner: Person
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    range: string
+    required: true
+    pattern: ^person:\d+$
+  is_staff:
+    name: is_staff
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:is_staff
+    multivalued: false
+    alias: is_staff
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: boolean
+    required: true
+  is_superuser:
+    name: is_superuser
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:is_superuser
+    multivalued: false
+    alias: is_superuser
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: boolean
+    required: true
+  last_name:
+    name: last_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:last_name
+    multivalued: false
+    alias: last_name
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: string
+  username:
+    name: username
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:username
+    multivalued: false
+    alias: username
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: string
+    required: true
 class_uri: synbio:Person
 
 </code></pre>

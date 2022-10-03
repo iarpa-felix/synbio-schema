@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about.md">
+<a class="md-nav__link" href="../about/">
         About
       </a>
 </li>
@@ -211,6 +211,7 @@
       Modification : el_name_long
       Modification : el_name_short
       Modification : element_organism
+      Modification : id
       Modification : modification_type
       Modification : modifications_genes
       Modification : notes
@@ -232,6 +233,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
 <tr>
 <td><a href="../aa_change/">aa_change</a></td>
 <td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
@@ -331,6 +337,12 @@
 <td>range</td>
 <td>Modification</td>
 </tr>
+<tr>
+<td><a href="../Database/">Database</a></td>
+<td><a href="../modification_set/">modification_set</a></td>
+<td>range</td>
+<td>Modification</td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -365,6 +377,7 @@
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 rank: 1000
 slots:
+- id
 - aa_change
 - bio_safety_level
 - category
@@ -384,6 +397,19 @@ slots:
 slot_usage:
   id:
     name: id
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
     pattern: ^IF:\d+$
   principal_investigator:
     name: principal_investigator
@@ -497,6 +523,19 @@ rank: 1000
 slot_usage:
   id:
     name: id
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
     pattern: ^IF:\d+$
   principal_investigator:
     name: principal_investigator
@@ -599,6 +638,29 @@ slot_usage:
     - Modification
     required: false
 attributes:
+  id:
+    name: id
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:id
+    identifier: true
+    alias: id
+    owner: Modification
+    domain_of:
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    - PartsSequence
+    - Strain
+    - Modification
+    - NamedThing
+    - Organism
+    - Person
+    range: string
+    pattern: ^IF:\d+$
   aa_change:
     name: aa_change
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
