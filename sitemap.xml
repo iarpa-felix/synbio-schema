@@ -96,11 +96,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/about/</loc>
-         <lastmod>2022-10-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/associated_part/</loc>
          <lastmod>2022-10-03</lastmod>
          <changefreq>daily</changefreq>
@@ -172,11 +167,6 @@
     </url>
     <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/email/</loc>
-         <lastmod>2022-10-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://semantic-synbio.github.io/synbio-schema/exactMatch/</loc>
          <lastmod>2022-10-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
