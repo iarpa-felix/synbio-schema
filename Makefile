@@ -22,7 +22,7 @@ SHEET_TABS = $(shell sh ./utils/get-value.sh google_sheet_tabs)
 SHEET_MODULE_PATH = $(SOURCE_SCHEMA_DIR)/$(SHEET_MODULE).yaml
 
 # basename of a YAML file in model/
-.PHONY: all clean
+.PHONY: all clean site gen-project gendoc
 
 # note: "help" MUST be the first target in the file,
 # when the user types "make" they should get help info

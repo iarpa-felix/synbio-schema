@@ -1,6 +1,11 @@
 .idea
 .DS_Store
 resources/felix_dump.db
+blastdbs/
+data/
+swissprot.tar.gz
+taxdb.*
+uniprot_entries_cache.sqlite
 
 /docs/
 /project/docs/

@@ -1,6 +1,15 @@
 # no annotation for non-coding sequences yet
 # uniprot annotations for GFPs not especially good
 
+# doesn't yet do any special handling of deletion flanks
+# may require ssh tunel to postgres
+
+max_eval=1e-20
+blast_thread_count=9
+selected_sqlite_input_db=local/felix_dump.db # prod for your eyes only
+#selected_sqlite_input_db=data/sqlite_not_postgres.db # test for public
+#destination_sqlite_db=target/seq2ids.db
+
 RUN=poetry run
 SCHEMA_DIR = src/synbio_schema/schema/
 SCHEMA_NAME = synbio_schema
@@ -9,16 +18,33 @@ SCHEMA_FILE = $(SCHEMA_DIR)$(SCHEMA_NAME)$(SCHEMA_EXTENSION)
 
 .PHONY: project_clean project_all jsonschema_validation confirm_invalid
 
+.PHONY: gentle blast_res_to_sqlite clean squeaky_clean live_db load_seqs_blast_result nt_approach sqlite_input \
+uniprot_approach uniprot_sqlite_input worthiness
+
 # probably don't want to release this with resources/felix_dump.db as part of project_all
-project_all: project_clean  jsonschema_validation resources/felix_dump.db
+project_all: squeaky_clean jsonschema_validation resources/felix_dump.db \
+target/seq2ids.fasta blastdbs/swissprot.psq taxdb.bti target/seq2ids_v_uniprot.tsv \
+data/fpbase.fasta data/fpbase.fasta.psq target/seq2ids_v_fpbase.tsv \
+blast_res_to_sqlite resources/swiss_entries.json interval_clustering
+
+# interval_clustering
 
 # resources/linting_log.tsv
 
+squeaky_clean: project_clean
+	rm -rf blastdbs/*
+	rm -rf data/*
+	rm -rf resources/swiss_entries.yaml
+	rm -rf swissprot*
+	rm -rf taxdb*
+
 project_clean:
-	rm -rf resources/linting_log.tsv
 	rm -rf resources/*.db
-	rm -rf resources/*.yaml
 	rm -rf resources/*.json
+	rm -rf resources/*.yaml
+	rm -rf resources/felix_dump.db
+	rm -rf resources/linting_log.tsv
+	rm -rf target/*
 
 #  -c, --config FILE
 #  -f, --format [terminal|markdown|json|tsv]
@@ -88,3 +114,87 @@ resources/felix_dump.db:
 	$(basename $(notdir $@))
 	sqlite3 $@ "update auth_user set password = NULL;"
 
+# SQLITE -> FASTA
+target/seq2ids.fasta:
+	$(RUN) python src/synbio_schema/scripts/seq2ids.py \
+		--min_len 51 \
+		--max_len 50000 \
+		--sqlite_file resources/felix_dump.db \
+		--fasta_out $@ \
+		--metadata_tsv_out $(subst .fasta,.tsv,$@)
+
+# download NCBI's pre-indexed swissprot BLAST database
+# probably doesn't include trembl, so decreased search space
+blastdbs/swissprot.psq:
+	wget https://ftp.ncbi.nlm.nih.gov/blast/db/swissprot.tar.gz
+	tar -xzvf swissprot.tar.gz --directory blastdbs
+
+# get NCBI's taxon ID supplement for blast searches
+# subsequent steps seem to expect it at the root of the repo
+taxdb.bti: blastdbs/swissprot.psq
+	wget https://ftp.ncbi.nlm.nih.gov/blast/db/taxdb.tar.gz
+	tar -xzvf taxdb.tar.gz --directory .
+
+# blast the FELIX proteins against swissprot.
+#  did we limit this to insertions somewhere? or some other constraints?
+# output is technically misnamed because the search database was swissprot not uniprot
+# assumes blastx is on the path
+# https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+target/seq2ids_v_uniprot.tsv: target/seq2ids.fasta taxdb.bti
+	blastx \
+		-query $< \
+		-db blastdbs/swissprot \
+		-num_threads ${blast_thread_count} \
+		-out target/at_delim_blast.txt \
+		-evalue ${max_eval} \
+		-outfmt "6 delim=@ qacc qcovhsp qcovs qstart qend bitscore score evalue length pident sacc sstart send sallacc sseqid sallseqid stitle salltitles staxids sskingdoms sscinames sblastnames scomnames"
+	cat target/at_delim_blast.txt | tr '@' '\t' > target/tab_delim_blast.tsv
+	$(RUN) python src/synbio_schema/scripts/add_col.py \
+		--tsv_in target/tab_delim_blast.tsv \
+		--tsv_out $@ \
+		--col_val swissprot
+	rm target/at_delim_blast.txt target/tab_delim_blast.tsv
+
+# get fluorescent protein database sequences from API
+# get/keep annotations, too (besides name?)
+data/fpbase.fasta:
+	$(RUN) python src/synbio_schema/scripts/get_fluor_prot_seqs.py
+
+# index fluorescent protein database for blast
+data/fpbase.fasta.psq: data/fpbase.fasta
+	makeblastdb -in $< -dbtype prot
+
+target/seq2ids_v_fpbase.tsv: target/seq2ids.fasta data/fpbase.fasta.psq
+	blastx \
+		-query $< \
+		-db data/fpbase.fasta \
+		-num_threads ${blast_thread_count} \
+		-out target/at_delim_blast.txt \
+		-evalue ${max_eval} \
+		-outfmt "6 delim=@ qacc qcovhsp qcovs qstart qend bitscore score evalue length pident sacc sstart send sallacc sseqid sallseqid stitle salltitles staxids sskingdoms sscinames sblastnames scomnames"
+	cat target/at_delim_blast.txt | tr '@' '\t' > target/tab_delim_blast.tsv
+	$(RUN) python src/synbio_schema/scripts/add_col.py \
+		--tsv_in target/tab_delim_blast.tsv \
+		--tsv_out $@ \
+		--col_val fpbase
+	rm target/at_delim_blast.txt target/tab_delim_blast.tsv
+
+blast_res_to_sqlite: target/seq2ids_v_uniprot.tsv target/seq2ids_v_fpbase.tsv
+	sqlite3 resources/felix_dump.db < sql/create_blast_results_table.sql
+	sqlite3 resources/felix_dump.db ".mode tabs" ".import target/seq2ids_v_uniprot.tsv blast_results" ""
+	sqlite3 resources/felix_dump.db ".mode tabs" ".import target/seq2ids_v_fpbase.tsv blast_results" ""
+	sqlite3 resources/felix_dump.db < sql/without_attachement.sql
+	sqlite3 resources/felix_dump.db < sql/indices.sql
+
+resources/swiss_entries.json:
+	$(RUN) python src/synbio_schema/scripts/get_uniprot_entries.py
+
+interval_clustering:
+	sleep 100
+	$(RUN) python src/synbio_schema/scripts/interval_clustering.py
+
+resources/synbio_database.json: src/synbio_schema/schema/synbio_schema.yaml resources/synbio_database.yaml
+	$(RUN) linkml-convert \
+		--output $@ \
+		--target-class Database \
+		--schema $^

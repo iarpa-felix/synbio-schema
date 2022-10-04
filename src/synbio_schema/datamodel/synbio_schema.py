@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-10-03T06:48:12
+# Generation date: 2022-10-03T17:51:16
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -87,6 +87,8 @@ class PartsSequence(YAMLRoot):
     seq_type: Optional[Union[str, "SeqTypeEnum"]] = None
     date_added: Optional[str] = None
     nt_sequence: Optional[str] = None
+    uniprot_accessions: Optional[Union[str, List[str]]] = empty_list()
+    go_terms: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -108,6 +110,14 @@ class PartsSequence(YAMLRoot):
 
         if self.nt_sequence is not None and not isinstance(self.nt_sequence, str):
             self.nt_sequence = str(self.nt_sequence)
+
+        if not isinstance(self.uniprot_accessions, list):
+            self.uniprot_accessions = [self.uniprot_accessions] if self.uniprot_accessions is not None else []
+        self.uniprot_accessions = [v if isinstance(v, str) else str(v) for v in self.uniprot_accessions]
+
+        if not isinstance(self.go_terms, list):
+            self.go_terms = [self.go_terms] if self.go_terms is not None else []
+        self.go_terms = [v if isinstance(v, str) else str(v) for v in self.go_terms]
 
         super().__post_init__(**kwargs)
 
@@ -624,6 +634,12 @@ class DescriptorEnum(EnumDefinitionImpl):
 # Slots
 class slots:
     pass
+
+slots.uniprot_accessions = Slot(uri=SYNBIO.uniprot_accessions, name="uniprot_accessions", curie=SYNBIO.curie('uniprot_accessions'),
+                   model_uri=SYNBIO.uniprot_accessions, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.go_terms = Slot(uri=SYNBIO.go_terms, name="go_terms", curie=SYNBIO.curie('go_terms'),
+                   model_uri=SYNBIO.go_terms, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.associated_part = Slot(uri=SYNBIO.associated_part, name="associated_part", curie=SYNBIO.curie('associated_part'),
                    model_uri=SYNBIO.associated_part, domain=None, range=Optional[Union[str, ModificationId]])

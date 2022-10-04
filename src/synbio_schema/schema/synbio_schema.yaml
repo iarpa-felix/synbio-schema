@@ -174,6 +174,22 @@ enums:
           - SO:0000141
       VP16: { }
 slots:
+  match_gene_symbols_etc:
+    multivalued: true
+  match_ec_numbers:
+    multivalued: true
+  match_names:
+    multivalued: true
+  scientific_names:
+    multivalued: true
+  taxon_ids:
+    multivalued: true
+  uniprot_accessions:
+    multivalued: true
+  go_term_ids:
+    multivalued: true
+  go_term_labels:
+    multivalued: true
   associated_part:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     range: Modification
@@ -297,9 +313,9 @@ slots:
     exact_mappings:
       - NCIT:C43611
     slot_uri: dcterms:license
-#  exactMatch:
-#    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-#    slot_uri: skos:exactMatch
+  #  exactMatch:
+  #    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+  #    slot_uri: skos:exactMatch
   aa_change:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:aa_change
@@ -456,6 +472,14 @@ classes:
       - seq_type
       - date_added
       - nt_sequence
+      - uniprot_accessions
+      - go_term_ids
+      - go_term_labels
+      - scientific_names
+      - taxon_ids
+      - match_names
+      - match_ec_numbers
+      - match_gene_symbols_etc
     slot_usage:
       id:
         pattern: ^sequence:\d+$
