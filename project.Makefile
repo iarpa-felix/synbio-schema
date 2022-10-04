@@ -1,14 +1,11 @@
 # no annotation for non-coding sequences yet
 # uniprot annotations for GFPs not especially good
-
 # doesn't yet do any special handling of deletion flanks
 # may require ssh tunel to postgres
 
 max_eval=1e-20
 blast_thread_count=9
-selected_sqlite_input_db=local/felix_dump.db # prod for your eyes only
-#selected_sqlite_input_db=data/sqlite_not_postgres.db # test for public
-#destination_sqlite_db=target/seq2ids.db
+selected_sqlite_input_db=local/felix_dump.db
 
 RUN=poetry run
 SCHEMA_DIR = src/synbio_schema/schema/
@@ -16,18 +13,22 @@ SCHEMA_NAME = synbio_schema
 SCHEMA_EXTENSION = .yaml
 SCHEMA_FILE = $(SCHEMA_DIR)$(SCHEMA_NAME)$(SCHEMA_EXTENSION)
 
-.PHONY: project_clean project_all jsonschema_validation confirm_invalid
-
-.PHONY: gentle blast_res_to_sqlite clean squeaky_clean live_db load_seqs_blast_result nt_approach sqlite_input \
-uniprot_approach uniprot_sqlite_input worthiness
+.PHONY: \
+blast_res_to_sqlite \
+confirm_invalid \
+interval_clustering \
+jsonschema_validation \
+project_all \
+project_clean \
+squeaky_clean \
+uniprot_approach
 
 # probably don't want to release this with resources/felix_dump.db as part of project_all
 project_all: squeaky_clean jsonschema_validation resources/felix_dump.db \
 target/seq2ids.fasta blastdbs/swissprot.psq taxdb.bti target/seq2ids_v_uniprot.tsv \
 data/fpbase.fasta data/fpbase.fasta.psq target/seq2ids_v_fpbase.tsv \
-blast_res_to_sqlite resources/swiss_entries.json interval_clustering
-
-# interval_clustering
+blast_res_to_sqlite resources/swiss_entries.json interval_clustering \
+resources/synbio_database.json resources/synbio_database.db
 
 # resources/linting_log.tsv
 
@@ -193,8 +194,17 @@ interval_clustering:
 	sleep 100
 	$(RUN) python src/synbio_schema/scripts/interval_clustering.py
 
+resources/synbio_database.yaml:
+	$(RUN) python src/synbio_schema/scripts/seqs2yaml.py
+
 resources/synbio_database.json: src/synbio_schema/schema/synbio_schema.yaml resources/synbio_database.yaml
 	$(RUN) linkml-convert \
 		--output $@ \
+		--target-class Database \
+		--schema $^
+
+resources/synbio_database.db: src/synbio_schema/schema/synbio_schema.yaml resources/synbio_database.yaml
+	$(RUN) linkml-sqldb dump \
+		--db $@ \
 		--target-class Database \
 		--schema $^
