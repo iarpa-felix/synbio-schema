@@ -275,7 +275,7 @@
 </tr>
 <tr>
 <td><a href="../element_organism/">element_organism</a></td>
-<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
@@ -397,6 +397,7 @@ slots:
 slot_usage:
   id:
     name: id
+    identifier: true
     domain_of:
     - PartsSequence
     - Strain
@@ -410,23 +411,14 @@ slot_usage:
     - NamedThing
     - Organism
     - Person
+    required: true
     pattern: ^IF:\d+$
-  principal_investigator:
-    name: principal_investigator
+  aa_change:
+    name: aa_change
     domain_of:
-    - Strain
     - Modification
-    - Strain
     - Modification
-    required: true
-  status:
-    name: status
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    required: true
+    required: false
   bio_safety_level:
     name: bio_safety_level
     domain_of:
@@ -435,6 +427,12 @@ slot_usage:
     - Strain
     - Modification
     required: true
+  category:
+    name: category
+    domain_of:
+    - Modification
+    - Modification
+    required: false
   creator:
     name: creator
     domain_of:
@@ -442,7 +440,14 @@ slot_usage:
     - Modification
     - Strain
     - Modification
+    range: Person
     required: true
+  descriptor:
+    name: descriptor
+    domain_of:
+    - Modification
+    - Modification
+    required: false
   el_name_long:
     name: el_name_long
     domain_of:
@@ -455,12 +460,12 @@ slot_usage:
     - Modification
     - Modification
     required: false
-  element_organism:
-    name: element_organism
+  modification_type:
+    name: modification_type
     domain_of:
     - Modification
     - Modification
-    required: true
+    required: false
   notes:
     name: notes
     domain_of:
@@ -469,48 +474,51 @@ slot_usage:
     - Strain
     - Modification
     required: false
-  descriptor:
-    name: descriptor
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  size_bp:
-    name: size_bp
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   position:
     name: position
     domain_of:
     - Modification
     - Modification
     required: false
-  aa_change:
-    name: aa_change
+  principal_investigator:
+    name: principal_investigator
+    domain_of:
+    - Strain
+    - Modification
+    - Strain
+    - Modification
+    range: Person
+    required: true
+  size_bp:
+    name: size_bp
     domain_of:
     - Modification
     - Modification
     required: false
-  category:
-    name: category
+  status:
+    name: status
     domain_of:
+    - Strain
     - Modification
+    - Strain
     - Modification
-    required: false
+    required: true
   subcategory_size:
     name: subcategory_size
     domain_of:
     - Modification
     - Modification
     required: false
+  element_organism:
+    name: element_organism
+    domain_of:
+    - Modification
+    - Modification
   modifications_genes:
     name: modifications_genes
     domain_of:
     - Modification
     - Modification
-    required: false
 class_uri: synbio:Modification
 
 </code></pre>
@@ -523,6 +531,7 @@ rank: 1000
 slot_usage:
   id:
     name: id
+    identifier: true
     domain_of:
     - PartsSequence
     - Strain
@@ -536,23 +545,14 @@ slot_usage:
     - NamedThing
     - Organism
     - Person
+    required: true
     pattern: ^IF:\d+$
-  principal_investigator:
-    name: principal_investigator
+  aa_change:
+    name: aa_change
     domain_of:
-    - Strain
     - Modification
-    - Strain
     - Modification
-    required: true
-  status:
-    name: status
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    required: true
+    required: false
   bio_safety_level:
     name: bio_safety_level
     domain_of:
@@ -561,6 +561,12 @@ slot_usage:
     - Strain
     - Modification
     required: true
+  category:
+    name: category
+    domain_of:
+    - Modification
+    - Modification
+    required: false
   creator:
     name: creator
     domain_of:
@@ -568,7 +574,14 @@ slot_usage:
     - Modification
     - Strain
     - Modification
+    range: Person
     required: true
+  descriptor:
+    name: descriptor
+    domain_of:
+    - Modification
+    - Modification
+    required: false
   el_name_long:
     name: el_name_long
     domain_of:
@@ -581,12 +594,12 @@ slot_usage:
     - Modification
     - Modification
     required: false
-  element_organism:
-    name: element_organism
+  modification_type:
+    name: modification_type
     domain_of:
     - Modification
     - Modification
-    required: true
+    required: false
   notes:
     name: notes
     domain_of:
@@ -595,48 +608,51 @@ slot_usage:
     - Strain
     - Modification
     required: false
-  descriptor:
-    name: descriptor
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  size_bp:
-    name: size_bp
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   position:
     name: position
     domain_of:
     - Modification
     - Modification
     required: false
-  aa_change:
-    name: aa_change
+  principal_investigator:
+    name: principal_investigator
+    domain_of:
+    - Strain
+    - Modification
+    - Strain
+    - Modification
+    range: Person
+    required: true
+  size_bp:
+    name: size_bp
     domain_of:
     - Modification
     - Modification
     required: false
-  category:
-    name: category
+  status:
+    name: status
     domain_of:
+    - Strain
     - Modification
+    - Strain
     - Modification
-    required: false
+    required: true
   subcategory_size:
     name: subcategory_size
     domain_of:
     - Modification
     - Modification
     required: false
+  element_organism:
+    name: element_organism
+    domain_of:
+    - Modification
+    - Modification
   modifications_genes:
     name: modifications_genes
     domain_of:
     - Modification
     - Modification
-    required: false
 attributes:
   id:
     name: id
@@ -660,6 +676,7 @@ attributes:
     - Organism
     - Person
     range: string
+    required: true
     pattern: ^IF:\d+$
   aa_change:
     name: aa_change
@@ -761,7 +778,6 @@ attributes:
     - Modification
     - Modification
     range: string
-    required: true
   modification_type:
     name: modification_type
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -771,7 +787,9 @@ attributes:
     owner: Modification
     domain_of:
     - Modification
+    - Modification
     range: ModificationTypeEnum
+    required: false
   modifications_genes:
     name: modifications_genes
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -783,7 +801,6 @@ attributes:
     - Modification
     - Modification
     range: string
-    required: false
   notes:
     name: notes
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio

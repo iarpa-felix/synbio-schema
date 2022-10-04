@@ -258,11 +258,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../host_organism/">host_organism</a></td>
-<td>0..1 <br/> <a href="../Organism/">Organism</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../intellectual_property/">intellectual_property</a></td>
 <td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
@@ -283,6 +278,11 @@
 <td></td>
 </tr>
 <tr>
+<td><a href="../parent_parts/">parent_parts</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="../principal_investigator/">principal_investigator</a></td>
 <td>0..1 <br/> <a href="../Person/">Person</a></td>
 <td></td>
@@ -298,18 +298,18 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../summary/">summary</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../sub_parts/">sub_parts</a></td>
 <td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="../parent_parts/">parent_parts</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td><a href="../summary/">summary</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../host_organism/">host_organism</a></td>
+<td>0..1 <br/> <a href="../Organism/">Organism</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -376,17 +376,17 @@ slots:
 - creator
 - funding_source
 - genotype_phenotype
-- host_organism
 - intellectual_property
 - keywords
 - name
 - notes
+- parent_parts
 - principal_investigator
 - references
 - status
-- summary
 - sub_parts
-- parent_parts
+- summary
+- host_organism
 slot_usage:
   id:
     name: id
@@ -497,17 +497,10 @@ attributes:
     domain_of:
     - Strain
     range: string
-  host_organism:
-    name: host_organism
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    alias: host_organism
-    owner: Strain
-    domain_of:
-    - Strain
-    range: Organism
   intellectual_property:
     name: intellectual_property
+    todos:
+    - enum range?
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     alias: intellectual_property
@@ -548,6 +541,16 @@ attributes:
     - Strain
     - Modification
     range: string
+  parent_parts:
+    name: parent_parts
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: parent_parts
+    owner: Strain
+    domain_of:
+    - Strain
+    range: string
   principal_investigator:
     name: principal_investigator
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -585,15 +588,6 @@ attributes:
     - Strain
     - Modification
     range: StatusEnum
-  summary:
-    name: summary
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    alias: summary
-    owner: Strain
-    domain_of:
-    - Strain
-    range: string
   sub_parts:
     name: sub_parts
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -604,16 +598,24 @@ attributes:
     domain_of:
     - Strain
     range: string
-  parent_parts:
-    name: parent_parts
+  summary:
+    name: summary
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
-    multivalued: true
-    alias: parent_parts
+    alias: summary
     owner: Strain
     domain_of:
     - Strain
     range: string
+  host_organism:
+    name: host_organism
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    alias: host_organism
+    owner: Strain
+    domain_of:
+    - Strain
+    range: Organism
 class_uri: synbio:Strain
 
 </code></pre>

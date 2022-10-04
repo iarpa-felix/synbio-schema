@@ -152,6 +152,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#todos">
+    TODOs
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
     Identifier and Mapping Information
   </a>
@@ -212,6 +217,7 @@
       PartsSequence : match_gene_symbols_etc
       PartsSequence : match_names
       PartsSequence : nt_sequence
+      PartsSequence : other_accessions
       PartsSequence : scientific_names
       PartsSequence : seq_name
       PartsSequence : seq_type
@@ -241,28 +247,8 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../seq_name/">seq_name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="../seq_type/">seq_type</a></td>
-<td>0..1 <br/> <a href="../SeqTypeEnum/">SeqTypeEnum</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../date_added/">date_added</a></td>
 <td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="../nt_sequence/">nt_sequence</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="../uniprot_accessions/">uniprot_accessions</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
@@ -276,12 +262,12 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../scientific_names/">scientific_names</a></td>
+<td><a href="../match_ec_numbers/">match_ec_numbers</a></td>
 <td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="../taxon_ids/">taxon_ids</a></td>
+<td><a href="../match_gene_symbols_etc/">match_gene_symbols_etc</a></td>
 <td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
@@ -291,12 +277,37 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../match_ec_numbers/">match_ec_numbers</a></td>
+<td><a href="../nt_sequence/">nt_sequence</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../other_accessions/">other_accessions</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>Especially fpbase identifiers</td>
+</tr>
+<tr>
+<td><a href="../scientific_names/">scientific_names</a></td>
 <td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="../match_gene_symbols_etc/">match_gene_symbols_etc</a></td>
+<td><a href="../seq_name/">seq_name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../seq_type/">seq_type</a></td>
+<td>0..1 <br/> <a href="../SeqTypeEnum/">SeqTypeEnum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../taxon_ids/">taxon_ids</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../uniprot_accessions/">uniprot_accessions</a></td>
 <td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
@@ -321,6 +332,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="todos">TODOs</h2>
+<ul>
+<li>clarify which slots represent a lookup, like the current match... slots</li>
+</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -350,23 +365,26 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: PartsSequence
+todos:
+- clarify which slots represent a lookup, like the current match... slots
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 rank: 1000
 slots:
 - id
 - associated_part
-- seq_name
-- seq_type
 - date_added
-- nt_sequence
-- uniprot_accessions
 - go_term_ids
 - go_term_labels
-- scientific_names
-- taxon_ids
-- match_names
 - match_ec_numbers
 - match_gene_symbols_etc
+- match_names
+- nt_sequence
+- other_accessions
+- scientific_names
+- seq_name
+- seq_type
+- taxon_ids
+- uniprot_accessions
 slot_usage:
   id:
     name: id
@@ -396,6 +414,8 @@ slot_usage:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: PartsSequence
+todos:
+- clarify which slots represent a lookup, like the current match... slots
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 rank: 1000
 slot_usage:
@@ -449,48 +469,11 @@ attributes:
     - PartsSequence
     range: Modification
     pattern: ^IF:\d+$
-  seq_name:
-    name: seq_name
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    alias: seq_name
-    owner: PartsSequence
-    domain_of:
-    - PartsSequence
-    range: string
-  seq_type:
-    name: seq_type
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    alias: seq_type
-    owner: PartsSequence
-    domain_of:
-    - PartsSequence
-    range: SeqTypeEnum
   date_added:
     name: date_added
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     alias: date_added
-    owner: PartsSequence
-    domain_of:
-    - PartsSequence
-    range: string
-  nt_sequence:
-    name: nt_sequence
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    alias: nt_sequence
-    owner: PartsSequence
-    domain_of:
-    - PartsSequence
-    range: string
-  uniprot_accessions:
-    name: uniprot_accessions
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    multivalued: true
-    alias: uniprot_accessions
     owner: PartsSequence
     domain_of:
     - PartsSequence
@@ -515,36 +498,6 @@ attributes:
     domain_of:
     - PartsSequence
     range: string
-  scientific_names:
-    name: scientific_names
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    multivalued: true
-    alias: scientific_names
-    owner: PartsSequence
-    domain_of:
-    - PartsSequence
-    range: string
-  taxon_ids:
-    name: taxon_ids
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    multivalued: true
-    alias: taxon_ids
-    owner: PartsSequence
-    domain_of:
-    - PartsSequence
-    range: string
-  match_names:
-    name: match_names
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    multivalued: true
-    alias: match_names
-    owner: PartsSequence
-    domain_of:
-    - PartsSequence
-    range: string
   match_ec_numbers:
     name: match_ec_numbers
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -561,6 +514,85 @@ attributes:
     rank: 1000
     multivalued: true
     alias: match_gene_symbols_etc
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: string
+  match_names:
+    name: match_names
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: match_names
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: string
+  nt_sequence:
+    name: nt_sequence
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    alias: nt_sequence
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: string
+  other_accessions:
+    name: other_accessions
+    description: Especially fpbase identifiers.  Some Uniprot/Swissprot accessions
+      may leak in  if an entry could not be retrieved from the Uniprot API.
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: other_accessions
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: string
+  scientific_names:
+    name: scientific_names
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: scientific_names
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: string
+  seq_name:
+    name: seq_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    alias: seq_name
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: string
+  seq_type:
+    name: seq_type
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    alias: seq_type
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: SeqTypeEnum
+  taxon_ids:
+    name: taxon_ids
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: taxon_ids
+    owner: PartsSequence
+    domain_of:
+    - PartsSequence
+    range: string
+  uniprot_accessions:
+    name: uniprot_accessions
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: uniprot_accessions
     owner: PartsSequence
     domain_of:
     - PartsSequence

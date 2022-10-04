@@ -225,8 +225,13 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="../date_joined/">date_joined</a></td>
-<td>1..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td></td>
 </tr>
 <tr>
@@ -237,11 +242,6 @@
 <tr>
 <td><a href="../first_name/">first_name</a></td>
 <td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
@@ -349,10 +349,10 @@ exact_mappings:
 - NCBITaxon:9606
 rank: 1000
 slots:
+- id
 - date_joined
 - email
 - first_name
-- id
 - is_staff
 - is_superuser
 - last_name
@@ -493,43 +493,6 @@ slot_usage:
     - Person
     - Person
 attributes:
-  date_joined:
-    name: date_joined
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    slot_uri: synbio:date_joined
-    multivalued: false
-    alias: date_joined
-    owner: Person
-    domain_of:
-    - Person
-    - Person
-    range: datetime
-    required: true
-  email:
-    name: email
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    slot_uri: synbio:email
-    multivalued: false
-    alias: email
-    owner: Person
-    domain_of:
-    - Person
-    - Person
-    range: string
-  first_name:
-    name: first_name
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    slot_uri: synbio:first_name
-    multivalued: false
-    alias: first_name
-    owner: Person
-    domain_of:
-    - Person
-    - Person
-    range: string
   id:
     name: id
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -555,6 +518,42 @@ attributes:
     range: string
     required: true
     pattern: ^person:\d+$
+  date_joined:
+    name: date_joined
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:date_joined
+    multivalued: false
+    alias: date_joined
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: datetime
+  email:
+    name: email
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:email
+    multivalued: false
+    alias: email
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: string
+  first_name:
+    name: first_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:first_name
+    multivalued: false
+    alias: first_name
+    owner: Person
+    domain_of:
+    - Person
+    - Person
+    range: string
   is_staff:
     name: is_staff
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio

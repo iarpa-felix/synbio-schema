@@ -316,6 +316,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://semantic-synbio.github.io/synbio-schema/other_accessions/</loc>
+         <lastmod>2022-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/parent_parts/</loc>
          <lastmod>2022-10-04</lastmod>
          <changefreq>daily</changefreq>

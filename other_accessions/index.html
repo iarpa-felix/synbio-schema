@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://semantic-synbio.github.io/synbio-schema/date_joined/">
+        <link rel="canonical" href="https://semantic-synbio.github.io/synbio-schema/other_accessions/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>Slot: date_joined - synbio-schema</title>
+        <title>Slot: other_accessions - synbio-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-date_joined" class="md-skip">
+        <a href="#slot-other_accessions" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: date_joined
+              Slot: other_accessions
             
           </span>
         </div>
@@ -303,20 +303,21 @@
                 
                   
 
-  <a href="https://github.com/semantic-synbio/synbio-schema/edit/master/docs/date_joined.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/semantic-synbio/synbio-schema/edit/master/docs/other_accessions.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-date_joined">Slot: date_joined</h1>
-<p>URI: <a href="https://w3id.org/None/date_joined">https://w3id.org/None/date_joined</a></p>
+<h1 id="slot-other_accessions">Slot: other_accessions</h1>
+<p><em>Especially fpbase identifiers.  Some Uniprot/Swissprot accessions may leak in  if an entry could not be retrieved from the Uniprot API.</em></p>
+<p>URI: <a href="https://w3id.org/None/other_accessions">https://w3id.org/None/other_accessions</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="xsd:dateTime">xsd:dateTime</a></li>
-<li>Multivalued: None</li>
+<li>Range: <a href="xsd:string">xsd:string</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -326,14 +327,16 @@
 <h2 id="linkml-specification">LinkML Specification</h2>
 <details>
 
-<pre><code class="language-yaml">name: date_joined
+<pre><code class="language-yaml">name: other_accessions
+description: Especially fpbase identifiers.  Some Uniprot/Swissprot accessions may
+  leak in  if an entry could not be retrieved from the Uniprot API.
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 rank: 1000
-slot_uri: synbio:date_joined
-alias: date_joined
+multivalued: true
+alias: other_accessions
 domain_of:
-- Person
-range: datetime
+- PartsSequence
+range: string
 
 </code></pre>
 
