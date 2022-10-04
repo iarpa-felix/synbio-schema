@@ -266,7 +266,13 @@
             "date_added": {
                "type": "string"
             },
-            "go_terms": {
+            "go_term_ids": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "go_term_labels": {
                "items": {
                   "type": "string"
                },
@@ -276,14 +282,51 @@
                "pattern": "^sequence:\\d+$",
                "type": "string"
             },
+            "match_ec_numbers": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "match_gene_symbols_etc": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "match_names": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "nt_sequence": {
                "type": "string"
+            },
+            "other_accessions": {
+               "description": "Especially fpbase identifiers.  Some Uniprot/Swissprot accessions may leak in  if an entry could not be retrieved from the Uniprot API.",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "scientific_names": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "seq_name": {
                "type": "string"
             },
             "seq_type": {
                "$ref": "#/$defs/SeqTypeEnum"
+            },
+            "taxon_ids": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "uniprot_accessions": {
                "items": {

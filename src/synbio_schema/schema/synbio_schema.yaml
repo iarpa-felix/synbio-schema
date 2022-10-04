@@ -64,19 +64,12 @@ enums:
       amber stop codon:
         exact_mappings:
           - SO:0002333
-      CDSpartial: { }
-      chrXIII-chrII: { }
-      compound deletion: { }
-      compound insertion: { }
       deletion:
         exact_mappings:
           - SO:0000159
-      fluorescent/epitope: { }
       frameshift:
         exact_mappings:
           - SO:0000865
-      in-frame deletion:
-        exact_mappings:
       insertion:
         exact_mappings:
           - SO:0000667
@@ -91,19 +84,29 @@ enums:
           - SO:0002334
       plasmid:
         exact_mappings:
-          - SO:0000155
-      plasmid element: { }
-      reassortment: { }
+          - SO:000015
       substitution:
         exact_mappings:
           - SO:1000002
-      substitution transition: { }
-      substitution transversion: { }
-      subtitutions: { }
       transition:
         exact_mappings:
           - SO:1000009
+      203TAGTAGGTACT: { }
+      492ACTTAAGCCAGAAAATTTA: { }
+      CDSpartial: { }
+      T474A-A490T-T492A: { }
+      chrXIII-chrII: { }
+      compound deletion: { }
+      compound insertion: { }
+      fluorescent/epitope: { }
+      in-frame deletion:
+      plasmid element: { }
+      reassortment: { }
+      substitution transition: { }
+      substitution transversion: { }
+      subtitutions: { }
       transition plasmid element: { }
+
   BioSafetyLevelEnum:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     permissible_values:
@@ -132,6 +135,7 @@ enums:
         exact_mappings:
           - SO:0000141
       toxin/virulence: { }
+
   DescriptorEnum:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     permissible_values:
@@ -173,7 +177,15 @@ enums:
         exact_mappings:
           - SO:0000141
       VP16: { }
+      cleavage site: { }
+      GFP: { }
 slots:
+  other_accessions:
+    description: >-
+      Especially fpbase identifiers. 
+      Some Uniprot/Swissprot accessions may leak in 
+      if an entry could not be retrieved from the Uniprot API.
+    multivalued: true
   match_gene_symbols_etc:
     multivalued: true
   match_ec_numbers:
@@ -201,6 +213,7 @@ slots:
     range: SeqTypeEnum
   date_added:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+  #    range: date
   nt_sequence:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     range: string
@@ -236,6 +249,8 @@ slots:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
     range: string
+    todos:
+      - enum range?
   keywords:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
@@ -338,7 +353,7 @@ slots:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:date_joined
     range: datetime
-    required: true
+  #    required: true
   el_name_long:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:el_name_long
@@ -465,21 +480,24 @@ slots:
 classes:
   PartsSequence:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    todos:
+      - clarify which slots represent a lookup, like the current match... slots
     slots:
       - id
       - associated_part
-      - seq_name
-      - seq_type
       - date_added
-      - nt_sequence
-      - uniprot_accessions
       - go_term_ids
       - go_term_labels
-      - scientific_names
-      - taxon_ids
-      - match_names
       - match_ec_numbers
       - match_gene_symbols_etc
+      - match_names
+      - nt_sequence
+      - other_accessions
+      - scientific_names
+      - seq_name
+      - seq_type
+      - taxon_ids
+      - uniprot_accessions
     slot_usage:
       id:
         pattern: ^sequence:\d+$
@@ -495,17 +513,18 @@ classes:
       - creator
       - funding_source
       - genotype_phenotype
-      - host_organism
       - intellectual_property
       - keywords
       - name
       - notes
+      - parent_parts
       - principal_investigator
       - references
       - status
-      - summary
       - sub_parts
-      - parent_parts
+      - summary
+
+      - host_organism
     slot_usage:
       id:
         pattern: MS:\d+
@@ -532,8 +551,9 @@ classes:
         range: PartsSequence
     class_uri: synbio:Database
   Modification:
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    class_uri: synbio:Modification
     exact_mappings:
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slots:
       - id
       - aa_change
@@ -555,37 +575,44 @@ classes:
     slot_usage:
       id:
         pattern: ^IF:\d+$
-      principal_investigator:
         required: true
-      status:
-        required: true
+        identifier: true
+      aa_change:
+        required: false
       bio_safety_level:
         required: true
+      category:
+        required: false
       creator:
         required: true
+        range: Person
+      descriptor:
+        required: false
       el_name_long:
         required: true
       el_name_short:
         required: false
-      element_organism:
-        required: true
+      modification_type:
+        required: false
       notes:
-        required: false
-      descriptor:
-        required: false
-      size_bp:
         required: false
       position:
         required: false
-      aa_change:
+      principal_investigator:
+        required: true
+        range: Person
+      size_bp:
         required: false
-      category:
-        required: false
+      status:
+        required: true
       subcategory_size:
         required: false
+
+      element_organism:
+      #        required: true
       modifications_genes:
-        required: false
-    class_uri: synbio:Modification
+  #        required: false
+
   NamedThing:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
@@ -634,10 +661,10 @@ classes:
     exact_mappings:
       - NCBITaxon:9606
     slots:
+      - id
       - date_joined
       - email
       - first_name
-      - id
       - is_staff
       - is_superuser
       - last_name
