@@ -17,7 +17,7 @@ type Modification
     descriptor: DescriptorEnum
     elNameLong: String!
     elNameShort: String
-    elementOrganism: String!
+    elementOrganism: String
     modificationType: ModificationTypeEnum
     modificationsGenes: String
     notes: String
@@ -26,6 +26,11 @@ type Modification
     sizeBp: Integer
     status: StatusEnum!
     subcategorySize: String
+    curatedGeneSymbols: [String]
+    curatedProteinName: String
+    curatedEnzymeName: String
+    curatedUniprotAccession: String
+    partOfs: [String]
   }
 
 type NamedThing
@@ -48,18 +53,27 @@ type PartsSequence
   {
     id: String!
     associatedPart: Modification
+    dateAdded: String
+    goTermIds: [String]
+    goTermLabels: [String]
+    matchEcNumbers: [String]
+    matchGeneSymbolsEtc: [String]
+    matchNames: [String]
+    ntSequence: String
+    otherAccessions: [String]
+    scientificNames: [String]
     seqName: String
     seqType: SeqTypeEnum
-    dateAdded: String
-    ntSequence: String
+    taxonIds: [String]
+    uniprotAccessions: [String]
   }
 
 type Person
   {
-    dateJoined: Datetime!
+    id: String!
+    dateJoined: Datetime
     email: String
     firstName: String
-    id: String!
     isStaff: Boolean!
     isSuperuser: Boolean!
     lastName: String
@@ -73,7 +87,6 @@ type Strain
     creator: Person
     fundingSource: FundingSourceEnum
     genotypePhenotype: String
-    hostOrganism: Organism
     intellectualProperty: String
     keywords: String
     name: String
@@ -82,7 +95,7 @@ type Strain
     references: String
     status: StatusEnum
     summary: String
-    subParts: [String]
-    parentParts: [String]
+    hasParts: [String]
+    hostOrganism: Organism
   }
 

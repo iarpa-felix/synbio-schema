@@ -180,6 +180,14 @@ enums:
       cleavage site: { }
       GFP: { }
 slots:
+  curated_uniprot_accession: { }
+  has_parts:
+    multivalued: true
+  part_ofs:
+    multivalued: true
+  curated_protein_name: { }
+  curated_enzyme_name: { }
+  curated_gene_symbols: { }
   other_accessions:
     description: >-
       Especially fpbase identifiers. 
@@ -217,12 +225,12 @@ slots:
   nt_sequence:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     range: string
-  sub_parts:
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    multivalued: true
-  parent_parts:
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    multivalued: true
+  #  sub_parts:
+  #    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+  #    multivalued: true
+  #  parent_parts:
+  #    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+  #    multivalued: true
   host_organism:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
@@ -517,12 +525,13 @@ classes:
       - keywords
       - name
       - notes
-      - parent_parts
+      #      - parent_parts
       - principal_investigator
       - references
       - status
-      - sub_parts
+      #      - sub_parts
       - summary
+      - has_parts
 
       - host_organism
     slot_usage:
@@ -572,6 +581,11 @@ classes:
       - size_bp
       - status
       - subcategory_size
+      - curated_gene_symbols
+      - curated_protein_name
+      - curated_enzyme_name
+      - curated_uniprot_accession
+      - part_ofs
     slot_usage:
       id:
         pattern: ^IF:\d+$
@@ -607,6 +621,8 @@ classes:
         required: true
       subcategory_size:
         required: false
+      curated_gene_symbols:
+        multivalued: true
 
       element_organism:
       #        required: true
@@ -688,5 +704,6 @@ classes:
         multivalued: false
       username:
         multivalued: false
+        required: true
     class_uri: synbio:Person
 source_file: src/schema/synbio_bestof.yaml

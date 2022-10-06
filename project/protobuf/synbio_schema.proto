@@ -25,6 +25,11 @@ message Modification
   integer sizeBp = 0
   statusEnum status = 0
   string subcategorySize = 0
+ repeated  string curatedGeneSymbols = 0
+  string curatedProteinName = 0
+  string curatedEnzymeName = 0
+  string curatedUniprotAccession = 0
+ repeated  string partOfs = 0
  }
 message NamedThing
  {
@@ -44,17 +49,26 @@ message PartsSequence
  {
   string id = 0
   modification associatedPart = 0
+  string dateAdded = 0
+ repeated  string goTermIds = 0
+ repeated  string goTermLabels = 0
+ repeated  string matchEcNumbers = 0
+ repeated  string matchGeneSymbolsEtc = 0
+ repeated  string matchNames = 0
+  string ntSequence = 0
+ repeated  string otherAccessions = 0
+ repeated  string scientificNames = 0
   string seqName = 0
   seqTypeEnum seqType = 0
-  string dateAdded = 0
-  string ntSequence = 0
+ repeated  string taxonIds = 0
+ repeated  string uniprotAccessions = 0
  }
 message Person
  {
+  string id = 0
   datetime dateJoined = 0
   string email = 0
   string firstName = 0
-  string id = 0
   boolean isStaff = 0
   boolean isSuperuser = 0
   string lastName = 0
@@ -67,7 +81,6 @@ message Strain
   person creator = 0
   fundingSourceEnum fundingSource = 0
   string genotypePhenotype = 0
-  organism hostOrganism = 0
   string intellectualProperty = 0
   string keywords = 0
   string name = 0
@@ -76,6 +89,6 @@ message Strain
   string references = 0
   statusEnum status = 0
   string summary = 0
- repeated  string subParts = 0
- repeated  string parentParts = 0
+ repeated  string hasParts = 0
+  organism hostOrganism = 0
  }

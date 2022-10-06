@@ -53,7 +53,7 @@ linkml:Nodeidentifier NONLITERAL
           <descriptor> @<DescriptorEnum> ? ;
           <el_name_long> @linkml:String ;
           <el_name_short> @linkml:String ? ;
-          <element_organism> @linkml:String ;
+          <element_organism> @linkml:String ? ;
           <modification_type> @<ModificationTypeEnum> ? ;
           <modifications_genes> @linkml:String ? ;
           <notes> @linkml:String ? ;
@@ -61,7 +61,12 @@ linkml:Nodeidentifier NONLITERAL
           <principal_investigator> @<Person> ;
           <size_bp> @linkml:Integer ? ;
           <status> @<StatusEnum> ;
-          <subcategory_size> @linkml:String ?
+          <subcategory_size> @linkml:String ? ;
+          <curated_gene_symbols> @linkml:String * ;
+          <curated_protein_name> @linkml:String ? ;
+          <curated_enzyme_name> @linkml:String ? ;
+          <curated_uniprot_accession> @linkml:String ? ;
+          <part_ofs> @linkml:String *
        ) ;
        rdf:type [ <Modification> ]
     )
@@ -87,17 +92,26 @@ linkml:Nodeidentifier NONLITERAL
 
 <PartsSequence> CLOSED {
     (  $<PartsSequence_tes> (  <associated_part> @<Modification> ? ;
+          <date_added> @linkml:String ? ;
+          <go_term_ids> @linkml:String * ;
+          <go_term_labels> @linkml:String * ;
+          <match_ec_numbers> @linkml:String * ;
+          <match_gene_symbols_etc> @linkml:String * ;
+          <match_names> @linkml:String * ;
+          <nt_sequence> @linkml:String ? ;
+          <other_accessions> @linkml:String * ;
+          <scientific_names> @linkml:String * ;
           <seq_name> @linkml:String ? ;
           <seq_type> @<SeqTypeEnum> ? ;
-          <date_added> @linkml:String ? ;
-          <nt_sequence> @linkml:String ?
+          <taxon_ids> @linkml:String * ;
+          <uniprot_accessions> @linkml:String *
        ) ;
        rdf:type [ <PartsSequence> ]
     )
 }
 
 <Person> CLOSED {
-    (  $<Person_tes> (  <date_joined> @linkml:Datetime ;
+    (  $<Person_tes> (  <date_joined> @linkml:Datetime ? ;
           <email> @linkml:String ? ;
           <first_name> @linkml:String ? ;
           <is_staff> @linkml:Boolean ;
@@ -114,7 +128,6 @@ linkml:Nodeidentifier NONLITERAL
           <creator> @<Person> ? ;
           <funding_source> @<FundingSourceEnum> ? ;
           <genotype_phenotype> @linkml:String ? ;
-          <host_organism> @<Organism> ? ;
           <intellectual_property> @linkml:String ? ;
           <keywords> @linkml:String ? ;
           <name> @linkml:String ? ;
@@ -123,8 +136,8 @@ linkml:Nodeidentifier NONLITERAL
           <references> @linkml:String ? ;
           <status> @<StatusEnum> ? ;
           <summary> @linkml:String ? ;
-          <sub_parts> @linkml:String * ;
-          <parent_parts> @linkml:String *
+          <has_parts> @linkml:String * ;
+          <host_organism> @<Organism> ?
        ) ;
        rdf:type [ <Strain> ]
     )

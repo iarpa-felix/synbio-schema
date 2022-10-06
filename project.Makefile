@@ -3,9 +3,10 @@
 # doesn't yet do any special handling of deletion flanks
 # may require ssh tunel to postgres
 
-max_eval=1e-20
-blast_thread_count=9
-selected_sqlite_input_db=local/felix_dump.db
+#max_eval=1e-20
+max_eval=1e-5
+#blast_thread_count=9
+blast_thread_count=15
 
 RUN=poetry run
 SCHEMA_DIR = src/synbio_schema/schema/
@@ -24,7 +25,7 @@ squeaky_clean \
 uniprot_approach
 
 # probably don't want to release this with resources/felix_dump.db as part of project_all
-project_all: squeaky_clean jsonschema_validation resources/felix_dump.db \
+project_all: project_clean jsonschema_validation resources/felix_dump.db \
 target/seq2ids.fasta blastdbs/swissprot.psq taxdb.bti target/seq2ids_v_uniprot.tsv \
 data/fpbase.fasta data/fpbase.fasta.psq target/seq2ids_v_fpbase.tsv \
 blast_res_to_sqlite resources/swiss_entries.json interval_clustering \
@@ -111,7 +112,7 @@ jsonschema_validation: resources/person.json resources/$(SCHEMA_NAME).schema.jso
 
 resources/felix_dump.db:
 	- $(RUN) sh utils/pgsql2sqlite.sh mam 1111 \
-	parts,auth_user,species,parts_accessions,parts_sequences,modifications,selection_markers,plasmids,parts_parameters,external_urls,sub_parts \
+	parts,auth_user,species,parts_accessions,parts_sequences,modifications,modifications_genes,selection_markers,plasmids,parts_parameters,external_urls,sub_parts \
 	$(basename $(notdir $@))
 	sqlite3 $@ "update auth_user set password = NULL;"
 
@@ -191,11 +192,11 @@ resources/swiss_entries.json:
 	$(RUN) python src/synbio_schema/scripts/get_uniprot_entries.py
 
 interval_clustering:
-	sleep 100
+	sleep 60
 	$(RUN) python src/synbio_schema/scripts/interval_clustering.py
 
 resources/synbio_database.yaml:
-	$(RUN) python src/synbio_schema/scripts/seqs2yaml.py
+	$(RUN) python src/synbio_schema/scripts/celniker2yaml.py
 
 resources/synbio_database.json: src/synbio_schema/schema/synbio_schema.yaml resources/synbio_database.yaml
 	$(RUN) linkml-convert \
@@ -203,7 +204,7 @@ resources/synbio_database.json: src/synbio_schema/schema/synbio_schema.yaml reso
 		--target-class Database \
 		--schema $^
 
-resources/synbio_database.db: src/synbio_schema/schema/synbio_schema.yaml resources/synbio_database.yaml
+resources/synbio_database.db: src/synbio_schema/schema/synbio_schema.yaml resources/synbio_database.json
 	$(RUN) linkml-sqldb dump \
 		--db $@ \
 		--target-class Database \

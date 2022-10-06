@@ -15,7 +15,8 @@ sqlite_db_fp = "resources/felix_dump.db"
 swiss_entries_dump_fp = "resources/swiss_entries.json"
 
 sqlite_db_conn = sqlite3.connect(sqlite_db_fp)
-swiss_accessions_q = f"select distinct sacc from {blast_results_table} where blast_db = 'swissprot' and qcovs > 90 and pident > 90 order by sacc"
+swiss_accessions_q = f"select distinct sacc from {blast_results_table} where blast_db = 'swissprot' and pident > 50 order by sacc"
+# qcovs > 90 and
 swiss_accessions_res = pd.read_sql_query(swiss_accessions_q, sqlite_db_conn)
 swiss_accessions = swiss_accessions_res['sacc'].to_list()
 
@@ -25,6 +26,8 @@ annotation_lod = []
 for i in swiss_accessions[0:]:
     print(i)
     swiss_entries[i] = session.get(f"https://www.uniprot.org/uniprot/{i}.json").json()
+    if len(swiss_entries[i]) < 15:
+        print(f"entry key count: {len(swiss_entries[i])}")
     annotation_lod.append({"accession": i, "annotationScore": swiss_entries[i]['annotationScore']})
 
 annotation_frame = pd.DataFrame(annotation_lod)
@@ -33,8 +36,12 @@ sqlite_db_conn.close()
 
 # pprint.pprint(swiss_entries)
 
+print("writing to json")
+
 with open(swiss_entries_dump_fp, 'w') as outfile:
     json.dump(swiss_entries, outfile)
+
+print("writing to yaml")
 
 with open(swiss_entries_dump_fp.replace('json', 'yaml'), 'w') as outfile:
     yaml.dump(swiss_entries, outfile)

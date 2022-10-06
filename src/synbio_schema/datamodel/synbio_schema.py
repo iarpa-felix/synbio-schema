@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-10-03T17:51:16
+# Generation date: 2022-10-05T22:53:27
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -83,12 +83,19 @@ class PartsSequence(YAMLRoot):
 
     id: Union[str, PartsSequenceId] = None
     associated_part: Optional[Union[str, ModificationId]] = None
+    date_added: Optional[str] = None
+    go_term_ids: Optional[Union[str, List[str]]] = empty_list()
+    go_term_labels: Optional[Union[str, List[str]]] = empty_list()
+    match_ec_numbers: Optional[Union[str, List[str]]] = empty_list()
+    match_gene_symbols_etc: Optional[Union[str, List[str]]] = empty_list()
+    match_names: Optional[Union[str, List[str]]] = empty_list()
+    nt_sequence: Optional[str] = None
+    other_accessions: Optional[Union[str, List[str]]] = empty_list()
+    scientific_names: Optional[Union[str, List[str]]] = empty_list()
     seq_name: Optional[str] = None
     seq_type: Optional[Union[str, "SeqTypeEnum"]] = None
-    date_added: Optional[str] = None
-    nt_sequence: Optional[str] = None
+    taxon_ids: Optional[Union[str, List[str]]] = empty_list()
     uniprot_accessions: Optional[Union[str, List[str]]] = empty_list()
-    go_terms: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -99,25 +106,53 @@ class PartsSequence(YAMLRoot):
         if self.associated_part is not None and not isinstance(self.associated_part, ModificationId):
             self.associated_part = ModificationId(self.associated_part)
 
+        if self.date_added is not None and not isinstance(self.date_added, str):
+            self.date_added = str(self.date_added)
+
+        if not isinstance(self.go_term_ids, list):
+            self.go_term_ids = [self.go_term_ids] if self.go_term_ids is not None else []
+        self.go_term_ids = [v if isinstance(v, str) else str(v) for v in self.go_term_ids]
+
+        if not isinstance(self.go_term_labels, list):
+            self.go_term_labels = [self.go_term_labels] if self.go_term_labels is not None else []
+        self.go_term_labels = [v if isinstance(v, str) else str(v) for v in self.go_term_labels]
+
+        if not isinstance(self.match_ec_numbers, list):
+            self.match_ec_numbers = [self.match_ec_numbers] if self.match_ec_numbers is not None else []
+        self.match_ec_numbers = [v if isinstance(v, str) else str(v) for v in self.match_ec_numbers]
+
+        if not isinstance(self.match_gene_symbols_etc, list):
+            self.match_gene_symbols_etc = [self.match_gene_symbols_etc] if self.match_gene_symbols_etc is not None else []
+        self.match_gene_symbols_etc = [v if isinstance(v, str) else str(v) for v in self.match_gene_symbols_etc]
+
+        if not isinstance(self.match_names, list):
+            self.match_names = [self.match_names] if self.match_names is not None else []
+        self.match_names = [v if isinstance(v, str) else str(v) for v in self.match_names]
+
+        if self.nt_sequence is not None and not isinstance(self.nt_sequence, str):
+            self.nt_sequence = str(self.nt_sequence)
+
+        if not isinstance(self.other_accessions, list):
+            self.other_accessions = [self.other_accessions] if self.other_accessions is not None else []
+        self.other_accessions = [v if isinstance(v, str) else str(v) for v in self.other_accessions]
+
+        if not isinstance(self.scientific_names, list):
+            self.scientific_names = [self.scientific_names] if self.scientific_names is not None else []
+        self.scientific_names = [v if isinstance(v, str) else str(v) for v in self.scientific_names]
+
         if self.seq_name is not None and not isinstance(self.seq_name, str):
             self.seq_name = str(self.seq_name)
 
         if self.seq_type is not None and not isinstance(self.seq_type, SeqTypeEnum):
             self.seq_type = SeqTypeEnum(self.seq_type)
 
-        if self.date_added is not None and not isinstance(self.date_added, str):
-            self.date_added = str(self.date_added)
-
-        if self.nt_sequence is not None and not isinstance(self.nt_sequence, str):
-            self.nt_sequence = str(self.nt_sequence)
+        if not isinstance(self.taxon_ids, list):
+            self.taxon_ids = [self.taxon_ids] if self.taxon_ids is not None else []
+        self.taxon_ids = [v if isinstance(v, str) else str(v) for v in self.taxon_ids]
 
         if not isinstance(self.uniprot_accessions, list):
             self.uniprot_accessions = [self.uniprot_accessions] if self.uniprot_accessions is not None else []
         self.uniprot_accessions = [v if isinstance(v, str) else str(v) for v in self.uniprot_accessions]
-
-        if not isinstance(self.go_terms, list):
-            self.go_terms = [self.go_terms] if self.go_terms is not None else []
-        self.go_terms = [v if isinstance(v, str) else str(v) for v in self.go_terms]
 
         super().__post_init__(**kwargs)
 
@@ -136,7 +171,6 @@ class Strain(YAMLRoot):
     creator: Optional[Union[str, PersonId]] = None
     funding_source: Optional[Union[str, "FundingSourceEnum"]] = None
     genotype_phenotype: Optional[str] = None
-    host_organism: Optional[Union[str, OrganismId]] = None
     intellectual_property: Optional[str] = None
     keywords: Optional[str] = None
     name: Optional[str] = None
@@ -145,8 +179,8 @@ class Strain(YAMLRoot):
     references: Optional[str] = None
     status: Optional[Union[str, "StatusEnum"]] = None
     summary: Optional[str] = None
-    sub_parts: Optional[Union[str, List[str]]] = empty_list()
-    parent_parts: Optional[Union[str, List[str]]] = empty_list()
+    has_parts: Optional[Union[str, List[str]]] = empty_list()
+    host_organism: Optional[Union[str, OrganismId]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -165,9 +199,6 @@ class Strain(YAMLRoot):
 
         if self.genotype_phenotype is not None and not isinstance(self.genotype_phenotype, str):
             self.genotype_phenotype = str(self.genotype_phenotype)
-
-        if self.host_organism is not None and not isinstance(self.host_organism, OrganismId):
-            self.host_organism = OrganismId(self.host_organism)
 
         if self.intellectual_property is not None and not isinstance(self.intellectual_property, str):
             self.intellectual_property = str(self.intellectual_property)
@@ -193,13 +224,12 @@ class Strain(YAMLRoot):
         if self.summary is not None and not isinstance(self.summary, str):
             self.summary = str(self.summary)
 
-        if not isinstance(self.sub_parts, list):
-            self.sub_parts = [self.sub_parts] if self.sub_parts is not None else []
-        self.sub_parts = [v if isinstance(v, str) else str(v) for v in self.sub_parts]
+        if not isinstance(self.has_parts, list):
+            self.has_parts = [self.has_parts] if self.has_parts is not None else []
+        self.has_parts = [v if isinstance(v, str) else str(v) for v in self.has_parts]
 
-        if not isinstance(self.parent_parts, list):
-            self.parent_parts = [self.parent_parts] if self.parent_parts is not None else []
-        self.parent_parts = [v if isinstance(v, str) else str(v) for v in self.parent_parts]
+        if self.host_organism is not None and not isinstance(self.host_organism, OrganismId):
+            self.host_organism = OrganismId(self.host_organism)
 
         super().__post_init__(**kwargs)
 
@@ -246,19 +276,24 @@ class Modification(YAMLRoot):
     bio_safety_level: Union[str, "BioSafetyLevelEnum"] = None
     creator: Union[str, PersonId] = None
     el_name_long: str = None
-    element_organism: str = None
     principal_investigator: Union[str, PersonId] = None
     status: Union[str, "StatusEnum"] = None
     aa_change: Optional[str] = None
     category: Optional[Union[str, "CategoryEnum"]] = None
     descriptor: Optional[Union[str, "DescriptorEnum"]] = None
     el_name_short: Optional[str] = None
+    element_organism: Optional[str] = None
     modification_type: Optional[Union[str, "ModificationTypeEnum"]] = None
     modifications_genes: Optional[str] = None
     notes: Optional[str] = None
     position: Optional[str] = None
     size_bp: Optional[int] = None
     subcategory_size: Optional[str] = None
+    curated_gene_symbols: Optional[Union[str, List[str]]] = empty_list()
+    curated_protein_name: Optional[str] = None
+    curated_enzyme_name: Optional[str] = None
+    curated_uniprot_accession: Optional[str] = None
+    part_ofs: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -280,11 +315,6 @@ class Modification(YAMLRoot):
             self.MissingRequiredField("el_name_long")
         if not isinstance(self.el_name_long, str):
             self.el_name_long = str(self.el_name_long)
-
-        if self._is_empty(self.element_organism):
-            self.MissingRequiredField("element_organism")
-        if not isinstance(self.element_organism, str):
-            self.element_organism = str(self.element_organism)
 
         if self._is_empty(self.principal_investigator):
             self.MissingRequiredField("principal_investigator")
@@ -308,6 +338,9 @@ class Modification(YAMLRoot):
         if self.el_name_short is not None and not isinstance(self.el_name_short, str):
             self.el_name_short = str(self.el_name_short)
 
+        if self.element_organism is not None and not isinstance(self.element_organism, str):
+            self.element_organism = str(self.element_organism)
+
         if self.modification_type is not None and not isinstance(self.modification_type, ModificationTypeEnum):
             self.modification_type = ModificationTypeEnum(self.modification_type)
 
@@ -325,6 +358,23 @@ class Modification(YAMLRoot):
 
         if self.subcategory_size is not None and not isinstance(self.subcategory_size, str):
             self.subcategory_size = str(self.subcategory_size)
+
+        if not isinstance(self.curated_gene_symbols, list):
+            self.curated_gene_symbols = [self.curated_gene_symbols] if self.curated_gene_symbols is not None else []
+        self.curated_gene_symbols = [v if isinstance(v, str) else str(v) for v in self.curated_gene_symbols]
+
+        if self.curated_protein_name is not None and not isinstance(self.curated_protein_name, str):
+            self.curated_protein_name = str(self.curated_protein_name)
+
+        if self.curated_enzyme_name is not None and not isinstance(self.curated_enzyme_name, str):
+            self.curated_enzyme_name = str(self.curated_enzyme_name)
+
+        if self.curated_uniprot_accession is not None and not isinstance(self.curated_uniprot_accession, str):
+            self.curated_uniprot_accession = str(self.curated_uniprot_accession)
+
+        if not isinstance(self.part_ofs, list):
+            self.part_ofs = [self.part_ofs] if self.part_ofs is not None else []
+        self.part_ofs = [v if isinstance(v, str) else str(v) for v in self.part_ofs]
 
         super().__post_init__(**kwargs)
 
@@ -403,10 +453,10 @@ class Person(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = SYNBIO.Person
 
     id: Union[str, PersonId] = None
-    date_joined: Union[str, XSDDateTime] = None
     is_staff: Union[bool, Bool] = None
     is_superuser: Union[bool, Bool] = None
     username: str = None
+    date_joined: Optional[Union[str, XSDDateTime]] = None
     email: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -416,11 +466,6 @@ class Person(YAMLRoot):
             self.MissingRequiredField("id")
         if not isinstance(self.id, PersonId):
             self.id = PersonId(self.id)
-
-        if self._is_empty(self.date_joined):
-            self.MissingRequiredField("date_joined")
-        if not isinstance(self.date_joined, XSDDateTime):
-            self.date_joined = XSDDateTime(self.date_joined)
 
         if self._is_empty(self.is_staff):
             self.MissingRequiredField("is_staff")
@@ -436,6 +481,9 @@ class Person(YAMLRoot):
             self.MissingRequiredField("username")
         if not isinstance(self.username, str):
             self.username = str(self.username)
+
+        if self.date_joined is not None and not isinstance(self.date_joined, XSDDateTime):
+            self.date_joined = XSDDateTime(self.date_joined)
 
         if self.email is not None and not isinstance(self.email, str):
             self.email = str(self.email)
@@ -511,16 +559,16 @@ class StatusEnum(EnumDefinitionImpl):
 
 class ModificationTypeEnum(EnumDefinitionImpl):
 
-    CDSpartial = PermissibleValue(text="CDSpartial")
     deletion = PermissibleValue(text="deletion")
     frameshift = PermissibleValue(text="frameshift")
     insertion = PermissibleValue(text="insertion")
     inversion = PermissibleValue(text="inversion")
     plasmid = PermissibleValue(text="plasmid")
-    reassortment = PermissibleValue(text="reassortment")
     substitution = PermissibleValue(text="substitution")
-    subtitutions = PermissibleValue(text="subtitutions")
     transition = PermissibleValue(text="transition")
+    CDSpartial = PermissibleValue(text="CDSpartial")
+    reassortment = PermissibleValue(text="reassortment")
+    subtitutions = PermissibleValue(text="subtitutions")
 
     _defn = EnumDefinition(
         name="ModificationTypeEnum",
@@ -530,6 +578,16 @@ class ModificationTypeEnum(EnumDefinitionImpl):
     def _addvals(cls):
         setattr(cls, "amber stop codon",
                 PermissibleValue(text="amber stop codon") )
+        setattr(cls, "insertion site",
+                PermissibleValue(text="insertion site") )
+        setattr(cls, "ochre stop codon",
+                PermissibleValue(text="ochre stop codon") )
+        setattr(cls, "203TAGTAGGTACT",
+                PermissibleValue(text="203TAGTAGGTACT") )
+        setattr(cls, "492ACTTAAGCCAGAAAATTTA",
+                PermissibleValue(text="492ACTTAAGCCAGAAAATTTA") )
+        setattr(cls, "T474A-A490T-T492A",
+                PermissibleValue(text="T474A-A490T-T492A") )
         setattr(cls, "chrXIII-chrII",
                 PermissibleValue(text="chrXIII-chrII") )
         setattr(cls, "compound deletion",
@@ -540,10 +598,6 @@ class ModificationTypeEnum(EnumDefinitionImpl):
                 PermissibleValue(text="fluorescent/epitope") )
         setattr(cls, "in-frame deletion",
                 PermissibleValue(text="in-frame deletion") )
-        setattr(cls, "insertion site",
-                PermissibleValue(text="insertion site") )
-        setattr(cls, "ochre stop codon",
-                PermissibleValue(text="ochre stop codon") )
         setattr(cls, "plasmid element",
                 PermissibleValue(text="plasmid element") )
         setattr(cls, "substitution transition",
@@ -607,6 +661,7 @@ class DescriptorEnum(EnumDefinitionImpl):
     SUMO = PermissibleValue(text="SUMO")
     terminator = PermissibleValue(text="terminator")
     VP16 = PermissibleValue(text="VP16")
+    GFP = PermissibleValue(text="GFP")
 
     _defn = EnumDefinition(
         name="DescriptorEnum",
@@ -630,16 +685,57 @@ class DescriptorEnum(EnumDefinitionImpl):
                 PermissibleValue(text="multiple cloning site") )
         setattr(cls, "ribosomal binding site",
                 PermissibleValue(text="ribosomal binding site") )
+        setattr(cls, "cleavage site",
+                PermissibleValue(text="cleavage site") )
 
 # Slots
 class slots:
     pass
 
+slots.curated_uniprot_accession = Slot(uri=SYNBIO.curated_uniprot_accession, name="curated_uniprot_accession", curie=SYNBIO.curie('curated_uniprot_accession'),
+                   model_uri=SYNBIO.curated_uniprot_accession, domain=None, range=Optional[str])
+
+slots.has_parts = Slot(uri=SYNBIO.has_parts, name="has_parts", curie=SYNBIO.curie('has_parts'),
+                   model_uri=SYNBIO.has_parts, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.part_ofs = Slot(uri=SYNBIO.part_ofs, name="part_ofs", curie=SYNBIO.curie('part_ofs'),
+                   model_uri=SYNBIO.part_ofs, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.curated_protein_name = Slot(uri=SYNBIO.curated_protein_name, name="curated_protein_name", curie=SYNBIO.curie('curated_protein_name'),
+                   model_uri=SYNBIO.curated_protein_name, domain=None, range=Optional[str])
+
+slots.curated_enzyme_name = Slot(uri=SYNBIO.curated_enzyme_name, name="curated_enzyme_name", curie=SYNBIO.curie('curated_enzyme_name'),
+                   model_uri=SYNBIO.curated_enzyme_name, domain=None, range=Optional[str])
+
+slots.curated_gene_symbols = Slot(uri=SYNBIO.curated_gene_symbols, name="curated_gene_symbols", curie=SYNBIO.curie('curated_gene_symbols'),
+                   model_uri=SYNBIO.curated_gene_symbols, domain=None, range=Optional[str])
+
+slots.other_accessions = Slot(uri=SYNBIO.other_accessions, name="other_accessions", curie=SYNBIO.curie('other_accessions'),
+                   model_uri=SYNBIO.other_accessions, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.match_gene_symbols_etc = Slot(uri=SYNBIO.match_gene_symbols_etc, name="match_gene_symbols_etc", curie=SYNBIO.curie('match_gene_symbols_etc'),
+                   model_uri=SYNBIO.match_gene_symbols_etc, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.match_ec_numbers = Slot(uri=SYNBIO.match_ec_numbers, name="match_ec_numbers", curie=SYNBIO.curie('match_ec_numbers'),
+                   model_uri=SYNBIO.match_ec_numbers, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.match_names = Slot(uri=SYNBIO.match_names, name="match_names", curie=SYNBIO.curie('match_names'),
+                   model_uri=SYNBIO.match_names, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.scientific_names = Slot(uri=SYNBIO.scientific_names, name="scientific_names", curie=SYNBIO.curie('scientific_names'),
+                   model_uri=SYNBIO.scientific_names, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.taxon_ids = Slot(uri=SYNBIO.taxon_ids, name="taxon_ids", curie=SYNBIO.curie('taxon_ids'),
+                   model_uri=SYNBIO.taxon_ids, domain=None, range=Optional[Union[str, List[str]]])
+
 slots.uniprot_accessions = Slot(uri=SYNBIO.uniprot_accessions, name="uniprot_accessions", curie=SYNBIO.curie('uniprot_accessions'),
                    model_uri=SYNBIO.uniprot_accessions, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.go_terms = Slot(uri=SYNBIO.go_terms, name="go_terms", curie=SYNBIO.curie('go_terms'),
-                   model_uri=SYNBIO.go_terms, domain=None, range=Optional[Union[str, List[str]]])
+slots.go_term_ids = Slot(uri=SYNBIO.go_term_ids, name="go_term_ids", curie=SYNBIO.curie('go_term_ids'),
+                   model_uri=SYNBIO.go_term_ids, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.go_term_labels = Slot(uri=SYNBIO.go_term_labels, name="go_term_labels", curie=SYNBIO.curie('go_term_labels'),
+                   model_uri=SYNBIO.go_term_labels, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.associated_part = Slot(uri=SYNBIO.associated_part, name="associated_part", curie=SYNBIO.curie('associated_part'),
                    model_uri=SYNBIO.associated_part, domain=None, range=Optional[Union[str, ModificationId]])
@@ -655,12 +751,6 @@ slots.date_added = Slot(uri=SYNBIO.date_added, name="date_added", curie=SYNBIO.c
 
 slots.nt_sequence = Slot(uri=SYNBIO.nt_sequence, name="nt_sequence", curie=SYNBIO.curie('nt_sequence'),
                    model_uri=SYNBIO.nt_sequence, domain=None, range=Optional[str])
-
-slots.sub_parts = Slot(uri=SYNBIO.sub_parts, name="sub_parts", curie=SYNBIO.curie('sub_parts'),
-                   model_uri=SYNBIO.sub_parts, domain=None, range=Optional[Union[str, List[str]]])
-
-slots.parent_parts = Slot(uri=SYNBIO.parent_parts, name="parent_parts", curie=SYNBIO.curie('parent_parts'),
-                   model_uri=SYNBIO.parent_parts, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.host_organism = Slot(uri=SYNBIO.host_organism, name="host_organism", curie=SYNBIO.curie('host_organism'),
                    model_uri=SYNBIO.host_organism, domain=None, range=Optional[Union[str, OrganismId]])
@@ -741,7 +831,7 @@ slots.comment = Slot(uri=SYNBIO.comment, name="comment", curie=SYNBIO.curie('com
                    model_uri=SYNBIO.comment, domain=None, range=Optional[str])
 
 slots.date_joined = Slot(uri=SYNBIO.date_joined, name="date_joined", curie=SYNBIO.curie('date_joined'),
-                   model_uri=SYNBIO.date_joined, domain=None, range=Union[str, XSDDateTime])
+                   model_uri=SYNBIO.date_joined, domain=None, range=Optional[Union[str, XSDDateTime]])
 
 slots.el_name_long = Slot(uri=SYNBIO.el_name_long, name="el_name_long", curie=SYNBIO.curie('el_name_long'),
                    model_uri=SYNBIO.el_name_long, domain=None, range=Optional[str])
@@ -864,17 +954,20 @@ slots.Modification_id = Slot(uri=SYNBIO.id, name="Modification_id", curie=SYNBIO
                    model_uri=SYNBIO.Modification_id, domain=Modification, range=Union[str, ModificationId],
                    pattern=re.compile(r'^IF:\d+$'))
 
-slots.Modification_principal_investigator = Slot(uri=SYNBIO.principal_investigator, name="Modification_principal_investigator", curie=SYNBIO.curie('principal_investigator'),
-                   model_uri=SYNBIO.Modification_principal_investigator, domain=Modification, range=Union[str, PersonId])
-
-slots.Modification_status = Slot(uri=SYNBIO.status, name="Modification_status", curie=SYNBIO.curie('status'),
-                   model_uri=SYNBIO.Modification_status, domain=Modification, range=Union[str, "StatusEnum"])
+slots.Modification_aa_change = Slot(uri=SYNBIO.aa_change, name="Modification_aa_change", curie=SYNBIO.curie('aa_change'),
+                   model_uri=SYNBIO.Modification_aa_change, domain=Modification, range=Optional[str])
 
 slots.Modification_bio_safety_level = Slot(uri=SYNBIO.bio_safety_level, name="Modification_bio_safety_level", curie=SYNBIO.curie('bio_safety_level'),
                    model_uri=SYNBIO.Modification_bio_safety_level, domain=Modification, range=Union[str, "BioSafetyLevelEnum"])
 
+slots.Modification_category = Slot(uri=SYNBIO.category, name="Modification_category", curie=SYNBIO.curie('category'),
+                   model_uri=SYNBIO.Modification_category, domain=Modification, range=Optional[Union[str, "CategoryEnum"]])
+
 slots.Modification_creator = Slot(uri=SYNBIO.creator, name="Modification_creator", curie=SYNBIO.curie('creator'),
                    model_uri=SYNBIO.Modification_creator, domain=Modification, range=Union[str, PersonId])
+
+slots.Modification_descriptor = Slot(uri=SYNBIO.descriptor, name="Modification_descriptor", curie=SYNBIO.curie('descriptor'),
+                   model_uri=SYNBIO.Modification_descriptor, domain=Modification, range=Optional[Union[str, "DescriptorEnum"]])
 
 slots.Modification_el_name_long = Slot(uri=SYNBIO.el_name_long, name="Modification_el_name_long", curie=SYNBIO.curie('el_name_long'),
                    model_uri=SYNBIO.Modification_el_name_long, domain=Modification, range=str)
@@ -882,29 +975,32 @@ slots.Modification_el_name_long = Slot(uri=SYNBIO.el_name_long, name="Modificati
 slots.Modification_el_name_short = Slot(uri=SYNBIO.el_name_short, name="Modification_el_name_short", curie=SYNBIO.curie('el_name_short'),
                    model_uri=SYNBIO.Modification_el_name_short, domain=Modification, range=Optional[str])
 
-slots.Modification_element_organism = Slot(uri=SYNBIO.element_organism, name="Modification_element_organism", curie=SYNBIO.curie('element_organism'),
-                   model_uri=SYNBIO.Modification_element_organism, domain=Modification, range=str)
+slots.Modification_modification_type = Slot(uri=SYNBIO.modification_type, name="Modification_modification_type", curie=SYNBIO.curie('modification_type'),
+                   model_uri=SYNBIO.Modification_modification_type, domain=Modification, range=Optional[Union[str, "ModificationTypeEnum"]])
 
 slots.Modification_notes = Slot(uri=SYNBIO.notes, name="Modification_notes", curie=SYNBIO.curie('notes'),
                    model_uri=SYNBIO.Modification_notes, domain=Modification, range=Optional[str])
 
-slots.Modification_descriptor = Slot(uri=SYNBIO.descriptor, name="Modification_descriptor", curie=SYNBIO.curie('descriptor'),
-                   model_uri=SYNBIO.Modification_descriptor, domain=Modification, range=Optional[Union[str, "DescriptorEnum"]])
+slots.Modification_position = Slot(uri=SYNBIO.position, name="Modification_position", curie=SYNBIO.curie('position'),
+                   model_uri=SYNBIO.Modification_position, domain=Modification, range=Optional[str])
+
+slots.Modification_principal_investigator = Slot(uri=SYNBIO.principal_investigator, name="Modification_principal_investigator", curie=SYNBIO.curie('principal_investigator'),
+                   model_uri=SYNBIO.Modification_principal_investigator, domain=Modification, range=Union[str, PersonId])
 
 slots.Modification_size_bp = Slot(uri=SYNBIO.size_bp, name="Modification_size_bp", curie=SYNBIO.curie('size_bp'),
                    model_uri=SYNBIO.Modification_size_bp, domain=Modification, range=Optional[int])
 
-slots.Modification_position = Slot(uri=SYNBIO.position, name="Modification_position", curie=SYNBIO.curie('position'),
-                   model_uri=SYNBIO.Modification_position, domain=Modification, range=Optional[str])
-
-slots.Modification_aa_change = Slot(uri=SYNBIO.aa_change, name="Modification_aa_change", curie=SYNBIO.curie('aa_change'),
-                   model_uri=SYNBIO.Modification_aa_change, domain=Modification, range=Optional[str])
-
-slots.Modification_category = Slot(uri=SYNBIO.category, name="Modification_category", curie=SYNBIO.curie('category'),
-                   model_uri=SYNBIO.Modification_category, domain=Modification, range=Optional[Union[str, "CategoryEnum"]])
+slots.Modification_status = Slot(uri=SYNBIO.status, name="Modification_status", curie=SYNBIO.curie('status'),
+                   model_uri=SYNBIO.Modification_status, domain=Modification, range=Union[str, "StatusEnum"])
 
 slots.Modification_subcategory_size = Slot(uri=SYNBIO.subcategory_size, name="Modification_subcategory_size", curie=SYNBIO.curie('subcategory_size'),
                    model_uri=SYNBIO.Modification_subcategory_size, domain=Modification, range=Optional[str])
+
+slots.Modification_curated_gene_symbols = Slot(uri=SYNBIO.curated_gene_symbols, name="Modification_curated_gene_symbols", curie=SYNBIO.curie('curated_gene_symbols'),
+                   model_uri=SYNBIO.Modification_curated_gene_symbols, domain=Modification, range=Optional[Union[str, List[str]]])
+
+slots.Modification_element_organism = Slot(uri=SYNBIO.element_organism, name="Modification_element_organism", curie=SYNBIO.curie('element_organism'),
+                   model_uri=SYNBIO.Modification_element_organism, domain=Modification, range=Optional[str])
 
 slots.Modification_modifications_genes = Slot(uri=SYNBIO.modifications_genes, name="Modification_modifications_genes", curie=SYNBIO.curie('modifications_genes'),
                    model_uri=SYNBIO.Modification_modifications_genes, domain=Modification, range=Optional[str])
@@ -939,7 +1035,7 @@ slots.Person_id = Slot(uri=SYNBIO.id, name="Person_id", curie=SYNBIO.curie('id')
                    pattern=re.compile(r'^person:\d+$'))
 
 slots.Person_date_joined = Slot(uri=SYNBIO.date_joined, name="Person_date_joined", curie=SYNBIO.curie('date_joined'),
-                   model_uri=SYNBIO.Person_date_joined, domain=Person, range=Union[str, XSDDateTime])
+                   model_uri=SYNBIO.Person_date_joined, domain=Person, range=Optional[Union[str, XSDDateTime]])
 
 slots.Person_email = Slot(uri=SYNBIO.email, name="Person_email", curie=SYNBIO.curie('email'),
                    model_uri=SYNBIO.Person_email, domain=Person, range=Optional[str])

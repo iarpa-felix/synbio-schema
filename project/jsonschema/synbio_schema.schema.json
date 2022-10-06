@@ -89,7 +89,9 @@
             "scar",
             "SUMO",
             "terminator",
-            "VP16"
+            "VP16",
+            "cleavage site",
+            "GFP"
          ],
          "title": "DescriptorEnum",
          "type": "string"
@@ -126,6 +128,21 @@
             "creator": {
                "type": "string"
             },
+            "curated_enzyme_name": {
+               "type": "string"
+            },
+            "curated_gene_symbols": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "curated_protein_name": {
+               "type": "string"
+            },
+            "curated_uniprot_accession": {
+               "type": "string"
+            },
             "descriptor": {
                "$ref": "#/$defs/DescriptorEnum"
             },
@@ -151,6 +168,12 @@
             "notes": {
                "type": "string"
             },
+            "part_ofs": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "position": {
                "type": "string"
             },
@@ -172,7 +195,6 @@
             "bio_safety_level",
             "creator",
             "el_name_long",
-            "element_organism",
             "principal_investigator",
             "status"
          ],
@@ -183,26 +205,29 @@
          "description": "",
          "enum": [
             "amber stop codon",
-            "CDSpartial",
-            "chrXIII-chrII",
-            "compound deletion",
-            "compound insertion",
             "deletion",
-            "fluorescent/epitope",
             "frameshift",
-            "in-frame deletion",
             "insertion",
             "insertion site",
             "inversion",
             "ochre stop codon",
             "plasmid",
+            "substitution",
+            "transition",
+            "203TAGTAGGTACT",
+            "492ACTTAAGCCAGAAAATTTA",
+            "CDSpartial",
+            "T474A-A490T-T492A",
+            "chrXIII-chrII",
+            "compound deletion",
+            "compound insertion",
+            "fluorescent/epitope",
+            "in-frame deletion",
             "plasmid element",
             "reassortment",
-            "substitution",
             "substitution transition",
             "substitution transversion",
             "subtitutions",
-            "transition",
             "transition plasmid element"
          ],
          "title": "ModificationTypeEnum",
@@ -266,18 +291,73 @@
             "date_added": {
                "type": "string"
             },
+            "go_term_ids": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "go_term_labels": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "id": {
                "pattern": "^sequence:\\d+$",
                "type": "string"
             },
+            "match_ec_numbers": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "match_gene_symbols_etc": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "match_names": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "nt_sequence": {
                "type": "string"
+            },
+            "other_accessions": {
+               "description": "Especially fpbase identifiers.  Some Uniprot/Swissprot accessions may leak in  if an entry could not be retrieved from the Uniprot API.",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "scientific_names": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "seq_name": {
                "type": "string"
             },
             "seq_type": {
                "$ref": "#/$defs/SeqTypeEnum"
+            },
+            "taxon_ids": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "uniprot_accessions": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             }
          },
          "required": [
@@ -318,7 +398,6 @@
             }
          },
          "required": [
-            "date_joined",
             "id",
             "is_staff",
             "is_superuser",
@@ -364,6 +443,12 @@
             "genotype_phenotype": {
                "type": "string"
             },
+            "has_parts": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "host_organism": {
                "type": "string"
             },
@@ -383,12 +468,6 @@
             "notes": {
                "type": "string"
             },
-            "parent_parts": {
-               "items": {
-                  "type": "string"
-               },
-               "type": "array"
-            },
             "principal_investigator": {
                "type": "string"
             },
@@ -397,12 +476,6 @@
             },
             "status": {
                "$ref": "#/$defs/StatusEnum"
-            },
-            "sub_parts": {
-               "items": {
-                  "type": "string"
-               },
-               "type": "array"
             },
             "summary": {
                "type": "string"
