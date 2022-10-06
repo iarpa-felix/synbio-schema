@@ -207,6 +207,10 @@
       Modification : bio_safety_level
       Modification : category
       Modification : creator
+      Modification : curated_enzyme_name
+      Modification : curated_gene_symbols
+      Modification : curated_protein_name
+      Modification : curated_uniprot_accession
       Modification : descriptor
       Modification : el_name_long
       Modification : el_name_short
@@ -215,6 +219,7 @@
       Modification : modification_type
       Modification : modifications_genes
       Modification : notes
+      Modification : part_ofs
       Modification : position
       Modification : principal_investigator
       Modification : size_bp
@@ -318,6 +323,31 @@
 <td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
+<tr>
+<td><a href="../curated_gene_symbols/">curated_gene_symbols</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../curated_protein_name/">curated_protein_name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../curated_enzyme_name/">curated_enzyme_name</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../curated_uniprot_accession/">curated_uniprot_accession</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../part_ofs/">part_ofs</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -394,6 +424,11 @@ slots:
 - size_bp
 - status
 - subcategory_size
+- curated_gene_symbols
+- curated_protein_name
+- curated_enzyme_name
+- curated_uniprot_accession
+- part_ofs
 slot_usage:
   id:
     name: id
@@ -509,6 +544,12 @@ slot_usage:
     - Modification
     - Modification
     required: false
+  curated_gene_symbols:
+    name: curated_gene_symbols
+    multivalued: true
+    domain_of:
+    - Modification
+    - Modification
   element_organism:
     name: element_organism
     domain_of:
@@ -643,6 +684,12 @@ slot_usage:
     - Modification
     - Modification
     required: false
+  curated_gene_symbols:
+    name: curated_gene_symbols
+    multivalued: true
+    domain_of:
+    - Modification
+    - Modification
   element_organism:
     name: element_organism
     domain_of:
@@ -879,6 +926,54 @@ attributes:
     - Modification
     range: string
     required: false
+  curated_gene_symbols:
+    name: curated_gene_symbols
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: curated_gene_symbols
+    owner: Modification
+    domain_of:
+    - Modification
+    - Modification
+    range: string
+  curated_protein_name:
+    name: curated_protein_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    alias: curated_protein_name
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+  curated_enzyme_name:
+    name: curated_enzyme_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    alias: curated_enzyme_name
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+  curated_uniprot_accession:
+    name: curated_uniprot_accession
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    alias: curated_uniprot_accession
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+  part_ofs:
+    name: part_ofs
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: part_ofs
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
 class_uri: synbio:Modification
 
 </code></pre>

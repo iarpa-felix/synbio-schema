@@ -207,17 +207,16 @@
       Strain : creator
       Strain : funding_source
       Strain : genotype_phenotype
+      Strain : has_parts
       Strain : host_organism
       Strain : id
       Strain : intellectual_property
       Strain : keywords
       Strain : name
       Strain : notes
-      Strain : parent_parts
       Strain : principal_investigator
       Strain : references
       Strain : status
-      Strain : sub_parts
       Strain : summary
 
 </div>
@@ -278,11 +277,6 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../parent_parts/">parent_parts</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
-<td></td>
-</tr>
-<tr>
 <td><a href="../principal_investigator/">principal_investigator</a></td>
 <td>0..1 <br/> <a href="../Person/">Person</a></td>
 <td></td>
@@ -298,13 +292,13 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="../sub_parts/">sub_parts</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td><a href="../summary/">summary</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="../summary/">summary</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td><a href="../has_parts/">has_parts</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td></td>
 </tr>
 <tr>
@@ -380,12 +374,11 @@ slots:
 - keywords
 - name
 - notes
-- parent_parts
 - principal_investigator
 - references
 - status
-- sub_parts
 - summary
+- has_parts
 - host_organism
 slot_usage:
   id:
@@ -541,16 +534,6 @@ attributes:
     - Strain
     - Modification
     range: string
-  parent_parts:
-    name: parent_parts
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    multivalued: true
-    alias: parent_parts
-    owner: Strain
-    domain_of:
-    - Strain
-    range: string
   principal_investigator:
     name: principal_investigator
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -588,21 +571,21 @@ attributes:
     - Strain
     - Modification
     range: StatusEnum
-  sub_parts:
-    name: sub_parts
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    rank: 1000
-    multivalued: true
-    alias: sub_parts
-    owner: Strain
-    domain_of:
-    - Strain
-    range: string
   summary:
     name: summary
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     alias: summary
+    owner: Strain
+    domain_of:
+    - Strain
+    range: string
+  has_parts:
+    name: has_parts
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    multivalued: true
+    alias: has_parts
     owner: Strain
     domain_of:
     - Strain
