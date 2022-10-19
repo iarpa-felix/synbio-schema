@@ -91,7 +91,8 @@
             "terminator",
             "VP16",
             "cleavage site",
-            "GFP"
+            "GFP",
+            "self-cleaving-peptide"
          ],
          "title": "DescriptorEnum",
          "type": "string"

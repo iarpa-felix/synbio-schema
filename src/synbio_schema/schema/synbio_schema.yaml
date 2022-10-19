@@ -179,6 +179,7 @@ enums:
       VP16: { }
       cleavage site: { }
       GFP: { }
+      self-cleaving-peptide: { }
 slots:
   curated_uniprot_accession: { }
   has_parts:

@@ -28,8 +28,6 @@ def cli(tsv_in: str, tsv_out: str, col_val: str):
     in_frame["added"] = col_val
     in_frame.to_csv(tsv_out, sep="\t", index=False, header=False)
 
-    pass
-
 
 if __name__ == "__main__":
     cli()

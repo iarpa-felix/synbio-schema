@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-10-05T22:53:27
+# Generation date: 2022-10-19T13:04:16
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -687,6 +687,8 @@ class DescriptorEnum(EnumDefinitionImpl):
                 PermissibleValue(text="ribosomal binding site") )
         setattr(cls, "cleavage site",
                 PermissibleValue(text="cleavage site") )
+        setattr(cls, "self-cleaving-peptide",
+                PermissibleValue(text="self-cleaving-peptide") )
 
 # Slots
 class slots:

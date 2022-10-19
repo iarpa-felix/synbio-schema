@@ -1,3 +1,8 @@
+import logging
+
+import click
+import click_log
+
 import json
 
 import requests
@@ -7,30 +12,41 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 import re
 
-fp_url = "https://www.fpbase.org/api/proteins/?format=json"
-fasta_out = "data/fpbase.fasta"
-json_out = "resources/fpbase.json"
-yaml_out = "resources/fpbase.yaml"
+logger = logging.getLogger(__name__)
+click_log.basic_config(logger)
 
-fp = requests.get(fp_url)
 
-fp_lod = fp.json()
+@click.command()
+@click_log.simple_verbosity_option(logger)
+@click.option("--fp_url", default="https://www.fpbase.org/api/proteins/?format=json")
+@click.option("--fasta_out", type=click.Path(), default="data/fpbase.fasta")
+@click.option("--json_out", type=click.Path(), default="resources/fpbase.json")
+@click.option("--yaml_out", type=click.Path(), default="resources/fpbase.yaml")
+def cli(fp_url: str, fasta_out: str, json_out: str, yaml_out: str):
 
-fp_dict = {}
-for fp in fp_lod:
-    fp_dict[fp['slug']] = fp
+    fp = requests.get(fp_url)
 
-with open(json_out, 'w') as outfile:
-    json.dump(fp_dict, outfile)
+    fp_lod = fp.json()
 
-with open(yaml_out, 'w') as outfile:
-    yaml.dump(fp_dict, outfile)
+    fp_dict = {}
+    for fp in fp_lod:
+        fp_dict[fp['slug']] = fp
 
-with open(fasta_out, "w") as f_out:
-    for seqs in fp_lod:
-        if seqs['slug'] and seqs['seq']:
-            tidy = re.sub(r'\s+', '', seqs["seq"])
-            sr = SeqRecord(Seq(tidy), str(seqs["slug"]), "", "")
-            r = SeqIO.write(sr, f_out, "fasta")
-            if r != 1:
-                print("Error while writing sequence:  " + sr.id)
+    with open(json_out, 'w') as outfile:
+        json.dump(fp_dict, outfile)
+
+    with open(yaml_out, 'w') as outfile:
+        yaml.dump(fp_dict, outfile)
+
+    with open(fasta_out, "w") as f_out:
+        for seqs in fp_lod:
+            if seqs['slug'] and seqs['seq']:
+                tidy = re.sub(r'\s+', '', seqs["seq"])
+                sr = SeqRecord(Seq(tidy), str(seqs["slug"]), "", "")
+                r = SeqIO.write(sr, f_out, "fasta")
+                if r != 1:
+                    logger.warning("Error while writing sequence:  " + sr.id)
+
+
+if __name__ == "__main__":
+    cli()

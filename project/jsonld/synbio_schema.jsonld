@@ -581,6 +581,9 @@
         },
         {
           "text": "GFP"
+        },
+        {
+          "text": "self-cleaving-peptide"
         }
       ]
     }
@@ -2748,9 +2751,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "synbio_schema.yaml",
-  "source_file_date": "2022-10-05T21:48:31",
-  "source_file_size": 19806,
-  "generation_date": "2022-10-05T22:53:16",
+  "source_file_date": "2022-10-19T11:09:01",
+  "source_file_size": 19839,
+  "generation_date": "2022-10-19T13:04:08",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/synbio_schema.context.jsonld",

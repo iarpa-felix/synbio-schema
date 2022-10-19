@@ -4337,6 +4337,30 @@ dvfp:
   transitions: []
   uniprot: null
   uuid: 2DB3H
+dylight549p1:
+  agg: m
+  doi: 10.1016/j.bpj.2014.06.040
+  genbank: null
+  ipg_id: null
+  name: DyLight549P1
+  pdb: []
+  seq: null
+  slug: dylight549p1
+  states:
+  - brightness: 0.01
+    em_max: 575
+    ex_max: 550
+    ext_coeff: 150
+    lifetime: null
+    maturation: null
+    name: default
+    pka: null
+    qy: 0.091
+    slug: dylight549p1_default
+  switch_type: b
+  transitions: []
+  uniprot: null
+  uuid: T41B7
 e2-crimson:
   agg: t
   doi: 10.1021/bi900870u
@@ -8320,7 +8344,8 @@ lssmscarlet:
   genbank: null
   ipg_id: null
   name: LSSmScarlet
-  pdb: []
+  pdb:
+  - 7OIN
   seq: MVSKGEAVIKEFMRFKVHMEGSMNGHEFEIEGEGEGRPYEGTQTAKLKVTKGGPLPFSWDILSPQFMYGSRAFIKHPADIPDYHKQSFPEGFKWERVMNFEDGGAVTVTQDTSLEDGTLIYEVKLRGTNFPPDGPVMQKKTMGLEADTERLYPEDGVLKGDIKMALRLKDGGRYLADVRTTYKAKKPVQMPGAYNVDRKLDITSHNEDYTVVEQYERSEGRHSTGGMDELYK
   slug: lssmscarlet
   states:
@@ -8338,6 +8363,54 @@ lssmscarlet:
   transitions: []
   uniprot: null
   uuid: POBTH
+lssmscarlet2:
+  agg: m
+  doi: 10.3390/ijms231911051
+  genbank: null
+  ipg_id: null
+  name: LSSmScarlet2
+  pdb: []
+  seq: MVSKGEAVIKEFMRFKVHMEGSMNGHEFEIEGEGEGRPYEGTQTAKLKVTKGGPLPFSWDILSPQFMYGSRAFTKHPADIPDYHKQSFPEGFKWERVMNFEDGGAVTVTQDTSLEDGTLIYEVKLRGTNFPPDGPVMQKKTMGLEADTERLYPEDGVLKGDIKMALRLKGGGRYLAHVRTTYKAKKPVLMPGAYNVDRKLDITSHNEDYTVVEQFERSEGRHSTGDMDELYK
+  slug: lssmscarlet2
+  states:
+  - brightness: 8.7
+    em_max: 600
+    ex_max: 470
+    ext_coeff: 30000
+    lifetime: null
+    maturation: 184.0
+    name: default
+    pka: 2.19
+    qy: 0.29
+    slug: lssmscarlet2_default
+  switch_type: b
+  transitions: []
+  uniprot: null
+  uuid: OOASP
+lssmscarlet3:
+  agg: m
+  doi: 10.3390/ijms231911051
+  genbank: null
+  ipg_id: null
+  name: LSSmScarlet3
+  pdb: []
+  seq: MVSKGEAVIKEFMRFKVHMEGSMNGHEFEIEGEGEGRPYEGTQTAKLKVTKGGPLPFSWDILSPQFMYGSRAFTKHPADIPDYHKQSFPEGFKWERVMNFEDGGAVTVTQDTSLEDGTLIYEVKLRGTNFPPDGPVMQKKTMGLEADTERLYPEDGVLKGDIKMALRLKDGGRYLAHVRTTYKAKKPVLMPGAYNVDRKLDITSHNEDYTVVEQFERSEGRHSTGDMDELYK
+  slug: lssmscarlet3
+  states:
+  - brightness: 9.83
+    em_max: 598
+    ex_max: 466
+    ext_coeff: 27300
+    lifetime: null
+    maturation: 34.0
+    name: default
+    pka: 2.18
+    qy: 0.36
+    slug: lssmscarlet3_default
+  switch_type: b
+  transitions: []
+  uniprot: null
+  uuid: 86FNG
 lumazine-binding-protein:
   agg: ''
   doi: 10.1073/pnas.1424021112
@@ -10716,6 +10789,54 @@ mifp:
   transitions: []
   uniprot: null
   uuid: LDVKW
+minigfp1:
+  agg: m
+  doi: 10.3389/fbioe.2022.1039317
+  genbank: null
+  ipg_id: null
+  name: miniGFP1
+  pdb: []
+  seq: MEKSFVITDPWLPDYPIISASDGFLELTEYSREEIMGRNARFLQGPETDQATVQKIRDAIRDRRPTTVQLINYTKSGKKFWNLLHLQPVFDGKGGLQYFIGVQLVGSDHV
+  slug: minigfp1
+  states:
+  - brightness: 5.21
+    em_max: 499
+    ex_max: 450
+    ext_coeff: 16800
+    lifetime: 4.46
+    maturation: null
+    name: default
+    pka: 4.5
+    qy: 0.31
+    slug: minigfp1_default
+  switch_type: b
+  transitions: []
+  uniprot: null
+  uuid: OOLCX
+minigfp2:
+  agg: ''
+  doi: 10.3389/fbioe.2022.1039317
+  genbank: null
+  ipg_id: null
+  name: miniGFP2
+  pdb: []
+  seq: MEKSFVITDPWLPDYPIISASDGFLELTEYSRDEIMGRNARFLQGPETDQATVQKIRDAIRDRRPTTVQLINYTKSGKKFWNLLHLQPVFDGKGGLQYFIGVQLVGSDHV
+  slug: minigfp2
+  states:
+  - brightness: 5.18
+    em_max: 499
+    ex_max: 450
+    ext_coeff: 16200
+    lifetime: 4.54
+    maturation: null
+    name: default
+    pka: 4.4
+    qy: 0.32
+    slug: minigfp2_default
+  switch_type: b
+  transitions: []
+  uniprot: null
+  uuid: UVP48
 minisog:
   agg: m
   doi: 10.1371/journal.pbio.1001041
@@ -15092,7 +15213,7 @@ ph-tdgfp:
 philov21:
   agg: m
   doi: 10.1101/2021.08.02.454744
-  genbank: null
+  genbank: AUS83262
   ipg_id: null
   name: phiLOV2.1
   pdb: []

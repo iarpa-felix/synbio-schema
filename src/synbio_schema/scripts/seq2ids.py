@@ -12,9 +12,7 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 import re
 
-# from get_seqs_from_db import SeqsFromDb
-
-from get_seqs_from_db import SeqsFromDb
+from src.synbio_schema.scripts.get_seqs_from_db import SeqsFromDb
 
 import pandas as pd
 
