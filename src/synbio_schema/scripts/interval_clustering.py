@@ -1,58 +1,75 @@
-from bx.intervals.cluster import ClusterTree
 import collections
-import pandas as pd
+import logging
 import pprint
 import sqlite3
 
-fpbase_annotation_score = 5
+import click
+import click_log
+import pandas as pd
+from bx.intervals.cluster import ClusterTree
 
-con = sqlite3.connect("resources/felix_dump.db")
+logger = logging.getLogger(__name__)
+click_log.basic_config(logger)
 
-cur = con.cursor()
 
-df = pd.read_sql_query("""
-SELECT * FROM blast_results
-left join uniprot_annotation_scores on blast_results.sacc = uniprot_annotation_scores.accession
-""", con)
+@click.command()
+@click_log.simple_verbosity_option(logger)
+@click.option("--fpbase_annotation_score", default=5)
+@click.option("--sqlite_file", type=click.Path(), default="resources/felix_dump.db")
+def cli(sqlite_file: str, fpbase_annotation_score: str):
+    con = sqlite3.connect(sqlite_file)
 
-df['index'] = df.index
+    # cur = con.cursor()
 
-df['annotationScore'] = df['annotationScore'].fillna(fpbase_annotation_score)
+    df = pd.read_sql_query("""
+    SELECT * FROM blast_results
+    left join uniprot_annotation_scores on blast_results.sacc = uniprot_annotation_scores.accession
+    """, con)
 
-lod = df.to_dict('records')
+    df['index'] = df.index
 
-cluster_trees = collections.defaultdict(lambda: ClusterTree(1, 1))
+    df['annotationScore'] = df['annotationScore'].fillna(fpbase_annotation_score)
 
-for d in lod:
-    pprint.pprint(f"{d['qacc']} {d['index']}")
-    qmin = min(d['qstart'], d['qend'])
-    qmax = max(d['qstart'], d['qend'])
-    cluster_trees[d['qacc']].insert(qmin, qmax, d['index'])
+    lod = df.to_dict('records')
 
-cluster_lod = []
-for qseq, cluster_tree in cluster_trees.items():
-    for start, end, indices in cluster_tree.getregions():
-        for index in indices:
-            cluster_lod.append({'qacc': qseq,
-                                'index': index,
-                                "cluster_id": f"{qseq}_{start}_{end}"})
+    cluster_trees = collections.defaultdict(lambda: ClusterTree(1, 1))
 
-cluster_frame = pd.DataFrame(cluster_lod)
+    for d in lod:
+        logger.info(f"adding qacc {d['qacc']} and match index {d['index']} to cluster tree")
+        qmin = min(d['qstart'], d['qend'])
+        qmax = max(d['qstart'], d['qend'])
+        cluster_trees[d['qacc']].insert(qmin, qmax, d['index'])
 
-blast_results_clustered_scored = df.merge(cluster_frame, on=['qacc', 'index'], how='left')
+    cluster_lod = []
+    for qseq, cluster_tree in cluster_trees.items():
+        for start, end, indices in cluster_tree.getregions():
+            for index in indices:
+                cluster_lod.append({'qacc': qseq,
+                                    'index': index,
+                                    "cluster_id": f"{qseq}_{start}_{end}"})
 
-blast_results_clustered_scored['composite_score'] = blast_results_clustered_scored['qcovs'] * \
-                                                    blast_results_clustered_scored['pident'] * \
-                                                    blast_results_clustered_scored['annotationScore'] / 5000
+    cluster_frame = pd.DataFrame(cluster_lod)
 
-blast_results_clustered_scored[f'composite_score_rank'] = blast_results_clustered_scored.groupby('cluster_id')[
-    'composite_score'].rank("average", ascending=False)
+    blast_results_clustered_scored = df.merge(cluster_frame, on=['qacc', 'index'], how='left')
 
-blast_results_clustered_scored.to_sql(name="blast_results_clustered_scored", con=con, if_exists="replace", index=False)
+    blast_results_clustered_scored['composite_score'] = blast_results_clustered_scored['qcovs'] * \
+                                                        blast_results_clustered_scored['pident'] * \
+                                                        blast_results_clustered_scored['annotationScore'] / 5000
 
-blast_results_best_in_cluster = blast_results_clustered_scored.groupby('cluster_id')['composite_score_rank'].min()
+    blast_results_clustered_scored[f'composite_score_rank'] = blast_results_clustered_scored.groupby('cluster_id')[
+        'composite_score'].rank("average", ascending=False)
 
-blast_results_best_in_cluster = blast_results_clustered_scored.merge(blast_results_best_in_cluster,
-                                                                     on=['cluster_id', 'composite_score_rank'])
+    blast_results_clustered_scored.to_sql(name="blast_results_clustered_scored", con=con, if_exists="replace",
+                                          index=False)
 
-blast_results_best_in_cluster.to_sql(name="blast_results_best_in_cluster", con=con, if_exists="replace", index=False)
+    blast_results_best_in_cluster = blast_results_clustered_scored.groupby('cluster_id')['composite_score_rank'].min()
+
+    blast_results_best_in_cluster = blast_results_clustered_scored.merge(blast_results_best_in_cluster,
+                                                                         on=['cluster_id', 'composite_score_rank'])
+
+    blast_results_best_in_cluster.to_sql(name="blast_results_best_in_cluster", con=con, if_exists="replace",
+                                         index=False)
+
+
+if __name__ == "__main__":
+    cli()

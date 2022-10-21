@@ -1,17 +1,11 @@
-import pprint
 import json
-import sqlite3
-
-import pandas as pd
-import requests_cache
-import yaml
-
 import logging
+import sqlite3
 
 import click
 import click_log
-
 import pandas as pd
+import requests_cache
 
 # from typing import List
 
@@ -35,6 +29,9 @@ def cli(sqlite_db_fp: str, swiss_entries_dump_fp: str, blast_results_table: str,
     sqlite_db_conn = sqlite3.connect(sqlite_db_fp)
     swiss_accessions_q = f"select distinct sacc from {blast_results_table} where blast_db = 'swissprot' and pident >= {str(min_ident)} order by sacc"
     swiss_accessions_res = pd.read_sql_query(swiss_accessions_q, sqlite_db_conn)
+
+    # print(swiss_accessions_res)
+
     swiss_accessions = swiss_accessions_res['sacc'].to_list()
 
     swiss_entries = {}

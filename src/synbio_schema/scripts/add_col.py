@@ -8,18 +8,19 @@ import pandas as pd
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
 
+# todo allow user to specify added column name
+
 
 @click.command()
 @click_log.simple_verbosity_option(logger)
 @click.option("--tsv_in", type=click.Path(exists=True), required=True)
 @click.option("--tsv_out", type=click.Path(), required=True)
 @click.option("--col_val", required=True)
-def cli(tsv_in: str, tsv_out: str, col_val: str):
+def cli(tsv_in: str, tsv_out: str, col_val: str) -> None:
     """
     Add a column with a constant value to a TSV file
     :param tsv_in:
     :param tsv_out:
-    :param col_name:
     :param col_val:
     :return:
     """

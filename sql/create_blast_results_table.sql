@@ -19,11 +19,11 @@ CREATE TABLE IF NOT EXISTS "blast_results"(
   "sallseqid" TEXT,
   "stitle" TEXT,
   "salltitles" TEXT,
-  "staxids" TEXT,
-  "sskingdoms" TEXT,
-  "sscinames" TEXT,
-  "sblastnames" TEXT,
-  "scomnames" TEXT,
+--  "staxids" TEXT,
+--  "sskingdoms" TEXT,
+--  "sscinames" TEXT,
+--  "sblastnames" TEXT,
+--  "scomnames" TEXT,
   "blast_db" TEXT
 );
 

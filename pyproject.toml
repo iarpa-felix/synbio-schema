@@ -35,8 +35,10 @@ build-backend = "poetry.core.masonry.api"
 docs = ["linkml", "mkdocs-material"]
 
 [tool.poetry.scripts]
-seq2ids = "src.synbio_schema.scripts.seq2ids:seq2ids"
 add_col = "src.synbio_schema.scripts.add_col:cli"
+lbnl_felix_tracking2linkml = "src.synbio_schema.scripts.lbnl_felix_tracking2linkml:cli"
 get_fluor_prot_seqs = "src.synbio_schema.scripts.get_fluor_prot_seqs:cli"
 get_uniprot_entries = "src.synbio_schema.scripts.get_uniprot_entries:cli"
+interval_clustering = "src.synbio_schema.scripts.interval_clustering:cli"
+seq2ids = "src.synbio_schema.scripts.seq2ids:seq2ids"
 

@@ -12,14 +12,14 @@ class SeqsFromDb:
     def __init__(self):
         self.secrets_dict = Dict[str, Any]
 
-    def get_secrets_dict(self, secrets_file):
+    def get_secrets_dict(self, secrets_file: str) -> None:
         with open(secrets_file, 'r') as stream:
             try:
                 self.secrets_dict = yaml.safe_load(stream)
             except yaml.YAMLError as exc:
                 print(exc)
 
-    def sqlite_to_frame(self, sqlite_file):
+    def sqlite_to_frame(self, sqlite_file: str) -> pd.DataFrame:
         # where <path> is relative:
         engine = create_engine(f"sqlite:///{sqlite_file}")
         # todo do not leave this where filter in!!!
@@ -29,7 +29,7 @@ class SeqsFromDb:
         engine.dispose()
         return results_frame
 
-    def postgres_to_frame(self):
+    def postgres_to_frame(self) -> pd.DataFrame:
         # assumes that ssh tunnel is established
         # database_uri = f"postgresql+psycopg2://mam:{self.secrets_dict['db_pass']}@localhost:1111/felix"
         database_uri = f"postgresql+psycopg2://{self.secrets_dict['db_user']}@localhost:1111/felix"
