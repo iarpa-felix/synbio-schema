@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://semantic-synbio.github.io/synbio-schema/NamedThing/</loc>
+         <lastmod>2022-10-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/Organism/</loc>
          <lastmod>2022-10-25</lastmod>
          <changefreq>daily</changefreq>
@@ -76,12 +81,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://semantic-synbio.github.io/synbio-schema/SubcategorySizeEnum/</loc>
+         <lastmod>2022-10-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/aa_change/</loc>
          <lastmod>2022-10-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/abbreviation/</loc>
+         <lastmod>2022-10-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://semantic-synbio.github.io/synbio-schema/about/</loc>
          <lastmod>2022-10-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -426,7 +441,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://semantic-synbio.github.io/synbio-schema/special_name/</loc>
+         <lastmod>2022-10-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/species_name/</loc>
+         <lastmod>2022-10-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://semantic-synbio.github.io/synbio-schema/species_ncbi_taxon_number/</loc>
          <lastmod>2022-10-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
