@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#todos" class="md-nav__link">
     TODOs
   </a>
@@ -324,6 +331,7 @@
 
 
 <h1 id="slot-selection_markers">Slot: selection_markers</h1>
+<p><em>A genetic feature that encodes a trait used for artificial selection of a subpopulation</em></p>
 <p>URI: <a href="https://example.com/synbio/selection_markers">synbio:selection_markers</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -347,6 +355,22 @@
 <li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
 <li>Multivalued: True</li>
 </ul>
+<h2 id="examples">Examples</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tryptophan Auxotroph</td>
+</tr>
+<tr>
+<td>Ampicillin</td>
+</tr>
+</tbody>
+</table>
 <h2 id="todos">TODOs</h2>
 <ul>
 <li>strains and plasmids can have selection markers</li>
@@ -360,9 +384,16 @@
 <details>
 
 <pre><code class="language-yaml">name: selection_markers
+description: A genetic feature that encodes a trait used for artificial selection
+  of a subpopulation
 todos:
 - strains and plasmids can have selection markers
+examples:
+- value: Tryptophan Auxotroph
+- value: Ampicillin
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+exact_mappings:
+- SO:0002232
 rank: 1000
 multivalued: true
 alias: selection_markers

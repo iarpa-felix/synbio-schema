@@ -358,19 +358,19 @@
 <tr>
 <td><a href="../curated_gene_symbols/">curated_gene_symbols</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>corresponds to these genes, as determined by expert review</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../curated_protein_name/">curated_protein_name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>corresponds to this protein, as determined by expert review</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../curated_enzyme_name/">curated_enzyme_name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>corresponds to this enzyme, as determined by expert review</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -382,7 +382,7 @@
 <tr>
 <td><a href="../part_ofs/">part_ofs</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>appears in these genetic/genomic strains</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -971,6 +971,7 @@ attributes:
     required: false
   curated_gene_symbols:
     name: curated_gene_symbols
+    description: corresponds to these genes, as determined by expert review
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -982,6 +983,7 @@ attributes:
     range: string
   curated_protein_name:
     name: curated_protein_name
+    description: corresponds to this protein, as determined by expert review
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     alias: curated_protein_name
@@ -991,6 +993,7 @@ attributes:
     range: string
   curated_enzyme_name:
     name: curated_enzyme_name
+    description: corresponds to this enzyme, as determined by expert review
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     alias: curated_enzyme_name
@@ -1009,6 +1012,7 @@ attributes:
     range: string
   part_ofs:
     name: part_ofs
+    description: appears in these genetic/genomic strains
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true

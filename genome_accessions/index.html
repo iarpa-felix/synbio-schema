@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -317,6 +324,7 @@
 
 
 <h1 id="slot-genome_accessions">Slot: genome_accessions</h1>
+<p><em>An entry from NCBI's Genome database</em></p>
 <p>URI: <a href="https://example.com/synbio/genome_accessions">synbio:genome_accessions</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -340,6 +348,19 @@
 <li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
 <li>Multivalued: True</li>
 </ul>
+<h2 id="examples">Examples</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CP101925</td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -349,6 +370,9 @@
 <details>
 
 <pre><code class="language-yaml">name: genome_accessions
+description: An entry from NCBI's Genome database
+examples:
+- value: CP101925
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 rank: 1000
 multivalued: true

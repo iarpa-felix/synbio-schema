@@ -266,7 +266,7 @@
 <tr>
 <td><a href="../biosample_accessions/">biosample_accessions</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>An entry from NCBI's BioSample database</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -290,7 +290,7 @@
 <tr>
 <td><a href="../genome_accessions/">genome_accessions</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>An entry from NCBI's Genome database</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -302,7 +302,7 @@
 <tr>
 <td><a href="../has_parts/">has_parts</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>contains these genetic/genomic modifications</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -356,7 +356,7 @@
 <tr>
 <td><a href="../selection_markers/">selection_markers</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>A genetic feature that encodes a trait used for artificial selection of a subpopulation</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -534,6 +534,9 @@ attributes:
     range: BioSafetyLevelEnum
   biosample_accessions:
     name: biosample_accessions
+    description: An entry from NCBI's BioSample database
+    examples:
+    - value: SAMN29939549
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -578,6 +581,9 @@ attributes:
     range: FundingSourceEnum
   genome_accessions:
     name: genome_accessions
+    description: An entry from NCBI's Genome database
+    examples:
+    - value: CP101925
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -597,6 +603,7 @@ attributes:
     range: string
   has_parts:
     name: has_parts
+    description: contains these genetic/genomic modifications
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -708,9 +715,16 @@ attributes:
     range: string
   selection_markers:
     name: selection_markers
+    description: A genetic feature that encodes a trait used for artificial selection
+      of a subpopulation
     todos:
     - strains and plasmids can have selection markers
+    examples:
+    - value: Tryptophan Auxotroph
+    - value: Ampicillin
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    exact_mappings:
+    - SO:0002232
     rank: 1000
     multivalued: true
     alias: selection_markers

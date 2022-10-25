@@ -247,7 +247,7 @@
 <tr>
 <td><a href="../associated_part/">associated_part</a></td>
 <td>0..1 <br/> <a href="../Modification/">Modification</a></td>
-<td>None</td>
+<td>found in this Modification</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -259,31 +259,31 @@
 <tr>
 <td><a href="../go_term_ids/">go_term_ids</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
-<td>None</td>
+<td>may be described by these annotations, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../go_term_labels/">go_term_labels</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>may be described by these annotations, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../match_ec_numbers/">match_ec_numbers</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>corresponds to this enzyme, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../match_gene_symbols_etc/">match_gene_symbols_etc</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>corresponds to this genes, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../match_names/">match_names</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>similar to this sequence, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -301,7 +301,7 @@
 <tr>
 <td><a href="../scientific_names/">scientific_names</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>may originate in this organism, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -319,13 +319,13 @@
 <tr>
 <td><a href="../taxon_ids/">taxon_ids</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>may originate in this organism, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../uniprot_accessions/">uniprot_accessions</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>similar to this sequence, as determined by a sequence similarity search</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -480,6 +480,7 @@ attributes:
     pattern: ^sequence:\d+$
   associated_part:
     name: associated_part
+    description: found in this Modification
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     alias: associated_part
@@ -500,6 +501,8 @@ attributes:
     range: string
   go_term_ids:
     name: go_term_ids
+    description: may be described by these annotations, as determined by a sequence
+      similarity search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -510,6 +513,8 @@ attributes:
     range: uriorcurie
   go_term_labels:
     name: go_term_labels
+    description: may be described by these annotations, as determined by a sequence
+      similarity search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -520,6 +525,8 @@ attributes:
     range: string
   match_ec_numbers:
     name: match_ec_numbers
+    description: corresponds to this enzyme, as determined by a sequence similarity
+      search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -530,6 +537,8 @@ attributes:
     range: string
   match_gene_symbols_etc:
     name: match_gene_symbols_etc
+    description: corresponds to this genes, as determined by a sequence similarity
+      search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -540,6 +549,8 @@ attributes:
     range: string
   match_names:
     name: match_names
+    description: similar to this sequence, as determined by a sequence similarity
+      search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -571,6 +582,8 @@ attributes:
     range: string
   scientific_names:
     name: scientific_names
+    description: may originate in this organism, as determined by a sequence similarity
+      search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -599,6 +612,8 @@ attributes:
     range: SeqTypeEnum
   taxon_ids:
     name: taxon_ids
+    description: may originate in this organism, as determined by a sequence similarity
+      search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -609,6 +624,8 @@ attributes:
     range: string
   uniprot_accessions:
     name: uniprot_accessions
+    description: similar to this sequence, as determined by a sequence similarity
+      search
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
