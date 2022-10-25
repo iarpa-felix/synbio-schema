@@ -323,7 +323,7 @@
 <tbody>
 <tr>
 <td>antibiotic resistance</td>
-<td>None</td>
+<td>IDO:0000581</td>
 <td></td>
 </tr>
 <tr>
@@ -358,12 +358,12 @@
 </tr>
 <tr>
 <td>promoter</td>
-<td>None</td>
+<td>SO:0000167</td>
 <td></td>
 </tr>
 <tr>
 <td>terminator</td>
-<td>None</td>
+<td>SO:0000141</td>
 <td></td>
 </tr>
 <tr>
@@ -376,19 +376,18 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio</li>
+<li>from schema: https://example.com/synbio</li>
 </ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: CategoryEnum
-from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+from_schema: https://example.com/synbio
 rank: 1000
 permissible_values:
   antibiotic resistance:
     text: antibiotic resistance
-    exact_mappings:
-    - IDO:0000581
+    meaning: IDO:0000581
   biosynthetic:
     text: biosynthetic
   compound:
@@ -403,12 +402,10 @@ permissible_values:
     text: origin/structural
   promoter:
     text: promoter
-    exact_mappings:
-    - SO:0000167
+    meaning: SO:0000167
   terminator:
     text: terminator
-    exact_mappings:
-    - SO:0000141
+    meaning: SO:0000141
   toxin/virulence:
     text: toxin/virulence
 

@@ -419,7 +419,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio</li>
+<li>from schema: https://example.com/synbio</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -451,7 +451,7 @@
 <pre><code class="language-yaml">name: Strain
 description: An Organism from a population whose characteristics vary from the base
   Organism due to natural selection, breeding, etc.
-from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+from_schema: https://example.com/synbio
 exact_mappings:
 - OBI:0001185
 rank: 1000
@@ -500,7 +500,7 @@ class_uri: synbio:Strain
 <pre><code class="language-yaml">name: Strain
 description: An Organism from a population whose characteristics vary from the base
   Organism due to natural selection, breeding, etc.
-from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+from_schema: https://example.com/synbio
 exact_mappings:
 - OBI:0001185
 rank: 1000
@@ -523,7 +523,7 @@ slot_usage:
 attributes:
   bio_safety_level:
     name: bio_safety_level
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     slot_uri: synbio:bio_safety_level
     alias: bio_safety_level
@@ -537,7 +537,7 @@ attributes:
     description: An entry from NCBI's BioSample database
     examples:
     - value: SAMN29939549
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     multivalued: true
     alias: biosample_accessions
@@ -547,7 +547,7 @@ attributes:
     range: string
   creator:
     name: creator
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     slot_uri: synbio:creator
     alias: creator
@@ -562,7 +562,7 @@ attributes:
     todos:
     - strains have selection markers
     - enforce sane URLs? resolvable? heterogeneous delimiters!
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     multivalued: true
     alias: external_urls
@@ -572,7 +572,7 @@ attributes:
     range: string
   funding_source:
     name: funding_source
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     alias: funding_source
     owner: Strain
@@ -584,7 +584,7 @@ attributes:
     description: An entry from NCBI's Genome database
     examples:
     - value: CP101925
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     multivalued: true
     alias: genome_accessions
@@ -594,7 +594,7 @@ attributes:
     range: string
   genotype_phenotype:
     name: genotype_phenotype
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     alias: genotype_phenotype
     owner: Strain
@@ -604,7 +604,7 @@ attributes:
   has_parts:
     name: has_parts
     description: contains these genetic/genomic modifications
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     multivalued: true
     alias: has_parts
@@ -614,7 +614,7 @@ attributes:
     range: string
   host_organism:
     name: host_organism
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     alias: host_organism
     owner: Strain
@@ -623,7 +623,7 @@ attributes:
     range: Organism
   id:
     name: id
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     slot_uri: synbio:id
     multivalued: false
@@ -648,7 +648,7 @@ attributes:
     name: intellectual_property
     todos:
     - enum range?
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     alias: intellectual_property
     owner: Strain
@@ -657,7 +657,7 @@ attributes:
     range: string
   keywords:
     name: keywords
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     exact_mappings:
     - IAO:0000630
     rank: 1000
@@ -668,7 +668,7 @@ attributes:
     range: string
   name:
     name: name
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     alias: name
     owner: Strain
@@ -678,7 +678,7 @@ attributes:
     range: string
   notes:
     name: notes
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     exact_mappings:
     - IAO:0000634
     rank: 1000
@@ -691,7 +691,7 @@ attributes:
     range: string
   principal_investigator:
     name: principal_investigator
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     exact_mappings:
     - OBI:0000103
     rank: 1000
@@ -704,7 +704,7 @@ attributes:
     range: Person
   references:
     name: references
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     exact_mappings:
     - IAO:0000320
     rank: 1000
@@ -722,7 +722,7 @@ attributes:
     examples:
     - value: Tryptophan Auxotroph
     - value: Ampicillin
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     exact_mappings:
     - SO:0002232
     rank: 1000
@@ -734,7 +734,7 @@ attributes:
     range: string
   status:
     name: status
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     exact_mappings:
     - SO:0000905
     rank: 1000
@@ -747,7 +747,7 @@ attributes:
     range: StatusEnum
   summary:
     name: summary
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     alias: summary
     owner: Strain
@@ -756,7 +756,7 @@ attributes:
     range: string
   comment:
     name: comment
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     exact_mappings:
     - NCIT:C25393
     rank: 1000
@@ -769,7 +769,7 @@ attributes:
     range: string
   species_name:
     name: species_name
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     slot_uri: synbio:species_name
     multivalued: false
@@ -780,7 +780,7 @@ attributes:
     range: string
   strain_agnostic_taxid:
     name: strain_agnostic_taxid
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     slot_uri: synbio:strain_agnostic_taxid
     multivalued: false
@@ -791,7 +791,7 @@ attributes:
     range: string
   strain_value:
     name: strain_value
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    from_schema: https://example.com/synbio
     rank: 1000
     slot_uri: synbio:strain
     multivalued: false

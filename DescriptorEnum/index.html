@@ -363,17 +363,17 @@
 </tr>
 <tr>
 <td>enhancer</td>
-<td>None</td>
+<td>SO:0000165</td>
 <td></td>
 </tr>
 <tr>
 <td>epitope</td>
-<td>None</td>
+<td>SO:0001018</td>
 <td></td>
 </tr>
 <tr>
 <td>fragment</td>
-<td>None</td>
+<td>SO:0000731</td>
 <td></td>
 </tr>
 <tr>
@@ -383,12 +383,12 @@
 </tr>
 <tr>
 <td>gene</td>
-<td>None</td>
+<td>SO:0000704</td>
 <td></td>
 </tr>
 <tr>
 <td>insertion site</td>
-<td>None</td>
+<td>SO:0000366</td>
 <td></td>
 </tr>
 <tr>
@@ -403,7 +403,7 @@
 </tr>
 <tr>
 <td>promoter</td>
-<td>None</td>
+<td>SO:0000167</td>
 <td></td>
 </tr>
 <tr>
@@ -423,7 +423,7 @@
 </tr>
 <tr>
 <td>terminator</td>
-<td>None</td>
+<td>SO:0000141</td>
 <td></td>
 </tr>
 <tr>
@@ -451,13 +451,13 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio</li>
+<li>from schema: https://example.com/synbio</li>
 </ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: DescriptorEnum
-from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+from_schema: https://example.com/synbio
 rank: 1000
 permissible_values:
   3pUTR:
@@ -478,34 +478,28 @@ permissible_values:
     text: eGFP
   enhancer:
     text: enhancer
-    exact_mappings:
-    - SO:0000165
+    meaning: SO:0000165
   epitope:
     text: epitope
-    exact_mappings:
-    - SO:0001018
+    meaning: SO:0001018
   fragment:
     text: fragment
-    exact_mappings:
-    - SO:0000731
+    meaning: SO:0000731
   G:
     text: G
   gene:
     text: gene
-    exact_mappings:
-    - SO:0000704
+    meaning: SO:0000704
   insertion site:
     text: insertion site
-    exact_mappings:
-    - SO:0000366
+    meaning: SO:0000366
   multiple cloning site:
     text: multiple cloning site
   opt:
     text: opt
   promoter:
     text: promoter
-    exact_mappings:
-    - SO:0000167
+    meaning: SO:0000167
   ribosomal binding site:
     text: ribosomal binding site
   scar:
@@ -514,8 +508,7 @@ permissible_values:
     text: SUMO
   terminator:
     text: terminator
-    exact_mappings:
-    - SO:0000141
+    meaning: SO:0000141
   VP16:
     text: VP16
   cleavage site:
