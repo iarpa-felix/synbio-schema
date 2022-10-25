@@ -284,6 +284,30 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../curated_enzyme_name/">curated_enzyme_name</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>corresponds to this enzyme, as determined by expert review</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../curated_gene_symbols/">curated_gene_symbols</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>corresponds to these genes, as determined by expert review</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../curated_protein_name/">curated_protein_name</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>corresponds to this protein, as determined by expert review</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../curated_uniprot_accession/">curated_uniprot_accession</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>corresponds to this Uniprot entry, as determined by expert review</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../descriptor/">descriptor</a></td>
 <td>0..1 <br/> <a href="../DescriptorEnum/">DescriptorEnum</a></td>
 <td>None</td>
@@ -326,6 +350,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../part_ofs/">part_ofs</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>appears in these genetic/genomic strains</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../position/">position</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>None</td>
@@ -353,36 +383,6 @@
 <td><a href="../subcategory_size/">subcategory_size</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>None</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../curated_gene_symbols/">curated_gene_symbols</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>corresponds to these genes, as determined by expert review</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../curated_protein_name/">curated_protein_name</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>corresponds to this protein, as determined by expert review</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../curated_enzyme_name/">curated_enzyme_name</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>corresponds to this enzyme, as determined by expert review</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../curated_uniprot_accession/">curated_uniprot_accession</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>corresponds to this Uniprot entry, as determined by expert review</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../part_ofs/">part_ofs</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>appears in these genetic/genomic strains</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -457,6 +457,10 @@ slots:
 - bio_safety_level
 - category
 - creator
+- curated_enzyme_name
+- curated_gene_symbols
+- curated_protein_name
+- curated_uniprot_accession
 - descriptor
 - el_name_long
 - el_name_short
@@ -464,20 +468,15 @@ slots:
 - modification_type
 - modifications_genes
 - notes
+- part_ofs
 - position
 - principal_investigator
 - size_bp
 - status
 - subcategory_size
-- curated_gene_symbols
-- curated_protein_name
-- curated_enzyme_name
-- curated_uniprot_accession
-- part_ofs
 slot_usage:
   id:
     name: id
-    identifier: true
     domain_of:
     - PartsSequence
     - Strain
@@ -489,14 +488,7 @@ slot_usage:
     - Modification
     - Organism
     - Person
-    required: true
     pattern: ^IF:\d+$
-  aa_change:
-    name: aa_change
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   bio_safety_level:
     name: bio_safety_level
     domain_of:
@@ -505,12 +497,6 @@ slot_usage:
     - Strain
     - Modification
     required: true
-  category:
-    name: category
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   creator:
     name: creator
     domain_of:
@@ -518,61 +504,7 @@ slot_usage:
     - Modification
     - Strain
     - Modification
-    range: Person
     required: true
-  descriptor:
-    name: descriptor
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  el_name_long:
-    name: el_name_long
-    domain_of:
-    - Modification
-    - Modification
-    required: true
-  el_name_short:
-    name: el_name_short
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  modification_type:
-    name: modification_type
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  notes:
-    name: notes
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    required: false
-  position:
-    name: position
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  principal_investigator:
-    name: principal_investigator
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    range: Person
-    required: true
-  size_bp:
-    name: size_bp
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   status:
     name: status
     domain_of:
@@ -581,29 +513,6 @@ slot_usage:
     - Strain
     - Modification
     required: true
-  subcategory_size:
-    name: subcategory_size
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  curated_gene_symbols:
-    name: curated_gene_symbols
-    multivalued: true
-    domain_of:
-    - Modification
-    - Modification
-  element_organism:
-    name: element_organism
-    domain_of:
-    - Modification
-    - Modification
-  modifications_genes:
-    name: modifications_genes
-    domain_of:
-    - Modification
-    - Modification
-class_uri: synbio:Modification
 
 </code></pre>
 </details>
@@ -619,7 +528,6 @@ is_a: Part
 slot_usage:
   id:
     name: id
-    identifier: true
     domain_of:
     - PartsSequence
     - Strain
@@ -631,14 +539,7 @@ slot_usage:
     - Modification
     - Organism
     - Person
-    required: true
     pattern: ^IF:\d+$
-  aa_change:
-    name: aa_change
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   bio_safety_level:
     name: bio_safety_level
     domain_of:
@@ -647,12 +548,6 @@ slot_usage:
     - Strain
     - Modification
     required: true
-  category:
-    name: category
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   creator:
     name: creator
     domain_of:
@@ -660,61 +555,7 @@ slot_usage:
     - Modification
     - Strain
     - Modification
-    range: Person
     required: true
-  descriptor:
-    name: descriptor
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  el_name_long:
-    name: el_name_long
-    domain_of:
-    - Modification
-    - Modification
-    required: true
-  el_name_short:
-    name: el_name_short
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  modification_type:
-    name: modification_type
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  notes:
-    name: notes
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    required: false
-  position:
-    name: position
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  principal_investigator:
-    name: principal_investigator
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    range: Person
-    required: true
-  size_bp:
-    name: size_bp
-    domain_of:
-    - Modification
-    - Modification
-    required: false
   status:
     name: status
     domain_of:
@@ -723,34 +564,11 @@ slot_usage:
     - Strain
     - Modification
     required: true
-  subcategory_size:
-    name: subcategory_size
-    domain_of:
-    - Modification
-    - Modification
-    required: false
-  curated_gene_symbols:
-    name: curated_gene_symbols
-    multivalued: true
-    domain_of:
-    - Modification
-    - Modification
-  element_organism:
-    name: element_organism
-    domain_of:
-    - Modification
-    - Modification
-  modifications_genes:
-    name: modifications_genes
-    domain_of:
-    - Modification
-    - Modification
 attributes:
   id:
     name: id
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:id
     identifier: true
     alias: id
     owner: Modification
@@ -766,25 +584,20 @@ attributes:
     - Organism
     - Person
     range: string
-    required: true
     pattern: ^IF:\d+$
   aa_change:
     name: aa_change
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:aa_change
     alias: aa_change
     owner: Modification
     domain_of:
     - Modification
-    - Modification
     range: string
-    required: false
   bio_safety_level:
     name: bio_safety_level
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:bio_safety_level
     alias: bio_safety_level
     owner: Modification
     domain_of:
@@ -796,21 +609,19 @@ attributes:
     required: true
   category:
     name: category
+    examples:
+    - value: biosynthetic
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:category
     alias: category
     owner: Modification
     domain_of:
     - Modification
-    - Modification
     range: CategoryEnum
-    required: false
   creator:
     name: creator
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:creator
     alias: creator
     owner: Modification
     domain_of:
@@ -820,155 +631,16 @@ attributes:
     - Modification
     range: Person
     required: true
-    inlined: false
-  descriptor:
-    name: descriptor
+  curated_enzyme_name:
+    name: curated_enzyme_name
+    description: corresponds to this enzyme, as determined by expert review
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:descriptor
-    alias: descriptor
+    alias: curated_enzyme_name
     owner: Modification
     domain_of:
-    - Modification
-    - Modification
-    range: DescriptorEnum
-    required: false
-  el_name_long:
-    name: el_name_long
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:el_name_long
-    alias: el_name_long
-    owner: Modification
-    domain_of:
-    - Modification
     - Modification
     range: string
-    required: true
-  el_name_short:
-    name: el_name_short
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:el_name_short
-    alias: el_name_short
-    owner: Modification
-    domain_of:
-    - Modification
-    - Modification
-    range: string
-    required: false
-  element_organism:
-    name: element_organism
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:element_organism
-    alias: element_organism
-    owner: Modification
-    domain_of:
-    - Modification
-    - Modification
-    range: string
-  modification_type:
-    name: modification_type
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:modification_type
-    alias: modification_type
-    owner: Modification
-    domain_of:
-    - Modification
-    - Modification
-    range: ModificationTypeEnum
-    required: false
-  modifications_genes:
-    name: modifications_genes
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:modifications_genes
-    alias: modifications_genes
-    owner: Modification
-    domain_of:
-    - Modification
-    - Modification
-    range: string
-  notes:
-    name: notes
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:notes
-    alias: notes
-    owner: Modification
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    range: string
-    required: false
-  position:
-    name: position
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:position
-    alias: position
-    owner: Modification
-    domain_of:
-    - Modification
-    - Modification
-    range: string
-    required: false
-  principal_investigator:
-    name: principal_investigator
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:principal_investigator
-    alias: principal_investigator
-    owner: Modification
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    range: Person
-    required: true
-  size_bp:
-    name: size_bp
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:size_bp
-    alias: size_bp
-    owner: Modification
-    domain_of:
-    - Modification
-    - Modification
-    range: integer
-    required: false
-  status:
-    name: status
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:status
-    alias: status
-    owner: Modification
-    domain_of:
-    - Strain
-    - Modification
-    - Strain
-    - Modification
-    range: StatusEnum
-    required: true
-  subcategory_size:
-    name: subcategory_size
-    from_schema: https://example.com/synbio
-    rank: 1000
-    slot_uri: synbio:subcategory_size
-    alias: subcategory_size
-    owner: Modification
-    domain_of:
-    - Modification
-    - Modification
-    range: string
-    required: false
   curated_gene_symbols:
     name: curated_gene_symbols
     description: corresponds to these genes, as determined by expert review
@@ -979,7 +651,6 @@ attributes:
     owner: Modification
     domain_of:
     - Modification
-    - Modification
     range: string
   curated_protein_name:
     name: curated_protein_name
@@ -987,16 +658,6 @@ attributes:
     from_schema: https://example.com/synbio
     rank: 1000
     alias: curated_protein_name
-    owner: Modification
-    domain_of:
-    - Modification
-    range: string
-  curated_enzyme_name:
-    name: curated_enzyme_name
-    description: corresponds to this enzyme, as determined by expert review
-    from_schema: https://example.com/synbio
-    rank: 1000
-    alias: curated_enzyme_name
     owner: Modification
     domain_of:
     - Modification
@@ -1011,6 +672,77 @@ attributes:
     domain_of:
     - Modification
     range: string
+  descriptor:
+    name: descriptor
+    examples:
+    - value: epitope
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: descriptor
+    owner: Modification
+    domain_of:
+    - Modification
+    range: DescriptorEnum
+  el_name_long:
+    name: el_name_long
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: el_name_long
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+    required: true
+  el_name_short:
+    name: el_name_short
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: el_name_short
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+  element_organism:
+    name: element_organism
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: element_organism
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+  modification_type:
+    name: modification_type
+    examples:
+    - value: amber stop codon
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: modification_type
+    owner: Modification
+    domain_of:
+    - Modification
+    range: ModificationTypeEnum
+  modifications_genes:
+    name: modifications_genes
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: modifications_genes
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+  notes:
+    name: notes
+    from_schema: https://example.com/synbio
+    exact_mappings:
+    - IAO:0000634
+    rank: 1000
+    alias: notes
+    owner: Modification
+    domain_of:
+    - Strain
+    - Modification
+    range: string
   part_ofs:
     name: part_ofs
     description: appears in these genetic/genomic strains
@@ -1022,7 +754,59 @@ attributes:
     domain_of:
     - Modification
     range: string
-class_uri: synbio:Modification
+  position:
+    name: position
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: position
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
+  principal_investigator:
+    name: principal_investigator
+    from_schema: https://example.com/synbio
+    exact_mappings:
+    - OBI:0000103
+    rank: 1000
+    alias: principal_investigator
+    owner: Modification
+    domain_of:
+    - Strain
+    - Modification
+    range: Person
+    required: true
+  size_bp:
+    name: size_bp
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: size_bp
+    owner: Modification
+    domain_of:
+    - Modification
+    range: integer
+  status:
+    name: status
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: status
+    owner: Modification
+    domain_of:
+    - Strain
+    - Modification
+    - Strain
+    - Modification
+    range: StatusEnum
+    required: true
+  subcategory_size:
+    name: subcategory_size
+    from_schema: https://example.com/synbio
+    rank: 1000
+    alias: subcategory_size
+    owner: Modification
+    domain_of:
+    - Modification
+    range: string
 
 </code></pre>
 </details>

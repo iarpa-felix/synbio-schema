@@ -218,24 +218,11 @@
       Organism : strain_agnostic_taxid
       Organism : strain_value
 
-
-      Organism &lt;|-- Strain
-
-      Organism : comment
-      Organism : id
-      Organism : name
-      Organism : species_name
-      Organism : strain_agnostic_taxid
-      Organism : strain_value
-
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../Part/">Part</a><ul>
-<li><strong>Organism</strong><ul>
-<li><a href="../Strain/">Strain</a></li>
-</ul>
-</li>
+<li><strong>Organism</strong></li>
 </ul>
 </li>
 </ul>
@@ -362,7 +349,6 @@ slots:
 slot_usage:
   id:
     name: id
-    multivalued: false
     domain_of:
     - PartsSequence
     - Strain
@@ -374,36 +360,7 @@ slot_usage:
     - Modification
     - Organism
     - Person
-    required: true
     pattern: ^organism:-?\d+$
-  abbreviation:
-    name: abbreviation
-    multivalued: false
-  comment:
-    name: comment
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
-  species_name:
-    name: species_name
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
-  strain_agnostic_taxid:
-    name: strain_agnostic_taxid
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
-  strain_value:
-    name: strain_value
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
-class_uri: synbio:Organism
 
 </code></pre>
 </details>
@@ -419,7 +376,6 @@ is_a: Part
 slot_usage:
   id:
     name: id
-    multivalued: false
     domain_of:
     - PartsSequence
     - Strain
@@ -431,54 +387,23 @@ slot_usage:
     - Modification
     - Organism
     - Person
-    required: true
     pattern: ^organism:-?\d+$
-  abbreviation:
-    name: abbreviation
-    multivalued: false
-  comment:
-    name: comment
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
-  species_name:
-    name: species_name
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
-  strain_agnostic_taxid:
-    name: strain_agnostic_taxid
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
-  strain_value:
-    name: strain_value
-    multivalued: false
-    domain_of:
-    - Organism
-    - Organism
 attributes:
   comment:
     name: comment
     from_schema: https://example.com/synbio
+    exact_mappings:
+    - NCIT:C25393
     rank: 1000
-    slot_uri: synbio:comment
-    multivalued: false
     alias: comment
     owner: Organism
     domain_of:
-    - Organism
     - Organism
     range: string
   id:
     name: id
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:id
-    multivalued: false
     identifier: true
     alias: id
     owner: Organism
@@ -494,7 +419,6 @@ attributes:
     - Organism
     - Person
     range: string
-    required: true
     pattern: ^organism:-?\d+$
   name:
     name: name
@@ -510,39 +434,29 @@ attributes:
     name: species_name
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:species_name
-    multivalued: false
     alias: species_name
     owner: Organism
     domain_of:
-    - Organism
     - Organism
     range: string
   strain_agnostic_taxid:
     name: strain_agnostic_taxid
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:strain_agnostic_taxid
-    multivalued: false
     alias: strain_agnostic_taxid
     owner: Organism
     domain_of:
-    - Organism
     - Organism
     range: string
   strain_value:
     name: strain_value
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:strain
-    multivalued: false
     alias: strain_value
     owner: Organism
     domain_of:
     - Organism
-    - Organism
     range: string
-class_uri: synbio:Organism
 
 </code></pre>
 </details>

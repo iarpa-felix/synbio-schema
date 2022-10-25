@@ -369,7 +369,6 @@ slots:
 slot_usage:
   id:
     name: id
-    multivalued: false
     domain_of:
     - PartsSequence
     - Strain
@@ -381,52 +380,7 @@ slot_usage:
     - Modification
     - Organism
     - Person
-    required: true
     pattern: ^person:\d+$
-  date_joined:
-    name: date_joined
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  email:
-    name: email
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  first_name:
-    name: first_name
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  is_staff:
-    name: is_staff
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  is_superuser:
-    name: is_superuser
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  last_name:
-    name: last_name
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  username:
-    name: username
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-    required: true
-class_uri: synbio:Person
 
 </code></pre>
 </details>
@@ -442,7 +396,6 @@ rank: 1000
 slot_usage:
   id:
     name: id
-    multivalued: false
     domain_of:
     - PartsSequence
     - Strain
@@ -454,58 +407,12 @@ slot_usage:
     - Modification
     - Organism
     - Person
-    required: true
     pattern: ^person:\d+$
-  date_joined:
-    name: date_joined
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  email:
-    name: email
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  first_name:
-    name: first_name
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  is_staff:
-    name: is_staff
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  is_superuser:
-    name: is_superuser
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  last_name:
-    name: last_name
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-  username:
-    name: username
-    multivalued: false
-    domain_of:
-    - Person
-    - Person
-    required: true
 attributes:
   id:
     name: id
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:id
-    multivalued: false
     identifier: true
     alias: id
     owner: Person
@@ -521,54 +428,45 @@ attributes:
     - Organism
     - Person
     range: string
-    required: true
     pattern: ^person:\d+$
   date_joined:
     name: date_joined
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:date_joined
-    multivalued: false
     alias: date_joined
     owner: Person
     domain_of:
-    - Person
     - Person
     range: datetime
   email:
     name: email
     from_schema: https://example.com/synbio
+    exact_mappings:
+    - IAO:0000429
     rank: 1000
-    slot_uri: synbio:email
-    multivalued: false
     alias: email
     owner: Person
     domain_of:
-    - Person
     - Person
     range: string
   first_name:
     name: first_name
     from_schema: https://example.com/synbio
+    exact_mappings:
+    - IAO:0020016
     rank: 1000
-    slot_uri: synbio:first_name
-    multivalued: false
     alias: first_name
     owner: Person
     domain_of:
-    - Person
     - Person
     range: string
   is_staff:
     name: is_staff
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:is_staff
-    multivalued: false
     alias: is_staff
     owner: Person
     domain_of:
-    - Person
     - Person
     range: boolean
     required: true
@@ -576,41 +474,33 @@ attributes:
     name: is_superuser
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:is_superuser
-    multivalued: false
     alias: is_superuser
     owner: Person
     domain_of:
-    - Person
     - Person
     range: boolean
     required: true
   last_name:
     name: last_name
     from_schema: https://example.com/synbio
+    exact_mappings:
+    - IAO:0020017
     rank: 1000
-    slot_uri: synbio:last_name
-    multivalued: false
     alias: last_name
     owner: Person
     domain_of:
-    - Person
     - Person
     range: string
   username:
     name: username
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:username
-    multivalued: false
     alias: username
     owner: Person
     domain_of:
     - Person
-    - Person
     range: string
     required: true
-class_uri: synbio:Person
 
 </code></pre>
 </details>

@@ -288,38 +288,6 @@ slots:
 - person_set
 - sequence_set
 - strain_set
-slot_usage:
-  strain_set:
-    name: strain_set
-    domain_of:
-    - Database
-    - Database
-    range: Strain
-  modification_set:
-    name: modification_set
-    domain_of:
-    - Database
-    - Database
-    range: Modification
-  organism_set:
-    name: organism_set
-    domain_of:
-    - Database
-    - Database
-    range: Organism
-  person_set:
-    name: person_set
-    domain_of:
-    - Database
-    - Database
-    range: Person
-  sequence_set:
-    name: sequence_set
-    domain_of:
-    - Database
-    - Database
-    range: PartsSequence
-class_uri: synbio:Database
 
 </code></pre>
 </details>
@@ -329,37 +297,6 @@ class_uri: synbio:Database
 description: A collection of instances from other classes
 from_schema: https://example.com/synbio
 rank: 1000
-slot_usage:
-  strain_set:
-    name: strain_set
-    domain_of:
-    - Database
-    - Database
-    range: Strain
-  modification_set:
-    name: modification_set
-    domain_of:
-    - Database
-    - Database
-    range: Modification
-  organism_set:
-    name: organism_set
-    domain_of:
-    - Database
-    - Database
-    range: Organism
-  person_set:
-    name: person_set
-    domain_of:
-    - Database
-    - Database
-    range: Person
-  sequence_set:
-    name: sequence_set
-    domain_of:
-    - Database
-    - Database
-    range: PartsSequence
 attributes:
   modification_set:
     name: modification_set
@@ -371,7 +308,6 @@ attributes:
     owner: Database
     domain_of:
     - Database
-    - Database
     range: Modification
     inlined: true
     inlined_as_list: true
@@ -380,12 +316,10 @@ attributes:
     description: Zero or more Organism instances
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:organism_set
     multivalued: true
     alias: organism_set
     owner: Database
     domain_of:
-    - Database
     - Database
     range: Organism
     inlined: true
@@ -395,12 +329,10 @@ attributes:
     description: Zero or more Person instances
     from_schema: https://example.com/synbio
     rank: 1000
-    slot_uri: synbio:person_set
     multivalued: true
     alias: person_set
     owner: Database
     domain_of:
-    - Database
     - Database
     range: Person
     inlined: true
@@ -415,7 +347,6 @@ attributes:
     owner: Database
     domain_of:
     - Database
-    - Database
     range: PartsSequence
     inlined: true
     inlined_as_list: true
@@ -429,11 +360,9 @@ attributes:
     owner: Database
     domain_of:
     - Database
-    - Database
     range: Strain
     inlined: true
     inlined_as_list: true
-class_uri: synbio:Database
 
 </code></pre>
 </details>
