@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-10-25T10:59:52
+# Generation date: 2022-10-25T12:09:24
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio

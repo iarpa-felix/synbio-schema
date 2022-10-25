@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from synbio_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-25T10:59:43\n    Schema: synbio\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio\n    description: synbio\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from synbio_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-25T12:09:15\n    Schema: synbio\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio\n    description: synbio\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "GO": "http://amigo.geneontology.org/amigo/term/GO:",
       "IAO": {
