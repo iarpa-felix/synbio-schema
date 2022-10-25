@@ -20,10 +20,6 @@
       "prefix_reference": "http://purl.org/dc/terms/"
     },
     {
-      "prefix_prefix": "skos",
-      "prefix_reference": "http://www.w3.org/2004/02/skos/core#"
-    },
-    {
       "prefix_prefix": "NCIT",
       "prefix_reference": "http://purl.obolibrary.org/obo/NCIT_"
     },
@@ -42,10 +38,6 @@
     {
       "prefix_prefix": "NCBITaxon",
       "prefix_reference": "http://purl.obolibrary.org/obo/NCBITaxon_"
-    },
-    {
-      "prefix_prefix": "biolink",
-      "prefix_reference": "https://w3id.org/biolink/vocab/"
     }
   ],
   "default_prefix": "synbio",
@@ -589,6 +581,65 @@
     }
   ],
   "slots": [
+    {
+      "name": "genome_accessions",
+      "definition_uri": "https://w3id.org/None/genome_accessions",
+      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
+      "slot_uri": "https://w3id.org/None/genome_accessions",
+      "multivalued": true,
+      "owner": "Strain",
+      "domain_of": [
+        "Strain"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biosample_accessions",
+      "definition_uri": "https://w3id.org/None/biosample_accessions",
+      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
+      "slot_uri": "https://w3id.org/None/biosample_accessions",
+      "multivalued": true,
+      "owner": "Strain",
+      "domain_of": [
+        "Strain"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "selection_markers",
+      "definition_uri": "https://w3id.org/None/selection_markers",
+      "todos": [
+        "strains and plasmids can have selection markers"
+      ],
+      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
+      "slot_uri": "https://w3id.org/None/selection_markers",
+      "multivalued": true,
+      "owner": "Strain",
+      "domain_of": [
+        "Strain"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "external_urls",
+      "definition_uri": "https://w3id.org/None/external_urls",
+      "todos": [
+        "strains have selection markers",
+        "enforce sane URLs? resolvable? heterogeneous delimiters!"
+      ],
+      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
+      "slot_uri": "https://w3id.org/None/external_urls",
+      "multivalued": true,
+      "owner": "Strain",
+      "domain_of": [
+        "Strain"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
     {
       "name": "curated_uniprot_accession",
       "definition_uri": "https://w3id.org/None/curated_uniprot_accession",
@@ -1368,7 +1419,6 @@
         "PartsSequence",
         "Strain",
         "Modification",
-        "NamedThing",
         "Organism",
         "Person"
       ],
@@ -2222,28 +2272,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "NamedThing_id",
-      "definition_uri": "https://w3id.org/None/id",
-      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "mappings": [
-        "https://w3id.org/None/id"
-      ],
-      "is_a": "id",
-      "domain": "NamedThing",
-      "slot_uri": "https://w3id.org/None/id",
-      "identifier": true,
-      "alias": "id",
-      "owner": "NamedThing",
-      "domain_of": [
-        "NamedThing"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "id",
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "Organism_id",
       "definition_uri": "https://w3id.org/None/id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
@@ -2608,21 +2636,25 @@
         "OBI:0001185"
       ],
       "slots": [
-        "Strain_id",
+        "genome_accessions",
+        "biosample_accessions",
         "bio_safety_level",
         "creator",
         "funding_source",
         "genotype_phenotype",
+        "has_parts",
+        "host_organism",
+        "Strain_id",
         "intellectual_property",
         "keywords",
         "name",
         "notes",
         "principal_investigator",
         "references",
+        "selection_markers",
         "status",
         "summary",
-        "has_parts",
-        "host_organism"
+        "external_urls"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/None/Strain",
@@ -2682,23 +2714,6 @@
       "@type": "ClassDefinition"
     },
     {
-      "name": "NamedThing",
-      "definition_uri": "https://w3id.org/None/NamedThing",
-      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "mappings": [
-        "synbio:NamedThing"
-      ],
-      "exact_mappings": [
-        "biolink:NamedThing"
-      ],
-      "slots": [
-        "NamedThing_id"
-      ],
-      "slot_usage": {},
-      "class_uri": "https://w3id.org/None/NamedThing",
-      "@type": "ClassDefinition"
-    },
-    {
       "name": "Organism",
       "definition_uri": "https://w3id.org/None/Organism",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
@@ -2751,9 +2766,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "synbio_schema.yaml",
-  "source_file_date": "2022-10-19T11:09:01",
-  "source_file_size": 19839,
-  "generation_date": "2022-10-19T13:04:08",
+  "source_file_date": "2022-10-24T15:24:21",
+  "source_file_size": 19468,
+  "generation_date": "2022-10-24T17:21:40",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/synbio_schema.context.jsonld",

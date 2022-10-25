@@ -1,11 +1,8 @@
 .DS_Store
 .idea
 blastdbs/
-data/
 resources/felix_dump.db
 resources/swiss_entries.*
-swissprot.tar.gz
-taxdb.*
 uniprot_entries_cache.sqlite
 
 /docs/

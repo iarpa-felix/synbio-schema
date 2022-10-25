@@ -234,20 +234,6 @@
          "title": "ModificationTypeEnum",
          "type": "string"
       },
-      "NamedThing": {
-         "additionalProperties": false,
-         "description": "",
-         "properties": {
-            "id": {
-               "type": "string"
-            }
-         },
-         "required": [
-            "id"
-         ],
-         "title": "NamedThing",
-         "type": "object"
-      },
       "Organism": {
          "additionalProperties": false,
          "description": "",
@@ -435,11 +421,29 @@
             "bio_safety_level": {
                "$ref": "#/$defs/BioSafetyLevelEnum"
             },
+            "biosample_accessions": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "creator": {
                "type": "string"
             },
+            "external_urls": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "funding_source": {
                "$ref": "#/$defs/FundingSourceEnum"
+            },
+            "genome_accessions": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "genotype_phenotype": {
                "type": "string"
@@ -474,6 +478,12 @@
             },
             "references": {
                "type": "string"
+            },
+            "selection_markers": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "status": {
                "$ref": "#/$defs/StatusEnum"

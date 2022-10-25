@@ -9,6 +9,11 @@ import click_log
 import pandas as pd
 import requests_cache
 import yaml
+from linkml_runtime import SchemaView
+from linkml_runtime.dumpers import yaml_dumper
+import validators
+import math
+import csv
 
 logger = logging.getLogger(__name__)
 click_log.basic_config(logger)
@@ -19,17 +24,19 @@ click_log.basic_config(logger)
 @click.option("--sqlite_input_fp", type=click.Path(exists=True), default="resources/felix_dump.db")
 @click.option("--swiss_entries_fp", type=click.Path(exists=True), default="resources/swiss_entries.json")
 @click.option("--fpbase_entries_fp", type=click.Path(exists=True), default='resources/fpbase.json')
+@click.option("--schema_fp", type=click.Path(exists=True), default='src/synbio_schema/schema/synbio_schema.yaml')
+@click.option("--species_id_taxid_curations_fp", type=click.Path(exists=True),
+              default='resources/curations/species_id_taxid_curations.tsv')
 @click.option("--yaml_out", type=click.Path(), default="resources/synbio_database.yaml")
 @click.option("--uniprot_cache_name", default='uniprot_entries_cache')
-def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cache_name: str, fpbase_entries_fp: str):
+def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cache_name: str, fpbase_entries_fp: str,
+        schema_fp: str, species_id_taxid_curations_fp: str):
     # todo look for sequence:3609,IF:00429
     # todo disregarding asserted PI email. using email from the auth_user table.
     # could have taken a LinkML instantiation approach, using the model's data classes
 
-    # sqlite_input_fp = "resources/felix_dump.db"
-    # swiss_entries_fp = "resources/swiss_entries.json"
-    # uniprot_cache_name = 'uniprot_entries_cache'
-    # yaml_out = "resources/synbio_database.yaml"
+    # todo further muddying waters by making a view
+    synbio_view = SchemaView(schema_fp)
 
     pd.set_option('display.max_columns', None)
 
@@ -99,7 +106,7 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
 
     required_mod_attribs = {
         'bio_safety_level': 'bio_safety_level',
-        'creator': 'creator_id',
+        # 'creator': 'creator_id',
         'el_name_long': 'element',
         'status': 'status',
     }
@@ -129,7 +136,45 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
     }
 
     strain_query = """
-    select * from parts where "type" = 'STRAIN'
+    select
+        "references",
+        alias,
+        bio_safety_level,
+        creator_id,
+        funding_source,
+        genotype_phenotype,
+        intellectual_property,
+        keywords,
+        name,
+        notes,
+        principal_investigator,
+        group_concat(selection_marker, '|') as selection_marker,
+        status,
+        summary,
+        external_url,
+        group_concat(pa.accession || '_' || pa.source || '_' || pa.type, "|") as genome_accessions,
+        host_species_id
+    from parts p 
+    left join selection_markers sm on p.id = sm.part_id
+    left join external_urls eu on p.id = eu.part_id
+    left join parts_accessions pa on p.id = pa.part_id
+    where p."type" = 'STRAIN'
+    group by
+        "references",
+        alias,
+        bio_safety_level,
+        creator_id,
+        funding_source,
+        genotype_phenotype,
+        intellectual_property,
+        keywords,
+        name,
+        notes,
+        principal_investigator,
+        status,
+        summary,
+        external_url,
+        host_species_id
     """
 
     optional_strain_attribs = {
@@ -139,13 +184,16 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
         'keywords': 'keywords',
         'notes': 'notes',
         'references': 'references',
+        'selection_markers': 'selection_marker',
         'status': 'status',
         'summary': 'summary',
+        'external_urls': 'external_url',
+        'genome_accessions': 'genome_accessions',
     }
 
     required_strain_attribs = {
         'bio_safety_level': 'bio_safety_level',
-        'creator': 'creator_id',
+        # 'creator': 'creator_id',
         'name': 'name',
     }
 
@@ -154,6 +202,29 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
         'nt_sequence': 'nt_sequence',
         'seq_name': 'seq_name',
         'seq_type': 'seq_type',
+    }
+
+    species_query = """
+    select distinct
+        s.id as id,
+        species,
+        strain,
+        "comment",
+        s."name" as name
+    from
+        species s
+    join parts p on
+        p.host_species_id = s.id;
+    """
+
+    org_required_attributes = {
+        'name': 'species',
+    }
+
+    org_optional_attribs = {
+        "comment": "comment",
+        "species_name": "name",
+        "strain_value": "strain",
     }
 
     ###
@@ -173,12 +244,11 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
 
     for_sequence_set_dod = {}
 
-    with open(fpbase_entries_fp, 'r') as infile:
-        fpbase_entries = json.load(infile)
+    # with open(fpbase_entries_fp, 'r') as infile:
+    #     fpbase_entries = json.load(infile)
 
     for blast_plus_record in blast_res_plus_lod:
         if blast_plus_record['qacc'] not in for_sequence_set_dod:
-            # print(f"seeding blast_plus_record {blast_plus_record['qacc']}")
             for_sequence_set_dod[blast_plus_record['qacc']] = {
                 'id': f"sequence:{blast_plus_record['qacc']}",
                 'associated_part': f"IF:{blast_plus_record['part_alias'].replace('IF', '')}",
@@ -190,13 +260,11 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
             for s2l_item in annotation_sets_to_lists:
                 for_sequence_set_dod[blast_plus_record['qacc']][s2l_item] = set()
 
-            # pprint.pprint(for_sequence_set_dod)
         else:
-            # print(f"annotating {blast_plus_record['qacc']}")
             pass
 
         if blast_plus_record['blast_db'] == "swissprot":
-            print(f"swissprot {for_sequence_set_dod[blast_plus_record['qacc']]['associated_part']}")
+            # logger.info(f"swissprot {for_sequence_set_dod[blast_plus_record['qacc']]['associated_part']}")
             for_sequence_set_dod[blast_plus_record['qacc']]['uniprot_accessions'].add(blast_plus_record['sacc'])
 
             if blast_plus_record['sacc'] in swiss_entries:
@@ -205,16 +273,16 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
                     swiss_entries[blast_plus_record['sacc']]['proteinDescription']['recommendedName']['fullName'][
                         'value'])
 
-                print(f"has entry {for_sequence_set_dod[blast_plus_record['qacc']]['match_names']}")
+                # logger.info(f"has entry {for_sequence_set_dod[blast_plus_record['qacc']]['match_names']}")
 
                 if 'organism' in swiss_entries[blast_plus_record['sacc']]:
-                    print('has organism')
+                    # logger.info('has organism')
                     for_sequence_set_dod[blast_plus_record['qacc']]['scientific_names'].add(
                         swiss_entries[blast_plus_record['sacc']]['organism']['scientificName'])
                     for_sequence_set_dod[blast_plus_record['qacc']]['taxon_ids'].add(
                         swiss_entries[blast_plus_record['sacc']]['organism']['taxonId'])
                 else:
-                    print('no organism')
+                    logger.warning('no organism')
 
                 dbxrs = swiss_entries[blast_plus_record['sacc']]['uniProtKBCrossReferences']
 
@@ -242,9 +310,9 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
                                 for_sequence_set_dod[blast_plus_record['qacc']]['match_gene_symbols_etc'].add(
                                     synonym['value'])
             else:
-                print('no entry')
+                logger.warning('no entry')
         else:
-            print('not swissprot')
+            logger.warning('not swissprot')
             for_sequence_set_dod[blast_plus_record['qacc']]['other_accessions'].add(blast_plus_record['sacc'])
 
     sequence_set = []
@@ -289,6 +357,7 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
     for mod in modifications_lod:
         for_modification_set = ({
             "id": f"IF:{mod['alias'].replace('IF', '')}",
+            "creator": f"person:{mod['creator_id']}",
         })
 
         for rmak, rmav in required_mod_attribs.items():
@@ -311,7 +380,7 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
         discovered_pi_id = people_frame.loc[people_frame['fullname_lc'] == asserted_pi_lc, 'id'].values
 
         if len(discovered_pi_id) != 1:
-            print(
+            logger.error(
                 'There must be one and only one principal investigator, with a name that matches the auth_users table')
             exit()
         else:
@@ -338,9 +407,10 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
                 if 'entryType' in swiss_entry:
                     for_modification_set['curated_uniprot_accession'] = mod['uniprot_id']
                 else:
-                    print(f"{mod['uniprot_id']} doesn't seem to be a Uniprot entry")
+                    logger.warning(f"{mod['uniprot_id']} doesn't seem to be a Uniprot entry")
             else:
-                print(f"not propagating claimed 'uniprot_id' of {mod['uniprot_id']} for {for_modification_set['id']}")
+                logger.warning(
+                    f"not propagating claimed 'uniprot_id' of {mod['uniprot_id']} for {for_modification_set['id']}")
 
         modification_set.append(for_modification_set)
 
@@ -380,26 +450,72 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
 
     bad_strains = []
 
+    strain_induced_class = synbio_view.induced_class('Strain')
     for strain in strain_lod:
-        if 'alias' in strain and strain['alias'] and pattern.match(strain['alias']):
+        if 'alias' in strain and strain['alias'] and pattern.match(strain['alias']) and 'host_species_id' in strain and \
+                strain['host_species_id'] and not math.isnan(strain['host_species_id']):
             for_strain_set = {
                 "id": f"MS:{strain['alias'].replace('MS_', '')}",
+                "creator": f"person:{strain['creator_id']}",
+                "host_organism": f"organism:{str(int(strain['host_species_id']))}",
             }
             for rsak, rsav in required_strain_attribs.items():
-                for_strain_set[rsak] = strain[rsav] \
-                    # .strip()
+                for_strain_set[rsak] = strain[rsav]
 
             for osak, osav in optional_strain_attribs.items():
-                if strain[osav] and strain[osav] not in missing_data_indicators:
-                    for_strain_set[osak] = strain[osav] \
-                        # .strip()
+                if osav in strain and strain[osav] and strain[osav] not in missing_data_indicators:
+                    slot_props = strain_induced_class.attributes[osak]
+                    # todo but the delimiter might be different for plasmid attributes etc
+                    #   maybe make this slot-specific
+                    # if slot_props.multivalued:
+                    if osak == 'selection_markers':
+                        splitted = strain[osav].split("|")
+                        for_strain_set[osak] = splitted
+                    elif osak == 'external_urls':
+                        splitted = re.split(" |;", strain[osav])
+                        splitted = [i for i in splitted if i]
+                        url_validated = [i.rstrip(".") for i in splitted if validators.url(i)]
+                        url_failures = list(set(splitted) - set(url_validated))
+                        logger.info(f"problematic external urls: {url_failures}")
+                        logger.info(f"external urls with reasonable FORMATS: {url_validated}")
+                        for_strain_set[osak] = url_validated
+                    elif osak == 'genome_accessions':
+                        splitted = strain[osav].split("|")
+
+                        for one_split in splitted:
+                            split_components = one_split.split("_")
+                            if len(split_components) == 3:
+                                if split_components[1] == 'NCBI Genome':
+                                    if split_components[2] == 'assembly':
+
+                                        split_accessions = split_components[0].split("-")
+                                        if 'genome_accessions' in for_strain_set:
+                                            for_strain_set['genome_accessions'].extend(split_accessions)
+                                        else:
+                                            for_strain_set['genome_accessions'] = split_accessions
+                                    elif split_components[2] == 'sample':
+                                        if 'biosample_accessions' in for_strain_set:
+                                            for_strain_set['biosample_accessions'].append(split_components[0])
+                                        else:
+                                            for_strain_set['biosample_accessions'] = [split_components[0]]
+                                    else:
+                                        logger.warning(
+                                            f"don't know the meaning of  {split_components[2]} in {split_components}")
+                                else:
+                                    logger.warning(
+                                        f"don't know the meaning of  {split_components[1]} in{split_components}")
+                            else:
+                                logger.warning(
+                                    f"don't know how to process the {len(one_split)} parts of {split_components} as an accession")
+                    else:
+                        for_strain_set[osak] = strain[osav]
 
             asserted_pi_lc = strain['principal_investigator'].lower()
 
             discovered_pi_id = people_frame.loc[people_frame['fullname_lc'] == asserted_pi_lc, 'id'].values
 
             if len(discovered_pi_id) != 1:
-                print(
+                logger.error(
                     'There must be one and only one principal investigator, with a name that matches the auth_users table')
                 exit()
             else:
@@ -413,8 +529,9 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
             # todo dump these to a file instead of printing
             bad_strains.append(strain)
 
-    print('Skipping these strain records, because their alias value do not match the pattern MS_\\d+')
-    pprint.pprint(bad_strains)
+    logger.warning(
+        'Skipping these strain records, because they lack a host_species_id or because their alias value does not match the pattern \\MS_\\d+\\')
+    logger.warning(pprint.pformat(bad_strains))
 
     # todo
     #   'host_species_id': nan,
@@ -422,14 +539,41 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
 
     # DONE with strain_set
 
+    org_frame = pd.read_sql_query(sql=species_query, con=con)
+
+    species_id_taxid_curations = {}
+    with open(species_id_taxid_curations_fp, newline='') as tsvfile:
+        reader = csv.DictReader(tsvfile, delimiter="\t")
+        for row in reader:
+            species_id_taxid_curations[row['id']] = row['ncbi']
+
+    org_lod = org_frame.to_dict('records')
+    org_set = []
+
+    for org in org_lod:
+        for_org_set = {
+            "id": f"organism:{org['id']}",
+        }
+
+        for orak, orav in org_required_attributes.items():
+            for_org_set[orak] = org[orav]
+
+        for ooak, ooav in org_optional_attribs.items():
+            if ooav in org and org[ooav] and org[ooav] not in missing_data_indicators:
+                for_org_set[ooak] = org[ooav]
+
+        if str(org['id']) in species_id_taxid_curations:
+            for_org_set['strain_agnostic_taxid'] = species_id_taxid_curations[str(org['id'])]
+
+        org_set.append(for_org_set)
+
     database = {
         "modification_set": modification_set,
         "person_set": person_set,
         "sequence_set": sequence_set,
         "strain_set": strain_set,
+        "organism_set": org_set,
     }
-
-    # print("about to write")
 
     with open(yaml_out, 'w') as outfile:
         yaml.dump(database, outfile)

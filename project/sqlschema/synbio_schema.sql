@@ -9,11 +9,6 @@ CREATE TABLE "Database" (
 	PRIMARY KEY (modification_set, organism_set, person_set, sequence_set, strain_set)
 );
 
-CREATE TABLE "NamedThing" (
-	id TEXT NOT NULL, 
-	PRIMARY KEY (id)
-);
-
 CREATE TABLE "Organism" (
 	abbreviation TEXT, 
 	comment TEXT, 
@@ -64,11 +59,12 @@ CREATE TABLE "Modification" (
 );
 
 CREATE TABLE "Strain" (
-	id TEXT NOT NULL, 
 	bio_safety_level VARCHAR(7), 
 	creator TEXT, 
 	funding_source VARCHAR(11), 
 	genotype_phenotype TEXT, 
+	host_organism TEXT, 
+	id TEXT NOT NULL, 
 	intellectual_property TEXT, 
 	keywords TEXT, 
 	name TEXT, 
@@ -77,11 +73,10 @@ CREATE TABLE "Strain" (
 	"references" TEXT, 
 	status VARCHAR(11), 
 	summary TEXT, 
-	host_organism TEXT, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY(creator) REFERENCES "Person" (id), 
-	FOREIGN KEY(principal_investigator) REFERENCES "Person" (id), 
-	FOREIGN KEY(host_organism) REFERENCES "Organism" (id)
+	FOREIGN KEY(host_organism) REFERENCES "Organism" (id), 
+	FOREIGN KEY(principal_investigator) REFERENCES "Person" (id)
 );
 
 CREATE TABLE "PartsSequence" (
@@ -109,10 +104,38 @@ CREATE TABLE "Modification_part_ofs" (
 	FOREIGN KEY(backref_id) REFERENCES "Modification" (id)
 );
 
+CREATE TABLE "Strain_genome_accessions" (
+	backref_id TEXT, 
+	genome_accessions TEXT, 
+	PRIMARY KEY (backref_id, genome_accessions), 
+	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
+);
+
+CREATE TABLE "Strain_biosample_accessions" (
+	backref_id TEXT, 
+	biosample_accessions TEXT, 
+	PRIMARY KEY (backref_id, biosample_accessions), 
+	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
+);
+
 CREATE TABLE "Strain_has_parts" (
 	backref_id TEXT, 
 	has_parts TEXT, 
 	PRIMARY KEY (backref_id, has_parts), 
+	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
+);
+
+CREATE TABLE "Strain_selection_markers" (
+	backref_id TEXT, 
+	selection_markers TEXT, 
+	PRIMARY KEY (backref_id, selection_markers), 
+	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
+);
+
+CREATE TABLE "Strain_external_urls" (
+	backref_id TEXT, 
+	external_urls TEXT, 
+	PRIMARY KEY (backref_id, external_urls), 
 	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
 );
 

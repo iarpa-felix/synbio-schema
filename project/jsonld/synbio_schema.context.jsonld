@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from synbio_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-19T13:04:07\n    Schema: synbio\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio\n    description: synbio\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from synbio_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-24T17:21:39\n    Schema: synbio\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio\n    description: synbio\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "IAO": {
          "@id": "http://purl.obolibrary.org/obo/IAO_",
@@ -21,7 +21,6 @@
          "@id": "http://purl.obolibrary.org/obo/SO_",
          "@prefix": true
       },
-      "biolink": "https://w3id.org/biolink/vocab/",
       "dcterms": "http://purl.org/dc/terms/",
       "linkml": "https://w3id.org/linkml/",
       "skos": "http://www.w3.org/2004/02/skos/core#",

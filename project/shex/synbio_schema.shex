@@ -72,12 +72,6 @@ linkml:Nodeidentifier NONLITERAL
     )
 }
 
-<NamedThing> CLOSED {
-    (  $<NamedThing_tes> rdf:type . * ;
-       rdf:type [ <NamedThing> ]
-    )
-}
-
 <Organism> CLOSED {
     (  $<Organism_tes> (  <abbreviation> @linkml:String ? ;
           <comment> @linkml:String ? ;
@@ -124,20 +118,24 @@ linkml:Nodeidentifier NONLITERAL
 }
 
 <Strain> CLOSED {
-    (  $<Strain_tes> (  <bio_safety_level> @<BioSafetyLevelEnum> ? ;
+    (  $<Strain_tes> (  <genome_accessions> @linkml:String * ;
+          <biosample_accessions> @linkml:String * ;
+          <bio_safety_level> @<BioSafetyLevelEnum> ? ;
           <creator> @<Person> ? ;
           <funding_source> @<FundingSourceEnum> ? ;
           <genotype_phenotype> @linkml:String ? ;
+          <has_parts> @linkml:String * ;
+          <host_organism> @<Organism> ? ;
           <intellectual_property> @linkml:String ? ;
           <keywords> @linkml:String ? ;
           <name> @linkml:String ? ;
           <notes> @linkml:String ? ;
           <principal_investigator> @<Person> ? ;
           <references> @linkml:String ? ;
+          <selection_markers> @linkml:String * ;
           <status> @<StatusEnum> ? ;
           <summary> @linkml:String ? ;
-          <has_parts> @linkml:String * ;
-          <host_organism> @<Organism> ?
+          <external_urls> @linkml:String *
        ) ;
        rdf:type [ <Strain> ]
     )

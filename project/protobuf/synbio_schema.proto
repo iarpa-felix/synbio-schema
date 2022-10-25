@@ -31,10 +31,6 @@ message Modification
   string curatedUniprotAccession = 0
  repeated  string partOfs = 0
  }
-message NamedThing
- {
-  string id = 0
- }
 message Organism
  {
   string abbreviation = 0
@@ -76,19 +72,23 @@ message Person
  }
 message Strain
  {
-  string id = 0
+ repeated  string genomeAccessions = 0
+ repeated  string biosampleAccessions = 0
   bioSafetyLevelEnum bioSafetyLevel = 0
   person creator = 0
   fundingSourceEnum fundingSource = 0
   string genotypePhenotype = 0
+ repeated  string hasParts = 0
+  organism hostOrganism = 0
+  string id = 0
   string intellectualProperty = 0
   string keywords = 0
   string name = 0
   string notes = 0
   person principalInvestigator = 0
   string references = 0
+ repeated  string selectionMarkers = 0
   statusEnum status = 0
   string summary = 0
- repeated  string hasParts = 0
-  organism hostOrganism = 0
+ repeated  string externalUrls = 0
  }

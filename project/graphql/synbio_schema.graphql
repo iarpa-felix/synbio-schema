@@ -33,11 +33,6 @@ type Modification
     partOfs: [String]
   }
 
-type NamedThing
-  {
-    id: String!
-  }
-
 type Organism
   {
     abbreviation: String
@@ -82,20 +77,24 @@ type Person
 
 type Strain
   {
-    id: String!
+    genomeAccessions: [String]
+    biosampleAccessions: [String]
     bioSafetyLevel: BioSafetyLevelEnum
     creator: Person
     fundingSource: FundingSourceEnum
     genotypePhenotype: String
+    hasParts: [String]
+    hostOrganism: Organism
+    id: String!
     intellectualProperty: String
     keywords: String
     name: String
     notes: String
     principalInvestigator: Person
     references: String
+    selectionMarkers: [String]
     status: StatusEnum
     summary: String
-    hasParts: [String]
-    hostOrganism: Organism
+    externalUrls: [String]
   }
 

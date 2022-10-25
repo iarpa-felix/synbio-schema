@@ -5,15 +5,20 @@ imports:
   - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
-  synbio: https://w3id.org/None/
-  dcterms: http://purl.org/dc/terms/
-  skos: http://www.w3.org/2004/02/skos/core#
-  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  synbio: https://example.com/synbio/
+  IF: https://example.com/modification/
+  organism: https://example.com/organism/
+  person: https://example.com/person/
+  sequence: https://example.com/sequence/
+  MS: https://example.com/strain/
   IAO: http://purl.obolibrary.org/obo/IAO_
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
   OBI: http://purl.obolibrary.org/obo/OBI_
   SO: http://purl.obolibrary.org/obo/SO_
-  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
-  biolink: https://w3id.org/biolink/vocab/
+  dcterms: http://purl.org/dc/terms/
+  xsd: http://www.w3.org/2001/XMLSchema#
+
 default_prefix: synbio
 default_range: string
 enums:
@@ -39,19 +44,6 @@ enums:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     permissible_values:
       IARPA-FELIX: { }
-  SubcategorySizeEnum:
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    permissible_values:
-      lt_200:
-        title: <200
-      gt_3k:
-        title: '>3K'
-      from_1k_to_3k:
-        title: 1K-3K
-      from_100_to_300:
-        title: 200-600
-      from_300_to_1k:
-        title: 600-1K
   StatusEnum:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     permissible_values:
@@ -181,11 +173,26 @@ enums:
       GFP: { }
       self-cleaving-peptide: { }
 slots:
+  genome_accessions:
+    multivalued: true
+  biosample_accessions:
+    multivalued: true
+  selection_markers:
+    multivalued: true
+    todos:
+      - strains and plasmids can have selection markers
+  external_urls:
+    multivalued: true
+    todos:
+      - strains have selection markers
+      - enforce sane URLs? resolvable? heterogeneous delimiters!
   curated_uniprot_accession: { }
   has_parts:
     multivalued: true
+#    range: Modification
   part_ofs:
     multivalued: true
+#    range: Strain
   curated_protein_name: { }
   curated_enzyme_name: { }
   curated_gene_symbols: { }
@@ -209,6 +216,7 @@ slots:
     multivalued: true
   go_term_ids:
     multivalued: true
+#    range: uriorcurie
   go_term_labels:
     multivalued: true
   associated_part:
@@ -226,12 +234,6 @@ slots:
   nt_sequence:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     range: string
-  #  sub_parts:
-  #    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-  #    multivalued: true
-  #  parent_parts:
-  #    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-  #    multivalued: true
   host_organism:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
@@ -337,9 +339,6 @@ slots:
     exact_mappings:
       - NCIT:C43611
     slot_uri: dcterms:license
-  #  exactMatch:
-  #    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-  #    slot_uri: skos:exactMatch
   aa_change:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:aa_change
@@ -437,16 +436,16 @@ slots:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:size_bp
     range: integer
-  special_name:
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    slot_uri: synbio:special_name
+#  special_name:
+#    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+#    slot_uri: synbio:special_name
   species_name:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
     slot_uri: synbio:species_name
-  species_ncbi_taxon_number:
+  strain_agnostic_taxid:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    slot_uri: synbio:species_ncbi_taxon_number
+    slot_uri: synbio:strain_agnostic_taxid
   status:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
@@ -517,24 +516,25 @@ classes:
     exact_mappings:
       - OBI:0001185
     slots:
-      - id
       - bio_safety_level
+      - biosample_accessions
       - creator
+      - external_urls
       - funding_source
+      - genome_accessions
       - genotype_phenotype
+      - has_parts
+      - host_organism
+      - id
       - intellectual_property
       - keywords
       - name
       - notes
-      #      - parent_parts
       - principal_investigator
       - references
+      - selection_markers
       - status
-      #      - sub_parts
       - summary
-      - has_parts
-
-      - host_organism
     slot_usage:
       id:
         pattern: MS:\d+
@@ -624,34 +624,20 @@ classes:
         required: false
       curated_gene_symbols:
         multivalued: true
-
       element_organism:
-      #        required: true
       modifications_genes:
-  #        required: false
 
-  NamedThing:
-    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-    exact_mappings:
-      - biolink:NamedThing
-    slots:
-      - id
-    slot_usage:
-      id:
-        multivalued: false
-        required: true
-    class_uri: synbio:NamedThing
+
   Organism:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
       - OBI:0100026
     slots:
-      - abbreviation
       - comment
       - id
-      - special_name
+      - name
       - species_name
-      - species_ncbi_taxon_number
+      - strain_agnostic_taxid
       - strain_value
     slot_usage:
       id:
@@ -662,11 +648,11 @@ classes:
         multivalued: false
       comment:
         multivalued: false
-      special_name:
-        multivalued: false
+#      special_name:
+#        multivalued: false
       species_name:
         multivalued: false
-      species_ncbi_taxon_number:
+      strain_agnostic_taxid:
         multivalued: false
       strain_value:
         multivalued: false

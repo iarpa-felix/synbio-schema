@@ -1,5 +1,5 @@
 # Auto generated from synbio_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-10-19T13:04:16
+# Generation date: 2022-10-24T17:21:48
 # Schema: synbio
 #
 # id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
@@ -37,10 +37,8 @@ NCBITAXON = CurieNamespace('NCBITaxon', 'http://purl.obolibrary.org/obo/NCBITaxo
 NCIT = CurieNamespace('NCIT', 'http://purl.obolibrary.org/obo/NCIT_')
 OBI = CurieNamespace('OBI', 'http://purl.obolibrary.org/obo/OBI_')
 SO = CurieNamespace('SO', 'http://purl.obolibrary.org/obo/SO_')
-BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/vocab/')
 DCTERMS = CurieNamespace('dcterms', 'http://purl.org/dc/terms/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-SKOS = CurieNamespace('skos', 'http://www.w3.org/2004/02/skos/core#')
 SYNBIO = CurieNamespace('synbio', 'https://w3id.org/None/')
 DEFAULT_ = SYNBIO
 
@@ -57,10 +55,6 @@ class StrainId(extended_str):
 
 
 class ModificationId(extended_str):
-    pass
-
-
-class NamedThingId(extended_str):
     pass
 
 
@@ -167,26 +161,38 @@ class Strain(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = SYNBIO.Strain
 
     id: Union[str, StrainId] = None
+    genome_accessions: Optional[Union[str, List[str]]] = empty_list()
+    biosample_accessions: Optional[Union[str, List[str]]] = empty_list()
     bio_safety_level: Optional[Union[str, "BioSafetyLevelEnum"]] = None
     creator: Optional[Union[str, PersonId]] = None
     funding_source: Optional[Union[str, "FundingSourceEnum"]] = None
     genotype_phenotype: Optional[str] = None
+    has_parts: Optional[Union[str, List[str]]] = empty_list()
+    host_organism: Optional[Union[str, OrganismId]] = None
     intellectual_property: Optional[str] = None
     keywords: Optional[str] = None
     name: Optional[str] = None
     notes: Optional[str] = None
     principal_investigator: Optional[Union[str, PersonId]] = None
     references: Optional[str] = None
+    selection_markers: Optional[Union[str, List[str]]] = empty_list()
     status: Optional[Union[str, "StatusEnum"]] = None
     summary: Optional[str] = None
-    has_parts: Optional[Union[str, List[str]]] = empty_list()
-    host_organism: Optional[Union[str, OrganismId]] = None
+    external_urls: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
             self.MissingRequiredField("id")
         if not isinstance(self.id, StrainId):
             self.id = StrainId(self.id)
+
+        if not isinstance(self.genome_accessions, list):
+            self.genome_accessions = [self.genome_accessions] if self.genome_accessions is not None else []
+        self.genome_accessions = [v if isinstance(v, str) else str(v) for v in self.genome_accessions]
+
+        if not isinstance(self.biosample_accessions, list):
+            self.biosample_accessions = [self.biosample_accessions] if self.biosample_accessions is not None else []
+        self.biosample_accessions = [v if isinstance(v, str) else str(v) for v in self.biosample_accessions]
 
         if self.bio_safety_level is not None and not isinstance(self.bio_safety_level, BioSafetyLevelEnum):
             self.bio_safety_level = BioSafetyLevelEnum(self.bio_safety_level)
@@ -199,6 +205,13 @@ class Strain(YAMLRoot):
 
         if self.genotype_phenotype is not None and not isinstance(self.genotype_phenotype, str):
             self.genotype_phenotype = str(self.genotype_phenotype)
+
+        if not isinstance(self.has_parts, list):
+            self.has_parts = [self.has_parts] if self.has_parts is not None else []
+        self.has_parts = [v if isinstance(v, str) else str(v) for v in self.has_parts]
+
+        if self.host_organism is not None and not isinstance(self.host_organism, OrganismId):
+            self.host_organism = OrganismId(self.host_organism)
 
         if self.intellectual_property is not None and not isinstance(self.intellectual_property, str):
             self.intellectual_property = str(self.intellectual_property)
@@ -218,18 +231,19 @@ class Strain(YAMLRoot):
         if self.references is not None and not isinstance(self.references, str):
             self.references = str(self.references)
 
+        if not isinstance(self.selection_markers, list):
+            self.selection_markers = [self.selection_markers] if self.selection_markers is not None else []
+        self.selection_markers = [v if isinstance(v, str) else str(v) for v in self.selection_markers]
+
         if self.status is not None and not isinstance(self.status, StatusEnum):
             self.status = StatusEnum(self.status)
 
         if self.summary is not None and not isinstance(self.summary, str):
             self.summary = str(self.summary)
 
-        if not isinstance(self.has_parts, list):
-            self.has_parts = [self.has_parts] if self.has_parts is not None else []
-        self.has_parts = [v if isinstance(v, str) else str(v) for v in self.has_parts]
-
-        if self.host_organism is not None and not isinstance(self.host_organism, OrganismId):
-            self.host_organism = OrganismId(self.host_organism)
+        if not isinstance(self.external_urls, list):
+            self.external_urls = [self.external_urls] if self.external_urls is not None else []
+        self.external_urls = [v if isinstance(v, str) else str(v) for v in self.external_urls]
 
         super().__post_init__(**kwargs)
 
@@ -375,26 +389,6 @@ class Modification(YAMLRoot):
         if not isinstance(self.part_ofs, list):
             self.part_ofs = [self.part_ofs] if self.part_ofs is not None else []
         self.part_ofs = [v if isinstance(v, str) else str(v) for v in self.part_ofs]
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass
-class NamedThing(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = SYNBIO.NamedThing
-    class_class_curie: ClassVar[str] = "synbio:NamedThing"
-    class_name: ClassVar[str] = "NamedThing"
-    class_model_uri: ClassVar[URIRef] = SYNBIO.NamedThing
-
-    id: Union[str, NamedThingId] = None
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, NamedThingId):
-            self.id = NamedThingId(self.id)
 
         super().__post_init__(**kwargs)
 
@@ -693,6 +687,18 @@ class DescriptorEnum(EnumDefinitionImpl):
 # Slots
 class slots:
     pass
+
+slots.genome_accessions = Slot(uri=SYNBIO.genome_accessions, name="genome_accessions", curie=SYNBIO.curie('genome_accessions'),
+                   model_uri=SYNBIO.genome_accessions, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.biosample_accessions = Slot(uri=SYNBIO.biosample_accessions, name="biosample_accessions", curie=SYNBIO.curie('biosample_accessions'),
+                   model_uri=SYNBIO.biosample_accessions, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.selection_markers = Slot(uri=SYNBIO.selection_markers, name="selection_markers", curie=SYNBIO.curie('selection_markers'),
+                   model_uri=SYNBIO.selection_markers, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.external_urls = Slot(uri=SYNBIO.external_urls, name="external_urls", curie=SYNBIO.curie('external_urls'),
+                   model_uri=SYNBIO.external_urls, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.curated_uniprot_accession = Slot(uri=SYNBIO.curated_uniprot_accession, name="curated_uniprot_accession", curie=SYNBIO.curie('curated_uniprot_accession'),
                    model_uri=SYNBIO.curated_uniprot_accession, domain=None, range=Optional[str])
@@ -1006,9 +1012,6 @@ slots.Modification_element_organism = Slot(uri=SYNBIO.element_organism, name="Mo
 
 slots.Modification_modifications_genes = Slot(uri=SYNBIO.modifications_genes, name="Modification_modifications_genes", curie=SYNBIO.curie('modifications_genes'),
                    model_uri=SYNBIO.Modification_modifications_genes, domain=Modification, range=Optional[str])
-
-slots.NamedThing_id = Slot(uri=SYNBIO.id, name="NamedThing_id", curie=SYNBIO.curie('id'),
-                   model_uri=SYNBIO.NamedThing_id, domain=NamedThing, range=Union[str, NamedThingId])
 
 slots.Organism_id = Slot(uri=SYNBIO.id, name="Organism_id", curie=SYNBIO.curie('id'),
                    model_uri=SYNBIO.Organism_id, domain=Organism, range=Union[str, OrganismId],

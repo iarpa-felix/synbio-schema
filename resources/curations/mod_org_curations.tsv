@@ -1,0 +1,95 @@
+claimed_binomial	claimed_taxid	ncbi	rhs	match
+Mus musculus	10090	NCBITaxon:10090		
+Human alphaherpesvirus 1	10298	NCBITaxon:10298		
+human alphaherpesvirus 1		NCBITaxon:10298	10298	0
+Human alphaherpesvirus 2	10310	NCBITaxon:10310		
+Human alphaherpesvirus 2		NCBITaxon:10310	10310	0
+Cytomegalovirus	10358	NCBITaxon:10358		
+Rhodobacter	1060	NCBITaxon:1060	1060	1
+Cauliflower mosaic virus	10641	NCBITaxon:10641		
+cauliflower mosaic virus		NCBITaxon:10641	10641	0
+Escherichia phage P1	10678	NCBITaxon:10678		
+phage lambda	10710	NCBITaxon:10710		
+bacteriophage T3		NCBITaxon:10759		
+bacteriophage T7		NCBITaxon:10760		
+bacteriophage f1		NCBITaxon:10863		
+Hepacivirus C	11103	NCBITaxon:11103		
+Vesicular stomatitis Indiana virus	11277	NCBITaxon:11277		
+Human influenza A		NCBITaxon:11320	11320	0
+Lassa mammarenavirus	11620	NCBITaxon:11620		
+Lentivirus human-immunodeficiency-virus1		NCBITaxon:11676		
+Moloney murine leukemia virus	11801	NCBITaxon:11801		
+Nepovirus Tobacco-ringspot-virus		NCBITaxon:12282	12282	0
+Dengue virus	12637	NCBITaxon:12637		
+Staphylococcus aureus	1280	NCBITaxon:1280	1280	1
+Streptococcus pyogenes	1314	NCBITaxon:1314	1314	1
+Streptomyces alboniger	132473	NCBITaxon:132473		
+Enterococcus faecalis	1351	NCBITaxon:1351	1351	1
+Enterococcus faecium	1352	NCBITaxon:1352	1352	1
+Bacillus subtilis	1423	NCBITaxon:1423	1423	1
+InfluenzaA gyrfalcon WA USA	1589663	NCBITaxon:1589663		
+Human rhinovirus	169066	NCBITaxon:169066		
+Gerbera hybrida	18101	NCBITaxon:18101		
+Streptomyces hygroscopicus	1912	NCBITaxon:1912	1912	1
+Campylobacter coli	195	NCBITaxon:195	195	1
+Streptomyces noursei	1971	NCBITaxon:1971	1971	1
+Pseudomonas plasmid pVS1		NCBITaxon:219557	219557	0
+bacteriophage T4		NCBITaxon:2681598		
+Bacteriophage Mu	2681603	NCBITaxon:2681603	2681603	1
+bacteriophage Mu		NCBITaxon:2681603		
+bacteriophage lambda		NCBITaxon:2681611		
+bacteriophage M13		NCBITaxon:2785248		
+human adenovirus 5		NCBITaxon:28285	28285	0
+Pseudomonas aeruginosa	287	NCBITaxon:287	287	1
+Salmonella enterica	28901	NCBITaxon:28901		
+Pseudomonas putida	303	NCBITaxon:303	303	1
+synthetic	32630	NCBITaxon:32630		
+Ashbya gossypii	33169	NCBITaxon:33169	33169	1
+Ashbya gossypii		NCBITaxon:33169	33169	0
+Woodchuck Hepatitis Virus		NCBITaxon:35269	35269	0
+Agrobacterium tumefaciens	358	NCBITaxon:358	358	1
+Arabidopsis thaliana	3702	NCBITaxon:3702	3702	1
+Pisum sativum	3888	NCBITaxon:3888	3888	1
+Solanum tuberosum	4113	NCBITaxon:4113	4113	1
+Oryza sativa	4530	NCBITaxon:4530	4530	1
+Zea mays	4577	NCBITaxon:4577	4577	1
+Abies grandis	46611	NCBITaxon:46611	46611	1
+Komagataella pastoris	4922	NCBITaxon:4922	4922	1
+Saccharomyces cerevisiae	4932	NCBITaxon:4932	4932	1
+Saccharomyces cerevisiae		NCBITaxon:4932		
+Yarrowia lipolytica	4952	NCBITaxon:4952	4952	1
+Yarrowia lipolytica		NCBITaxon:4952	4952	0
+Bordetella bronchiseptica	518	NCBITaxon:518	518	1
+Rhodotorula toruloides	5286	NCBITaxon:5286	5286	1
+chromobacterium		NCBITaxon:535	535	0
+Citrobacter freundii	546	NCBITaxon:546	546	1
+Sorangium cellulosum	56	NCBITaxon:56	56	1
+Escherichia coli	562	NCBITaxon:562	562	1
+E coli		NCBITaxon:562	562	0
+Klebsiella pneumoniae	573	NCBITaxon:573	573	1
+Aequorea victoria	6100	NCBITaxon:6100	6100	1
+Aequorea_victoria	6100	NCBITaxon:6100	6100	1
+Entacmaea quadricolor	6118	NCBITaxon:6118		
+Zika virus	64320	NCBITaxon:64320		
+Aeromonas salmonicida	645	NCBITaxon:645	645	1
+Photinus pyralis	7054	NCBITaxon:7054		
+Drosophila melanogaster	7227	NCBITaxon:7227		
+Xenopus laevis	8355	NCBITaxon:8355		
+teschovirus A1		NCBITaxon:85506	85506	0
+Discosoma sp		NCBITaxon:86599	86599	0
+Discosoma	86600	NCBITaxon:86600		
+Homo sapiens	9606	NCBITaxon:9606		
+homo sapiens		NCBITaxon:9606	9606	0
+Bos taurus	9913	NCBITaxon:9913		
+InfluenzaA tufted duck Denmark	232441			
+Simian virus 40	1891767	NCBITaxon:1891767		
+D158E-I164L				
+NA				
+SARS-CoV-2				
+bacteriophage P1				
+bacteriophage SP6				
+herpes simplex virus-1				
+insertion				
+plasmid element				
+substitution				
+transposition				

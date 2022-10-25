@@ -234,20 +234,6 @@
          "title": "ModificationTypeEnum",
          "type": "string"
       },
-      "NamedThing": {
-         "additionalProperties": false,
-         "description": "",
-         "properties": {
-            "id": {
-               "type": "string"
-            }
-         },
-         "required": [
-            "id"
-         ],
-         "title": "NamedThing",
-         "type": "object"
-      },
       "Organism": {
          "additionalProperties": false,
          "description": "",
@@ -262,13 +248,13 @@
                "pattern": "^organism:-?\\d+$",
                "type": "string"
             },
-            "special_name": {
+            "name": {
                "type": "string"
             },
             "species_name": {
                "type": "string"
             },
-            "species_ncbi_taxon_number": {
+            "strain_agnostic_taxid": {
                "type": "string"
             },
             "strain_value": {
@@ -435,11 +421,29 @@
             "bio_safety_level": {
                "$ref": "#/$defs/BioSafetyLevelEnum"
             },
+            "biosample_accessions": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "creator": {
                "type": "string"
             },
+            "external_urls": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "funding_source": {
                "$ref": "#/$defs/FundingSourceEnum"
+            },
+            "genome_accessions": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             },
             "genotype_phenotype": {
                "type": "string"
@@ -475,6 +479,12 @@
             "references": {
                "type": "string"
             },
+            "selection_markers": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "status": {
                "$ref": "#/$defs/StatusEnum"
             },
@@ -487,18 +497,6 @@
          ],
          "title": "Strain",
          "type": "object"
-      },
-      "SubcategorySizeEnum": {
-         "description": "",
-         "enum": [
-            "lt_200",
-            "gt_3k",
-            "from_1k_to_3k",
-            "from_100_to_300",
-            "from_300_to_1k"
-         ],
-         "title": "SubcategorySizeEnum",
-         "type": "string"
       }
    },
    "$id": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",

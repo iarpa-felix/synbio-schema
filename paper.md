@@ -20,3 +20,16 @@ consolidate directories:
 - examples
 - resources
 - target
+
+---
+
+working on
+    selection markers
+
+problems
+    plasmids
+        split promoters	and replicates_in on commas?
+
+
+goal
+    organisms etc
