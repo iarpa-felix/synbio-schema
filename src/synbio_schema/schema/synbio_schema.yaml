@@ -18,6 +18,7 @@ prefixes:
   SO: http://purl.obolibrary.org/obo/SO_
   dcterms: http://purl.org/dc/terms/
   xsd: http://www.w3.org/2001/XMLSchema#
+  GO: "http://amigo.geneontology.org/amigo/term/GO:"
 
 default_prefix: synbio
 default_range: string
@@ -216,7 +217,7 @@ slots:
     multivalued: true
   go_term_ids:
     multivalued: true
-#    range: uriorcurie
+    range: uriorcurie
   go_term_labels:
     multivalued: true
   associated_part:
@@ -361,7 +362,6 @@ slots:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:date_joined
     range: datetime
-  #    required: true
   el_name_long:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:el_name_long
@@ -436,9 +436,6 @@ slots:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     slot_uri: synbio:size_bp
     range: integer
-#  special_name:
-#    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
-#    slot_uri: synbio:special_name
   species_name:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     exact_mappings:
@@ -648,8 +645,6 @@ classes:
         multivalued: false
       comment:
         multivalued: false
-#      special_name:
-#        multivalued: false
       species_name:
         multivalued: false
       strain_agnostic_taxid:

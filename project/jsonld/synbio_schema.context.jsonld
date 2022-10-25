@@ -1,10 +1,13 @@
 {
-   "_comments": "Auto generated from synbio_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-24T17:21:39\n    Schema: synbio\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio\n    description: synbio\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from synbio_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-25T10:59:43\n    Schema: synbio\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: http://www.semanticweb.org/mam/ontologies/2022/7/synbio\n    description: synbio\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
+      "GO": "http://amigo.geneontology.org/amigo/term/GO:",
       "IAO": {
          "@id": "http://purl.obolibrary.org/obo/IAO_",
          "@prefix": true
       },
+      "IF": "https://example.com/modification/",
+      "MS": "https://example.com/strain/",
       "NCBITaxon": {
          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_",
          "@prefix": true
@@ -23,9 +26,13 @@
       },
       "dcterms": "http://purl.org/dc/terms/",
       "linkml": "https://w3id.org/linkml/",
+      "organism": "https://example.com/organism/",
+      "person": "https://example.com/person/",
+      "sequence": "https://example.com/sequence/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "synbio": "https://w3id.org/None/",
-      "@vocab": "https://w3id.org/None/",
+      "synbio": "https://example.com/synbio/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "@vocab": "https://example.com/synbio/",
       "associated_part": {
          "@type": "@id"
       },
@@ -72,6 +79,9 @@
       },
       "generation_date": {
          "@id": "linkml:generation_date"
+      },
+      "go_term_ids": {
+         "@type": "@id"
       },
       "host_organism": {
          "@type": "@id"

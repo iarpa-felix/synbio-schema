@@ -4,6 +4,8 @@ blastdbs/
 resources/felix_dump.db
 resources/swiss_entries.*
 uniprot_entries_cache.sqlite
+completion_flags/
+poetry.lock
 
 /docs/
 /project/docs/

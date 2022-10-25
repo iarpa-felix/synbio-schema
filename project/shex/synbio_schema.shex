@@ -1,4 +1,4 @@
-BASE <https://w3id.org/None/>
+BASE <https://example.com/synbio/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
@@ -73,12 +73,12 @@ linkml:Nodeidentifier NONLITERAL
 }
 
 <Organism> CLOSED {
-    (  $<Organism_tes> (  <abbreviation> @linkml:String ? ;
-          <comment> @linkml:String ? ;
-          <special_name> @linkml:String ? ;
+    (  $<Organism_tes> (  <comment> @linkml:String ? ;
+          <name> @linkml:String ? ;
           <species_name> @linkml:String ? ;
-          <species_ncbi_taxon_number> @linkml:String ? ;
-          <strain> @linkml:String ?
+          <strain_agnostic_taxid> @linkml:String ? ;
+          <strain> @linkml:String ? ;
+          <abbreviation> @linkml:String ?
        ) ;
        rdf:type [ <Organism> ]
     )
@@ -87,7 +87,7 @@ linkml:Nodeidentifier NONLITERAL
 <PartsSequence> CLOSED {
     (  $<PartsSequence_tes> (  <associated_part> @<Modification> ? ;
           <date_added> @linkml:String ? ;
-          <go_term_ids> @linkml:String * ;
+          <go_term_ids> @linkml:Uriorcurie * ;
           <go_term_labels> @linkml:String * ;
           <match_ec_numbers> @linkml:String * ;
           <match_gene_symbols_etc> @linkml:String * ;
@@ -118,11 +118,12 @@ linkml:Nodeidentifier NONLITERAL
 }
 
 <Strain> CLOSED {
-    (  $<Strain_tes> (  <genome_accessions> @linkml:String * ;
+    (  $<Strain_tes> (  <bio_safety_level> @<BioSafetyLevelEnum> ? ;
           <biosample_accessions> @linkml:String * ;
-          <bio_safety_level> @<BioSafetyLevelEnum> ? ;
           <creator> @<Person> ? ;
+          <external_urls> @linkml:String * ;
           <funding_source> @<FundingSourceEnum> ? ;
+          <genome_accessions> @linkml:String * ;
           <genotype_phenotype> @linkml:String ? ;
           <has_parts> @linkml:String * ;
           <host_organism> @<Organism> ? ;
@@ -134,8 +135,7 @@ linkml:Nodeidentifier NONLITERAL
           <references> @linkml:String ? ;
           <selection_markers> @linkml:String * ;
           <status> @<StatusEnum> ? ;
-          <summary> @linkml:String ? ;
-          <external_urls> @linkml:String *
+          <summary> @linkml:String ?
        ) ;
        rdf:type [ <Strain> ]
     )

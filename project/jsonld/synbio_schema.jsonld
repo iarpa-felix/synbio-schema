@@ -13,19 +13,39 @@
     },
     {
       "prefix_prefix": "synbio",
-      "prefix_reference": "https://w3id.org/None/"
+      "prefix_reference": "https://example.com/synbio/"
     },
     {
-      "prefix_prefix": "dcterms",
-      "prefix_reference": "http://purl.org/dc/terms/"
+      "prefix_prefix": "IF",
+      "prefix_reference": "https://example.com/modification/"
     },
     {
-      "prefix_prefix": "NCIT",
-      "prefix_reference": "http://purl.obolibrary.org/obo/NCIT_"
+      "prefix_prefix": "organism",
+      "prefix_reference": "https://example.com/organism/"
+    },
+    {
+      "prefix_prefix": "person",
+      "prefix_reference": "https://example.com/person/"
+    },
+    {
+      "prefix_prefix": "sequence",
+      "prefix_reference": "https://example.com/sequence/"
+    },
+    {
+      "prefix_prefix": "MS",
+      "prefix_reference": "https://example.com/strain/"
     },
     {
       "prefix_prefix": "IAO",
       "prefix_reference": "http://purl.obolibrary.org/obo/IAO_"
+    },
+    {
+      "prefix_prefix": "NCBITaxon",
+      "prefix_reference": "http://purl.obolibrary.org/obo/NCBITaxon_"
+    },
+    {
+      "prefix_prefix": "NCIT",
+      "prefix_reference": "http://purl.obolibrary.org/obo/NCIT_"
     },
     {
       "prefix_prefix": "OBI",
@@ -36,8 +56,16 @@
       "prefix_reference": "http://purl.obolibrary.org/obo/SO_"
     },
     {
-      "prefix_prefix": "NCBITaxon",
-      "prefix_reference": "http://purl.obolibrary.org/obo/NCBITaxon_"
+      "prefix_prefix": "dcterms",
+      "prefix_reference": "http://purl.org/dc/terms/"
+    },
+    {
+      "prefix_prefix": "xsd",
+      "prefix_reference": "http://www.w3.org/2001/XMLSchema#"
+    },
+    {
+      "prefix_prefix": "GO",
+      "prefix_reference": "http://amigo.geneontology.org/amigo/term/GO:"
     }
   ],
   "default_prefix": "synbio",
@@ -216,7 +244,7 @@
   "enums": [
     {
       "name": "SeqTypeEnum",
-      "definition_uri": "https://w3id.org/None/SeqTypeEnum",
+      "definition_uri": "https://example.com/synbio/SeqTypeEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -247,7 +275,7 @@
     },
     {
       "name": "IntellectualPropertyEnum",
-      "definition_uri": "https://w3id.org/None/IntellectualPropertyEnum",
+      "definition_uri": "https://example.com/synbio/IntellectualPropertyEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -257,7 +285,7 @@
     },
     {
       "name": "FundingSourceEnum",
-      "definition_uri": "https://w3id.org/None/FundingSourceEnum",
+      "definition_uri": "https://example.com/synbio/FundingSourceEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -266,35 +294,8 @@
       ]
     },
     {
-      "name": "SubcategorySizeEnum",
-      "definition_uri": "https://w3id.org/None/SubcategorySizeEnum",
-      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "permissible_values": [
-        {
-          "text": "lt_200",
-          "title": "<200"
-        },
-        {
-          "text": "gt_3k",
-          "title": ">3K"
-        },
-        {
-          "text": "from_1k_to_3k",
-          "title": "1K-3K"
-        },
-        {
-          "text": "from_100_to_300",
-          "title": "200-600"
-        },
-        {
-          "text": "from_300_to_1k",
-          "title": "600-1K"
-        }
-      ]
-    },
-    {
       "name": "StatusEnum",
-      "definition_uri": "https://w3id.org/None/StatusEnum",
+      "definition_uri": "https://example.com/synbio/StatusEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -307,7 +308,7 @@
     },
     {
       "name": "ModificationTypeEnum",
-      "definition_uri": "https://w3id.org/None/ModificationTypeEnum",
+      "definition_uri": "https://example.com/synbio/ModificationTypeEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -419,7 +420,7 @@
     },
     {
       "name": "BioSafetyLevelEnum",
-      "definition_uri": "https://w3id.org/None/BioSafetyLevelEnum",
+      "definition_uri": "https://example.com/synbio/BioSafetyLevelEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -432,7 +433,7 @@
     },
     {
       "name": "CategoryEnum",
-      "definition_uri": "https://w3id.org/None/CategoryEnum",
+      "definition_uri": "https://example.com/synbio/CategoryEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -478,7 +479,7 @@
     },
     {
       "name": "DescriptorEnum",
-      "definition_uri": "https://w3id.org/None/DescriptorEnum",
+      "definition_uri": "https://example.com/synbio/DescriptorEnum",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "permissible_values": [
         {
@@ -583,9 +584,9 @@
   "slots": [
     {
       "name": "genome_accessions",
-      "definition_uri": "https://w3id.org/None/genome_accessions",
+      "definition_uri": "https://example.com/synbio/genome_accessions",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/genome_accessions",
+      "slot_uri": "https://example.com/synbio/genome_accessions",
       "multivalued": true,
       "owner": "Strain",
       "domain_of": [
@@ -596,9 +597,9 @@
     },
     {
       "name": "biosample_accessions",
-      "definition_uri": "https://w3id.org/None/biosample_accessions",
+      "definition_uri": "https://example.com/synbio/biosample_accessions",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/biosample_accessions",
+      "slot_uri": "https://example.com/synbio/biosample_accessions",
       "multivalued": true,
       "owner": "Strain",
       "domain_of": [
@@ -609,12 +610,12 @@
     },
     {
       "name": "selection_markers",
-      "definition_uri": "https://w3id.org/None/selection_markers",
+      "definition_uri": "https://example.com/synbio/selection_markers",
       "todos": [
         "strains and plasmids can have selection markers"
       ],
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/selection_markers",
+      "slot_uri": "https://example.com/synbio/selection_markers",
       "multivalued": true,
       "owner": "Strain",
       "domain_of": [
@@ -625,13 +626,13 @@
     },
     {
       "name": "external_urls",
-      "definition_uri": "https://w3id.org/None/external_urls",
+      "definition_uri": "https://example.com/synbio/external_urls",
       "todos": [
         "strains have selection markers",
         "enforce sane URLs? resolvable? heterogeneous delimiters!"
       ],
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/external_urls",
+      "slot_uri": "https://example.com/synbio/external_urls",
       "multivalued": true,
       "owner": "Strain",
       "domain_of": [
@@ -642,9 +643,9 @@
     },
     {
       "name": "curated_uniprot_accession",
-      "definition_uri": "https://w3id.org/None/curated_uniprot_accession",
+      "definition_uri": "https://example.com/synbio/curated_uniprot_accession",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/curated_uniprot_accession",
+      "slot_uri": "https://example.com/synbio/curated_uniprot_accession",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -654,9 +655,9 @@
     },
     {
       "name": "has_parts",
-      "definition_uri": "https://w3id.org/None/has_parts",
+      "definition_uri": "https://example.com/synbio/has_parts",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/has_parts",
+      "slot_uri": "https://example.com/synbio/has_parts",
       "multivalued": true,
       "owner": "Strain",
       "domain_of": [
@@ -667,9 +668,9 @@
     },
     {
       "name": "part_ofs",
-      "definition_uri": "https://w3id.org/None/part_ofs",
+      "definition_uri": "https://example.com/synbio/part_ofs",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/part_ofs",
+      "slot_uri": "https://example.com/synbio/part_ofs",
       "multivalued": true,
       "owner": "Modification",
       "domain_of": [
@@ -680,9 +681,9 @@
     },
     {
       "name": "curated_protein_name",
-      "definition_uri": "https://w3id.org/None/curated_protein_name",
+      "definition_uri": "https://example.com/synbio/curated_protein_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/curated_protein_name",
+      "slot_uri": "https://example.com/synbio/curated_protein_name",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -692,9 +693,9 @@
     },
     {
       "name": "curated_enzyme_name",
-      "definition_uri": "https://w3id.org/None/curated_enzyme_name",
+      "definition_uri": "https://example.com/synbio/curated_enzyme_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/curated_enzyme_name",
+      "slot_uri": "https://example.com/synbio/curated_enzyme_name",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -704,9 +705,9 @@
     },
     {
       "name": "curated_gene_symbols",
-      "definition_uri": "https://w3id.org/None/curated_gene_symbols",
+      "definition_uri": "https://example.com/synbio/curated_gene_symbols",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/curated_gene_symbols",
+      "slot_uri": "https://example.com/synbio/curated_gene_symbols",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -716,10 +717,10 @@
     },
     {
       "name": "other_accessions",
-      "definition_uri": "https://w3id.org/None/other_accessions",
+      "definition_uri": "https://example.com/synbio/other_accessions",
       "description": "Especially fpbase identifiers.  Some Uniprot/Swissprot accessions may leak in  if an entry could not be retrieved from the Uniprot API.",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/other_accessions",
+      "slot_uri": "https://example.com/synbio/other_accessions",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -730,9 +731,9 @@
     },
     {
       "name": "match_gene_symbols_etc",
-      "definition_uri": "https://w3id.org/None/match_gene_symbols_etc",
+      "definition_uri": "https://example.com/synbio/match_gene_symbols_etc",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/match_gene_symbols_etc",
+      "slot_uri": "https://example.com/synbio/match_gene_symbols_etc",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -743,9 +744,9 @@
     },
     {
       "name": "match_ec_numbers",
-      "definition_uri": "https://w3id.org/None/match_ec_numbers",
+      "definition_uri": "https://example.com/synbio/match_ec_numbers",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/match_ec_numbers",
+      "slot_uri": "https://example.com/synbio/match_ec_numbers",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -756,9 +757,9 @@
     },
     {
       "name": "match_names",
-      "definition_uri": "https://w3id.org/None/match_names",
+      "definition_uri": "https://example.com/synbio/match_names",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/match_names",
+      "slot_uri": "https://example.com/synbio/match_names",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -769,9 +770,9 @@
     },
     {
       "name": "scientific_names",
-      "definition_uri": "https://w3id.org/None/scientific_names",
+      "definition_uri": "https://example.com/synbio/scientific_names",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/scientific_names",
+      "slot_uri": "https://example.com/synbio/scientific_names",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -782,9 +783,9 @@
     },
     {
       "name": "taxon_ids",
-      "definition_uri": "https://w3id.org/None/taxon_ids",
+      "definition_uri": "https://example.com/synbio/taxon_ids",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/taxon_ids",
+      "slot_uri": "https://example.com/synbio/taxon_ids",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -795,9 +796,9 @@
     },
     {
       "name": "uniprot_accessions",
-      "definition_uri": "https://w3id.org/None/uniprot_accessions",
+      "definition_uri": "https://example.com/synbio/uniprot_accessions",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/uniprot_accessions",
+      "slot_uri": "https://example.com/synbio/uniprot_accessions",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -808,22 +809,22 @@
     },
     {
       "name": "go_term_ids",
-      "definition_uri": "https://w3id.org/None/go_term_ids",
+      "definition_uri": "https://example.com/synbio/go_term_ids",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/go_term_ids",
+      "slot_uri": "https://example.com/synbio/go_term_ids",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
         "PartsSequence"
       ],
-      "range": "string",
+      "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
     {
       "name": "go_term_labels",
-      "definition_uri": "https://w3id.org/None/go_term_labels",
+      "definition_uri": "https://example.com/synbio/go_term_labels",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/go_term_labels",
+      "slot_uri": "https://example.com/synbio/go_term_labels",
       "multivalued": true,
       "owner": "PartsSequence",
       "domain_of": [
@@ -834,9 +835,9 @@
     },
     {
       "name": "associated_part",
-      "definition_uri": "https://w3id.org/None/associated_part",
+      "definition_uri": "https://example.com/synbio/associated_part",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/associated_part",
+      "slot_uri": "https://example.com/synbio/associated_part",
       "owner": "PartsSequence",
       "domain_of": [
         "PartsSequence"
@@ -846,9 +847,9 @@
     },
     {
       "name": "seq_name",
-      "definition_uri": "https://w3id.org/None/seq_name",
+      "definition_uri": "https://example.com/synbio/seq_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/seq_name",
+      "slot_uri": "https://example.com/synbio/seq_name",
       "owner": "PartsSequence",
       "domain_of": [
         "PartsSequence"
@@ -858,9 +859,9 @@
     },
     {
       "name": "seq_type",
-      "definition_uri": "https://w3id.org/None/seq_type",
+      "definition_uri": "https://example.com/synbio/seq_type",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/seq_type",
+      "slot_uri": "https://example.com/synbio/seq_type",
       "owner": "PartsSequence",
       "domain_of": [
         "PartsSequence"
@@ -870,9 +871,9 @@
     },
     {
       "name": "date_added",
-      "definition_uri": "https://w3id.org/None/date_added",
+      "definition_uri": "https://example.com/synbio/date_added",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/date_added",
+      "slot_uri": "https://example.com/synbio/date_added",
       "owner": "PartsSequence",
       "domain_of": [
         "PartsSequence"
@@ -882,9 +883,9 @@
     },
     {
       "name": "nt_sequence",
-      "definition_uri": "https://w3id.org/None/nt_sequence",
+      "definition_uri": "https://example.com/synbio/nt_sequence",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/nt_sequence",
+      "slot_uri": "https://example.com/synbio/nt_sequence",
       "owner": "PartsSequence",
       "domain_of": [
         "PartsSequence"
@@ -894,9 +895,9 @@
     },
     {
       "name": "host_organism",
-      "definition_uri": "https://w3id.org/None/host_organism",
+      "definition_uri": "https://example.com/synbio/host_organism",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/host_organism",
+      "slot_uri": "https://example.com/synbio/host_organism",
       "owner": "Strain",
       "domain_of": [
         "Strain"
@@ -906,9 +907,9 @@
     },
     {
       "name": "strain_set",
-      "definition_uri": "https://w3id.org/None/strain_set",
+      "definition_uri": "https://example.com/synbio/strain_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/strain_set",
+      "slot_uri": "https://example.com/synbio/strain_set",
       "multivalued": true,
       "owner": "Database",
       "domain_of": [
@@ -921,9 +922,9 @@
     },
     {
       "name": "sequence_set",
-      "definition_uri": "https://w3id.org/None/sequence_set",
+      "definition_uri": "https://example.com/synbio/sequence_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/sequence_set",
+      "slot_uri": "https://example.com/synbio/sequence_set",
       "multivalued": true,
       "owner": "Database",
       "domain_of": [
@@ -936,21 +937,22 @@
     },
     {
       "name": "name",
-      "definition_uri": "https://w3id.org/None/name",
+      "definition_uri": "https://example.com/synbio/name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/name",
-      "owner": "Strain",
+      "slot_uri": "https://example.com/synbio/name",
+      "owner": "Organism",
       "domain_of": [
-        "Strain"
+        "Strain",
+        "Organism"
       ],
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "genotype_phenotype",
-      "definition_uri": "https://w3id.org/None/genotype_phenotype",
+      "definition_uri": "https://example.com/synbio/genotype_phenotype",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/genotype_phenotype",
+      "slot_uri": "https://example.com/synbio/genotype_phenotype",
       "owner": "Strain",
       "domain_of": [
         "Strain"
@@ -960,12 +962,12 @@
     },
     {
       "name": "intellectual_property",
-      "definition_uri": "https://w3id.org/None/intellectual_property",
+      "definition_uri": "https://example.com/synbio/intellectual_property",
       "todos": [
         "enum range?"
       ],
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/intellectual_property",
+      "slot_uri": "https://example.com/synbio/intellectual_property",
       "owner": "Strain",
       "domain_of": [
         "Strain"
@@ -975,12 +977,12 @@
     },
     {
       "name": "keywords",
-      "definition_uri": "https://w3id.org/None/keywords",
+      "definition_uri": "https://example.com/synbio/keywords",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0000630"
       ],
-      "slot_uri": "https://w3id.org/None/keywords",
+      "slot_uri": "https://example.com/synbio/keywords",
       "owner": "Strain",
       "domain_of": [
         "Strain"
@@ -990,9 +992,9 @@
     },
     {
       "name": "summary",
-      "definition_uri": "https://w3id.org/None/summary",
+      "definition_uri": "https://example.com/synbio/summary",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/summary",
+      "slot_uri": "https://example.com/synbio/summary",
       "owner": "Strain",
       "domain_of": [
         "Strain"
@@ -1002,12 +1004,12 @@
     },
     {
       "name": "references",
-      "definition_uri": "https://w3id.org/None/references",
+      "definition_uri": "https://example.com/synbio/references",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0000320"
       ],
-      "slot_uri": "https://w3id.org/None/references",
+      "slot_uri": "https://example.com/synbio/references",
       "owner": "Strain",
       "domain_of": [
         "Strain"
@@ -1017,9 +1019,9 @@
     },
     {
       "name": "funding_source",
-      "definition_uri": "https://w3id.org/None/funding_source",
+      "definition_uri": "https://example.com/synbio/funding_source",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/funding_source",
+      "slot_uri": "https://example.com/synbio/funding_source",
       "owner": "Strain",
       "domain_of": [
         "Strain"
@@ -1029,9 +1031,9 @@
     },
     {
       "name": "modification_set",
-      "definition_uri": "https://w3id.org/None/modification_set",
+      "definition_uri": "https://example.com/synbio/modification_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "slot_uri": "https://w3id.org/None/modification_set",
+      "slot_uri": "https://example.com/synbio/modification_set",
       "multivalued": true,
       "owner": "Database",
       "domain_of": [
@@ -1044,12 +1046,12 @@
     },
     {
       "name": "category",
-      "definition_uri": "https://w3id.org/None/category",
+      "definition_uri": "https://example.com/synbio/category",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/category"
+        "https://example.com/synbio/category"
       ],
-      "slot_uri": "https://w3id.org/None/category",
+      "slot_uri": "https://example.com/synbio/category",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1059,12 +1061,12 @@
     },
     {
       "name": "creator",
-      "definition_uri": "https://w3id.org/None/creator",
+      "definition_uri": "https://example.com/synbio/creator",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/creator"
+        "https://example.com/synbio/creator"
       ],
-      "slot_uri": "https://w3id.org/None/creator",
+      "slot_uri": "https://example.com/synbio/creator",
       "owner": "Modification",
       "domain_of": [
         "Strain",
@@ -1075,12 +1077,12 @@
     },
     {
       "name": "descriptor",
-      "definition_uri": "https://w3id.org/None/descriptor",
+      "definition_uri": "https://example.com/synbio/descriptor",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/descriptor"
+        "https://example.com/synbio/descriptor"
       ],
-      "slot_uri": "https://w3id.org/None/descriptor",
+      "slot_uri": "https://example.com/synbio/descriptor",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1090,23 +1092,23 @@
     },
     {
       "name": "modification_taxon",
-      "definition_uri": "https://w3id.org/None/modification_taxon",
+      "definition_uri": "https://example.com/synbio/modification_taxon",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/modification_taxon"
+        "https://example.com/synbio/modification_taxon"
       ],
-      "slot_uri": "https://w3id.org/None/modification_taxon",
+      "slot_uri": "https://example.com/synbio/modification_taxon",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "modification_type",
-      "definition_uri": "https://w3id.org/None/modification_type",
+      "definition_uri": "https://example.com/synbio/modification_type",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/modification_type"
+        "https://example.com/synbio/modification_type"
       ],
-      "slot_uri": "https://w3id.org/None/modification_type",
+      "slot_uri": "https://example.com/synbio/modification_type",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1116,23 +1118,23 @@
     },
     {
       "name": "organism_basis",
-      "definition_uri": "https://w3id.org/None/organism_basis",
+      "definition_uri": "https://example.com/synbio/organism_basis",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/organism_basis"
+        "https://example.com/synbio/organism_basis"
       ],
-      "slot_uri": "https://w3id.org/None/organism_basis",
+      "slot_uri": "https://example.com/synbio/organism_basis",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "organism_set",
-      "definition_uri": "https://w3id.org/None/organism_set",
+      "definition_uri": "https://example.com/synbio/organism_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/organism_set"
+        "https://example.com/synbio/organism_set"
       ],
-      "slot_uri": "https://w3id.org/None/organism_set",
+      "slot_uri": "https://example.com/synbio/organism_set",
       "multivalued": true,
       "owner": "Database",
       "domain_of": [
@@ -1145,12 +1147,12 @@
     },
     {
       "name": "person_set",
-      "definition_uri": "https://w3id.org/None/person_set",
+      "definition_uri": "https://example.com/synbio/person_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/person_set"
+        "https://example.com/synbio/person_set"
       ],
-      "slot_uri": "https://w3id.org/None/person_set",
+      "slot_uri": "https://example.com/synbio/person_set",
       "multivalued": true,
       "owner": "Database",
       "domain_of": [
@@ -1163,15 +1165,15 @@
     },
     {
       "name": "principal_investigator",
-      "definition_uri": "https://w3id.org/None/principal_investigator",
+      "definition_uri": "https://example.com/synbio/principal_investigator",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/principal_investigator"
+        "https://example.com/synbio/principal_investigator"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/OBI_0000103"
       ],
-      "slot_uri": "https://w3id.org/None/principal_investigator",
+      "slot_uri": "https://example.com/synbio/principal_investigator",
       "owner": "Modification",
       "domain_of": [
         "Strain",
@@ -1182,12 +1184,12 @@
     },
     {
       "name": "subcategory_size",
-      "definition_uri": "https://w3id.org/None/subcategory_size",
+      "definition_uri": "https://example.com/synbio/subcategory_size",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/subcategory_size"
+        "https://example.com/synbio/subcategory_size"
       ],
-      "slot_uri": "https://w3id.org/None/subcategory_size",
+      "slot_uri": "https://example.com/synbio/subcategory_size",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1197,7 +1199,7 @@
     },
     {
       "name": "license",
-      "definition_uri": "https://w3id.org/None/license",
+      "definition_uri": "https://example.com/synbio/license",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "http://purl.org/dc/terms/license"
@@ -1211,12 +1213,12 @@
     },
     {
       "name": "aa_change",
-      "definition_uri": "https://w3id.org/None/aa_change",
+      "definition_uri": "https://example.com/synbio/aa_change",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/aa_change"
+        "https://example.com/synbio/aa_change"
       ],
-      "slot_uri": "https://w3id.org/None/aa_change",
+      "slot_uri": "https://example.com/synbio/aa_change",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1226,30 +1228,26 @@
     },
     {
       "name": "abbreviation",
-      "definition_uri": "https://w3id.org/None/abbreviation",
+      "definition_uri": "https://example.com/synbio/abbreviation",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/abbreviation"
+        "https://example.com/synbio/abbreviation"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/NCIT_C42610"
       ],
-      "slot_uri": "https://w3id.org/None/abbreviation",
-      "owner": "Organism",
-      "domain_of": [
-        "Organism"
-      ],
+      "slot_uri": "https://example.com/synbio/abbreviation",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "bio_safety_level",
-      "definition_uri": "https://w3id.org/None/bio_safety_level",
+      "definition_uri": "https://example.com/synbio/bio_safety_level",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/bio_safety_level"
+        "https://example.com/synbio/bio_safety_level"
       ],
-      "slot_uri": "https://w3id.org/None/bio_safety_level",
+      "slot_uri": "https://example.com/synbio/bio_safety_level",
       "owner": "Modification",
       "domain_of": [
         "Strain",
@@ -1260,15 +1258,15 @@
     },
     {
       "name": "comment",
-      "definition_uri": "https://w3id.org/None/comment",
+      "definition_uri": "https://example.com/synbio/comment",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/comment"
+        "https://example.com/synbio/comment"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/NCIT_C25393"
       ],
-      "slot_uri": "https://w3id.org/None/comment",
+      "slot_uri": "https://example.com/synbio/comment",
       "owner": "Organism",
       "domain_of": [
         "Organism"
@@ -1278,12 +1276,12 @@
     },
     {
       "name": "date_joined",
-      "definition_uri": "https://w3id.org/None/date_joined",
+      "definition_uri": "https://example.com/synbio/date_joined",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/date_joined"
+        "https://example.com/synbio/date_joined"
       ],
-      "slot_uri": "https://w3id.org/None/date_joined",
+      "slot_uri": "https://example.com/synbio/date_joined",
       "owner": "Person",
       "domain_of": [
         "Person"
@@ -1293,12 +1291,12 @@
     },
     {
       "name": "el_name_long",
-      "definition_uri": "https://w3id.org/None/el_name_long",
+      "definition_uri": "https://example.com/synbio/el_name_long",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/el_name_long"
+        "https://example.com/synbio/el_name_long"
       ],
-      "slot_uri": "https://w3id.org/None/el_name_long",
+      "slot_uri": "https://example.com/synbio/el_name_long",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1308,12 +1306,12 @@
     },
     {
       "name": "el_name_short",
-      "definition_uri": "https://w3id.org/None/el_name_short",
+      "definition_uri": "https://example.com/synbio/el_name_short",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/el_name_short"
+        "https://example.com/synbio/el_name_short"
       ],
-      "slot_uri": "https://w3id.org/None/el_name_short",
+      "slot_uri": "https://example.com/synbio/el_name_short",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1323,45 +1321,45 @@
     },
     {
       "name": "element",
-      "definition_uri": "https://w3id.org/None/element",
+      "definition_uri": "https://example.com/synbio/element",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/element"
+        "https://example.com/synbio/element"
       ],
-      "slot_uri": "https://w3id.org/None/element",
+      "slot_uri": "https://example.com/synbio/element",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "element_id",
-      "definition_uri": "https://w3id.org/None/element_id",
+      "definition_uri": "https://example.com/synbio/element_id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/element_id"
+        "https://example.com/synbio/element_id"
       ],
-      "slot_uri": "https://w3id.org/None/element_id",
+      "slot_uri": "https://example.com/synbio/element_id",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "element_name",
-      "definition_uri": "https://w3id.org/None/element_name",
+      "definition_uri": "https://example.com/synbio/element_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/element_name"
+        "https://example.com/synbio/element_name"
       ],
-      "slot_uri": "https://w3id.org/None/element_name",
+      "slot_uri": "https://example.com/synbio/element_name",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "element_organism",
-      "definition_uri": "https://w3id.org/None/element_organism",
+      "definition_uri": "https://example.com/synbio/element_organism",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/element_organism"
+        "https://example.com/synbio/element_organism"
       ],
-      "slot_uri": "https://w3id.org/None/element_organism",
+      "slot_uri": "https://example.com/synbio/element_organism",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1371,15 +1369,15 @@
     },
     {
       "name": "email",
-      "definition_uri": "https://w3id.org/None/email",
+      "definition_uri": "https://example.com/synbio/email",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/email"
+        "https://example.com/synbio/email"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0000429"
       ],
-      "slot_uri": "https://w3id.org/None/email",
+      "slot_uri": "https://example.com/synbio/email",
       "owner": "Person",
       "domain_of": [
         "Person"
@@ -1389,15 +1387,15 @@
     },
     {
       "name": "first_name",
-      "definition_uri": "https://w3id.org/None/first_name",
+      "definition_uri": "https://example.com/synbio/first_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/first_name"
+        "https://example.com/synbio/first_name"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0020016"
       ],
-      "slot_uri": "https://w3id.org/None/first_name",
+      "slot_uri": "https://example.com/synbio/first_name",
       "owner": "Person",
       "domain_of": [
         "Person"
@@ -1407,12 +1405,12 @@
     },
     {
       "name": "id",
-      "definition_uri": "https://w3id.org/None/id",
+      "definition_uri": "https://example.com/synbio/id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/id"
+        "https://example.com/synbio/id"
       ],
-      "slot_uri": "https://w3id.org/None/id",
+      "slot_uri": "https://example.com/synbio/id",
       "identifier": true,
       "owner": "Person",
       "domain_of": [
@@ -1428,12 +1426,12 @@
     },
     {
       "name": "is_staff",
-      "definition_uri": "https://w3id.org/None/is_staff",
+      "definition_uri": "https://example.com/synbio/is_staff",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/is_staff"
+        "https://example.com/synbio/is_staff"
       ],
-      "slot_uri": "https://w3id.org/None/is_staff",
+      "slot_uri": "https://example.com/synbio/is_staff",
       "owner": "Person",
       "domain_of": [
         "Person"
@@ -1444,12 +1442,12 @@
     },
     {
       "name": "is_superuser",
-      "definition_uri": "https://w3id.org/None/is_superuser",
+      "definition_uri": "https://example.com/synbio/is_superuser",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/is_superuser"
+        "https://example.com/synbio/is_superuser"
       ],
-      "slot_uri": "https://w3id.org/None/is_superuser",
+      "slot_uri": "https://example.com/synbio/is_superuser",
       "owner": "Person",
       "domain_of": [
         "Person"
@@ -1460,15 +1458,15 @@
     },
     {
       "name": "last_name",
-      "definition_uri": "https://w3id.org/None/last_name",
+      "definition_uri": "https://example.com/synbio/last_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/last_name"
+        "https://example.com/synbio/last_name"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0020017"
       ],
-      "slot_uri": "https://w3id.org/None/last_name",
+      "slot_uri": "https://example.com/synbio/last_name",
       "owner": "Person",
       "domain_of": [
         "Person"
@@ -1478,23 +1476,23 @@
     },
     {
       "name": "modification_genes",
-      "definition_uri": "https://w3id.org/None/modification_genes",
+      "definition_uri": "https://example.com/synbio/modification_genes",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/modification_genes"
+        "https://example.com/synbio/modification_genes"
       ],
-      "slot_uri": "https://w3id.org/None/modification_genes",
+      "slot_uri": "https://example.com/synbio/modification_genes",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "modifications_genes",
-      "definition_uri": "https://w3id.org/None/modifications_genes",
+      "definition_uri": "https://example.com/synbio/modifications_genes",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/modifications_genes"
+        "https://example.com/synbio/modifications_genes"
       ],
-      "slot_uri": "https://w3id.org/None/modifications_genes",
+      "slot_uri": "https://example.com/synbio/modifications_genes",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1504,15 +1502,15 @@
     },
     {
       "name": "notes",
-      "definition_uri": "https://w3id.org/None/notes",
+      "definition_uri": "https://example.com/synbio/notes",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/notes"
+        "https://example.com/synbio/notes"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0000634"
       ],
-      "slot_uri": "https://w3id.org/None/notes",
+      "slot_uri": "https://example.com/synbio/notes",
       "owner": "Modification",
       "domain_of": [
         "Strain",
@@ -1523,12 +1521,12 @@
     },
     {
       "name": "position",
-      "definition_uri": "https://w3id.org/None/position",
+      "definition_uri": "https://example.com/synbio/position",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/position"
+        "https://example.com/synbio/position"
       ],
-      "slot_uri": "https://w3id.org/None/position",
+      "slot_uri": "https://example.com/synbio/position",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1538,12 +1536,12 @@
     },
     {
       "name": "size_bp",
-      "definition_uri": "https://w3id.org/None/size_bp",
+      "definition_uri": "https://example.com/synbio/size_bp",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/size_bp"
+        "https://example.com/synbio/size_bp"
       ],
-      "slot_uri": "https://w3id.org/None/size_bp",
+      "slot_uri": "https://example.com/synbio/size_bp",
       "owner": "Modification",
       "domain_of": [
         "Modification"
@@ -1552,28 +1550,13 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "special_name",
-      "definition_uri": "https://w3id.org/None/special_name",
-      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "mappings": [
-        "https://w3id.org/None/special_name"
-      ],
-      "slot_uri": "https://w3id.org/None/special_name",
-      "owner": "Organism",
-      "domain_of": [
-        "Organism"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "species_name",
-      "definition_uri": "https://w3id.org/None/species_name",
+      "definition_uri": "https://example.com/synbio/species_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/species_name"
+        "https://example.com/synbio/species_name"
       ],
-      "slot_uri": "https://w3id.org/None/species_name",
+      "slot_uri": "https://example.com/synbio/species_name",
       "owner": "Organism",
       "domain_of": [
         "Organism"
@@ -1582,13 +1565,13 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "species_ncbi_taxon_number",
-      "definition_uri": "https://w3id.org/None/species_ncbi_taxon_number",
+      "name": "strain_agnostic_taxid",
+      "definition_uri": "https://example.com/synbio/strain_agnostic_taxid",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/species_ncbi_taxon_number"
+        "https://example.com/synbio/strain_agnostic_taxid"
       ],
-      "slot_uri": "https://w3id.org/None/species_ncbi_taxon_number",
+      "slot_uri": "https://example.com/synbio/strain_agnostic_taxid",
       "owner": "Organism",
       "domain_of": [
         "Organism"
@@ -1598,15 +1581,15 @@
     },
     {
       "name": "status",
-      "definition_uri": "https://w3id.org/None/status",
+      "definition_uri": "https://example.com/synbio/status",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/status"
+        "https://example.com/synbio/status"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/SO_0000905"
       ],
-      "slot_uri": "https://w3id.org/None/status",
+      "slot_uri": "https://example.com/synbio/status",
       "owner": "Modification",
       "domain_of": [
         "Strain",
@@ -1617,12 +1600,12 @@
     },
     {
       "name": "strain_value",
-      "definition_uri": "https://w3id.org/None/strain_value",
+      "definition_uri": "https://example.com/synbio/strain_value",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/strain"
+        "https://example.com/synbio/strain"
       ],
-      "slot_uri": "https://w3id.org/None/strain",
+      "slot_uri": "https://example.com/synbio/strain",
       "owner": "Organism",
       "domain_of": [
         "Organism"
@@ -1632,12 +1615,12 @@
     },
     {
       "name": "username",
-      "definition_uri": "https://w3id.org/None/username",
+      "definition_uri": "https://example.com/synbio/username",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/username"
+        "https://example.com/synbio/username"
       ],
-      "slot_uri": "https://w3id.org/None/username",
+      "slot_uri": "https://example.com/synbio/username",
       "owner": "Person",
       "domain_of": [
         "Person"
@@ -1648,7 +1631,7 @@
     },
     {
       "name": "examples",
-      "definition_uri": "https://w3id.org/None/examples",
+      "definition_uri": "https://example.com/synbio/examples",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "https://w3id.org/linkml/examples"
@@ -1659,7 +1642,7 @@
     },
     {
       "name": "generation_date",
-      "definition_uri": "https://w3id.org/None/generation_date",
+      "definition_uri": "https://example.com/synbio/generation_date",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "https://w3id.org/linkml/generation_date"
@@ -1670,7 +1653,7 @@
     },
     {
       "name": "metamodel_version",
-      "definition_uri": "https://w3id.org/None/metamodel_version",
+      "definition_uri": "https://example.com/synbio/metamodel_version",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "https://w3id.org/linkml/metamodel_version"
@@ -1681,7 +1664,7 @@
     },
     {
       "name": "permissible_values",
-      "definition_uri": "https://w3id.org/None/permissible_values",
+      "definition_uri": "https://example.com/synbio/permissible_values",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "https://w3id.org/linkml/permissible_values"
@@ -1695,7 +1678,7 @@
     },
     {
       "name": "source_file",
-      "definition_uri": "https://w3id.org/None/source_file",
+      "definition_uri": "https://example.com/synbio/source_file",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "https://w3id.org/linkml/source_file"
@@ -1706,7 +1689,7 @@
     },
     {
       "name": "source_file_date",
-      "definition_uri": "https://w3id.org/None/source_file_date",
+      "definition_uri": "https://example.com/synbio/source_file_date",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "https://w3id.org/linkml/source_file_date"
@@ -1717,7 +1700,7 @@
     },
     {
       "name": "source_file_size",
-      "definition_uri": "https://w3id.org/None/source_file_size",
+      "definition_uri": "https://example.com/synbio/source_file_size",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "https://w3id.org/linkml/source_file_size"
@@ -1728,14 +1711,14 @@
     },
     {
       "name": "PartsSequence_id",
-      "definition_uri": "https://w3id.org/None/id",
+      "definition_uri": "https://example.com/synbio/id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/id"
+        "https://example.com/synbio/id"
       ],
       "is_a": "id",
       "domain": "PartsSequence",
-      "slot_uri": "https://w3id.org/None/id",
+      "slot_uri": "https://example.com/synbio/id",
       "identifier": true,
       "alias": "id",
       "owner": "PartsSequence",
@@ -1751,11 +1734,11 @@
     },
     {
       "name": "PartsSequence_associated_part",
-      "definition_uri": "https://w3id.org/None/associated_part",
+      "definition_uri": "https://example.com/synbio/associated_part",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "is_a": "associated_part",
       "domain": "PartsSequence",
-      "slot_uri": "https://w3id.org/None/associated_part",
+      "slot_uri": "https://example.com/synbio/associated_part",
       "alias": "associated_part",
       "owner": "PartsSequence",
       "domain_of": [
@@ -1769,14 +1752,14 @@
     },
     {
       "name": "Strain_id",
-      "definition_uri": "https://w3id.org/None/id",
+      "definition_uri": "https://example.com/synbio/id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/id"
+        "https://example.com/synbio/id"
       ],
       "is_a": "id",
       "domain": "Strain",
-      "slot_uri": "https://w3id.org/None/id",
+      "slot_uri": "https://example.com/synbio/id",
       "identifier": true,
       "alias": "id",
       "owner": "Strain",
@@ -1792,11 +1775,11 @@
     },
     {
       "name": "Database_strain_set",
-      "definition_uri": "https://w3id.org/None/strain_set",
+      "definition_uri": "https://example.com/synbio/strain_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "is_a": "strain_set",
       "domain": "Database",
-      "slot_uri": "https://w3id.org/None/strain_set",
+      "slot_uri": "https://example.com/synbio/strain_set",
       "multivalued": true,
       "alias": "strain_set",
       "owner": "Database",
@@ -1812,11 +1795,11 @@
     },
     {
       "name": "Database_modification_set",
-      "definition_uri": "https://w3id.org/None/modification_set",
+      "definition_uri": "https://example.com/synbio/modification_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "is_a": "modification_set",
       "domain": "Database",
-      "slot_uri": "https://w3id.org/None/modification_set",
+      "slot_uri": "https://example.com/synbio/modification_set",
       "multivalued": true,
       "alias": "modification_set",
       "owner": "Database",
@@ -1832,14 +1815,14 @@
     },
     {
       "name": "Database_organism_set",
-      "definition_uri": "https://w3id.org/None/organism_set",
+      "definition_uri": "https://example.com/synbio/organism_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/organism_set"
+        "https://example.com/synbio/organism_set"
       ],
       "is_a": "organism_set",
       "domain": "Database",
-      "slot_uri": "https://w3id.org/None/organism_set",
+      "slot_uri": "https://example.com/synbio/organism_set",
       "multivalued": true,
       "alias": "organism_set",
       "owner": "Database",
@@ -1855,14 +1838,14 @@
     },
     {
       "name": "Database_person_set",
-      "definition_uri": "https://w3id.org/None/person_set",
+      "definition_uri": "https://example.com/synbio/person_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/person_set"
+        "https://example.com/synbio/person_set"
       ],
       "is_a": "person_set",
       "domain": "Database",
-      "slot_uri": "https://w3id.org/None/person_set",
+      "slot_uri": "https://example.com/synbio/person_set",
       "multivalued": true,
       "alias": "person_set",
       "owner": "Database",
@@ -1878,11 +1861,11 @@
     },
     {
       "name": "Database_sequence_set",
-      "definition_uri": "https://w3id.org/None/sequence_set",
+      "definition_uri": "https://example.com/synbio/sequence_set",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "is_a": "sequence_set",
       "domain": "Database",
-      "slot_uri": "https://w3id.org/None/sequence_set",
+      "slot_uri": "https://example.com/synbio/sequence_set",
       "multivalued": true,
       "alias": "sequence_set",
       "owner": "Database",
@@ -1898,14 +1881,14 @@
     },
     {
       "name": "Modification_id",
-      "definition_uri": "https://w3id.org/None/id",
+      "definition_uri": "https://example.com/synbio/id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/id"
+        "https://example.com/synbio/id"
       ],
       "is_a": "id",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/id",
+      "slot_uri": "https://example.com/synbio/id",
       "identifier": true,
       "alias": "id",
       "owner": "Modification",
@@ -1921,14 +1904,14 @@
     },
     {
       "name": "Modification_aa_change",
-      "definition_uri": "https://w3id.org/None/aa_change",
+      "definition_uri": "https://example.com/synbio/aa_change",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/aa_change"
+        "https://example.com/synbio/aa_change"
       ],
       "is_a": "aa_change",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/aa_change",
+      "slot_uri": "https://example.com/synbio/aa_change",
       "alias": "aa_change",
       "owner": "Modification",
       "domain_of": [
@@ -1941,14 +1924,14 @@
     },
     {
       "name": "Modification_bio_safety_level",
-      "definition_uri": "https://w3id.org/None/bio_safety_level",
+      "definition_uri": "https://example.com/synbio/bio_safety_level",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/bio_safety_level"
+        "https://example.com/synbio/bio_safety_level"
       ],
       "is_a": "bio_safety_level",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/bio_safety_level",
+      "slot_uri": "https://example.com/synbio/bio_safety_level",
       "alias": "bio_safety_level",
       "owner": "Modification",
       "domain_of": [
@@ -1962,14 +1945,14 @@
     },
     {
       "name": "Modification_category",
-      "definition_uri": "https://w3id.org/None/category",
+      "definition_uri": "https://example.com/synbio/category",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/category"
+        "https://example.com/synbio/category"
       ],
       "is_a": "category",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/category",
+      "slot_uri": "https://example.com/synbio/category",
       "alias": "category",
       "owner": "Modification",
       "domain_of": [
@@ -1982,14 +1965,14 @@
     },
     {
       "name": "Modification_creator",
-      "definition_uri": "https://w3id.org/None/creator",
+      "definition_uri": "https://example.com/synbio/creator",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/creator"
+        "https://example.com/synbio/creator"
       ],
       "is_a": "creator",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/creator",
+      "slot_uri": "https://example.com/synbio/creator",
       "alias": "creator",
       "owner": "Modification",
       "domain_of": [
@@ -2003,14 +1986,14 @@
     },
     {
       "name": "Modification_descriptor",
-      "definition_uri": "https://w3id.org/None/descriptor",
+      "definition_uri": "https://example.com/synbio/descriptor",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/descriptor"
+        "https://example.com/synbio/descriptor"
       ],
       "is_a": "descriptor",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/descriptor",
+      "slot_uri": "https://example.com/synbio/descriptor",
       "alias": "descriptor",
       "owner": "Modification",
       "domain_of": [
@@ -2023,14 +2006,14 @@
     },
     {
       "name": "Modification_el_name_long",
-      "definition_uri": "https://w3id.org/None/el_name_long",
+      "definition_uri": "https://example.com/synbio/el_name_long",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/el_name_long"
+        "https://example.com/synbio/el_name_long"
       ],
       "is_a": "el_name_long",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/el_name_long",
+      "slot_uri": "https://example.com/synbio/el_name_long",
       "alias": "el_name_long",
       "owner": "Modification",
       "domain_of": [
@@ -2044,14 +2027,14 @@
     },
     {
       "name": "Modification_el_name_short",
-      "definition_uri": "https://w3id.org/None/el_name_short",
+      "definition_uri": "https://example.com/synbio/el_name_short",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/el_name_short"
+        "https://example.com/synbio/el_name_short"
       ],
       "is_a": "el_name_short",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/el_name_short",
+      "slot_uri": "https://example.com/synbio/el_name_short",
       "alias": "el_name_short",
       "owner": "Modification",
       "domain_of": [
@@ -2064,14 +2047,14 @@
     },
     {
       "name": "Modification_modification_type",
-      "definition_uri": "https://w3id.org/None/modification_type",
+      "definition_uri": "https://example.com/synbio/modification_type",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/modification_type"
+        "https://example.com/synbio/modification_type"
       ],
       "is_a": "modification_type",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/modification_type",
+      "slot_uri": "https://example.com/synbio/modification_type",
       "alias": "modification_type",
       "owner": "Modification",
       "domain_of": [
@@ -2084,17 +2067,17 @@
     },
     {
       "name": "Modification_notes",
-      "definition_uri": "https://w3id.org/None/notes",
+      "definition_uri": "https://example.com/synbio/notes",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/notes"
+        "https://example.com/synbio/notes"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0000634"
       ],
       "is_a": "notes",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/notes",
+      "slot_uri": "https://example.com/synbio/notes",
       "alias": "notes",
       "owner": "Modification",
       "domain_of": [
@@ -2107,14 +2090,14 @@
     },
     {
       "name": "Modification_position",
-      "definition_uri": "https://w3id.org/None/position",
+      "definition_uri": "https://example.com/synbio/position",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/position"
+        "https://example.com/synbio/position"
       ],
       "is_a": "position",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/position",
+      "slot_uri": "https://example.com/synbio/position",
       "alias": "position",
       "owner": "Modification",
       "domain_of": [
@@ -2127,17 +2110,17 @@
     },
     {
       "name": "Modification_principal_investigator",
-      "definition_uri": "https://w3id.org/None/principal_investigator",
+      "definition_uri": "https://example.com/synbio/principal_investigator",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/principal_investigator"
+        "https://example.com/synbio/principal_investigator"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/OBI_0000103"
       ],
       "is_a": "principal_investigator",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/principal_investigator",
+      "slot_uri": "https://example.com/synbio/principal_investigator",
       "alias": "principal_investigator",
       "owner": "Modification",
       "domain_of": [
@@ -2151,14 +2134,14 @@
     },
     {
       "name": "Modification_size_bp",
-      "definition_uri": "https://w3id.org/None/size_bp",
+      "definition_uri": "https://example.com/synbio/size_bp",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/size_bp"
+        "https://example.com/synbio/size_bp"
       ],
       "is_a": "size_bp",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/size_bp",
+      "slot_uri": "https://example.com/synbio/size_bp",
       "alias": "size_bp",
       "owner": "Modification",
       "domain_of": [
@@ -2171,17 +2154,17 @@
     },
     {
       "name": "Modification_status",
-      "definition_uri": "https://w3id.org/None/status",
+      "definition_uri": "https://example.com/synbio/status",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/status"
+        "https://example.com/synbio/status"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/SO_0000905"
       ],
       "is_a": "status",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/status",
+      "slot_uri": "https://example.com/synbio/status",
       "alias": "status",
       "owner": "Modification",
       "domain_of": [
@@ -2195,14 +2178,14 @@
     },
     {
       "name": "Modification_subcategory_size",
-      "definition_uri": "https://w3id.org/None/subcategory_size",
+      "definition_uri": "https://example.com/synbio/subcategory_size",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/subcategory_size"
+        "https://example.com/synbio/subcategory_size"
       ],
       "is_a": "subcategory_size",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/subcategory_size",
+      "slot_uri": "https://example.com/synbio/subcategory_size",
       "alias": "subcategory_size",
       "owner": "Modification",
       "domain_of": [
@@ -2215,11 +2198,11 @@
     },
     {
       "name": "Modification_curated_gene_symbols",
-      "definition_uri": "https://w3id.org/None/curated_gene_symbols",
+      "definition_uri": "https://example.com/synbio/curated_gene_symbols",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "is_a": "curated_gene_symbols",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/curated_gene_symbols",
+      "slot_uri": "https://example.com/synbio/curated_gene_symbols",
       "multivalued": true,
       "alias": "curated_gene_symbols",
       "owner": "Modification",
@@ -2233,14 +2216,14 @@
     },
     {
       "name": "Modification_element_organism",
-      "definition_uri": "https://w3id.org/None/element_organism",
+      "definition_uri": "https://example.com/synbio/element_organism",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/element_organism"
+        "https://example.com/synbio/element_organism"
       ],
       "is_a": "element_organism",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/element_organism",
+      "slot_uri": "https://example.com/synbio/element_organism",
       "alias": "element_organism",
       "owner": "Modification",
       "domain_of": [
@@ -2253,14 +2236,14 @@
     },
     {
       "name": "Modification_modifications_genes",
-      "definition_uri": "https://w3id.org/None/modifications_genes",
+      "definition_uri": "https://example.com/synbio/modifications_genes",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/modifications_genes"
+        "https://example.com/synbio/modifications_genes"
       ],
       "is_a": "modifications_genes",
       "domain": "Modification",
-      "slot_uri": "https://w3id.org/None/modifications_genes",
+      "slot_uri": "https://example.com/synbio/modifications_genes",
       "alias": "modifications_genes",
       "owner": "Modification",
       "domain_of": [
@@ -2273,14 +2256,14 @@
     },
     {
       "name": "Organism_id",
-      "definition_uri": "https://w3id.org/None/id",
+      "definition_uri": "https://example.com/synbio/id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/id"
+        "https://example.com/synbio/id"
       ],
       "is_a": "id",
       "domain": "Organism",
-      "slot_uri": "https://w3id.org/None/id",
+      "slot_uri": "https://example.com/synbio/id",
       "identifier": true,
       "alias": "id",
       "owner": "Organism",
@@ -2296,17 +2279,17 @@
     },
     {
       "name": "Organism_abbreviation",
-      "definition_uri": "https://w3id.org/None/abbreviation",
+      "definition_uri": "https://example.com/synbio/abbreviation",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/abbreviation"
+        "https://example.com/synbio/abbreviation"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/NCIT_C42610"
       ],
       "is_a": "abbreviation",
       "domain": "Organism",
-      "slot_uri": "https://w3id.org/None/abbreviation",
+      "slot_uri": "https://example.com/synbio/abbreviation",
       "alias": "abbreviation",
       "owner": "Organism",
       "domain_of": [
@@ -2319,17 +2302,17 @@
     },
     {
       "name": "Organism_comment",
-      "definition_uri": "https://w3id.org/None/comment",
+      "definition_uri": "https://example.com/synbio/comment",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/comment"
+        "https://example.com/synbio/comment"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/NCIT_C25393"
       ],
       "is_a": "comment",
       "domain": "Organism",
-      "slot_uri": "https://w3id.org/None/comment",
+      "slot_uri": "https://example.com/synbio/comment",
       "alias": "comment",
       "owner": "Organism",
       "domain_of": [
@@ -2341,35 +2324,15 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "Organism_special_name",
-      "definition_uri": "https://w3id.org/None/special_name",
-      "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
-      "mappings": [
-        "https://w3id.org/None/special_name"
-      ],
-      "is_a": "special_name",
-      "domain": "Organism",
-      "slot_uri": "https://w3id.org/None/special_name",
-      "alias": "special_name",
-      "owner": "Organism",
-      "domain_of": [
-        "Organism"
-      ],
-      "is_usage_slot": true,
-      "usage_slot_name": "special_name",
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "Organism_species_name",
-      "definition_uri": "https://w3id.org/None/species_name",
+      "definition_uri": "https://example.com/synbio/species_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/species_name"
+        "https://example.com/synbio/species_name"
       ],
       "is_a": "species_name",
       "domain": "Organism",
-      "slot_uri": "https://w3id.org/None/species_name",
+      "slot_uri": "https://example.com/synbio/species_name",
       "alias": "species_name",
       "owner": "Organism",
       "domain_of": [
@@ -2381,35 +2344,35 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "Organism_species_ncbi_taxon_number",
-      "definition_uri": "https://w3id.org/None/species_ncbi_taxon_number",
+      "name": "Organism_strain_agnostic_taxid",
+      "definition_uri": "https://example.com/synbio/strain_agnostic_taxid",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/species_ncbi_taxon_number"
+        "https://example.com/synbio/strain_agnostic_taxid"
       ],
-      "is_a": "species_ncbi_taxon_number",
+      "is_a": "strain_agnostic_taxid",
       "domain": "Organism",
-      "slot_uri": "https://w3id.org/None/species_ncbi_taxon_number",
-      "alias": "species_ncbi_taxon_number",
+      "slot_uri": "https://example.com/synbio/strain_agnostic_taxid",
+      "alias": "strain_agnostic_taxid",
       "owner": "Organism",
       "domain_of": [
         "Organism"
       ],
       "is_usage_slot": true,
-      "usage_slot_name": "species_ncbi_taxon_number",
+      "usage_slot_name": "strain_agnostic_taxid",
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
       "name": "Organism_strain_value",
-      "definition_uri": "https://w3id.org/None/strain_value",
+      "definition_uri": "https://example.com/synbio/strain_value",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/strain"
+        "https://example.com/synbio/strain"
       ],
       "is_a": "strain_value",
       "domain": "Organism",
-      "slot_uri": "https://w3id.org/None/strain",
+      "slot_uri": "https://example.com/synbio/strain",
       "alias": "strain_value",
       "owner": "Organism",
       "domain_of": [
@@ -2422,14 +2385,14 @@
     },
     {
       "name": "Person_id",
-      "definition_uri": "https://w3id.org/None/id",
+      "definition_uri": "https://example.com/synbio/id",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/id"
+        "https://example.com/synbio/id"
       ],
       "is_a": "id",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/id",
+      "slot_uri": "https://example.com/synbio/id",
       "identifier": true,
       "alias": "id",
       "owner": "Person",
@@ -2445,14 +2408,14 @@
     },
     {
       "name": "Person_date_joined",
-      "definition_uri": "https://w3id.org/None/date_joined",
+      "definition_uri": "https://example.com/synbio/date_joined",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/date_joined"
+        "https://example.com/synbio/date_joined"
       ],
       "is_a": "date_joined",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/date_joined",
+      "slot_uri": "https://example.com/synbio/date_joined",
       "alias": "date_joined",
       "owner": "Person",
       "domain_of": [
@@ -2465,17 +2428,17 @@
     },
     {
       "name": "Person_email",
-      "definition_uri": "https://w3id.org/None/email",
+      "definition_uri": "https://example.com/synbio/email",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/email"
+        "https://example.com/synbio/email"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0000429"
       ],
       "is_a": "email",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/email",
+      "slot_uri": "https://example.com/synbio/email",
       "alias": "email",
       "owner": "Person",
       "domain_of": [
@@ -2488,17 +2451,17 @@
     },
     {
       "name": "Person_first_name",
-      "definition_uri": "https://w3id.org/None/first_name",
+      "definition_uri": "https://example.com/synbio/first_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/first_name"
+        "https://example.com/synbio/first_name"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0020016"
       ],
       "is_a": "first_name",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/first_name",
+      "slot_uri": "https://example.com/synbio/first_name",
       "alias": "first_name",
       "owner": "Person",
       "domain_of": [
@@ -2511,14 +2474,14 @@
     },
     {
       "name": "Person_is_staff",
-      "definition_uri": "https://w3id.org/None/is_staff",
+      "definition_uri": "https://example.com/synbio/is_staff",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/is_staff"
+        "https://example.com/synbio/is_staff"
       ],
       "is_a": "is_staff",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/is_staff",
+      "slot_uri": "https://example.com/synbio/is_staff",
       "alias": "is_staff",
       "owner": "Person",
       "domain_of": [
@@ -2532,14 +2495,14 @@
     },
     {
       "name": "Person_is_superuser",
-      "definition_uri": "https://w3id.org/None/is_superuser",
+      "definition_uri": "https://example.com/synbio/is_superuser",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/is_superuser"
+        "https://example.com/synbio/is_superuser"
       ],
       "is_a": "is_superuser",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/is_superuser",
+      "slot_uri": "https://example.com/synbio/is_superuser",
       "alias": "is_superuser",
       "owner": "Person",
       "domain_of": [
@@ -2553,17 +2516,17 @@
     },
     {
       "name": "Person_last_name",
-      "definition_uri": "https://w3id.org/None/last_name",
+      "definition_uri": "https://example.com/synbio/last_name",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/last_name"
+        "https://example.com/synbio/last_name"
       ],
       "exact_mappings": [
         "http://purl.obolibrary.org/obo/IAO_0020017"
       ],
       "is_a": "last_name",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/last_name",
+      "slot_uri": "https://example.com/synbio/last_name",
       "alias": "last_name",
       "owner": "Person",
       "domain_of": [
@@ -2576,14 +2539,14 @@
     },
     {
       "name": "Person_username",
-      "definition_uri": "https://w3id.org/None/username",
+      "definition_uri": "https://example.com/synbio/username",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
-        "https://w3id.org/None/username"
+        "https://example.com/synbio/username"
       ],
       "is_a": "username",
       "domain": "Person",
-      "slot_uri": "https://w3id.org/None/username",
+      "slot_uri": "https://example.com/synbio/username",
       "alias": "username",
       "owner": "Person",
       "domain_of": [
@@ -2599,7 +2562,7 @@
   "classes": [
     {
       "name": "PartsSequence",
-      "definition_uri": "https://w3id.org/None/PartsSequence",
+      "definition_uri": "https://example.com/synbio/PartsSequence",
       "todos": [
         "clarify which slots represent a lookup, like the current match... slots"
       ],
@@ -2622,12 +2585,12 @@
         "uniprot_accessions"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/None/PartsSequence",
+      "class_uri": "https://example.com/synbio/PartsSequence",
       "@type": "ClassDefinition"
     },
     {
       "name": "Strain",
-      "definition_uri": "https://w3id.org/None/Strain",
+      "definition_uri": "https://example.com/synbio/Strain",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "synbio:Strain"
@@ -2636,11 +2599,12 @@
         "OBI:0001185"
       ],
       "slots": [
-        "genome_accessions",
-        "biosample_accessions",
         "bio_safety_level",
+        "biosample_accessions",
         "creator",
+        "external_urls",
         "funding_source",
+        "genome_accessions",
         "genotype_phenotype",
         "has_parts",
         "host_organism",
@@ -2653,16 +2617,15 @@
         "references",
         "selection_markers",
         "status",
-        "summary",
-        "external_urls"
+        "summary"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/None/Strain",
+      "class_uri": "https://example.com/synbio/Strain",
       "@type": "ClassDefinition"
     },
     {
       "name": "Database",
-      "definition_uri": "https://w3id.org/None/Database",
+      "definition_uri": "https://example.com/synbio/Database",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "synbio:Database"
@@ -2675,12 +2638,12 @@
         "Database_strain_set"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/None/Database",
+      "class_uri": "https://example.com/synbio/Database",
       "@type": "ClassDefinition"
     },
     {
       "name": "Modification",
-      "definition_uri": "https://w3id.org/None/Modification",
+      "definition_uri": "https://example.com/synbio/Modification",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "synbio:Modification"
@@ -2710,12 +2673,12 @@
         "part_ofs"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/None/Modification",
+      "class_uri": "https://example.com/synbio/Modification",
       "@type": "ClassDefinition"
     },
     {
       "name": "Organism",
-      "definition_uri": "https://w3id.org/None/Organism",
+      "definition_uri": "https://example.com/synbio/Organism",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "mappings": [
         "synbio:Organism"
@@ -2724,21 +2687,21 @@
         "OBI:0100026"
       ],
       "slots": [
-        "Organism_abbreviation",
         "Organism_comment",
         "Organism_id",
-        "Organism_special_name",
+        "name",
         "Organism_species_name",
-        "Organism_species_ncbi_taxon_number",
-        "Organism_strain_value"
+        "Organism_strain_agnostic_taxid",
+        "Organism_strain_value",
+        "Organism_abbreviation"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/None/Organism",
+      "class_uri": "https://example.com/synbio/Organism",
       "@type": "ClassDefinition"
     },
     {
       "name": "Person",
-      "definition_uri": "https://w3id.org/None/Person",
+      "definition_uri": "https://example.com/synbio/Person",
       "from_schema": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",
       "aliases": [
         "auth_user"
@@ -2760,21 +2723,21 @@
         "Person_username"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/None/Person",
+      "class_uri": "https://example.com/synbio/Person",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "synbio_schema.yaml",
-  "source_file_date": "2022-10-24T15:24:21",
-  "source_file_size": 19468,
-  "generation_date": "2022-10-24T17:21:40",
+  "source_file_date": "2022-10-25T10:29:28",
+  "source_file_size": 19273,
+  "generation_date": "2022-10-25T10:59:44",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/synbio_schema.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     {
-      "@base": "https://w3id.org/None/"
+      "@base": "https://example.com/synbio/"
     }
   ]
 }

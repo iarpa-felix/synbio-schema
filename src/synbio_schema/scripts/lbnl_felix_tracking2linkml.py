@@ -193,7 +193,6 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
 
     required_strain_attribs = {
         'bio_safety_level': 'bio_safety_level',
-        # 'creator': 'creator_id',
         'name': 'name',
     }
 
@@ -238,8 +237,6 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
 
     best_blasts_frame = pd.read_sql_query(best_blasts_query, con)
 
-    # best_blasts_frame.to_csv("best_blasts_frame.tsv", sep="\t")
-
     blast_res_plus_lod = best_blasts_frame.to_dict('records')
 
     for_sequence_set_dod = {}
@@ -276,7 +273,6 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
                 # logger.info(f"has entry {for_sequence_set_dod[blast_plus_record['qacc']]['match_names']}")
 
                 if 'organism' in swiss_entries[blast_plus_record['sacc']]:
-                    # logger.info('has organism')
                     for_sequence_set_dod[blast_plus_record['qacc']]['scientific_names'].add(
                         swiss_entries[blast_plus_record['sacc']]['organism']['scientificName'])
                     for_sequence_set_dod[blast_plus_record['qacc']]['taxon_ids'].add(
@@ -361,8 +357,7 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
         })
 
         for rmak, rmav in required_mod_attribs.items():
-            for_modification_set[rmak] = mod[rmav] \
-                # .strip()
+            for_modification_set[rmak] = mod[rmav]
 
         # todo add extra whitespace removal ?
 
@@ -401,9 +396,7 @@ def cli(sqlite_input_fp: str, swiss_entries_fp: str, yaml_out: str, uniprot_cach
         if 'uniprot_id' in mod and mod['uniprot_id']:
             if mod['uniprot_id'].isalnum():
                 swiss_entry = session.get(f"https://www.uniprot.org/uniprot/{mod['uniprot_id']}.json").json()
-                #   "messages": [
-                #     "The 'accession' value has invalid format. It should be a valid UniProtKB accession"
-                #   ]
+
                 if 'entryType' in swiss_entry:
                     for_modification_set['curated_uniprot_accession'] = mod['uniprot_id']
                 else:

@@ -9,7 +9,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix synbio: <https://w3id.org/None/> .
+@prefix synbio: <https://example.com/synbio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.semanticweb.org/mam/ontologies/2022/7/synbio> a owl:Ontology ;
@@ -21,11 +21,11 @@
         synbio:Person,
         synbio:Strain ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2022-10-24T17:21:46" ;
+    linkml:generation_date "2022-10-25T10:59:49" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "synbio_schema.yaml" ;
-    linkml:source_file_date "2022-10-24T15:24:21" ;
-    linkml:source_file_size 19468 .
+    linkml:source_file_date "2022-10-25T10:29:28" ;
+    linkml:source_file_size 19273 .
 
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" .
@@ -46,8 +46,8 @@ dcterms:license a owl:ObjectProperty,
 synbio:IntellectualPropertyEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "IntellectualPropertyEnum" ;
-    owl:unionOf ( <https://w3id.org/None/IntellectualPropertyEnum#Limited+License+Agreement+required+from+Scarab+Genomics> ) ;
-    linkml:permissible_values <https://w3id.org/None/IntellectualPropertyEnum#Limited+License+Agreement+required+from+Scarab+Genomics> .
+    owl:unionOf ( <https://example.com/synbio/IntellectualPropertyEnum#Limited+License+Agreement+required+from+Scarab+Genomics> ) ;
+    linkml:permissible_values <https://example.com/synbio/IntellectualPropertyEnum#Limited+License+Agreement+required+from+Scarab+Genomics> .
 
 synbio:associated_part a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -125,7 +125,7 @@ synbio:genotype_phenotype a owl:ObjectProperty,
 synbio:go_term_ids a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "go_term_ids" ;
-    rdfs:range linkml:String .
+    rdfs:range linkml:Uriorcurie .
 
 synbio:go_term_labels a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -184,11 +184,6 @@ synbio:modification_taxon a owl:ObjectProperty,
     rdfs:label "modification_taxon" ;
     rdfs:range linkml:String ;
     skos:exactMatch synbio:modification_taxon .
-
-synbio:name a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "name" ;
-    rdfs:range linkml:String .
 
 synbio:nt_sequence a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -306,51 +301,51 @@ linkml:source_file_size a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:exactMatch linkml:source_file_size .
 
-<https://w3id.org/None/BioSafetyLevelEnum#Level+1> a owl:Class,
+<https://example.com/synbio/BioSafetyLevelEnum#Level+1> a owl:Class,
         synbio:BioSafetyLevelEnum ;
     rdfs:label "Level 1" .
 
-<https://w3id.org/None/BioSafetyLevelEnum#Level+2> a owl:Class,
+<https://example.com/synbio/BioSafetyLevelEnum#Level+2> a owl:Class,
         synbio:BioSafetyLevelEnum ;
     rdfs:label "Level 2" .
 
-<https://w3id.org/None/CategoryEnum#GOI> a owl:Class,
+<https://example.com/synbio/CategoryEnum#GOI> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "GOI" .
 
-<https://w3id.org/None/CategoryEnum#antibiotic+resistance> a owl:Class,
+<https://example.com/synbio/CategoryEnum#antibiotic+resistance> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "antibiotic resistance" .
 
-<https://w3id.org/None/CategoryEnum#biosynthetic> a owl:Class,
+<https://example.com/synbio/CategoryEnum#biosynthetic> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "biosynthetic" .
 
-<https://w3id.org/None/CategoryEnum#compound> a owl:Class,
+<https://example.com/synbio/CategoryEnum#compound> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "compound" .
 
-<https://w3id.org/None/CategoryEnum#control+element> a owl:Class,
+<https://example.com/synbio/CategoryEnum#control+element> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "control element" .
 
-<https://w3id.org/None/CategoryEnum#fluorescent/epitope> a owl:Class,
+<https://example.com/synbio/CategoryEnum#fluorescent/epitope> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "fluorescent/epitope" .
 
-<https://w3id.org/None/CategoryEnum#origin/structural> a owl:Class,
+<https://example.com/synbio/CategoryEnum#origin/structural> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "origin/structural" .
 
-<https://w3id.org/None/CategoryEnum#promoter> a owl:Class,
+<https://example.com/synbio/CategoryEnum#promoter> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "promoter" .
 
-<https://w3id.org/None/CategoryEnum#terminator> a owl:Class,
+<https://example.com/synbio/CategoryEnum#terminator> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "terminator" .
 
-<https://w3id.org/None/CategoryEnum#toxin/virulence> a owl:Class,
+<https://example.com/synbio/CategoryEnum#toxin/virulence> a owl:Class,
         synbio:CategoryEnum ;
     rdfs:label "toxin/virulence" .
 
@@ -358,282 +353,257 @@ synbio:Database a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Database" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom synbio:Organism ;
-            owl:onProperty synbio:organism_set ],
-        [ a owl:Restriction ;
             owl:allValuesFrom synbio:PartsSequence ;
             owl:onProperty synbio:sequence_set ],
         [ a owl:Restriction ;
             owl:allValuesFrom synbio:Strain ;
             owl:onProperty synbio:strain_set ],
         [ a owl:Restriction ;
-            owl:allValuesFrom synbio:Person ;
-            owl:onProperty synbio:person_set ],
+            owl:allValuesFrom synbio:Organism ;
+            owl:onProperty synbio:organism_set ],
         [ a owl:Restriction ;
             owl:allValuesFrom synbio:Modification ;
-            owl:onProperty synbio:modification_set ] ;
+            owl:onProperty synbio:modification_set ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom synbio:Person ;
+            owl:onProperty synbio:person_set ] ;
     skos:exactMatch synbio:Database .
 
-<https://w3id.org/None/DescriptorEnum#3pUTR> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#3pUTR> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "3pUTR" .
 
-<https://w3id.org/None/DescriptorEnum#5pUTR> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#5pUTR> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "5pUTR" .
 
-<https://w3id.org/None/DescriptorEnum#CDS> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#CDS> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "CDS" .
 
-<https://w3id.org/None/DescriptorEnum#CDSpartial> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#CDSpartial> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "CDSpartial" .
 
-<https://w3id.org/None/DescriptorEnum#CDSpartial-3prime> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#CDSpartial-3prime> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "CDSpartial-3prime" .
 
-<https://w3id.org/None/DescriptorEnum#CDSpartial-5prime> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#CDSpartial-5prime> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "CDSpartial-5prime" .
 
-<https://w3id.org/None/DescriptorEnum#G> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#G> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "G" .
 
-<https://w3id.org/None/DescriptorEnum#GFP> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#GFP> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "GFP" .
 
-<https://w3id.org/None/DescriptorEnum#SUMO> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#SUMO> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "SUMO" .
 
-<https://w3id.org/None/DescriptorEnum#VP16> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#VP16> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "VP16" .
 
-<https://w3id.org/None/DescriptorEnum#activiation+domain> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#activiation+domain> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "activiation domain" .
 
-<https://w3id.org/None/DescriptorEnum#cleavage+site> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#cleavage+site> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "cleavage site" .
 
-<https://w3id.org/None/DescriptorEnum#eGFP> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#eGFP> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "eGFP" .
 
-<https://w3id.org/None/DescriptorEnum#enhancer> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#enhancer> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "enhancer" .
 
-<https://w3id.org/None/DescriptorEnum#epitope> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#epitope> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "epitope" .
 
-<https://w3id.org/None/DescriptorEnum#fragment> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#fragment> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "fragment" .
 
-<https://w3id.org/None/DescriptorEnum#gene> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#gene> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "gene" .
 
-<https://w3id.org/None/DescriptorEnum#insertion+site> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#insertion+site> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "insertion site" .
 
-<https://w3id.org/None/DescriptorEnum#multiple+cloning+site> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#multiple+cloning+site> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "multiple cloning site" .
 
-<https://w3id.org/None/DescriptorEnum#opt> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#opt> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "opt" .
 
-<https://w3id.org/None/DescriptorEnum#promoter> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#promoter> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "promoter" .
 
-<https://w3id.org/None/DescriptorEnum#ribosomal+binding+site> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#ribosomal+binding+site> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "ribosomal binding site" .
 
-<https://w3id.org/None/DescriptorEnum#scar> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#scar> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "scar" .
 
-<https://w3id.org/None/DescriptorEnum#self-cleaving-peptide> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#self-cleaving-peptide> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "self-cleaving-peptide" .
 
-<https://w3id.org/None/DescriptorEnum#terminator> a owl:Class,
+<https://example.com/synbio/DescriptorEnum#terminator> a owl:Class,
         synbio:DescriptorEnum ;
     rdfs:label "terminator" .
 
-<https://w3id.org/None/FundingSourceEnum#IARPA-FELIX> a owl:Class,
+<https://example.com/synbio/FundingSourceEnum#IARPA-FELIX> a owl:Class,
         synbio:FundingSourceEnum ;
     rdfs:label "IARPA-FELIX" .
 
-<https://w3id.org/None/IntellectualPropertyEnum#Limited+License+Agreement+required+from+Scarab+Genomics> a owl:Class,
+<https://example.com/synbio/IntellectualPropertyEnum#Limited+License+Agreement+required+from+Scarab+Genomics> a owl:Class,
         synbio:IntellectualPropertyEnum ;
     rdfs:label "Limited License Agreement required from Scarab Genomics" .
 
-<https://w3id.org/None/ModificationTypeEnum#203TAGTAGGTACT> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#203TAGTAGGTACT> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "203TAGTAGGTACT" .
 
-<https://w3id.org/None/ModificationTypeEnum#492ACTTAAGCCAGAAAATTTA> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#492ACTTAAGCCAGAAAATTTA> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "492ACTTAAGCCAGAAAATTTA" .
 
-<https://w3id.org/None/ModificationTypeEnum#CDSpartial> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#CDSpartial> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "CDSpartial" .
 
-<https://w3id.org/None/ModificationTypeEnum#T474A-A490T-T492A> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#T474A-A490T-T492A> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "T474A-A490T-T492A" .
 
-<https://w3id.org/None/ModificationTypeEnum#amber+stop+codon> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#amber+stop+codon> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "amber stop codon" .
 
-<https://w3id.org/None/ModificationTypeEnum#chrXIII-chrII> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#chrXIII-chrII> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "chrXIII-chrII" .
 
-<https://w3id.org/None/ModificationTypeEnum#compound+deletion> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#compound+deletion> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "compound deletion" .
 
-<https://w3id.org/None/ModificationTypeEnum#compound+insertion> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#compound+insertion> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "compound insertion" .
 
-<https://w3id.org/None/ModificationTypeEnum#deletion> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#deletion> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "deletion" .
 
-<https://w3id.org/None/ModificationTypeEnum#fluorescent/epitope> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#fluorescent/epitope> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "fluorescent/epitope" .
 
-<https://w3id.org/None/ModificationTypeEnum#frameshift> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#frameshift> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "frameshift" .
 
-<https://w3id.org/None/ModificationTypeEnum#in-frame+deletion> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#in-frame+deletion> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "in-frame deletion" .
 
-<https://w3id.org/None/ModificationTypeEnum#insertion> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#insertion> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "insertion" .
 
-<https://w3id.org/None/ModificationTypeEnum#insertion+site> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#insertion+site> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "insertion site" .
 
-<https://w3id.org/None/ModificationTypeEnum#inversion> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#inversion> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "inversion" .
 
-<https://w3id.org/None/ModificationTypeEnum#ochre+stop+codon> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#ochre+stop+codon> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "ochre stop codon" .
 
-<https://w3id.org/None/ModificationTypeEnum#plasmid> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#plasmid> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "plasmid" .
 
-<https://w3id.org/None/ModificationTypeEnum#plasmid+element> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#plasmid+element> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "plasmid element" .
 
-<https://w3id.org/None/ModificationTypeEnum#reassortment> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#reassortment> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "reassortment" .
 
-<https://w3id.org/None/ModificationTypeEnum#substitution> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#substitution> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "substitution" .
 
-<https://w3id.org/None/ModificationTypeEnum#substitution+transition> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#substitution+transition> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "substitution transition" .
 
-<https://w3id.org/None/ModificationTypeEnum#substitution+transversion> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#substitution+transversion> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "substitution transversion" .
 
-<https://w3id.org/None/ModificationTypeEnum#subtitutions> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#subtitutions> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "subtitutions" .
 
-<https://w3id.org/None/ModificationTypeEnum#transition> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#transition> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "transition" .
 
-<https://w3id.org/None/ModificationTypeEnum#transition+plasmid+element> a owl:Class,
+<https://example.com/synbio/ModificationTypeEnum#transition+plasmid+element> a owl:Class,
         synbio:ModificationTypeEnum ;
     rdfs:label "transition plasmid element" .
 
-<https://w3id.org/None/SeqTypeEnum#deletion> a owl:Class,
+<https://example.com/synbio/SeqTypeEnum#deletion> a owl:Class,
         synbio:SeqTypeEnum ;
     rdfs:label "deletion" .
 
-<https://w3id.org/None/SeqTypeEnum#flank1> a owl:Class,
+<https://example.com/synbio/SeqTypeEnum#flank1> a owl:Class,
         synbio:SeqTypeEnum ;
     rdfs:label "flank1" .
 
-<https://w3id.org/None/SeqTypeEnum#flank2> a owl:Class,
+<https://example.com/synbio/SeqTypeEnum#flank2> a owl:Class,
         synbio:SeqTypeEnum ;
     rdfs:label "flank2" .
 
-<https://w3id.org/None/SeqTypeEnum#insertion> a owl:Class,
+<https://example.com/synbio/SeqTypeEnum#insertion> a owl:Class,
         synbio:SeqTypeEnum ;
     rdfs:label "insertion" .
 
-<https://w3id.org/None/SeqTypeEnum#sequence> a owl:Class,
+<https://example.com/synbio/SeqTypeEnum#sequence> a owl:Class,
         synbio:SeqTypeEnum ;
     rdfs:label "sequence" .
 
-<https://w3id.org/None/StatusEnum#Abandoned> a owl:Class,
+<https://example.com/synbio/StatusEnum#Abandoned> a owl:Class,
         synbio:StatusEnum ;
     rdfs:label "Abandoned" .
 
-<https://w3id.org/None/StatusEnum#In+Progress> a owl:Class,
+<https://example.com/synbio/StatusEnum#In+Progress> a owl:Class,
         synbio:StatusEnum ;
     rdfs:label "In Progress" .
-
-<https://w3id.org/None/SubcategorySizeEnum#from_100_to_300> a owl:Class,
-        synbio:SubcategorySizeEnum ;
-    rdfs:label "from_100_to_300" ;
-    dcterms:title "200-600" .
-
-<https://w3id.org/None/SubcategorySizeEnum#from_1k_to_3k> a owl:Class,
-        synbio:SubcategorySizeEnum ;
-    rdfs:label "from_1k_to_3k" ;
-    dcterms:title "1K-3K" .
-
-<https://w3id.org/None/SubcategorySizeEnum#from_300_to_1k> a owl:Class,
-        synbio:SubcategorySizeEnum ;
-    rdfs:label "from_300_to_1k" ;
-    dcterms:title "600-1K" .
-
-<https://w3id.org/None/SubcategorySizeEnum#gt_3k> a owl:Class,
-        synbio:SubcategorySizeEnum ;
-    rdfs:label "gt_3k" ;
-    dcterms:title ">3K" .
-
-<https://w3id.org/None/SubcategorySizeEnum#lt_200> a owl:Class,
-        synbio:SubcategorySizeEnum ;
-    rdfs:label "lt_200" ;
-    dcterms:title "<200" .
 
 synbio:aa_change a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -736,6 +706,11 @@ synbio:modifications_genes a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:exactMatch synbio:modifications_genes .
 
+synbio:name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "name" ;
+    rdfs:range linkml:String .
+
 synbio:organism_set a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "organism_set" ;
@@ -760,29 +735,23 @@ synbio:size_bp a owl:ObjectProperty,
     rdfs:range linkml:Integer ;
     skos:exactMatch synbio:size_bp .
 
-synbio:special_name a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "special_name" ;
-    rdfs:range linkml:String ;
-    skos:exactMatch synbio:special_name .
-
 synbio:species_name a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "species_name" ;
     rdfs:range linkml:String ;
     skos:exactMatch synbio:species_name .
 
-synbio:species_ncbi_taxon_number a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "species_ncbi_taxon_number" ;
-    rdfs:range linkml:String ;
-    skos:exactMatch synbio:species_ncbi_taxon_number .
-
 synbio:strain a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "strain_value" ;
     rdfs:range linkml:String ;
     skos:exactMatch synbio:strain .
+
+synbio:strain_agnostic_taxid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "strain_agnostic_taxid" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch synbio:strain_agnostic_taxid .
 
 synbio:subcategory_size a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -799,63 +768,63 @@ synbio:username a owl:ObjectProperty,
 synbio:FundingSourceEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "FundingSourceEnum" ;
-    owl:unionOf ( <https://w3id.org/None/FundingSourceEnum#IARPA-FELIX> ) ;
-    linkml:permissible_values <https://w3id.org/None/FundingSourceEnum#IARPA-FELIX> .
+    owl:unionOf ( <https://example.com/synbio/FundingSourceEnum#IARPA-FELIX> ) ;
+    linkml:permissible_values <https://example.com/synbio/FundingSourceEnum#IARPA-FELIX> .
 
 synbio:PartsSequence a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "PartsSequence" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:date_added ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:match_names ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:other_accessions ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:id ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty synbio:scientific_names ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:go_term_labels ],
+            owl:onProperty synbio:match_gene_symbols_etc ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:Modification ;
+            owl:onProperty synbio:associated_part ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:nt_sequence ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:taxon_ids ],
+            owl:onProperty synbio:go_term_labels ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty synbio:go_term_ids ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:match_ec_numbers ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:uniprot_accessions ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:SeqTypeEnum ;
+            owl:onProperty synbio:seq_type ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:seq_name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:match_names ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:uniprot_accessions ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:Modification ;
-            owl:onProperty synbio:associated_part ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:other_accessions ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:go_term_ids ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:nt_sequence ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:id ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:date_added ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:SeqTypeEnum ;
-            owl:onProperty synbio:seq_type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:match_gene_symbols_etc ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:match_ec_numbers ] .
+            owl:onProperty synbio:taxon_ids ] .
 
 synbio:bio_safety_level a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -896,11 +865,58 @@ synbio:Strain a owl:Class,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:summary ],
+            owl:onProperty synbio:genotype_phenotype ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:Organism ;
+            owl:onProperty synbio:host_organism ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:external_urls ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:Person ;
+            owl:onProperty synbio:creator ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:genome_accessions ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:selection_markers ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:biosample_accessions ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:Person ;
+            owl:onProperty synbio:principal_investigator ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:has_parts ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:id ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:keywords ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass synbio:StatusEnum ;
             owl:onProperty synbio:status ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:references ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass synbio:FundingSourceEnum ;
@@ -915,162 +931,53 @@ synbio:Strain a owl:Class,
             owl:onProperty synbio:bio_safety_level ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:Person ;
-            owl:onProperty synbio:creator ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:biosample_accessions ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:notes ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:name ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:genotype_phenotype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:selection_markers ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:references ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:genome_accessions ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:Organism ;
-            owl:onProperty synbio:host_organism ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:has_parts ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:external_urls ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:Person ;
-            owl:onProperty synbio:principal_investigator ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:keywords ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:id ;
-            owl:qualifiedCardinality 1 ] ;
+            owl:onProperty synbio:summary ] ;
     skos:exactMatch OBI:0001185,
         synbio:Strain .
 
 synbio:BioSafetyLevelEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "BioSafetyLevelEnum" ;
-    owl:unionOf ( <https://w3id.org/None/BioSafetyLevelEnum#Level+1> <https://w3id.org/None/BioSafetyLevelEnum#Level+2> ) ;
-    linkml:permissible_values <https://w3id.org/None/BioSafetyLevelEnum#Level+1>,
-        <https://w3id.org/None/BioSafetyLevelEnum#Level+2> .
+    owl:unionOf ( <https://example.com/synbio/BioSafetyLevelEnum#Level+1> <https://example.com/synbio/BioSafetyLevelEnum#Level+2> ) ;
+    linkml:permissible_values <https://example.com/synbio/BioSafetyLevelEnum#Level+1>,
+        <https://example.com/synbio/BioSafetyLevelEnum#Level+2> .
 
 synbio:StatusEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "StatusEnum" ;
-    owl:unionOf ( <https://w3id.org/None/StatusEnum#In+Progress> <https://w3id.org/None/StatusEnum#Abandoned> ) ;
-    linkml:permissible_values <https://w3id.org/None/StatusEnum#Abandoned>,
-        <https://w3id.org/None/StatusEnum#In+Progress> .
-
-synbio:SubcategorySizeEnum a owl:Class,
-        linkml:EnumDefinition ;
-    rdfs:label "SubcategorySizeEnum" ;
-    owl:unionOf ( <https://w3id.org/None/SubcategorySizeEnum#lt_200> <https://w3id.org/None/SubcategorySizeEnum#gt_3k> <https://w3id.org/None/SubcategorySizeEnum#from_1k_to_3k> <https://w3id.org/None/SubcategorySizeEnum#from_100_to_300> <https://w3id.org/None/SubcategorySizeEnum#from_300_to_1k> ) ;
-    linkml:permissible_values <https://w3id.org/None/SubcategorySizeEnum#from_100_to_300>,
-        <https://w3id.org/None/SubcategorySizeEnum#from_1k_to_3k>,
-        <https://w3id.org/None/SubcategorySizeEnum#from_300_to_1k>,
-        <https://w3id.org/None/SubcategorySizeEnum#gt_3k>,
-        <https://w3id.org/None/SubcategorySizeEnum#lt_200> .
+    owl:unionOf ( <https://example.com/synbio/StatusEnum#In+Progress> <https://example.com/synbio/StatusEnum#Abandoned> ) ;
+    linkml:permissible_values <https://example.com/synbio/StatusEnum#Abandoned>,
+        <https://example.com/synbio/StatusEnum#In+Progress> .
 
 synbio:Modification a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Modification" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:DescriptorEnum ;
-            owl:onProperty synbio:descriptor ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:curated_protein_name ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:subcategory_size ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:notes ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:curated_uniprot_accession ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:el_name_long ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass synbio:StatusEnum ;
-            owl:onProperty synbio:status ;
-            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:id ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:CategoryEnum ;
-            owl:onProperty synbio:category ],
+            owl:onClass synbio:DescriptorEnum ;
+            owl:onProperty synbio:descriptor ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass synbio:ModificationTypeEnum ;
-            owl:onProperty synbio:modification_type ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty synbio:curated_gene_symbols ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty synbio:part_ofs ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:CategoryEnum ;
+            owl:onProperty synbio:category ],
+        [ a owl:Restriction ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:element_organism ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:modifications_genes ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:el_name_short ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty synbio:curated_gene_symbols ],
-        [ a owl:Restriction ;
-            owl:onClass synbio:Person ;
-            owl:onProperty synbio:creator ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:aa_change ],
-        [ a owl:Restriction ;
-            owl:onClass synbio:Person ;
-            owl:onProperty synbio:principal_investigator ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:position ],
-        [ a owl:Restriction ;
-            owl:onClass synbio:BioSafetyLevelEnum ;
-            owl:onProperty synbio:bio_safety_level ;
+            owl:onProperty synbio:el_name_long ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
@@ -1078,25 +985,73 @@ synbio:Modification a owl:Class,
             owl:onProperty synbio:size_bp ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass synbio:ModificationTypeEnum ;
+            owl:onProperty synbio:modification_type ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:curated_enzyme_name ] ;
+            owl:onProperty synbio:position ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:el_name_short ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:notes ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:subcategory_size ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:modifications_genes ],
+        [ a owl:Restriction ;
+            owl:onClass synbio:BioSafetyLevelEnum ;
+            owl:onProperty synbio:bio_safety_level ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:aa_change ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:curated_uniprot_accession ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:curated_enzyme_name ],
+        [ a owl:Restriction ;
+            owl:onClass synbio:StatusEnum ;
+            owl:onProperty synbio:status ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:element_organism ],
+        [ a owl:Restriction ;
+            owl:onClass synbio:Person ;
+            owl:onProperty synbio:creator ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass synbio:Person ;
+            owl:onProperty synbio:principal_investigator ;
+            owl:qualifiedCardinality 1 ] ;
     skos:exactMatch synbio:Modification .
 
 synbio:Organism a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Organism" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:name ],
+        [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:id ;
             owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:species_name ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:special_name ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
@@ -1104,15 +1059,19 @@ synbio:Organism a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:abbreviation ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
             owl:onProperty synbio:strain ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty synbio:species_ncbi_taxon_number ] ;
+            owl:onProperty synbio:species_name ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:strain_agnostic_taxid ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:abbreviation ] ;
     skos:exactMatch OBI:0100026,
         synbio:Organism .
 
@@ -1128,29 +1087,17 @@ linkml:ClassDefinition a owl:Class ;
 synbio:SeqTypeEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "SeqTypeEnum" ;
-    owl:unionOf ( <https://w3id.org/None/SeqTypeEnum#deletion> <https://w3id.org/None/SeqTypeEnum#sequence> <https://w3id.org/None/SeqTypeEnum#insertion> <https://w3id.org/None/SeqTypeEnum#flank1> <https://w3id.org/None/SeqTypeEnum#flank2> ) ;
-    linkml:permissible_values <https://w3id.org/None/SeqTypeEnum#deletion>,
-        <https://w3id.org/None/SeqTypeEnum#flank1>,
-        <https://w3id.org/None/SeqTypeEnum#flank2>,
-        <https://w3id.org/None/SeqTypeEnum#insertion>,
-        <https://w3id.org/None/SeqTypeEnum#sequence> .
+    owl:unionOf ( <https://example.com/synbio/SeqTypeEnum#deletion> <https://example.com/synbio/SeqTypeEnum#sequence> <https://example.com/synbio/SeqTypeEnum#insertion> <https://example.com/synbio/SeqTypeEnum#flank1> <https://example.com/synbio/SeqTypeEnum#flank2> ) ;
+    linkml:permissible_values <https://example.com/synbio/SeqTypeEnum#deletion>,
+        <https://example.com/synbio/SeqTypeEnum#flank1>,
+        <https://example.com/synbio/SeqTypeEnum#flank2>,
+        <https://example.com/synbio/SeqTypeEnum#insertion>,
+        <https://example.com/synbio/SeqTypeEnum#sequence> .
 
 synbio:Person a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Person" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Datetime ;
-            owl:onProperty synbio:date_joined ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty synbio:is_superuser ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty synbio:first_name ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty synbio:last_name ],
@@ -1160,8 +1107,20 @@ synbio:Person a owl:Class,
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:Boolean ;
+            owl:onProperty synbio:is_superuser ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty synbio:first_name ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Boolean ;
             owl:onProperty synbio:is_staff ;
             owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Datetime ;
+            owl:onProperty synbio:date_joined ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
@@ -1177,77 +1136,77 @@ synbio:Person a owl:Class,
 synbio:CategoryEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "CategoryEnum" ;
-    owl:unionOf ( <https://w3id.org/None/CategoryEnum#antibiotic+resistance> <https://w3id.org/None/CategoryEnum#biosynthetic> <https://w3id.org/None/CategoryEnum#compound> <https://w3id.org/None/CategoryEnum#control+element> <https://w3id.org/None/CategoryEnum#fluorescent/epitope> <https://w3id.org/None/CategoryEnum#GOI> <https://w3id.org/None/CategoryEnum#origin/structural> <https://w3id.org/None/CategoryEnum#promoter> <https://w3id.org/None/CategoryEnum#terminator> <https://w3id.org/None/CategoryEnum#toxin/virulence> ) ;
-    linkml:permissible_values <https://w3id.org/None/CategoryEnum#GOI>,
-        <https://w3id.org/None/CategoryEnum#antibiotic+resistance>,
-        <https://w3id.org/None/CategoryEnum#biosynthetic>,
-        <https://w3id.org/None/CategoryEnum#compound>,
-        <https://w3id.org/None/CategoryEnum#control+element>,
-        <https://w3id.org/None/CategoryEnum#fluorescent/epitope>,
-        <https://w3id.org/None/CategoryEnum#origin/structural>,
-        <https://w3id.org/None/CategoryEnum#promoter>,
-        <https://w3id.org/None/CategoryEnum#terminator>,
-        <https://w3id.org/None/CategoryEnum#toxin/virulence> .
+    owl:unionOf ( <https://example.com/synbio/CategoryEnum#antibiotic+resistance> <https://example.com/synbio/CategoryEnum#biosynthetic> <https://example.com/synbio/CategoryEnum#compound> <https://example.com/synbio/CategoryEnum#control+element> <https://example.com/synbio/CategoryEnum#fluorescent/epitope> <https://example.com/synbio/CategoryEnum#GOI> <https://example.com/synbio/CategoryEnum#origin/structural> <https://example.com/synbio/CategoryEnum#promoter> <https://example.com/synbio/CategoryEnum#terminator> <https://example.com/synbio/CategoryEnum#toxin/virulence> ) ;
+    linkml:permissible_values <https://example.com/synbio/CategoryEnum#GOI>,
+        <https://example.com/synbio/CategoryEnum#antibiotic+resistance>,
+        <https://example.com/synbio/CategoryEnum#biosynthetic>,
+        <https://example.com/synbio/CategoryEnum#compound>,
+        <https://example.com/synbio/CategoryEnum#control+element>,
+        <https://example.com/synbio/CategoryEnum#fluorescent/epitope>,
+        <https://example.com/synbio/CategoryEnum#origin/structural>,
+        <https://example.com/synbio/CategoryEnum#promoter>,
+        <https://example.com/synbio/CategoryEnum#terminator>,
+        <https://example.com/synbio/CategoryEnum#toxin/virulence> .
 
 synbio:DescriptorEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "DescriptorEnum" ;
-    owl:unionOf ( <https://w3id.org/None/DescriptorEnum#3pUTR> <https://w3id.org/None/DescriptorEnum#5pUTR> <https://w3id.org/None/DescriptorEnum#activiation+domain> <https://w3id.org/None/DescriptorEnum#CDS> <https://w3id.org/None/DescriptorEnum#CDSpartial> <https://w3id.org/None/DescriptorEnum#CDSpartial-3prime> <https://w3id.org/None/DescriptorEnum#CDSpartial-5prime> <https://w3id.org/None/DescriptorEnum#eGFP> <https://w3id.org/None/DescriptorEnum#enhancer> <https://w3id.org/None/DescriptorEnum#epitope> <https://w3id.org/None/DescriptorEnum#fragment> <https://w3id.org/None/DescriptorEnum#G> <https://w3id.org/None/DescriptorEnum#gene> <https://w3id.org/None/DescriptorEnum#insertion+site> <https://w3id.org/None/DescriptorEnum#multiple+cloning+site> <https://w3id.org/None/DescriptorEnum#opt> <https://w3id.org/None/DescriptorEnum#promoter> <https://w3id.org/None/DescriptorEnum#ribosomal+binding+site> <https://w3id.org/None/DescriptorEnum#scar> <https://w3id.org/None/DescriptorEnum#SUMO> <https://w3id.org/None/DescriptorEnum#terminator> <https://w3id.org/None/DescriptorEnum#VP16> <https://w3id.org/None/DescriptorEnum#cleavage+site> <https://w3id.org/None/DescriptorEnum#GFP> <https://w3id.org/None/DescriptorEnum#self-cleaving-peptide> ) ;
-    linkml:permissible_values <https://w3id.org/None/DescriptorEnum#3pUTR>,
-        <https://w3id.org/None/DescriptorEnum#5pUTR>,
-        <https://w3id.org/None/DescriptorEnum#CDS>,
-        <https://w3id.org/None/DescriptorEnum#CDSpartial>,
-        <https://w3id.org/None/DescriptorEnum#CDSpartial-3prime>,
-        <https://w3id.org/None/DescriptorEnum#CDSpartial-5prime>,
-        <https://w3id.org/None/DescriptorEnum#G>,
-        <https://w3id.org/None/DescriptorEnum#GFP>,
-        <https://w3id.org/None/DescriptorEnum#SUMO>,
-        <https://w3id.org/None/DescriptorEnum#VP16>,
-        <https://w3id.org/None/DescriptorEnum#activiation+domain>,
-        <https://w3id.org/None/DescriptorEnum#cleavage+site>,
-        <https://w3id.org/None/DescriptorEnum#eGFP>,
-        <https://w3id.org/None/DescriptorEnum#enhancer>,
-        <https://w3id.org/None/DescriptorEnum#epitope>,
-        <https://w3id.org/None/DescriptorEnum#fragment>,
-        <https://w3id.org/None/DescriptorEnum#gene>,
-        <https://w3id.org/None/DescriptorEnum#insertion+site>,
-        <https://w3id.org/None/DescriptorEnum#multiple+cloning+site>,
-        <https://w3id.org/None/DescriptorEnum#opt>,
-        <https://w3id.org/None/DescriptorEnum#promoter>,
-        <https://w3id.org/None/DescriptorEnum#ribosomal+binding+site>,
-        <https://w3id.org/None/DescriptorEnum#scar>,
-        <https://w3id.org/None/DescriptorEnum#self-cleaving-peptide>,
-        <https://w3id.org/None/DescriptorEnum#terminator> .
+    owl:unionOf ( <https://example.com/synbio/DescriptorEnum#3pUTR> <https://example.com/synbio/DescriptorEnum#5pUTR> <https://example.com/synbio/DescriptorEnum#activiation+domain> <https://example.com/synbio/DescriptorEnum#CDS> <https://example.com/synbio/DescriptorEnum#CDSpartial> <https://example.com/synbio/DescriptorEnum#CDSpartial-3prime> <https://example.com/synbio/DescriptorEnum#CDSpartial-5prime> <https://example.com/synbio/DescriptorEnum#eGFP> <https://example.com/synbio/DescriptorEnum#enhancer> <https://example.com/synbio/DescriptorEnum#epitope> <https://example.com/synbio/DescriptorEnum#fragment> <https://example.com/synbio/DescriptorEnum#G> <https://example.com/synbio/DescriptorEnum#gene> <https://example.com/synbio/DescriptorEnum#insertion+site> <https://example.com/synbio/DescriptorEnum#multiple+cloning+site> <https://example.com/synbio/DescriptorEnum#opt> <https://example.com/synbio/DescriptorEnum#promoter> <https://example.com/synbio/DescriptorEnum#ribosomal+binding+site> <https://example.com/synbio/DescriptorEnum#scar> <https://example.com/synbio/DescriptorEnum#SUMO> <https://example.com/synbio/DescriptorEnum#terminator> <https://example.com/synbio/DescriptorEnum#VP16> <https://example.com/synbio/DescriptorEnum#cleavage+site> <https://example.com/synbio/DescriptorEnum#GFP> <https://example.com/synbio/DescriptorEnum#self-cleaving-peptide> ) ;
+    linkml:permissible_values <https://example.com/synbio/DescriptorEnum#3pUTR>,
+        <https://example.com/synbio/DescriptorEnum#5pUTR>,
+        <https://example.com/synbio/DescriptorEnum#CDS>,
+        <https://example.com/synbio/DescriptorEnum#CDSpartial>,
+        <https://example.com/synbio/DescriptorEnum#CDSpartial-3prime>,
+        <https://example.com/synbio/DescriptorEnum#CDSpartial-5prime>,
+        <https://example.com/synbio/DescriptorEnum#G>,
+        <https://example.com/synbio/DescriptorEnum#GFP>,
+        <https://example.com/synbio/DescriptorEnum#SUMO>,
+        <https://example.com/synbio/DescriptorEnum#VP16>,
+        <https://example.com/synbio/DescriptorEnum#activiation+domain>,
+        <https://example.com/synbio/DescriptorEnum#cleavage+site>,
+        <https://example.com/synbio/DescriptorEnum#eGFP>,
+        <https://example.com/synbio/DescriptorEnum#enhancer>,
+        <https://example.com/synbio/DescriptorEnum#epitope>,
+        <https://example.com/synbio/DescriptorEnum#fragment>,
+        <https://example.com/synbio/DescriptorEnum#gene>,
+        <https://example.com/synbio/DescriptorEnum#insertion+site>,
+        <https://example.com/synbio/DescriptorEnum#multiple+cloning+site>,
+        <https://example.com/synbio/DescriptorEnum#opt>,
+        <https://example.com/synbio/DescriptorEnum#promoter>,
+        <https://example.com/synbio/DescriptorEnum#ribosomal+binding+site>,
+        <https://example.com/synbio/DescriptorEnum#scar>,
+        <https://example.com/synbio/DescriptorEnum#self-cleaving-peptide>,
+        <https://example.com/synbio/DescriptorEnum#terminator> .
 
 synbio:ModificationTypeEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "ModificationTypeEnum" ;
-    owl:unionOf ( <https://w3id.org/None/ModificationTypeEnum#amber+stop+codon> <https://w3id.org/None/ModificationTypeEnum#deletion> <https://w3id.org/None/ModificationTypeEnum#frameshift> <https://w3id.org/None/ModificationTypeEnum#insertion> <https://w3id.org/None/ModificationTypeEnum#insertion+site> <https://w3id.org/None/ModificationTypeEnum#inversion> <https://w3id.org/None/ModificationTypeEnum#ochre+stop+codon> <https://w3id.org/None/ModificationTypeEnum#plasmid> <https://w3id.org/None/ModificationTypeEnum#substitution> <https://w3id.org/None/ModificationTypeEnum#transition> <https://w3id.org/None/ModificationTypeEnum#203TAGTAGGTACT> <https://w3id.org/None/ModificationTypeEnum#492ACTTAAGCCAGAAAATTTA> <https://w3id.org/None/ModificationTypeEnum#CDSpartial> <https://w3id.org/None/ModificationTypeEnum#T474A-A490T-T492A> <https://w3id.org/None/ModificationTypeEnum#chrXIII-chrII> <https://w3id.org/None/ModificationTypeEnum#compound+deletion> <https://w3id.org/None/ModificationTypeEnum#compound+insertion> <https://w3id.org/None/ModificationTypeEnum#fluorescent/epitope> <https://w3id.org/None/ModificationTypeEnum#in-frame+deletion> <https://w3id.org/None/ModificationTypeEnum#plasmid+element> <https://w3id.org/None/ModificationTypeEnum#reassortment> <https://w3id.org/None/ModificationTypeEnum#substitution+transition> <https://w3id.org/None/ModificationTypeEnum#substitution+transversion> <https://w3id.org/None/ModificationTypeEnum#subtitutions> <https://w3id.org/None/ModificationTypeEnum#transition+plasmid+element> ) ;
-    linkml:permissible_values <https://w3id.org/None/ModificationTypeEnum#203TAGTAGGTACT>,
-        <https://w3id.org/None/ModificationTypeEnum#492ACTTAAGCCAGAAAATTTA>,
-        <https://w3id.org/None/ModificationTypeEnum#CDSpartial>,
-        <https://w3id.org/None/ModificationTypeEnum#T474A-A490T-T492A>,
-        <https://w3id.org/None/ModificationTypeEnum#amber+stop+codon>,
-        <https://w3id.org/None/ModificationTypeEnum#chrXIII-chrII>,
-        <https://w3id.org/None/ModificationTypeEnum#compound+deletion>,
-        <https://w3id.org/None/ModificationTypeEnum#compound+insertion>,
-        <https://w3id.org/None/ModificationTypeEnum#deletion>,
-        <https://w3id.org/None/ModificationTypeEnum#fluorescent/epitope>,
-        <https://w3id.org/None/ModificationTypeEnum#frameshift>,
-        <https://w3id.org/None/ModificationTypeEnum#in-frame+deletion>,
-        <https://w3id.org/None/ModificationTypeEnum#insertion>,
-        <https://w3id.org/None/ModificationTypeEnum#insertion+site>,
-        <https://w3id.org/None/ModificationTypeEnum#inversion>,
-        <https://w3id.org/None/ModificationTypeEnum#ochre+stop+codon>,
-        <https://w3id.org/None/ModificationTypeEnum#plasmid>,
-        <https://w3id.org/None/ModificationTypeEnum#plasmid+element>,
-        <https://w3id.org/None/ModificationTypeEnum#reassortment>,
-        <https://w3id.org/None/ModificationTypeEnum#substitution>,
-        <https://w3id.org/None/ModificationTypeEnum#substitution+transition>,
-        <https://w3id.org/None/ModificationTypeEnum#substitution+transversion>,
-        <https://w3id.org/None/ModificationTypeEnum#subtitutions>,
-        <https://w3id.org/None/ModificationTypeEnum#transition>,
-        <https://w3id.org/None/ModificationTypeEnum#transition+plasmid+element> .
+    owl:unionOf ( <https://example.com/synbio/ModificationTypeEnum#amber+stop+codon> <https://example.com/synbio/ModificationTypeEnum#deletion> <https://example.com/synbio/ModificationTypeEnum#frameshift> <https://example.com/synbio/ModificationTypeEnum#insertion> <https://example.com/synbio/ModificationTypeEnum#insertion+site> <https://example.com/synbio/ModificationTypeEnum#inversion> <https://example.com/synbio/ModificationTypeEnum#ochre+stop+codon> <https://example.com/synbio/ModificationTypeEnum#plasmid> <https://example.com/synbio/ModificationTypeEnum#substitution> <https://example.com/synbio/ModificationTypeEnum#transition> <https://example.com/synbio/ModificationTypeEnum#203TAGTAGGTACT> <https://example.com/synbio/ModificationTypeEnum#492ACTTAAGCCAGAAAATTTA> <https://example.com/synbio/ModificationTypeEnum#CDSpartial> <https://example.com/synbio/ModificationTypeEnum#T474A-A490T-T492A> <https://example.com/synbio/ModificationTypeEnum#chrXIII-chrII> <https://example.com/synbio/ModificationTypeEnum#compound+deletion> <https://example.com/synbio/ModificationTypeEnum#compound+insertion> <https://example.com/synbio/ModificationTypeEnum#fluorescent/epitope> <https://example.com/synbio/ModificationTypeEnum#in-frame+deletion> <https://example.com/synbio/ModificationTypeEnum#plasmid+element> <https://example.com/synbio/ModificationTypeEnum#reassortment> <https://example.com/synbio/ModificationTypeEnum#substitution+transition> <https://example.com/synbio/ModificationTypeEnum#substitution+transversion> <https://example.com/synbio/ModificationTypeEnum#subtitutions> <https://example.com/synbio/ModificationTypeEnum#transition+plasmid+element> ) ;
+    linkml:permissible_values <https://example.com/synbio/ModificationTypeEnum#203TAGTAGGTACT>,
+        <https://example.com/synbio/ModificationTypeEnum#492ACTTAAGCCAGAAAATTTA>,
+        <https://example.com/synbio/ModificationTypeEnum#CDSpartial>,
+        <https://example.com/synbio/ModificationTypeEnum#T474A-A490T-T492A>,
+        <https://example.com/synbio/ModificationTypeEnum#amber+stop+codon>,
+        <https://example.com/synbio/ModificationTypeEnum#chrXIII-chrII>,
+        <https://example.com/synbio/ModificationTypeEnum#compound+deletion>,
+        <https://example.com/synbio/ModificationTypeEnum#compound+insertion>,
+        <https://example.com/synbio/ModificationTypeEnum#deletion>,
+        <https://example.com/synbio/ModificationTypeEnum#fluorescent/epitope>,
+        <https://example.com/synbio/ModificationTypeEnum#frameshift>,
+        <https://example.com/synbio/ModificationTypeEnum#in-frame+deletion>,
+        <https://example.com/synbio/ModificationTypeEnum#insertion>,
+        <https://example.com/synbio/ModificationTypeEnum#insertion+site>,
+        <https://example.com/synbio/ModificationTypeEnum#inversion>,
+        <https://example.com/synbio/ModificationTypeEnum#ochre+stop+codon>,
+        <https://example.com/synbio/ModificationTypeEnum#plasmid>,
+        <https://example.com/synbio/ModificationTypeEnum#plasmid+element>,
+        <https://example.com/synbio/ModificationTypeEnum#reassortment>,
+        <https://example.com/synbio/ModificationTypeEnum#substitution>,
+        <https://example.com/synbio/ModificationTypeEnum#substitution+transition>,
+        <https://example.com/synbio/ModificationTypeEnum#substitution+transversion>,
+        <https://example.com/synbio/ModificationTypeEnum#subtitutions>,
+        <https://example.com/synbio/ModificationTypeEnum#transition>,
+        <https://example.com/synbio/ModificationTypeEnum#transition+plasmid+element> .
 
 linkml:SlotDefinition a owl:Class ;
     rdfs:label "slot_definition" .

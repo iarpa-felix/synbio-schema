@@ -1,10 +1,17 @@
 {
+   "GO": "http://amigo.geneontology.org/amigo/term/GO:",
    "IAO": "http://purl.obolibrary.org/obo/IAO_",
+   "IF": "https://example.com/modification/",
+   "MS": "https://example.com/strain/",
    "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",
    "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
    "OBI": "http://purl.obolibrary.org/obo/OBI_",
    "SO": "http://purl.obolibrary.org/obo/SO_",
    "dcterms": "http://purl.org/dc/terms/",
    "linkml": "https://w3id.org/linkml/",
-   "synbio": "https://w3id.org/None/"
+   "organism": "https://example.com/organism/",
+   "person": "https://example.com/person/",
+   "sequence": "https://example.com/sequence/",
+   "synbio": "https://example.com/synbio/",
+   "xsd": "http://www.w3.org/2001/XMLSchema#"
 }

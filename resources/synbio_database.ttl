@@ -8970,9 +8970,9 @@ person:8 a synbio:Person ;
 sequence:3025 a synbio:PartsSequence ;
     synbio:associated_part IF:00435 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0002100",
-        "GO:0008270",
-        "GO:0052717" ;
+    synbio:go_term_ids "GO:0002100"^^xsd:anyURI,
+        "GO:0008270"^^xsd:anyURI,
+        "GO:0052717"^^xsd:anyURI ;
     synbio:go_term_labels "F:tRNA-specific adenosine-34 deaminase activity",
         "F:zinc ion binding",
         "P:tRNA wobble adenosine to inosine editing" ;
@@ -8989,10 +8989,10 @@ sequence:3025 a synbio:PartsSequence ;
 sequence:3042 a synbio:PartsSequence ;
     synbio:associated_part IF:00532 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005737",
-        "GO:0008994",
-        "GO:0019301",
-        "GO:0046872" ;
+    synbio:go_term_ids "GO:0005737"^^xsd:anyURI,
+        "GO:0008994"^^xsd:anyURI,
+        "GO:0019301"^^xsd:anyURI,
+        "GO:0046872"^^xsd:anyURI ;
     synbio:go_term_labels "C:cytoplasm",
         "F:metal ion binding",
         "F:rhamnulose-1-phosphate aldolase activity",
@@ -9019,9 +9019,9 @@ sequence:3042 a synbio:PartsSequence ;
 sequence:3054 a synbio:PartsSequence ;
     synbio:associated_part IF:00542 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0016407",
-        "GO:0016747",
-        "GO:0046677" ;
+    synbio:go_term_ids "GO:0016407"^^xsd:anyURI,
+        "GO:0016747"^^xsd:anyURI,
+        "GO:0046677"^^xsd:anyURI ;
     synbio:go_term_labels "F:acetyltransferase activity",
         "F:acyltransferase activity, transferring groups other than amino-acyl groups",
         "P:response to antibiotic" ;
@@ -9051,11 +9051,11 @@ sequence:3062 a synbio:PartsSequence ;
 sequence:3089 a synbio:PartsSequence ;
     synbio:associated_part IF:00547 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005886",
-        "GO:0015297",
-        "GO:0016021",
-        "GO:0046677",
-        "GO:1902600" ;
+    synbio:go_term_ids "GO:0005886"^^xsd:anyURI,
+        "GO:0015297"^^xsd:anyURI,
+        "GO:0016021"^^xsd:anyURI,
+        "GO:0046677"^^xsd:anyURI,
+        "GO:1902600"^^xsd:anyURI ;
     synbio:go_term_labels "C:integral component of membrane",
         "C:plasma membrane",
         "F:antiporter activity",
@@ -9073,10 +9073,10 @@ sequence:3089 a synbio:PartsSequence ;
 sequence:3092 a synbio:PartsSequence ;
     synbio:associated_part IF:00548 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0004556",
-        "GO:0005576",
-        "GO:0005975",
-        "GO:0046872" ;
+    synbio:go_term_ids "GO:0004556"^^xsd:anyURI,
+        "GO:0005576"^^xsd:anyURI,
+        "GO:0005975"^^xsd:anyURI,
+        "GO:0046872"^^xsd:anyURI ;
     synbio:go_term_labels "C:extracellular region",
         "F:alpha-amylase activity",
         "F:metal ion binding",
@@ -9103,32 +9103,32 @@ sequence:3098 a synbio:PartsSequence ;
 sequence:3100 a synbio:PartsSequence ;
     synbio:associated_part IF:00556 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0003723",
-        "GO:0003887",
-        "GO:0003964",
-        "GO:0004190",
-        "GO:0004523",
-        "GO:0006308",
-        "GO:0006310",
-        "GO:0006508",
-        "GO:0008270",
-        "GO:0016020",
-        "GO:0019013",
-        "GO:0019068",
-        "GO:0020002",
-        "GO:0032993",
-        "GO:0039657",
-        "GO:0039660",
-        "GO:0039702",
-        "GO:0039705",
-        "GO:0044185",
-        "GO:0044824",
-        "GO:0044826",
-        "GO:0046718",
-        "GO:0072494",
-        "GO:0075713",
-        "GO:0120026" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0003723"^^xsd:anyURI,
+        "GO:0003887"^^xsd:anyURI,
+        "GO:0003964"^^xsd:anyURI,
+        "GO:0004190"^^xsd:anyURI,
+        "GO:0004523"^^xsd:anyURI,
+        "GO:0006308"^^xsd:anyURI,
+        "GO:0006310"^^xsd:anyURI,
+        "GO:0006508"^^xsd:anyURI,
+        "GO:0008270"^^xsd:anyURI,
+        "GO:0016020"^^xsd:anyURI,
+        "GO:0019013"^^xsd:anyURI,
+        "GO:0019068"^^xsd:anyURI,
+        "GO:0020002"^^xsd:anyURI,
+        "GO:0032993"^^xsd:anyURI,
+        "GO:0039657"^^xsd:anyURI,
+        "GO:0039660"^^xsd:anyURI,
+        "GO:0039702"^^xsd:anyURI,
+        "GO:0039705"^^xsd:anyURI,
+        "GO:0044185"^^xsd:anyURI,
+        "GO:0044824"^^xsd:anyURI,
+        "GO:0044826"^^xsd:anyURI,
+        "GO:0046718"^^xsd:anyURI,
+        "GO:0072494"^^xsd:anyURI,
+        "GO:0075713"^^xsd:anyURI,
+        "GO:0120026"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell late endosome membrane",
         "C:host cell plasma membrane",
         "C:host cell uropod",
@@ -9178,10 +9178,10 @@ sequence:3109 a synbio:PartsSequence ;
 sequence:3134 a synbio:PartsSequence ;
     synbio:associated_part IF:00292 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000287",
-        "GO:0019629",
-        "GO:0046421",
-        "GO:0140677" ;
+    synbio:go_term_ids "GO:0000287"^^xsd:anyURI,
+        "GO:0019629"^^xsd:anyURI,
+        "GO:0046421"^^xsd:anyURI,
+        "GO:0140677"^^xsd:anyURI ;
     synbio:go_term_labels "F:magnesium ion binding",
         "F:methylisocitrate lyase activity",
         "F:molecular function activator activity",
@@ -9211,8 +9211,8 @@ sequence:3152 a synbio:PartsSequence ;
 sequence:3184 a synbio:PartsSequence ;
     synbio:associated_part IF:00056 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0060703",
-        "GO:0099016" ;
+    synbio:go_term_ids "GO:0060703"^^xsd:anyURI,
+        "GO:0099016"^^xsd:anyURI ;
     synbio:go_term_labels "F:deoxyribonuclease inhibitor activity",
         "P:evasion by virus of DNA end degradation" ;
     synbio:match_gene_symbols_etc "gam",
@@ -9228,9 +9228,9 @@ sequence:3184 a synbio:PartsSequence ;
 sequence:3207 a synbio:PartsSequence ;
     synbio:associated_part IF:00065 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000105",
-        "GO:0004424",
-        "GO:0046872" ;
+    synbio:go_term_ids "GO:0000105"^^xsd:anyURI,
+        "GO:0004424"^^xsd:anyURI,
+        "GO:0046872"^^xsd:anyURI ;
     synbio:go_term_labels "F:imidazoleglycerol-phosphate dehydratase activity",
         "F:metal ion binding",
         "P:histidine biosynthetic process" ;
@@ -9247,41 +9247,41 @@ sequence:3207 a synbio:PartsSequence ;
 sequence:3224 a synbio:PartsSequence ;
     synbio:associated_part IF:00078 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000287",
-        "GO:0001938",
-        "GO:0001968",
-        "GO:0004565",
-        "GO:0005178",
-        "GO:0005509",
-        "GO:0005518",
-        "GO:0005604",
-        "GO:0005615",
-        "GO:0005783",
-        "GO:0005990",
-        "GO:0006986",
-        "GO:0007399",
-        "GO:0008083",
-        "GO:0008201",
-        "GO:0009341",
-        "GO:0016525",
-        "GO:0016529",
-        "GO:0030246",
-        "GO:0031012",
-        "GO:0031420",
-        "GO:0031594",
-        "GO:0034103",
-        "GO:0034976",
-        "GO:0042802",
-        "GO:0043237",
-        "GO:0048266",
-        "GO:0048771",
-        "GO:0048812",
-        "GO:0050731",
-        "GO:0051451",
-        "GO:0051781",
-        "GO:0062023",
-        "GO:0071603",
-        "GO:0090023" ;
+    synbio:go_term_ids "GO:0000287"^^xsd:anyURI,
+        "GO:0001938"^^xsd:anyURI,
+        "GO:0001968"^^xsd:anyURI,
+        "GO:0004565"^^xsd:anyURI,
+        "GO:0005178"^^xsd:anyURI,
+        "GO:0005509"^^xsd:anyURI,
+        "GO:0005518"^^xsd:anyURI,
+        "GO:0005604"^^xsd:anyURI,
+        "GO:0005615"^^xsd:anyURI,
+        "GO:0005783"^^xsd:anyURI,
+        "GO:0005990"^^xsd:anyURI,
+        "GO:0006986"^^xsd:anyURI,
+        "GO:0007399"^^xsd:anyURI,
+        "GO:0008083"^^xsd:anyURI,
+        "GO:0008201"^^xsd:anyURI,
+        "GO:0009341"^^xsd:anyURI,
+        "GO:0016525"^^xsd:anyURI,
+        "GO:0016529"^^xsd:anyURI,
+        "GO:0030246"^^xsd:anyURI,
+        "GO:0031012"^^xsd:anyURI,
+        "GO:0031420"^^xsd:anyURI,
+        "GO:0031594"^^xsd:anyURI,
+        "GO:0034103"^^xsd:anyURI,
+        "GO:0034976"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI,
+        "GO:0043237"^^xsd:anyURI,
+        "GO:0048266"^^xsd:anyURI,
+        "GO:0048771"^^xsd:anyURI,
+        "GO:0048812"^^xsd:anyURI,
+        "GO:0050731"^^xsd:anyURI,
+        "GO:0051451"^^xsd:anyURI,
+        "GO:0051781"^^xsd:anyURI,
+        "GO:0062023"^^xsd:anyURI,
+        "GO:0071603"^^xsd:anyURI,
+        "GO:0090023"^^xsd:anyURI ;
     synbio:go_term_labels "C:basement membrane",
         "C:beta-galactosidase complex",
         "C:collagen-containing extracellular matrix",
@@ -9337,9 +9337,9 @@ sequence:3224 a synbio:PartsSequence ;
 sequence:3225 a synbio:PartsSequence ;
     synbio:associated_part IF:00079 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0006355",
-        "GO:0019042" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0006355"^^xsd:anyURI,
+        "GO:0019042"^^xsd:anyURI ;
     synbio:go_term_labels "F:DNA binding",
         "P:regulation of DNA-templated transcription",
         "P:viral latency" ;
@@ -9355,9 +9355,9 @@ sequence:3225 a synbio:PartsSequence ;
 sequence:3227 a synbio:PartsSequence ;
     synbio:associated_part IF:00081 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0006355",
-        "GO:0019042" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0006355"^^xsd:anyURI,
+        "GO:0019042"^^xsd:anyURI ;
     synbio:go_term_labels "F:DNA binding",
         "P:regulation of DNA-templated transcription",
         "P:viral latency" ;
@@ -9373,12 +9373,12 @@ sequence:3227 a synbio:PartsSequence ;
 sequence:3260 a synbio:PartsSequence ;
     synbio:associated_part IF:00103 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005770",
-        "GO:0005794",
-        "GO:0007034",
-        "GO:0010008",
-        "GO:0015031",
-        "GO:0016021" ;
+    synbio:go_term_ids "GO:0005770"^^xsd:anyURI,
+        "GO:0005794"^^xsd:anyURI,
+        "GO:0007034"^^xsd:anyURI,
+        "GO:0010008"^^xsd:anyURI,
+        "GO:0015031"^^xsd:anyURI,
+        "GO:0016021"^^xsd:anyURI ;
     synbio:go_term_labels "C:Golgi apparatus",
         "C:endosome membrane",
         "C:integral component of membrane",
@@ -9397,12 +9397,12 @@ sequence:3260 a synbio:PartsSequence ;
 sequence:3283 a synbio:PartsSequence ;
     synbio:associated_part IF:00119 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005770",
-        "GO:0005794",
-        "GO:0007034",
-        "GO:0010008",
-        "GO:0015031",
-        "GO:0016021" ;
+    synbio:go_term_ids "GO:0005770"^^xsd:anyURI,
+        "GO:0005794"^^xsd:anyURI,
+        "GO:0007034"^^xsd:anyURI,
+        "GO:0010008"^^xsd:anyURI,
+        "GO:0015031"^^xsd:anyURI,
+        "GO:0016021"^^xsd:anyURI ;
     synbio:go_term_labels "C:Golgi apparatus",
         "C:endosome membrane",
         "C:integral component of membrane",
@@ -9421,9 +9421,9 @@ sequence:3283 a synbio:PartsSequence ;
 sequence:3302 a synbio:PartsSequence ;
     synbio:associated_part IF:00136 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0003700",
-        "GO:0030435" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0003700"^^xsd:anyURI,
+        "GO:0030435"^^xsd:anyURI ;
     synbio:go_term_labels "F:DNA binding",
         "F:DNA-binding transcription factor activity",
         "P:sporulation resulting in formation of a cellular spore" ;
@@ -9439,15 +9439,15 @@ sequence:3302 a synbio:PartsSequence ;
 sequence:3306 a synbio:PartsSequence ;
     synbio:associated_part IF:00140 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000712",
-        "GO:0003677",
-        "GO:0003682",
-        "GO:0006281",
-        "GO:0006974",
-        "GO:0031297",
-        "GO:0043240",
-        "GO:0046982",
-        "GO:0071821" ;
+    synbio:go_term_ids "GO:0000712"^^xsd:anyURI,
+        "GO:0003677"^^xsd:anyURI,
+        "GO:0003682"^^xsd:anyURI,
+        "GO:0006281"^^xsd:anyURI,
+        "GO:0006974"^^xsd:anyURI,
+        "GO:0031297"^^xsd:anyURI,
+        "GO:0043240"^^xsd:anyURI,
+        "GO:0046982"^^xsd:anyURI,
+        "GO:0071821"^^xsd:anyURI ;
     synbio:go_term_labels "C:FANCM-MHF complex",
         "C:Fanconi anaemia nuclear complex",
         "F:DNA binding",
@@ -9469,9 +9469,9 @@ sequence:3306 a synbio:PartsSequence ;
 sequence:3324 a synbio:PartsSequence ;
     synbio:associated_part IF:00261 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0009507",
-        "GO:0009853",
-        "GO:0019253" ;
+    synbio:go_term_ids "GO:0009507"^^xsd:anyURI,
+        "GO:0009853"^^xsd:anyURI,
+        "GO:0019253"^^xsd:anyURI ;
     synbio:go_term_labels "C:chloroplast",
         "P:photorespiration",
         "P:reductive pentose-phosphate cycle" ;
@@ -9487,9 +9487,9 @@ sequence:3324 a synbio:PartsSequence ;
 sequence:3367 a synbio:PartsSequence ;
     synbio:associated_part IF:00376 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0008800",
-        "GO:0030655",
-        "GO:0046677" ;
+    synbio:go_term_ids "GO:0008800"^^xsd:anyURI,
+        "GO:0030655"^^xsd:anyURI,
+        "GO:0046677"^^xsd:anyURI ;
     synbio:go_term_labels "F:beta-lactamase activity",
         "P:beta-lactam antibiotic catabolic process",
         "P:response to antibiotic" ;
@@ -9510,9 +9510,9 @@ sequence:3367 a synbio:PartsSequence ;
 sequence:3368 a synbio:PartsSequence ;
     synbio:associated_part IF:00377 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0004803",
-        "GO:0006313" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0004803"^^xsd:anyURI,
+        "GO:0006313"^^xsd:anyURI ;
     synbio:go_term_labels "F:DNA binding",
         "F:transposase activity",
         "P:transposition, DNA-mediated" ;
@@ -9560,12 +9560,12 @@ sequence:3419 a synbio:PartsSequence ;
 sequence:3430 a synbio:PartsSequence ;
     synbio:associated_part IF:00306 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0004410",
-        "GO:0005634",
-        "GO:0005739",
-        "GO:0006281",
-        "GO:0019878",
-        "GO:0046872" ;
+    synbio:go_term_ids "GO:0004410"^^xsd:anyURI,
+        "GO:0005634"^^xsd:anyURI,
+        "GO:0005739"^^xsd:anyURI,
+        "GO:0006281"^^xsd:anyURI,
+        "GO:0019878"^^xsd:anyURI,
+        "GO:0046872"^^xsd:anyURI ;
     synbio:go_term_labels "C:mitochondrion",
         "C:nucleus",
         "F:homocitrate synthase activity",
@@ -9588,12 +9588,12 @@ sequence:3430 a synbio:PartsSequence ;
 sequence:3440 a synbio:PartsSequence ;
     synbio:associated_part IF:00311 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000287",
-        "GO:0003862",
-        "GO:0005829",
-        "GO:0006097",
-        "GO:0009098",
-        "GO:0051287" ;
+    synbio:go_term_ids "GO:0000287"^^xsd:anyURI,
+        "GO:0003862"^^xsd:anyURI,
+        "GO:0005829"^^xsd:anyURI,
+        "GO:0006097"^^xsd:anyURI,
+        "GO:0009098"^^xsd:anyURI,
+        "GO:0051287"^^xsd:anyURI ;
     synbio:go_term_labels "C:cytosol",
         "F:3-isopropylmalate dehydrogenase activity",
         "F:NAD binding",
@@ -9613,13 +9613,13 @@ sequence:3440 a synbio:PartsSequence ;
 sequence:3455 a synbio:PartsSequence ;
     synbio:associated_part IF:00390 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000287",
-        "GO:0004565",
-        "GO:0005990",
-        "GO:0009341",
-        "GO:0030246",
-        "GO:0031420",
-        "GO:0042802" ;
+    synbio:go_term_ids "GO:0000287"^^xsd:anyURI,
+        "GO:0004565"^^xsd:anyURI,
+        "GO:0005990"^^xsd:anyURI,
+        "GO:0009341"^^xsd:anyURI,
+        "GO:0030246"^^xsd:anyURI,
+        "GO:0031420"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI ;
     synbio:go_term_labels "C:beta-galactosidase complex",
         "F:alkali metal ion binding",
         "F:beta-galactosidase activity",
@@ -9640,9 +9640,9 @@ sequence:3455 a synbio:PartsSequence ;
 sequence:3457 a synbio:PartsSequence ;
     synbio:associated_part IF:00392 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0006417",
-        "GO:0030430",
-        "GO:0075525" ;
+    synbio:go_term_ids "GO:0006417"^^xsd:anyURI,
+        "GO:0030430"^^xsd:anyURI,
+        "GO:0075525"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell cytoplasm",
         "P:regulation of translation",
         "P:viral translational termination-reinitiation" ;
@@ -9657,12 +9657,12 @@ sequence:3457 a synbio:PartsSequence ;
 sequence:3465 a synbio:PartsSequence ;
     synbio:associated_part IF:00322 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0003700",
-        "GO:0006355",
-        "GO:0009408",
-        "GO:0045892",
-        "GO:0071236" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0003700"^^xsd:anyURI,
+        "GO:0006355"^^xsd:anyURI,
+        "GO:0009408"^^xsd:anyURI,
+        "GO:0045892"^^xsd:anyURI,
+        "GO:0071236"^^xsd:anyURI ;
     synbio:go_term_labels "F:DNA binding",
         "F:DNA-binding transcription factor activity",
         "P:cellular response to antibiotic",
@@ -9684,12 +9684,12 @@ sequence:3465 a synbio:PartsSequence ;
 sequence:3473 a synbio:PartsSequence ;
     synbio:associated_part IF:00331 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0003700",
-        "GO:0005829",
-        "GO:0006351",
-        "GO:0045892",
-        "GO:0046677" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0003700"^^xsd:anyURI,
+        "GO:0005829"^^xsd:anyURI,
+        "GO:0006351"^^xsd:anyURI,
+        "GO:0045892"^^xsd:anyURI,
+        "GO:0046677"^^xsd:anyURI ;
     synbio:go_term_labels "C:cytosol",
         "F:DNA binding",
         "F:DNA-binding transcription factor activity",
@@ -9709,12 +9709,12 @@ sequence:3473 a synbio:PartsSequence ;
 sequence:3474 a synbio:PartsSequence ;
     synbio:associated_part IF:00332 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003677",
-        "GO:0003700",
-        "GO:0005829",
-        "GO:0006351",
-        "GO:0045892",
-        "GO:0046677" ;
+    synbio:go_term_ids "GO:0003677"^^xsd:anyURI,
+        "GO:0003700"^^xsd:anyURI,
+        "GO:0005829"^^xsd:anyURI,
+        "GO:0006351"^^xsd:anyURI,
+        "GO:0045892"^^xsd:anyURI,
+        "GO:0046677"^^xsd:anyURI ;
     synbio:go_term_labels "C:cytosol",
         "F:DNA binding",
         "F:DNA-binding transcription factor activity",
@@ -9742,19 +9742,19 @@ sequence:3487 a synbio:PartsSequence ;
 sequence:3501 a synbio:PartsSequence ;
     synbio:associated_part IF:00163 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0006351",
-        "GO:0006355",
-        "GO:0006811",
-        "GO:0007049",
-        "GO:0019051",
-        "GO:0039592",
-        "GO:0042025",
-        "GO:0043655",
-        "GO:0044423",
-        "GO:0046718",
-        "GO:0051260",
-        "GO:0051701",
-        "GO:0075732" ;
+    synbio:go_term_ids "GO:0006351"^^xsd:anyURI,
+        "GO:0006355"^^xsd:anyURI,
+        "GO:0006811"^^xsd:anyURI,
+        "GO:0007049"^^xsd:anyURI,
+        "GO:0019051"^^xsd:anyURI,
+        "GO:0039592"^^xsd:anyURI,
+        "GO:0042025"^^xsd:anyURI,
+        "GO:0043655"^^xsd:anyURI,
+        "GO:0044423"^^xsd:anyURI,
+        "GO:0046718"^^xsd:anyURI,
+        "GO:0051260"^^xsd:anyURI,
+        "GO:0051701"^^xsd:anyURI,
+        "GO:0075732"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell nucleus",
         "C:host extracellular space",
         "C:virion component",
@@ -9783,24 +9783,24 @@ sequence:3501 a synbio:PartsSequence ;
 sequence:3502 a synbio:PartsSequence ;
     synbio:associated_part IF:00164 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0001070",
-        "GO:0005576",
-        "GO:0010801",
-        "GO:0019904",
-        "GO:0030332",
-        "GO:0030430",
-        "GO:0032968",
-        "GO:0039502",
-        "GO:0039525",
-        "GO:0039586",
-        "GO:0042025",
-        "GO:0042783",
-        "GO:0042805",
-        "GO:0044196",
-        "GO:0046872",
-        "GO:0050434",
-        "GO:0140313",
-        "GO:1990970" ;
+    synbio:go_term_ids "GO:0001070"^^xsd:anyURI,
+        "GO:0005576"^^xsd:anyURI,
+        "GO:0010801"^^xsd:anyURI,
+        "GO:0019904"^^xsd:anyURI,
+        "GO:0030332"^^xsd:anyURI,
+        "GO:0030430"^^xsd:anyURI,
+        "GO:0032968"^^xsd:anyURI,
+        "GO:0039502"^^xsd:anyURI,
+        "GO:0039525"^^xsd:anyURI,
+        "GO:0039586"^^xsd:anyURI,
+        "GO:0042025"^^xsd:anyURI,
+        "GO:0042783"^^xsd:anyURI,
+        "GO:0042805"^^xsd:anyURI,
+        "GO:0044196"^^xsd:anyURI,
+        "GO:0046872"^^xsd:anyURI,
+        "GO:0050434"^^xsd:anyURI,
+        "GO:0140313"^^xsd:anyURI,
+        "GO:1990970"^^xsd:anyURI ;
     synbio:go_term_labels "C:extracellular region",
         "C:host cell cytoplasm",
         "C:host cell nucleolus",
@@ -9831,13 +9831,13 @@ sequence:3502 a synbio:PartsSequence ;
 sequence:3503 a synbio:PartsSequence ;
     synbio:associated_part IF:00165 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003700",
-        "GO:0003723",
-        "GO:0016032",
-        "GO:0030430",
-        "GO:0042802",
-        "GO:0044196",
-        "GO:0051028" ;
+    synbio:go_term_ids "GO:0003700"^^xsd:anyURI,
+        "GO:0003723"^^xsd:anyURI,
+        "GO:0016032"^^xsd:anyURI,
+        "GO:0030430"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI,
+        "GO:0044196"^^xsd:anyURI,
+        "GO:0051028"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell cytoplasm",
         "C:host cell nucleolus",
         "F:DNA-binding transcription factor activity",
@@ -9857,35 +9857,35 @@ sequence:3503 a synbio:PartsSequence ;
 sequence:3504 a synbio:PartsSequence ;
     synbio:associated_part IF:00166 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0003700",
-        "GO:0003723",
-        "GO:0005198",
-        "GO:0016021",
-        "GO:0016032",
-        "GO:0019031",
-        "GO:0019049",
-        "GO:0019062",
-        "GO:0019064",
-        "GO:0019082",
-        "GO:0020002",
-        "GO:0030430",
-        "GO:0039654",
-        "GO:0042609",
-        "GO:0042783",
-        "GO:0042802",
-        "GO:0044175",
-        "GO:0044196",
-        "GO:0044220",
-        "GO:0044538",
-        "GO:0044877",
-        "GO:0046718",
-        "GO:0051028",
-        "GO:0055036",
-        "GO:0075512",
-        "GO:0090527",
-        "GO:1903905",
-        "GO:1903908",
-        "GO:1903911" ;
+    synbio:go_term_ids "GO:0003700"^^xsd:anyURI,
+        "GO:0003723"^^xsd:anyURI,
+        "GO:0005198"^^xsd:anyURI,
+        "GO:0016021"^^xsd:anyURI,
+        "GO:0016032"^^xsd:anyURI,
+        "GO:0019031"^^xsd:anyURI,
+        "GO:0019049"^^xsd:anyURI,
+        "GO:0019062"^^xsd:anyURI,
+        "GO:0019064"^^xsd:anyURI,
+        "GO:0019082"^^xsd:anyURI,
+        "GO:0020002"^^xsd:anyURI,
+        "GO:0030430"^^xsd:anyURI,
+        "GO:0039654"^^xsd:anyURI,
+        "GO:0042609"^^xsd:anyURI,
+        "GO:0042783"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI,
+        "GO:0044175"^^xsd:anyURI,
+        "GO:0044196"^^xsd:anyURI,
+        "GO:0044220"^^xsd:anyURI,
+        "GO:0044538"^^xsd:anyURI,
+        "GO:0044877"^^xsd:anyURI,
+        "GO:0046718"^^xsd:anyURI,
+        "GO:0051028"^^xsd:anyURI,
+        "GO:0055036"^^xsd:anyURI,
+        "GO:0075512"^^xsd:anyURI,
+        "GO:0090527"^^xsd:anyURI,
+        "GO:1903905"^^xsd:anyURI,
+        "GO:1903908"^^xsd:anyURI,
+        "GO:1903911"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell cytoplasm",
         "C:host cell endosome membrane",
         "C:host cell nucleolus",
@@ -9948,14 +9948,14 @@ sequence:3504 a synbio:PartsSequence ;
 sequence:3505 a synbio:PartsSequence ;
     synbio:associated_part IF:00167 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005261",
-        "GO:0016021",
-        "GO:0019076",
-        "GO:0032801",
-        "GO:0033644",
-        "GO:0039502",
-        "GO:0039587",
-        "GO:0042609" ;
+    synbio:go_term_ids "GO:0005261"^^xsd:anyURI,
+        "GO:0016021"^^xsd:anyURI,
+        "GO:0019076"^^xsd:anyURI,
+        "GO:0032801"^^xsd:anyURI,
+        "GO:0033644"^^xsd:anyURI,
+        "GO:0039502"^^xsd:anyURI,
+        "GO:0039587"^^xsd:anyURI,
+        "GO:0042609"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell membrane",
         "C:integral component of membrane",
         "F:CD4 receptor binding",
@@ -9976,16 +9976,16 @@ sequence:3505 a synbio:PartsSequence ;
 sequence:3507 a synbio:PartsSequence ;
     synbio:associated_part IF:00169 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005525",
-        "GO:0005576",
-        "GO:0016020",
-        "GO:0017124",
-        "GO:0020002",
-        "GO:0039505",
-        "GO:0039521",
-        "GO:0044178",
-        "GO:0044423",
-        "GO:0046776" ;
+    synbio:go_term_ids "GO:0005525"^^xsd:anyURI,
+        "GO:0005576"^^xsd:anyURI,
+        "GO:0016020"^^xsd:anyURI,
+        "GO:0017124"^^xsd:anyURI,
+        "GO:0020002"^^xsd:anyURI,
+        "GO:0039505"^^xsd:anyURI,
+        "GO:0039521"^^xsd:anyURI,
+        "GO:0044178"^^xsd:anyURI,
+        "GO:0044423"^^xsd:anyURI,
+        "GO:0046776"^^xsd:anyURI ;
     synbio:go_term_labels "C:extracellular region",
         "C:host cell Golgi membrane",
         "C:host cell plasma membrane",
@@ -10008,8 +10008,8 @@ sequence:3507 a synbio:PartsSequence ;
 sequence:3515 a synbio:PartsSequence ;
     synbio:associated_part IF:00177 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0097367",
-        "GO:1901135" ;
+    synbio:go_term_ids "GO:0097367"^^xsd:anyURI,
+        "GO:1901135"^^xsd:anyURI ;
     synbio:go_term_labels "F:carbohydrate derivative binding",
         "P:carbohydrate derivative metabolic process" ;
     synbio:match_gene_symbols_etc "mas2" ;
@@ -10024,8 +10024,8 @@ sequence:3515 a synbio:PartsSequence ;
 sequence:3538 a synbio:PartsSequence ;
     synbio:associated_part IF:00201 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0006417",
-        "GO:0030430" ;
+    synbio:go_term_ids "GO:0006417"^^xsd:anyURI,
+        "GO:0030430"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell cytoplasm",
         "P:regulation of translation" ;
     synbio:match_names "Transactivator/viroplasmin protein" ;
@@ -10039,7 +10039,7 @@ sequence:3538 a synbio:PartsSequence ;
 sequence:3556 a synbio:PartsSequence ;
     synbio:associated_part IF:00217 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0099018" ;
+    synbio:go_term_ids "GO:0099018"^^xsd:anyURI ;
     synbio:go_term_labels "P:evasion by virus of host restriction-modification system" ;
     synbio:match_names "Protein Ocr" ;
     synbio:nt_sequence "GATGGCTATGTCTAACATGACTTACAACAACGTTTTCGACCACGCTTACGAAATGCTGAAAGAAAACATCCGTTATGATGACATCCGTGACACTGATGACCTGCACGATGCTATTCACATGGCTGCCGATAATGCAGTTCCGCACTACTACGCTGACATCTTTAGCGTAATGGCAAGTGAGGGCATTGACCTTGAGTTCGAAGACTCTGGTCTGATGCCTGACACCAAGGACGTAATCCGCATCCTGCAAGCGCGTATCTATGAGCAATTAACGATTGACCTCTGGGAAGACGCAGAAGACTTGCTCAATGAATACTTGGAGGAAGTCGAGGAGTACGAGGAGGATGAAGAGTA" ;
@@ -10052,7 +10052,7 @@ sequence:3556 a synbio:PartsSequence ;
 sequence:3557 a synbio:PartsSequence ;
     synbio:associated_part IF:00218 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0044865" ;
+    synbio:go_term_ids "GO:0044865"^^xsd:anyURI ;
     synbio:go_term_labels "P:negative regulation by virus of host cell division" ;
     synbio:match_names "Gene 0.4 protein" ;
     synbio:nt_sequence "AATGTCTACTACCAACGTGCAATACGGTCTGACCGCTCAAACTGTACTTTTCTATAGCGACATGGTGCGCTGTGGCTTTAACTGGTCACTCGCAATGGCACAGCTCAAAGAACTGTACGAAAACAACAAGGCAATAGCTTTAGAATCTGCTGAGTG" ;
@@ -10065,8 +10065,8 @@ sequence:3557 a synbio:PartsSequence ;
 sequence:3558 a synbio:PartsSequence ;
     synbio:associated_part IF:00219 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0016021",
-        "GO:0033644" ;
+    synbio:go_term_ids "GO:0016021"^^xsd:anyURI,
+        "GO:0033644"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell membrane",
         "C:integral component of membrane" ;
     synbio:match_names "Protein 0.5" ;
@@ -10080,25 +10080,25 @@ sequence:3558 a synbio:PartsSequence ;
 sequence:3561 a synbio:PartsSequence ;
     synbio:associated_part IF:00220 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005198",
-        "GO:0016021",
-        "GO:0019031",
-        "GO:0019049",
-        "GO:0019062",
-        "GO:0019064",
-        "GO:0019082",
-        "GO:0020002",
-        "GO:0039654",
-        "GO:0042783",
-        "GO:0042802",
-        "GO:0044175",
-        "GO:0046718",
-        "GO:0055036",
-        "GO:0075512",
-        "GO:0090527",
-        "GO:1903905",
-        "GO:1903908",
-        "GO:1903911" ;
+    synbio:go_term_ids "GO:0005198"^^xsd:anyURI,
+        "GO:0016021"^^xsd:anyURI,
+        "GO:0019031"^^xsd:anyURI,
+        "GO:0019049"^^xsd:anyURI,
+        "GO:0019062"^^xsd:anyURI,
+        "GO:0019064"^^xsd:anyURI,
+        "GO:0019082"^^xsd:anyURI,
+        "GO:0020002"^^xsd:anyURI,
+        "GO:0039654"^^xsd:anyURI,
+        "GO:0042783"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI,
+        "GO:0044175"^^xsd:anyURI,
+        "GO:0046718"^^xsd:anyURI,
+        "GO:0055036"^^xsd:anyURI,
+        "GO:0075512"^^xsd:anyURI,
+        "GO:0090527"^^xsd:anyURI,
+        "GO:1903905"^^xsd:anyURI,
+        "GO:1903908"^^xsd:anyURI,
+        "GO:1903911"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell endosome membrane",
         "C:host cell plasma membrane",
         "C:integral component of membrane",
@@ -10136,16 +10136,16 @@ sequence:3561 a synbio:PartsSequence ;
 sequence:3568 a synbio:PartsSequence ;
     synbio:associated_part IF:00223 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005525",
-        "GO:0005576",
-        "GO:0016020",
-        "GO:0017124",
-        "GO:0020002",
-        "GO:0039505",
-        "GO:0039521",
-        "GO:0044178",
-        "GO:0044423",
-        "GO:0046776" ;
+    synbio:go_term_ids "GO:0005525"^^xsd:anyURI,
+        "GO:0005576"^^xsd:anyURI,
+        "GO:0016020"^^xsd:anyURI,
+        "GO:0017124"^^xsd:anyURI,
+        "GO:0020002"^^xsd:anyURI,
+        "GO:0039505"^^xsd:anyURI,
+        "GO:0039521"^^xsd:anyURI,
+        "GO:0044178"^^xsd:anyURI,
+        "GO:0044423"^^xsd:anyURI,
+        "GO:0046776"^^xsd:anyURI ;
     synbio:go_term_labels "C:extracellular region",
         "C:host cell Golgi membrane",
         "C:host cell plasma membrane",
@@ -10168,16 +10168,16 @@ sequence:3568 a synbio:PartsSequence ;
 sequence:3573 a synbio:PartsSequence ;
     synbio:associated_part IF:00406 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005198",
-        "GO:0019062",
-        "GO:0019069",
-        "GO:0039620",
-        "GO:0042025",
-        "GO:0042802",
-        "GO:0044165",
-        "GO:0046727",
-        "GO:0060090",
-        "GO:0075513" ;
+    synbio:go_term_ids "GO:0005198"^^xsd:anyURI,
+        "GO:0019062"^^xsd:anyURI,
+        "GO:0019069"^^xsd:anyURI,
+        "GO:0039620"^^xsd:anyURI,
+        "GO:0042025"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI,
+        "GO:0044165"^^xsd:anyURI,
+        "GO:0046727"^^xsd:anyURI,
+        "GO:0060090"^^xsd:anyURI,
+        "GO:0075513"^^xsd:anyURI ;
     synbio:go_term_labels "C:T=7 icosahedral viral capsid",
         "C:capsomere",
         "C:host cell endoplasmic reticulum",
@@ -10240,16 +10240,16 @@ sequence:3582 a synbio:PartsSequence ;
 sequence:3585 a synbio:PartsSequence ;
     synbio:associated_part IF:00007 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005525",
-        "GO:0005576",
-        "GO:0016020",
-        "GO:0017124",
-        "GO:0020002",
-        "GO:0039505",
-        "GO:0039521",
-        "GO:0044178",
-        "GO:0044423",
-        "GO:0046776" ;
+    synbio:go_term_ids "GO:0005525"^^xsd:anyURI,
+        "GO:0005576"^^xsd:anyURI,
+        "GO:0016020"^^xsd:anyURI,
+        "GO:0017124"^^xsd:anyURI,
+        "GO:0020002"^^xsd:anyURI,
+        "GO:0039505"^^xsd:anyURI,
+        "GO:0039521"^^xsd:anyURI,
+        "GO:0044178"^^xsd:anyURI,
+        "GO:0044423"^^xsd:anyURI,
+        "GO:0046776"^^xsd:anyURI ;
     synbio:go_term_labels "C:extracellular region",
         "C:host cell Golgi membrane",
         "C:host cell plasma membrane",
@@ -10272,9 +10272,9 @@ sequence:3585 a synbio:PartsSequence ;
 sequence:3591 a synbio:PartsSequence ;
     synbio:associated_part IF:00410 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0002100",
-        "GO:0008270",
-        "GO:0052717" ;
+    synbio:go_term_ids "GO:0002100"^^xsd:anyURI,
+        "GO:0008270"^^xsd:anyURI,
+        "GO:0052717"^^xsd:anyURI ;
     synbio:go_term_labels "F:tRNA-specific adenosine-34 deaminase activity",
         "F:zinc ion binding",
         "P:tRNA wobble adenosine to inosine editing" ;
@@ -10291,9 +10291,9 @@ sequence:3591 a synbio:PartsSequence ;
 sequence:3592 a synbio:PartsSequence ;
     synbio:associated_part IF:00411 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0016407",
-        "GO:0016747",
-        "GO:0046677" ;
+    synbio:go_term_ids "GO:0016407"^^xsd:anyURI,
+        "GO:0016747"^^xsd:anyURI,
+        "GO:0046677"^^xsd:anyURI ;
     synbio:go_term_labels "F:acetyltransferase activity",
         "F:acyltransferase activity, transferring groups other than amino-acyl groups",
         "P:response to antibiotic" ;
@@ -10311,11 +10311,11 @@ sequence:3592 a synbio:PartsSequence ;
 sequence:3614 a synbio:PartsSequence ;
     synbio:associated_part IF:00434 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0005886",
-        "GO:0015297",
-        "GO:0016021",
-        "GO:0046677",
-        "GO:1902600" ;
+    synbio:go_term_ids "GO:0005886"^^xsd:anyURI,
+        "GO:0015297"^^xsd:anyURI,
+        "GO:0016021"^^xsd:anyURI,
+        "GO:0046677"^^xsd:anyURI,
+        "GO:1902600"^^xsd:anyURI ;
     synbio:go_term_labels "C:integral component of membrane",
         "C:plasma membrane",
         "F:antiporter activity",
@@ -10333,27 +10333,27 @@ sequence:3614 a synbio:PartsSequence ;
 sequence:3622 a synbio:PartsSequence ;
     synbio:associated_part IF:00446 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000978",
-        "GO:0001046",
-        "GO:0003677",
-        "GO:0003700",
-        "GO:0003713",
-        "GO:0005667",
-        "GO:0019033",
-        "GO:0030430",
-        "GO:0039660",
-        "GO:0039695",
-        "GO:0042025",
-        "GO:0044161",
-        "GO:0044220",
-        "GO:0045893",
-        "GO:0045944",
-        "GO:0046782",
-        "GO:0046809",
-        "GO:0051701",
-        "GO:0065003",
-        "GO:0140297",
-        "GO:0140677" ;
+    synbio:go_term_ids "GO:0000978"^^xsd:anyURI,
+        "GO:0001046"^^xsd:anyURI,
+        "GO:0003677"^^xsd:anyURI,
+        "GO:0003700"^^xsd:anyURI,
+        "GO:0003713"^^xsd:anyURI,
+        "GO:0005667"^^xsd:anyURI,
+        "GO:0019033"^^xsd:anyURI,
+        "GO:0030430"^^xsd:anyURI,
+        "GO:0039660"^^xsd:anyURI,
+        "GO:0039695"^^xsd:anyURI,
+        "GO:0042025"^^xsd:anyURI,
+        "GO:0044161"^^xsd:anyURI,
+        "GO:0044220"^^xsd:anyURI,
+        "GO:0045893"^^xsd:anyURI,
+        "GO:0045944"^^xsd:anyURI,
+        "GO:0046782"^^xsd:anyURI,
+        "GO:0046809"^^xsd:anyURI,
+        "GO:0051701"^^xsd:anyURI,
+        "GO:0065003"^^xsd:anyURI,
+        "GO:0140297"^^xsd:anyURI,
+        "GO:0140677"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell cytoplasm",
         "C:host cell cytoplasmic vesicle",
         "C:host cell nucleus",
@@ -10386,27 +10386,27 @@ sequence:3622 a synbio:PartsSequence ;
 sequence:3623 a synbio:PartsSequence ;
     synbio:associated_part IF:00447 ;
     synbio:date_added "2022-02-15T01:32:49.277810" ;
-    synbio:go_term_ids "GO:0000978",
-        "GO:0001046",
-        "GO:0003677",
-        "GO:0003700",
-        "GO:0003713",
-        "GO:0005667",
-        "GO:0019033",
-        "GO:0030430",
-        "GO:0039660",
-        "GO:0039695",
-        "GO:0042025",
-        "GO:0044161",
-        "GO:0044220",
-        "GO:0045893",
-        "GO:0045944",
-        "GO:0046782",
-        "GO:0046809",
-        "GO:0051701",
-        "GO:0065003",
-        "GO:0140297",
-        "GO:0140677" ;
+    synbio:go_term_ids "GO:0000978"^^xsd:anyURI,
+        "GO:0001046"^^xsd:anyURI,
+        "GO:0003677"^^xsd:anyURI,
+        "GO:0003700"^^xsd:anyURI,
+        "GO:0003713"^^xsd:anyURI,
+        "GO:0005667"^^xsd:anyURI,
+        "GO:0019033"^^xsd:anyURI,
+        "GO:0030430"^^xsd:anyURI,
+        "GO:0039660"^^xsd:anyURI,
+        "GO:0039695"^^xsd:anyURI,
+        "GO:0042025"^^xsd:anyURI,
+        "GO:0044161"^^xsd:anyURI,
+        "GO:0044220"^^xsd:anyURI,
+        "GO:0045893"^^xsd:anyURI,
+        "GO:0045944"^^xsd:anyURI,
+        "GO:0046782"^^xsd:anyURI,
+        "GO:0046809"^^xsd:anyURI,
+        "GO:0051701"^^xsd:anyURI,
+        "GO:0065003"^^xsd:anyURI,
+        "GO:0140297"^^xsd:anyURI,
+        "GO:0140677"^^xsd:anyURI ;
     synbio:go_term_labels "C:host cell cytoplasm",
         "C:host cell cytoplasmic vesicle",
         "C:host cell nucleus",
@@ -10451,13 +10451,13 @@ sequence:3651 a synbio:PartsSequence ;
 sequence:3696 a synbio:PartsSequence ;
     synbio:associated_part IF:00572 ;
     synbio:date_added "2022-02-25T18:35:45.919606" ;
-    synbio:go_term_ids "GO:0000287",
-        "GO:0004565",
-        "GO:0005990",
-        "GO:0009341",
-        "GO:0030246",
-        "GO:0031420",
-        "GO:0042802" ;
+    synbio:go_term_ids "GO:0000287"^^xsd:anyURI,
+        "GO:0004565"^^xsd:anyURI,
+        "GO:0005990"^^xsd:anyURI,
+        "GO:0009341"^^xsd:anyURI,
+        "GO:0030246"^^xsd:anyURI,
+        "GO:0031420"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI ;
     synbio:go_term_labels "C:beta-galactosidase complex",
         "F:alkali metal ion binding",
         "F:beta-galactosidase activity",
@@ -10478,7 +10478,7 @@ sequence:3696 a synbio:PartsSequence ;
 sequence:3731 a synbio:PartsSequence ;
     synbio:associated_part IF:00574 ;
     synbio:date_added "2022-03-01T19:20:35.597768" ;
-    synbio:go_term_ids "GO:0042802" ;
+    synbio:go_term_ids "GO:0042802"^^xsd:anyURI ;
     synbio:go_term_labels "F:identical protein binding" ;
     synbio:match_gene_symbols_etc "rop" ;
     synbio:match_names "Regulatory protein rop" ;
@@ -10492,13 +10492,13 @@ sequence:3731 a synbio:PartsSequence ;
 sequence:3753 a synbio:PartsSequence ;
     synbio:associated_part IF:00465 ;
     synbio:date_added "2022-03-16T16:49:59.661458" ;
-    synbio:go_term_ids "GO:0000794",
-        "GO:0005634",
-        "GO:0005940",
-        "GO:0016925",
-        "GO:0031386",
-        "GO:0042802",
-        "GO:0044389" ;
+    synbio:go_term_ids "GO:0000794"^^xsd:anyURI,
+        "GO:0005634"^^xsd:anyURI,
+        "GO:0005940"^^xsd:anyURI,
+        "GO:0016925"^^xsd:anyURI,
+        "GO:0031386"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI,
+        "GO:0044389"^^xsd:anyURI ;
     synbio:go_term_labels "C:condensed nuclear chromosome",
         "C:nucleus",
         "C:septin ring",
@@ -10518,13 +10518,13 @@ sequence:3753 a synbio:PartsSequence ;
 sequence:3754 a synbio:PartsSequence ;
     synbio:associated_part IF:00464 ;
     synbio:date_added "2022-03-16T16:49:59.661458" ;
-    synbio:go_term_ids "GO:0000794",
-        "GO:0005634",
-        "GO:0005940",
-        "GO:0016925",
-        "GO:0031386",
-        "GO:0042802",
-        "GO:0044389" ;
+    synbio:go_term_ids "GO:0000794"^^xsd:anyURI,
+        "GO:0005634"^^xsd:anyURI,
+        "GO:0005940"^^xsd:anyURI,
+        "GO:0016925"^^xsd:anyURI,
+        "GO:0031386"^^xsd:anyURI,
+        "GO:0042802"^^xsd:anyURI,
+        "GO:0044389"^^xsd:anyURI ;
     synbio:go_term_labels "C:condensed nuclear chromosome",
         "C:nucleus",
         "C:septin ring",
@@ -10544,11 +10544,11 @@ sequence:3754 a synbio:PartsSequence ;
 sequence:3760 a synbio:PartsSequence ;
     synbio:associated_part IF:00585 ;
     synbio:date_added "2022-03-17T19:04:09.651787" ;
-    synbio:go_term_ids "GO:0004590",
-        "GO:0005829",
-        "GO:0006207",
-        "GO:0006222",
-        "GO:0044205" ;
+    synbio:go_term_ids "GO:0004590"^^xsd:anyURI,
+        "GO:0005829"^^xsd:anyURI,
+        "GO:0006207"^^xsd:anyURI,
+        "GO:0006222"^^xsd:anyURI,
+        "GO:0044205"^^xsd:anyURI ;
     synbio:go_term_labels "C:cytosol",
         "F:orotidine-5'-phosphate decarboxylase activity",
         "P:'de novo' UMP biosynthetic process",
@@ -10567,7 +10567,7 @@ sequence:3760 a synbio:PartsSequence ;
 sequence:3763 a synbio:PartsSequence ;
     synbio:associated_part IF:00580 ;
     synbio:date_added "2022-03-17T23:28:44.845892" ;
-    synbio:go_term_ids "GO:0042802" ;
+    synbio:go_term_ids "GO:0042802"^^xsd:anyURI ;
     synbio:go_term_labels "F:identical protein binding" ;
     synbio:match_gene_symbols_etc "rop" ;
     synbio:match_names "Regulatory protein rop" ;
@@ -10581,17 +10581,17 @@ sequence:3763 a synbio:PartsSequence ;
 sequence:3766 a synbio:PartsSequence ;
     synbio:associated_part IF:00401 ;
     synbio:date_added "2022-03-31T23:04:10.122667" ;
-    synbio:go_term_ids "GO:0005737",
-        "GO:0005829",
-        "GO:0006661",
-        "GO:0007165",
-        "GO:0016316",
-        "GO:0017161",
-        "GO:0034597",
-        "GO:0043647",
-        "GO:0046855",
-        "GO:0046856",
-        "GO:0052828" ;
+    synbio:go_term_ids "GO:0005737"^^xsd:anyURI,
+        "GO:0005829"^^xsd:anyURI,
+        "GO:0006661"^^xsd:anyURI,
+        "GO:0007165"^^xsd:anyURI,
+        "GO:0016316"^^xsd:anyURI,
+        "GO:0017161"^^xsd:anyURI,
+        "GO:0034597"^^xsd:anyURI,
+        "GO:0043647"^^xsd:anyURI,
+        "GO:0046855"^^xsd:anyURI,
+        "GO:0046856"^^xsd:anyURI,
+        "GO:0052828"^^xsd:anyURI ;
     synbio:go_term_labels "C:cytoplasm",
         "C:cytosol",
         "F:inositol-1,3,4-trisphosphate 4-phosphatase activity",
@@ -10623,8 +10623,8 @@ sequence:3776 a synbio:PartsSequence ;
 sequence:3783 a synbio:PartsSequence ;
     synbio:associated_part IF:00595 ;
     synbio:date_added "2022-04-05T18:04:00.464751" ;
-    synbio:go_term_ids "GO:0006629",
-        "GO:0008962" ;
+    synbio:go_term_ids "GO:0006629"^^xsd:anyURI,
+        "GO:0008962"^^xsd:anyURI ;
     synbio:go_term_labels "F:phosphatidylglycerophosphatase activity",
         "P:lipid metabolic process" ;
     synbio:match_gene_symbols_etc "ypjQ" ;
@@ -10639,7 +10639,7 @@ sequence:3783 a synbio:PartsSequence ;
 sequence:3797 a synbio:PartsSequence ;
     synbio:associated_part IF:00603 ;
     synbio:date_added "2022-04-06T16:44:51.983119" ;
-    synbio:go_term_ids "GO:0046677" ;
+    synbio:go_term_ids "GO:0046677"^^xsd:anyURI ;
     synbio:go_term_labels "P:response to antibiotic" ;
     synbio:match_gene_symbols_etc "bleO" ;
     synbio:match_names "Bleomycin resistance protein" ;

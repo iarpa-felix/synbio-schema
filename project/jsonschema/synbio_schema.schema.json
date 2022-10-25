@@ -248,13 +248,13 @@
                "pattern": "^organism:-?\\d+$",
                "type": "string"
             },
-            "special_name": {
+            "name": {
                "type": "string"
             },
             "species_name": {
                "type": "string"
             },
-            "species_ncbi_taxon_number": {
+            "strain_agnostic_taxid": {
                "type": "string"
             },
             "strain_value": {
@@ -497,18 +497,6 @@
          ],
          "title": "Strain",
          "type": "object"
-      },
-      "SubcategorySizeEnum": {
-         "description": "",
-         "enum": [
-            "lt_200",
-            "gt_3k",
-            "from_1k_to_3k",
-            "from_100_to_300",
-            "from_300_to_1k"
-         ],
-         "title": "SubcategorySizeEnum",
-         "type": "string"
       }
    },
    "$id": "http://www.semanticweb.org/mam/ontologies/2022/7/synbio",

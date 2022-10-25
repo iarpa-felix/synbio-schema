@@ -10,13 +10,13 @@ CREATE TABLE "Database" (
 );
 
 CREATE TABLE "Organism" (
-	abbreviation TEXT, 
 	comment TEXT, 
 	id TEXT NOT NULL, 
-	special_name TEXT, 
+	name TEXT, 
 	species_name TEXT, 
-	species_ncbi_taxon_number TEXT, 
+	strain_agnostic_taxid TEXT, 
 	strain_value TEXT, 
+	abbreviation TEXT, 
 	PRIMARY KEY (id)
 );
 
@@ -104,17 +104,24 @@ CREATE TABLE "Modification_part_ofs" (
 	FOREIGN KEY(backref_id) REFERENCES "Modification" (id)
 );
 
-CREATE TABLE "Strain_genome_accessions" (
-	backref_id TEXT, 
-	genome_accessions TEXT, 
-	PRIMARY KEY (backref_id, genome_accessions), 
-	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
-);
-
 CREATE TABLE "Strain_biosample_accessions" (
 	backref_id TEXT, 
 	biosample_accessions TEXT, 
 	PRIMARY KEY (backref_id, biosample_accessions), 
+	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
+);
+
+CREATE TABLE "Strain_external_urls" (
+	backref_id TEXT, 
+	external_urls TEXT, 
+	PRIMARY KEY (backref_id, external_urls), 
+	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
+);
+
+CREATE TABLE "Strain_genome_accessions" (
+	backref_id TEXT, 
+	genome_accessions TEXT, 
+	PRIMARY KEY (backref_id, genome_accessions), 
 	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
 );
 
@@ -129,13 +136,6 @@ CREATE TABLE "Strain_selection_markers" (
 	backref_id TEXT, 
 	selection_markers TEXT, 
 	PRIMARY KEY (backref_id, selection_markers), 
-	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
-);
-
-CREATE TABLE "Strain_external_urls" (
-	backref_id TEXT, 
-	external_urls TEXT, 
-	PRIMARY KEY (backref_id, external_urls), 
 	FOREIGN KEY(backref_id) REFERENCES "Strain" (id)
 );
 
