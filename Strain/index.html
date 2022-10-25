@@ -205,13 +205,15 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-strain">Class: Strain</h1>
+<p><em>An Organism from a population whose characteristics vary from the base Organism due to natural selection, breeding, etc.</em></p>
 <p>URI: <a href="https://example.com/synbio/Strain">synbio:Strain</a></p>
 <div class="mermaid"> classDiagram
     class Strain
-      Part &lt;|-- Strain
+      Organism &lt;|-- Strain
 
       Strain : bio_safety_level
       Strain : biosample_accessions
+      Strain : comment
       Strain : creator
       Strain : external_urls
       Strain : funding_source
@@ -227,13 +229,16 @@
       Strain : principal_investigator
       Strain : references
       Strain : selection_markers
+      Strain : species_name
       Strain : status
+      Strain : strain_agnostic_taxid
+      Strain : strain_value
       Strain : summary
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
-<li><a href="../Part/">Part</a><ul>
+<li><a href="../Organism/">Organism</a><ul>
 <li><strong>Strain</strong></li>
 </ul>
 </li>
@@ -363,6 +368,30 @@
 <td>None</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../comment/">comment</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
+<td>inherited</td>
+</tr>
+<tr>
+<td><a href="../species_name/">species_name</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
+<td>inherited</td>
+</tr>
+<tr>
+<td><a href="../strain_agnostic_taxid/">strain_agnostic_taxid</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
+<td>inherited</td>
+</tr>
+<tr>
+<td><a href="../strain_value/">strain_value</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
+<td>inherited</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -417,11 +446,13 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Strain
+description: An Organism from a population whose characteristics vary from the base
+  Organism due to natural selection, breeding, etc.
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 exact_mappings:
 - OBI:0001185
 rank: 1000
-is_a: Part
+is_a: Organism
 slots:
 - bio_safety_level
 - biosample_accessions
@@ -464,11 +495,13 @@ class_uri: synbio:Strain
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Strain
+description: An Organism from a population whose characteristics vary from the base
+  Organism due to natural selection, breeding, etc.
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 exact_mappings:
 - OBI:0001185
 rank: 1000
-is_a: Part
+is_a: Organism
 slot_usage:
   id:
     name: id
@@ -583,6 +616,7 @@ attributes:
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     slot_uri: synbio:id
+    multivalued: false
     identifier: true
     alias: id
     owner: Strain
@@ -598,6 +632,7 @@ attributes:
     - Organism
     - Person
     range: string
+    required: true
     pattern: MS:\d+
   intellectual_property:
     name: intellectual_property
@@ -701,6 +736,52 @@ attributes:
     owner: Strain
     domain_of:
     - Strain
+    range: string
+  comment:
+    name: comment
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    exact_mappings:
+    - NCIT:C25393
+    rank: 1000
+    slot_uri: synbio:comment
+    multivalued: false
+    alias: comment
+    owner: Strain
+    domain_of:
+    - Organism
+    range: string
+  species_name:
+    name: species_name
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:species_name
+    multivalued: false
+    alias: species_name
+    owner: Strain
+    domain_of:
+    - Organism
+    range: string
+  strain_agnostic_taxid:
+    name: strain_agnostic_taxid
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:strain_agnostic_taxid
+    multivalued: false
+    alias: strain_agnostic_taxid
+    owner: Strain
+    domain_of:
+    - Organism
+    range: string
+  strain_value:
+    name: strain_value
+    from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+    rank: 1000
+    slot_uri: synbio:strain
+    multivalued: false
+    alias: strain_value
+    owner: Strain
+    domain_of:
+    - Organism
     range: string
 class_uri: synbio:Strain
 

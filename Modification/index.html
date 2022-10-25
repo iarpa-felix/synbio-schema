@@ -205,6 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-modification">Class: Modification</h1>
+<p><em>A sequence that is different from some reference sequence.</em></p>
 <p>URI: <a href="https://example.com/synbio/Modification">synbio:Modification</a></p>
 <div class="mermaid"> classDiagram
     class Modification
@@ -433,6 +434,10 @@
 <td>native</td>
 <td>['synbio:Modification']</td>
 </tr>
+<tr>
+<td>exact</td>
+<td>['SO:0001059']</td>
+</tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
@@ -440,7 +445,10 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Modification
+description: A sequence that is different from some reference sequence.
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+exact_mappings:
+- SO:0001059
 rank: 1000
 is_a: Part
 slots:
@@ -602,7 +610,10 @@ class_uri: synbio:Modification
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Modification
+description: A sequence that is different from some reference sequence.
 from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
+exact_mappings:
+- SO:0001059
 rank: 1000
 is_a: Part
 slot_usage:
