@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://semantic-synbio.github.io/synbio-schema/Plasmid/</loc>
+         <lastmod>2022-10-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://semantic-synbio.github.io/synbio-schema/SeqTypeEnum/</loc>
          <lastmod>2022-10-25</lastmod>
          <changefreq>daily</changefreq>
