@@ -209,6 +209,16 @@
 <p>URI: <a href="https://example.com/synbio/Organism">synbio:Organism</a></p>
 <div class="mermaid"> classDiagram
     class Organism
+      Part &lt;|-- Organism
+
+      Organism : comment
+      Organism : id
+      Organism : name
+      Organism : species_name
+      Organism : strain_agnostic_taxid
+      Organism : strain_value
+
+
       Organism &lt;|-- Strain
 
       Organism : comment
@@ -221,8 +231,11 @@
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
+<li><a href="../Part/">Part</a><ul>
 <li><strong>Organism</strong><ul>
 <li><a href="../Strain/">Strain</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -338,6 +351,7 @@ from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 exact_mappings:
 - OBI:0100026
 rank: 1000
+is_a: Part
 slots:
 - comment
 - id
@@ -401,6 +415,7 @@ from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
 exact_mappings:
 - OBI:0100026
 rank: 1000
+is_a: Part
 slot_usage:
   id:
     name: id
