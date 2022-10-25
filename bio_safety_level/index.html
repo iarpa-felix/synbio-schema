@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -344,6 +351,19 @@
 <li>Range: <a href="../BioSafetyLevelEnum/">BioSafetyLevelEnum</a></li>
 <li>Multivalued: None</li>
 </ul>
+<h2 id="examples">Examples</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level 1</td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -353,6 +373,8 @@
 <details>
 
 <pre><code class="language-yaml">name: bio_safety_level
+examples:
+- value: Level 1
 from_schema: https://example.com/synbio
 rank: 1000
 slot_uri: synbio:bio_safety_level
