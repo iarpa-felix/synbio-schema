@@ -221,31 +221,31 @@
 <tr>
 <td><a href="../modification_set/">modification_set</a></td>
 <td>0..* <br/> <a href="../Modification/">Modification</a></td>
-<td>None</td>
+<td>Zero or more Modification instances</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../organism_set/">organism_set</a></td>
 <td>0..* <br/> <a href="../Organism/">Organism</a></td>
-<td>None</td>
+<td>Zero or more Organism instances</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../person_set/">person_set</a></td>
 <td>0..* <br/> <a href="../Person/">Person</a></td>
-<td>None</td>
+<td>Zero or more Person instances</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../sequence_set/">sequence_set</a></td>
 <td>0..* <br/> <a href="../PartsSequence/">PartsSequence</a></td>
-<td>None</td>
+<td>Zero or more PartsSequence instances</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../strain_set/">strain_set</a></td>
 <td>0..* <br/> <a href="../Strain/">Strain</a></td>
-<td>None</td>
+<td>Zero or more Strain instances</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -363,6 +363,7 @@ slot_usage:
 attributes:
   modification_set:
     name: modification_set
+    description: Zero or more Modification instances
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -376,6 +377,7 @@ attributes:
     inlined_as_list: true
   organism_set:
     name: organism_set
+    description: Zero or more Organism instances
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     slot_uri: synbio:organism_set
@@ -390,6 +392,7 @@ attributes:
     inlined_as_list: true
   person_set:
     name: person_set
+    description: Zero or more Person instances
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     slot_uri: synbio:person_set
@@ -404,6 +407,7 @@ attributes:
     inlined_as_list: true
   sequence_set:
     name: sequence_set
+    description: Zero or more PartsSequence instances
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
@@ -417,6 +421,7 @@ attributes:
     inlined_as_list: true
   strain_set:
     name: strain_set
+    description: Zero or more Strain instances
     from_schema: http://www.semanticweb.org/mam/ontologies/2022/7/synbio
     rank: 1000
     multivalued: true
